@@ -7,7 +7,11 @@ lang: en
 ---
 # User Guide
 
-Welcome to the OpenMandriva User Guide. This section provides detailed instructions on using and configuring the OpenMandriva Lx system.
+Welcome to the OpenMandriva User Guide. Start with the first steps after installation, then explore the sections below for detailed instructions on customizing and using your system.
+
+## First Steps After Installation
+
+Get up and running quickly with ten essential tasks: update your system, install multimedia codecs, set up snapshots with Timeshift, and more. Read [First Ten Tasks After Installation](./first-steps.en.html) right after installing OpenMandriva.
 
 ## Desktop Environments
 

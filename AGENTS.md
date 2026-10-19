@@ -19,3 +19,10 @@ This site includes several custom modifications to the base theme. For detailed 
 ## Writing Overrides 
 
 This platform (Jekyll) and this theme (Just the Docs) generates a Table of Contents at the bottom of every file that has children. Therefore, do not generate Related Topics headings on these pages. Generate Related Topics only on leaf nodes (files that have no children in the navigation). 
+
+## Package References
+
+Always verify DNF package names against the OpenMandriva package database at [pkgs.org](https://pkgs.org). Do not assume package names from other distributions (e.g., Fedora's `gstreamer1.0-codec-installer` does not exist in OpenMandriva). Search by distribution to confirm:
+- `gstreamer1.0-plugins-ugly` — in the Restricted repository
+- `gstreamer1.0-libav` — in the Main repository
+- `lib64dvdcss` — in the Restricted repository
