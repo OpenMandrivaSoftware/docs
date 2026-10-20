@@ -16,6 +16,10 @@ This site includes several custom modifications to the base theme. For detailed 
 - [Removable Theme Footer](./.agents/remove-theme-footer/): Removing the default theme footer messages.
 - [Right Sidebar (Page TOC)](./.agents/right-sidebar/): Right sidebar that displays a table of contents.
 
+## Writing 
+
+When asked to write or edit content, always load the technical writing skills you find, either globally or in this project, to mimic the operator's voice *before* you start writing or editing. 
+
 ## Writing Overrides 
 
 This platform (Jekyll) and this theme (Just the Docs) generates a Table of Contents at the bottom of every file that has children. Therefore, do not generate Related Topics headings on these pages. Generate Related Topics only on leaf nodes (files that have no children in the navigation). 
