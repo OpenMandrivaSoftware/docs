@@ -8,9 +8,9 @@ lang: en
 ---
 # Contributing to OpenMandriva
 
-OpenMandriva is 100 % community driven, and it runs on volunteers. You can contribute in many ways.
+OpenMandriva is 100% community driven, and it runs on volunteers. You can contribute in many ways.
 
-## Give your time
+## Give Your Time
 
 Help in the areas below. Each one needs people.
 
@@ -19,27 +19,27 @@ Help in the areas below. Each one needs people.
 - Translation
 - Community support and keeping the forum alive
 - Issue reporting and bug triage
-- Quality assurance — test new software and report back
+- Quality assurance---test new software and report back
 - Design for the website, services, and products
-- Infrastructure — run servers and services
+- Infrastructure---run servers and services
 
-## Spread the word
+## Spread the Word
 
-Use the [artwork](team/artwork) to share OpenMandriva and the values behind it.
+Use the [artwork](../community/artwork.en.html) to share OpenMandriva and the values behind it.
 
-## Share your ideas
+## Share Your Ideas
 
-Tell the community what you need and what you are struggling with. Report the problems you find; developers use them to improve OpenMandriva.
+Tell the community what you need and what you're struggling with. Report the problems you find; developers use them to improve OpenMandriva.
 
 ## Donate
 
 OpenMandriva is a non-profit association. All donations support the project and are welcome, no matter the size.
 
-[Donate](https://www.openmandriva.org/donate) to the OpenMandraiva Association.
+[Donate](https://www.openmandriva.org/donate) to the OpenMandriva Association.
 
-## Learn more
+## Related Topics
 
 The pages below help you in specific areas:
 
-- [How to report a bug](./report-bug.en.html) — file a clear, actionable report.
-- [Getting started with QA](./get-started-qa.en.html) — test OpenMandriva and help keep it stable.
+- [How to report a bug](./report-bug.en.html)---file a clear, actionable report.
+- [Getting started with QA](./get-started-qa.en.html)---test OpenMandriva and help keep it stable.
