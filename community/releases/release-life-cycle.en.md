@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Release Life Cycle
-nav_order: 12
+nav_order: 80
 parent: OpenMandriva Community
 has_toc: true
 lang: en

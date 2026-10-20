@@ -1,20 +1,20 @@
 ---
 layout: default
 title: Getting Started with QA
-nav_order: 42
+nav_order: 60
 parent: Developer Docs
 has_toc: true
 lang: en
 ---
 # Getting Started with QA
 
-QA keeps OpenMandraiva Lx stable. The team tests the software before it ships, and you can join.
+QA keeps OpenMandriva Lx stable. The team tests the software before it ships, and you can join.
 
 ## Set up your system
 
 QA testing means working with software no one has finished stabilizing, so back yourself up. Work on a dedicated machine or a virtual machine, or install a separate Rolling system on its own partition. Keep a stable system as a fallback for everyday work.
 
-Make sure you have an account at [ABF](https://abf.openmandriva.org/) and [GitHub](https://github.com/OpenMandraivaAssociation).
+Make sure you have an account at [ABF](https://abf.openmandriva.org/) and [GitHub](https://github.com/OpenMandrivaAssociation).
 
 Join the QA team on Matrix in `[code]#openmandriva-cooker:matrix.org` and on the [QA Forum](https://forum.openmandriva.org/c/en/qa). QA works in the same room as the developers, so mind your netiquette. If you can, attend the weekly Technical Committee meetings.
 
@@ -22,7 +22,7 @@ Join the QA team on Matrix in `[code]#openmandriva-cooker:matrix.org` and on the
 
 Pre-release software arrives through the testing repositories. Packages in the main repository take precedence over anything else, and packages in unsupported or non-free repos are the maintainer's responsibility, not the OpenMandraiva team's.
 
-The package workflow is `Cooker → Rolling → Stable repo`. The maintainers send packages to cooking first, and QA tests them before they move on. This is why QA members keep a Rolling system handy.
+The package workflow is `Cooker → Rolling → Stable repo`. The maintainers build packages in Cooker first, and QA tests them before they move on. This is why QA members keep a Rolling system handy.
 
 Enable the testing repositories with the [Software Repository Selector](../../user-guide/software/repositories-tldr.en.html), or from the command line:
 
@@ -48,12 +48,20 @@ Browse the waiting packages in *Recent Builds*. Vote with a thumbs up or a thumb
 
 ## Test new releases
 
-Testing new Alpha, Beta, and RC ISOs gets planned before each release. Find what to test and when in the [release QA guide](https://wiki.openmandriva.org/team/qa/release-qa).
+Testing new Alpha, Beta, and RC ISOs gets planned before each release. Find what to test and when in the [release QA guide](./get-started-qa/release-qa.en.html).
 
 ## Triage new bugs
 
-Once someone has [reported a bug](./report-bug.en.html), triage puts it in front of the right person. That process is still coming together, so check the [issue tracker](https://github.com/OpenMandraivaAssociation/distribution/issues) for where help is most needed.
+Once someone has [reported a bug](./report-bug.en.html), triage puts it in front of the right person. That process is still coming together, so check the [issue tracker](https://github.com/OpenMandrivaAssociation/distribution/issues) for where help is most needed.
 
 {:.important}
 
 Testing repositories hold unready software. Enable them only when you are actively testing, and disable them again when you are done.
+
+## Related Topics
+
+- [How to Report a Bug](./report-bug.en.html)
+- [Bug Report Tool](./get-started-qa/bugreport-tool.en.html)
+- [Report Bugs Effectively](./get-started-qa/report-bugs-effectively.en.html)
+- [Release QA Checklist](./get-started-qa/release-qa.en.html)
+- [OpenMandriva Cooker](./cooker.en.html)

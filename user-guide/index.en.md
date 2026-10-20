@@ -24,3 +24,21 @@ Install, remove, and update software on your system using the package managers a
 ## Network Configuration
 
 Configure your network connections, from basic wired connections to complex wireless setups.
+
+## Post Installation Configuration
+
+Configure your system right after installation---set your user avatar, partition your disks, and more.
+
+- [Post Installation Configuration](./post-installation/index.en.html)
+
+## Maintaining Your System
+
+Keep your system up to date and running smoothly. Switch between Rock and ROME, check recent updates, and compile custom software.
+
+- [Maintaining Your System](./maintaining/index.en.html)
+
+## Troubleshooting
+
+Resolve common problems---fix a broken bootloader, connect to the internet in recovery mode, and correct time issues in dual boot.
+
+- [Troubleshooting](./troubleshooting/index.en.html)

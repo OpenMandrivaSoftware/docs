@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Release Plan and Repositories
-nav_order: 10
+nav_order: 60
 parent: OpenMandriva Community
 has_toc: true
 lang: en

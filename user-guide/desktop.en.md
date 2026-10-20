@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Desktop Environments
-nav_order: 20
+nav_order: 40
 parent: User Guide
 has_toc: true
 lang: en

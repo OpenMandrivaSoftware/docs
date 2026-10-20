@@ -23,3 +23,13 @@ OpenMandriva is more than software. It is a worldwide community of people who li
 - The Cooker channel `#openmandriva-cooker:matrix.org`, for technical work and discussions with the development team.
 
 OpenMandriva no longer uses IRC. We moved to Matrix in 2023, so use a Matrix client such as [Element](https://app.element.io/#/room/#openmandriva:matrix.org).
+
+## Policies
+
+OpenMandriva's policies define how the distribution is named, branded, and maintained---and the terms for using project services.
+
+- [Release Codenames](./releases/codename.en.html) --- codenames for each release.
+- [Repository Policies](./releases/repository-policies.en.html) --- update flow between Cooker, ROME, and Rock.
+- [Official Naming Policy](./official-naming-policy.en.html) --- how to refer to the Association and its products.
+- [Trademark License](./oma-tm-licence.en.html) --- terms for using OpenMandriva and Mandriva trademarks.
+- [Terms of Service](./terms-of-service.en.html) --- rules for using project services.

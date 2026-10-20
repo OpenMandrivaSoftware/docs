@@ -7,7 +7,7 @@ lang: en
 ---
 # Developer Docs
 
-OpenMandraiva needs two kinds of work to exist: the code that ships in the repositories, and the tools, configuration, and artwork that make the distribution its own. Developers of both kinds contribute their skills here.
+OpenMandriva needs two kinds of work to exist: the code that ships in the repositories, and the tools, configuration, and artwork that make the distribution its own. Developers of both kinds contribute their skills here.
 
 ## Contribute code
 
@@ -17,20 +17,20 @@ OpenMandraiva needs two kinds of work to exist: the code that ships in the repos
 
 ## Contribute other skills
 
-- [Contributing to OpenMandraiva](./contribute.en.html) — ways to help beyond the code.
+- [Contributing to OpenMandriva](./contribute.en.html) — ways to help beyond the code.
 
 ## About Cooker
 
-Cooker is the development branch of OpenMandraiva Lx. It reflects the current progress of work across every component. Cooker is a moving target, and it is unstable. Advanced users who like to experiment, and developers who need the latest software on a system, run Cooker. Download the snapshot ISO here:
+Cooker is the development branch of OpenMandriva Lx. It reflects the current progress of work across every component. Cooker is a moving target, and it is unstable. Advanced users who like to experiment, and developers who need the latest software on a system, run Cooker. Download the snapshot ISO here:
 
 - x86_64: <https://abf.openmandriva.org/platforms/cooker/products/71>
 - znver1: <https://abf.openmandriva.org/platforms/cooker/products/69>
 
-Cooker is the build system. Developers make all their changes here, so it takes every kind of technical contribution: the packaging of thousands of programs, and the tools, configuration, and artwork that make the distribution its own. This is where you start.
+Cooker is the build system. Developers make all their changes here, so it takes every kind of technical contribution: the packaging of thousands of programs, and the tools, configuration, and artwork that make the distribution its own. This is where you start. Read the [technical overview](./cooker.en.html) for more details.
 
 ## How Cooker works
 
-All development happens in Cooker. From there, packages move through the [release plan](../community/releases/release-plan.html) (Cooker → Rolling → Release) before any change leaves the development branch. The team builds and tests packages in Cooker with [ABF](./build.html), OpenMandraiva's build system, before testing lands in the stable release.
+All development happens in Cooker. From there, packages move through the [release plan](../community/releases/release-plan.html) (Cooker → Rolling → Release) before any change leaves the development branch. The team builds and tests packages in Cooker with [ABF](./build.html), OpenMandriva's build system, before testing lands in the stable release.
 
 {: .important }
 

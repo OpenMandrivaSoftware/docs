@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Software Repository Selector
-nav_order: 30
+nav_order: 20
 parent: Managing Software
 has_toc: true
 lang: en

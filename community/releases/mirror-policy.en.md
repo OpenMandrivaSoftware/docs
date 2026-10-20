@@ -1,14 +1,14 @@
 ---
 layout: default
 title: Setting Up a Mirror
-nav_order: 13
+nav_order: 90
 parent: OpenMandriva Community
 has_toc: true
 lang: en
 ---
 # Mirroring
 
-OpenMandraiva mirrors let you download packages and install images quickly. A flat mirror topology keeps them honest: every mirror syncs directly from the origin (ABF), so no lagging mirror is propagated to others, and each mirror can be as fresh as the source.
+OpenMandriva mirrors let you download packages and install images quickly. A flat mirror topology keeps them honest: every mirror syncs directly from the origin (ABF), so no lagging mirror is propagated to others, and each mirror can be as fresh as the source.
 
 ## For end users
 
@@ -40,3 +40,8 @@ Do not forget the `TIME.txt` file — Mirmon and Mirrorbits need it to work corr
 Our T0 mirror, ABF, is where packages are compiled and distributed. It holds more than any other mirror: source packages, debug packages, old release packages, personal repositories, and more. Its content can be explored at <http://abf.openmandriva.org>.
 
 Mirrorbits always redirects to ABF if a file does not exist on any mirror.
+
+## Related Topics
+
+- [Release Codenames](./codename.en.html)
+- [Repository Policies](./repository-policies.en.html)

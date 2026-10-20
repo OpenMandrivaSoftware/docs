@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Managing Software
-nav_order: 10
+nav_order: 20
 parent: User Guide
 has_toc: true
 lang: en
@@ -44,3 +44,7 @@ OpenMandriva does not ship software from third-party sources that sit outside it
 
 - [Using DNF](./using-dnf.en.html)
 - [Software Repository Selector](./repositories-tldr.en.html)
+- [DnfDrake Overview](./dnfdrake.en.html)
+- [Install Steam](./install-steam.en.html)
+- [List Packages in the ISO](./list-packages-iso.en.html)
+- [OpenMandriva Welcome](./om-welcome.en.html)

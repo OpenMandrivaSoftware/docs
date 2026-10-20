@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bylaws
-nav_order: 12
+nav_order: 10
 parent: About OpenMandriva
 has_toc: true
 lang: en

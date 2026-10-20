@@ -1,7 +1,7 @@
 ---
 layout: default
 title: How to Build and Submit Packages
-nav_order: 10
+nav_order: 20
 parent: Developer Docs
 has_toc: true
 lang: en

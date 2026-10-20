@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Artwork
-nav_order: 30
+nav_order: 40
 parent: OpenMandriva Community
 has_toc: true
 lang: en

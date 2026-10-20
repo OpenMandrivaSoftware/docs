@@ -1,7 +1,7 @@
 ---
 layout: default
 title: First Ten Tasks After Installation
-nav_order: 5
+nav_order: 10
 parent: User Guide
 has_toc: true
 lang: en

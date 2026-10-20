@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Network Configuration
-nav_order: 30
+nav_order: 50
 parent: User Guide
 has_toc: true
 lang: en

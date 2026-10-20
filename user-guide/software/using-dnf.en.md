@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Using DNF
-nav_order: 20
+nav_order: 10
 parent: Managing Software
 has_toc: true
 lang: en

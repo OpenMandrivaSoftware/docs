@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Statutes
-nav_order: 11
+nav_order: 30
 parent: About OpenMandriva
 has_toc: true
 lang: en

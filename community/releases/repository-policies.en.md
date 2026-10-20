@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Repository Policies
-nav_order: 11
+nav_order: 70
 parent: OpenMandriva Community
 has_toc: true
 lang: en
