@@ -3,40 +3,26 @@ layout: default
 title: Maintaining Your System
 nav_order: 60
 parent: User Guide
+card_columns: 3
 has_toc: true
 lang: en
+cards:
+  - title: "Update Your System"
+    description: "Sync all packages to the latest versions for security, stability, and bug fixes."
+    url: "./update-system.en.html"
+  - title: "Switch Update Channels"
+    description: "Change between the stable Rock release and the rolling ROME edition."
+    url: "./update-channel.en.html"
+  - title: "List Recent Updates"
+    description: "Show packages installed on your system, sorted by date."
+    url: "./latest-updates.en.html"
+  - title: "Compile Custom Software"
+    description: "Build your own software from source using clang."
+    url: "./custom-binaries.en.html"
 ---
 
 # Maintaining Your System
 
 Keeping your system up to date is essential for security, stability, and performance. These guides cover the core maintenance tasks for an OpenMandriva installation.
 
-## Update Your System
-
-Sync your packages to the latest available versions. This keeps your system secure and stable.
-
-- [Update Your System](./update-system.en.html)
-
-## Switch Between Rock and ROME
-
-Change your update channel from the stable Rock release to the rolling ROME edition---or switch back.
-
-- [Switch Update Channels](./update-channel.en.html)
-
-## Check Recent Updates
-
-Generate a list of packages installed on your system, sorted by date.
-
-- [List Recent Updates](./latest-updates.en.html)
-
-## Compile Custom Software
-
-OpenMandriva uses *clang* as its primary compiler. Build your own software from source.
-
-- [Compile Custom Software](./custom-binaries.en.html)
-
-## Related Topics
-
-- [Managing Software](../software.en.html)
-- [Post Installation Configuration](../post-installation/index.en.html)
-- [Troubleshooting](../troubleshooting/index.en.html)
+{% include section_cards.html %}

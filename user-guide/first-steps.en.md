@@ -20,12 +20,39 @@ sudo dnf dsync --refresh --allowerasing
 
 Reboot when prompted, especially if the kernel was updated.
 
-## 2. Install Multimedia Codecs
+## 2. Explore OM Welcome
 
-OpenMandriva includes only open-source codecs by default. To play MP3, H.264, or DVDs, enable the Restricted repository.
+*OM Welcome* is the first screen you see on your desktop at each boot. It is a configuration hub---not just a greeting---that introduces you to OpenMandriva, its features, and its tools. You can disable it from starting automatically at any time.
+
+1. Click through each screen to learn what OpenMandriva offers.
+2. Use the *Configure* screen to quickly access system, hardware, software, and desktop tools.
+3. Use the *Applications* screen to install commonly used software by category.
+4. Use the *Repositories* screen to review and manage your software sources.
+
+For full details, see [OpenMandriva Welcome](software/om-welcome.en.html).
+
+## 3. Manage Software Repositories
+
+Repositories control which software and updates you receive. Set them up before installing multimedia codecs or additional software.
 
 1. Open the *Software Repository Selector*.
-2. Check the **Restricted** or **Non-Free** repository.
+2. Enable the repositories you need:
+   - **main/release**---core packages, always enable.
+   - **extra**---community packages.
+   - **restricted**---patented codecs where legally allowed.
+   - **non-free**---proprietary drivers and applications.
+3. Refresh the cache:
+```bash
+sudo dnf clean all
+sudo dnf repolist
+```
+
+## 4. Install Multimedia Codecs
+
+OpenMandriva includes only open-source codecs by default.
+
+1. Open the *Software Repository Selector*.
+2. Check the **Restricted** repository.
 3. Install codecs:
 ```bash
 sudo dnf install gstreamer1.0-plugins-ugly gstreamer1.0-libav
@@ -33,7 +60,7 @@ sudo dnf install gstreamer1.0-plugins-ugly gstreamer1.0-libav
 
 For DVD playback, also install `lib64dvdcss` from the Restricted repository.
 
-## 3. Set Up Timeshift
+## 5. Set Up Timeshift
 
 *Timeshift* creates automatic system snapshots so you can roll back after a failed update or broken driver.
 
@@ -46,7 +73,7 @@ sudo dnf install timeshift
 3. Choose `rsync` mode for ext4 or XFS, or Btrfs mode if your root partition uses Btrfs.
 4. Set a daily schedule and keep at least 7 days of snapshots.
 
-## 4. Add a Printer
+## 6. Add a Printer
 
 1. Open **System Settings → Printers**.
 2. Click *Add Printer*.
@@ -55,7 +82,7 @@ sudo dnf install timeshift
 
 For unsupported printers, check the [OpenPrinting database](https://www.openprinting.org/).
 
-## 5. Install Additional Software
+## 7. Install Additional Software
 
 *Discover* is the default graphical package manager. Use it for everyday installs, or *DNF* for command-line control.
 
@@ -71,16 +98,7 @@ sudo dnf install [package-name]
 
 Popular choices include *LibreOffice*, *Firefox*, and *VLC*.
 
-## 6. Import Browser Data
-
-Bring your bookmarks, passwords, and history from your previous browser.
-
-1. Open your web browser.
-2. Go to *Settings → Import Data from Another Browser*.
-3. Select the source browser and the data you want.
-4. Click *Import*.
-
-## 7. Configure Automatic Backups
+## 8. Configure Automatic Backups
 
 Snapshots protect your system, but back up your personal files separately. *BorgBackup* deduplicates data for efficient daily backups. *Vorta* adds a graphical interface.
 
@@ -93,28 +111,12 @@ sudo dnf install borgbackup vorta
 3. Open Vorta and create a new backup repository.
 4. Set the folders to back up and the backup schedule.
 
-## 8. Customize the Desktop
+## 9. Customize the Desktop
 
 1. Open **System Settings**.
 2. Change the wallpaper under *Workspace*.
 3. Adjust themes and fonts under *Appearance*.
 4. Right-click the desktop to add widgets or rearrange panels.
-
-## 9. Manage Software Repositories
-
-Repositories control which software and updates you receive.
-
-1. Open the Software Repository Selector.
-2. Enable the repositories you need:
-   - **main/release** — core packages, always enable.
-   - **extra** — community packages.
-   - **restricted** — patented codecs where legally allowed.
-   - **non-free** — proprietary drivers and applications.
-3. Refresh the cache:
-```bash
-sudo dnf clean all
-sudo dnf repolist
-```
 
 ## 10. Join the Community
 
@@ -126,8 +128,9 @@ Stay connected with other users and contributors.
 
 ## Related Topics
 
-- [Managing Software](../software.en.html)
-- [Desktop Environments](../desktop.en.html)
-- [Network Configuration](../network.en.html)
+- [Managing Software](software.en.html)
+- [Desktop Environments](desktop.en.html)
+- [Network Configuration](network.en.html)
 - [Using DNF](software/using-dnf.en.html)
 - [Software Repository Selector](software/repositories-tldr.en.html)
+- [OpenMandriva Welcome](software/om-welcome.en.html)

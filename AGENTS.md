@@ -19,9 +19,11 @@ This site includes several custom modifications to the base theme. For detailed 
 ## Images 
 
 In this site, 
+
 - Images that are global, reusable images go in `./assets/images`. 
 - Images that go with their individual documentation are stored in a subfolder called `./images` wherever that documentation is. 
 - Images that go with their individual documentation should be named the same as their documentation file but numbered sequentially in the order they appear in the file. For example, if the file they go with is `installing-openmandriva.en.md`, images should be named `installing-openmandriva-01.png`, `installing-openmandriva-02.png`, etc. 
+- Resize all images wider than 800px to 800px wide, keeping the aspect ratio. 
 
 Use `./getting-started/installing-openmandriva.en.md` as an example. 
 

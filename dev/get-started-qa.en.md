@@ -57,11 +57,3 @@ Once someone has [reported a bug](./report-bug.en.html), triage puts it in front
 {:.important}
 
 Testing repositories hold unready software. Enable them only when you are actively testing, and disable them again when you are done.
-
-## Related Topics
-
-- [How to Report a Bug](./report-bug.en.html)
-- [Bug Report Tool](./get-started-qa/bugreport-tool.en.html)
-- [Report Bugs Effectively](./get-started-qa/report-bugs-effectively.en.html)
-- [Release QA Checklist](./get-started-qa/release-qa.en.html)
-- [OpenMandriva Cooker](./cooker.en.html)

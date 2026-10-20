@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Managing Software
-nav_order: 20
+nav_order: 30
 parent: User Guide
 has_toc: true
 lang: en
@@ -43,12 +43,3 @@ OpenMandriva does not ship software from third-party sources that sit outside it
 - *AppImage* files are self-contained executables that need no installation.
 
 - Compiling software from source and installing binary packages from other sources both work, but they need care and are your responsibility.
-
-## Related Topics
-
-- [Using DNF](./using-dnf.en.html)
-- [Software Repository Selector](./repositories-tldr.en.html)
-- [DnfDrake Overview](./dnfdrake.en.html)
-- [Install Steam](./install-steam.en.html)
-- [List Packages in the ISO](./list-packages-iso.en.html)
-- [OpenMandriva Welcome](./om-welcome.en.html)

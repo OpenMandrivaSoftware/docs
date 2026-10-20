@@ -9,7 +9,7 @@ lang: en
 
 # OpenMandriva Welcome
 
-*OM Welcome* is the first thing you see on your desktop at each boot. It is not just a greetings screen---it is a configuration hub that introduces the distribution, its features, and its tools. You can disable it from starting automatically if you prefer.
+*OM Welcome* is the first thing you see on your desktop at each boot. It is not just a greeting screen---it is a configuration hub that introduces the distribution, its features, and its tools. You can disable it from starting automatically if you prefer.
 
 ## Welcome Screen
 

@@ -28,8 +28,3 @@ When booted into console or recovery mode, Wi-Fi may not work. Connect using the
 Windows stores the hardware clock in local time, but Linux expects UTC. This mismatch causes the clock to appear wrong after a dual-boot.
 
 - [Fix Incorrect Time in Dual Boot](./incorrect-time.en.html)
-
-## Related Topics
-
-- [Maintaining Your System](../maintaining/index.en.html)
-- [Post Installation Configuration](../post-installation/index.en.html)

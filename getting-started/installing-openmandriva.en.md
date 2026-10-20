@@ -67,3 +67,5 @@ Now all you have to do is sit back and watch the installation happen. OpenMandri
 OpenMandriva then boots on your system. Provide the password you set to log in, and the desktop appears. You're ready to go! 
 
 ![The OpenMandriva desktop appears. ](./images/installing-openmandriva-11.png) 
+
+Now that you've successfully installed OpenMandriva, you're ready to explore the system. Check out the [First Ten Tasks after Installing OpenMandriva](../user-guide/first-steps.en.html) to begin exploring your new operating system! 
