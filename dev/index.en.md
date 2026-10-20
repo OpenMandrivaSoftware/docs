@@ -2,36 +2,32 @@
 layout: default
 title: Developer Docs
 nav_order: 30
+card_columns: 3
 has_toc: true
 lang: en
+cards:
+  - title: "Build System"
+    description: "Learn about the ABF build system and how OpenMandriva packages software."
+    url: "/dev/build.en.html"
+  - title: "How to Build and Submit Packages"
+    description: "Write, build, and submit an RPM to the repositories."
+    url: "/dev/how-to-build-and-submit-packages.en.html"
+  - title: "OpenMandriva Cooker"
+    description: "The development branch---where all changes begin. Download snapshots and learn the workflow."
+    url: "/dev/cooker.en.html"
+  - title: "Contributing to OpenMandriva"
+    description: "Ways to help beyond the code---artwork, documentation, translation, and more."
+    url: "/dev/contribute.en.html"
+  - title: "How to Report a Bug"
+    description: "Write effective bug reports that get fixed quickly."
+    url: "/dev/report-bug.en.html"
+  - title: "Getting Started with QA"
+    description: "Test releases and help keep the project stable."
+    url: "/dev/get-started-qa.en.html"
 ---
+
 # Developer Docs
 
-OpenMandriva needs two kinds of work to exist: the code that ships in the repositories, and the tools, configuration, and artwork that make the distribution its own. Developers of both kinds contribute their skills here.
+OpenMandriva needs two kinds of work to exist: code that ships in the repositories, and the tools, configuration, and artwork that make the distribution its own. Explore the sections below to find where your skills fit.
 
-## Contribute code
-
-- [How to Build and Submit Packages](./how-to-build-and-submit-packages.en.html) — how to write, build, and submit an RPM.
-- [How to report a bug](./report-bug.en.html) — what a good bug report looks like.
-- [Getting started with QA](./get-started-qa.en.html) — test releases and keep the project stable.
-
-## Contribute other skills
-
-- [Contributing to OpenMandriva](./contribute.en.html) — ways to help beyond the code.
-
-## About Cooker
-
-Cooker is the development branch of OpenMandriva Lx. It reflects the current progress of work across every component. Cooker is a moving target, and it is unstable. Advanced users who like to experiment, and developers who need the latest software on a system, run Cooker. Download the snapshot ISO here:
-
-- x86_64: <https://abf.openmandriva.org/platforms/cooker/products/71>
-- znver1: <https://abf.openmandriva.org/platforms/cooker/products/69>
-
-Cooker is the build system. Developers make all their changes here, so it takes every kind of technical contribution: the packaging of thousands of programs, and the tools, configuration, and artwork that make the distribution its own. This is where you start. Read the [technical overview](./cooker.en.html) for more details.
-
-## How Cooker works
-
-All development happens in Cooker. From there, packages move through the [release plan](../community/releases/release-plan.html) (Cooker → Rolling → Release) before any change leaves the development branch. The team builds and tests packages in Cooker with [ABF](./build.html), OpenMandriva's build system, before testing lands in the stable release.
-
-{: .important }
-
-Cooker breaks. Do not use it as your only operating system.
+{% include section_cards.html %}
