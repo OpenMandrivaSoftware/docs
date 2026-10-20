@@ -23,7 +23,7 @@ cards:
     url: "/dev/report-bug.en.html"
   - title: "Getting Started with QA"
     description: "Test releases and help keep the project stable."
-    url: "/dev/get-started-qa.en.html"
+    url: "/dev/getting-started-with-qa.en.html"
 ---
 
 # Developer Docs

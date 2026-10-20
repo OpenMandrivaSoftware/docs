@@ -57,4 +57,4 @@ This agreement licenses the use of "Mandriva" only in conjunction with "Open"---
 ## Related Topics
 
 - [Official Naming Policy](./official-naming-policy.en.html)
-- [Release Codenames](./releases/codename.en.html)
+- [Release Codenames](./releases/release-codenames.en.html)

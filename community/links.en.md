@@ -51,4 +51,4 @@ A quick reference to the most useful resources for OpenMandriva users and contri
 ## Related Topics
 
 - [Chat with OpenMandriva](./chat.en.html)
-- [Setting Up a Mirror](./releases/mirror-policy.en.html)
+- [Setting Up a Mirror](./releases/setting-up-a-mirror.en.html)

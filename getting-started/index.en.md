@@ -14,13 +14,13 @@ cards:
     url: "/getting-started/downloading-openmandriva.en.html"
   - title: "Copying to a USB Stick"
     description: "Create a bootable USB installer."
-    url: "/getting-started/copying-to-usb.en.html"
+    url: "/getting-started/copying-openmandriva-to-a-usb-stick.en.html"
   - title: "Installing OpenMandriva"
     description: "Follow the guided installer to set up your system."
     url: "/getting-started/installing-openmandriva.en.html"
   - title: "Partitioning"
     description: "Learn about manual partitioning and encryption options."
-    url: "/getting-started/partitioning/index.en.html"
+    url: "/getting-started/installing-openmandriva/index.en.html"
 ---
 
 # Getting Started

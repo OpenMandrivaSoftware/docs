@@ -2,7 +2,7 @@
 layout: default
 title: Repository Policies
 nav_order: 70
-parent: OpenMandriva Community
+parent: Release Plan and Repositories
 has_toc: true
 lang: en
 ---
@@ -24,4 +24,4 @@ Release must stay usable at all times. Anything sent there must build in Cooker 
 
 ## End of the line
 
-Once a package reaches its update channel, the team marks it complete and moves on to the next. Do not spam maintainers asking when something will be released or updated — they work in their free time. If you would like to help, read how to [create, maintain, and update packages](../../dev/packaging.en.html) and [join the QA team](../../dev/get-started-qa.en.html).
+Once a package reaches its update channel, the team marks it complete and moves on to the next. Do not spam maintainers asking when something will be released or updated — they work in their free time. If you would like to help, read how to [create, maintain, and update packages](../../dev/how-to-build-and-submit-packages.en.html) and [join the QA team](../../dev/getting-started-with-qa.en.html).

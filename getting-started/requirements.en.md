@@ -42,4 +42,4 @@ OpenMandriva also runs on:
 
 ## Related Topics
 
-- [Installing OpenMandriva](../installing-openmandriva.en.html)
+- [Installing OpenMandriva](installing-openmandriva.en.html)

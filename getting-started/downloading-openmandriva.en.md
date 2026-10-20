@@ -39,6 +39,6 @@ Great! Now that you're ready, head over to the [release picking](https://openman
 
 ## Related Topics 
 
-[Copying OpenMandriva to a USB](./copying-to-usb.en.html)
+[Copying OpenMandriva to a USB](./copying-openmandriva-to-a-usb-stick.en.html)
 
 [Installing OpenMandriva](./installing-openmandriva.en.html)

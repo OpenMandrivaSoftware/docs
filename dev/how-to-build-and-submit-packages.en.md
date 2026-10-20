@@ -205,5 +205,5 @@ The [RPM packaging guide](https://rpm-packaging-guide.github.io/) and the [packa
 ## Related Topics
 
 - [How to report a bug](./report-bug.en.html) — what a good bug report looks like.
-- [Getting started with QA](./get-started-qa.en.html) — test releases and keep the project stable.
+- [Getting started with QA](./getting-started-with-qa.en.html) — test releases and keep the project stable.
 

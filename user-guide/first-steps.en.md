@@ -29,7 +29,7 @@ Reboot when prompted, especially if the kernel was updated.
 3. Use the *Applications* screen to install commonly used software by category.
 4. Use the *Repositories* screen to review and manage your software sources.
 
-For full details, see [OpenMandriva Welcome](software/om-welcome.en.html).
+For full details, see [OpenMandriva Welcome](managing-software/openmandriva-welcome.en.html).
 
 ## 3. Manage Software Repositories
 
@@ -128,9 +128,9 @@ Stay connected with other users and contributors.
 
 ## Related Topics
 
-- [Managing Software](software.en.html)
+- [Managing Software](managing-software.en.html)
 - [Desktop Environments](desktop.en.html)
 - [Network Configuration](network.en.html)
-- [Using DNF](software/using-dnf.en.html)
-- [Software Repository Selector](software/repositories-tldr.en.html)
-- [OpenMandriva Welcome](software/om-welcome.en.html)
+- [Using DNF](managing-software/index.en.html)
+- [Software Repository Selector](managing-software/software-repository-selector.en.html)
+- [OpenMandriva Welcome](managing-software/openmandriva-welcome.en.html)

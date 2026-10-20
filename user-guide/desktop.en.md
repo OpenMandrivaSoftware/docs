@@ -14,7 +14,7 @@ OpenMandriva includes a desktop environment by default. You begin with a complet
 
 ## Choose a Second One
 
-Add another environment without removing Plasma. Install it with the [package manager](../software.en.html), then select your choice at the login screen.
+Add another environment without removing Plasma. Install it with the [package manager](../managing-software.en.html), then select your choice at the login screen.
 
 - **GNOME** uses a single app bar at the top and fills the screen with windows.
 - **LXQt** is lightweight. It runs well on older computers when you want a desktop that stays out of the way.
@@ -29,5 +29,5 @@ Try a desktop in [live mode](../../getting-started/downloading-openmandriva.en.h
 
 ## Related Topics
 
-- [Managing Software](software.en.html)
+- [Managing Software](managing-software.en.html)
 - [Getting Started](../../getting-started/index.en.html)

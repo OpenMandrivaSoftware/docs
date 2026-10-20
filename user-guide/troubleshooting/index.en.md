@@ -1,30 +1,60 @@
 ---
 layout: default
-title: Troubleshooting
-nav_order: 70
-parent: User Guide
+title: Fix a Broken Bootloader
+nav_order: 10
+parent: Troubleshooting
 has_toc: true
 lang: en
 ---
 
-# Troubleshooting
+# Fix a Broken Bootloader
 
-When something goes wrong with your system, these guides help you diagnose and fix common problems.
+OpenMandriva uses GRUB2 as its bootloader. If GRUB stops working---for example, after a disk change or a failed update---you can repair it with a few commands.
 
-## Fix a Broken Bootloader
+## Regenerate the GRUB Configuration
 
-If GRUB does not appear at startup, reinstall or repair the GRUB2 bootloader.
+Probe your system and write a comprehensive GRUB menu:
 
-- [Fix a Broken Bootloader](./fix-bootloader.en.html)
+```bash
+$ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+```
 
-## Connect to the Internet in Recovery Mode
+In most cases, the simpler command works:
 
-When booted into console or recovery mode, Wi-Fi may not work. Connect using the command-line network tool.
+```bash
+$ sudo update-grub2
+```
 
-- [Connect to the Internet in Recovery Mode](./connect-console-recovery-mode.en.html)
+## Install GRUB to a Drive
 
-## Fix Incorrect Time in Dual Boot
+Install the bootloader to the drive you want to boot from, replacing `[drive]` with your drive name---for example `sda` or `nvme0n1`:
 
-Windows stores the hardware clock in local time, but Linux expects UTC. This mismatch causes the clock to appear wrong after a dual-boot.
+```bash
+$ sudo grub2-install /dev/[drive]
+```
 
-- [Fix Incorrect Time in Dual Boot](./incorrect-time.en.html)
+To identify your drives, list them with:
+
+```bash
+$ sudo fdisk -l
+```
+
+## Boot Without Your Hard Drive
+
+If you cannot access your system, boot from external tools:
+
+- [Super Grub2 Disk](https://sourceforge.net/p/supergrub2/)---try this first to boot without reinstalling.
+- [Rescatux](https://sourceforge.net/p/rescatux/)---a rescue distribution.
+
+## Additional Information
+
+The `grub2-mkconfig` and `update-grub2` commands use the `os-prober` utility to detect other operating systems. You can run it independently:
+
+```bash
+$ sudo os-prober
+```
+
+## Related Topics
+
+- [Connect to the Internet in Recovery Mode](./connect-to-the-internet-in-recovery-mode.en.html)
+- [Maintaining Your System](../maintaining-your-system.en.html)

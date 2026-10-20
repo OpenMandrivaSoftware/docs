@@ -5,7 +5,7 @@
     - name: "Downloading OpenMandriva"
       base_url: "/getting-started/downloading-openmandriva"
     - name: "Copying to a USB"
-      base_url: "/getting-started/copying-to-usb"
+      base_url: "/getting-started/copying-openmandriva-to-a-usb-stick"
     - name: "Installing OpenMandriva"
       base_url: "/getting-started/installing-openmandriva"
 
@@ -16,7 +16,7 @@
     - name: "Desktop Environments"
       base_url: "/user-guide/desktop"
     - name: "Software Management"
-      base_url: "/user-guide/software"
+      base_url: "/user-guide/managing-software"
     - name: "Network Configuration"
       base_url: "/user-guide/network"
 
@@ -27,7 +27,7 @@
     - name: "Build System"
       base_url: "/dev/build"
     - name: "Packaging Guidelines"
-      base_url: "/dev/packaging"
+      base_url: "/dev/how-to-build-and-submit-packages"
     - name: "Contribution Process"
       base_url: "/dev/contribute"
 
@@ -39,5 +39,5 @@
       url: "https://forums.openmandriva.org"
     - name: "IRC/Matrix"
       base_url: "/community/chat"
-    - name: "Mailing Lists"
-      base_url: "/community/mailing-lists"
+    - name: "Links"
+      base_url: "/community/links"

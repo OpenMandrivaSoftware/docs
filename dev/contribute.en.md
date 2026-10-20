@@ -42,4 +42,4 @@ OpenMandriva is a non-profit association. All donations support the project and 
 The pages below help you in specific areas:
 
 - [How to report a bug](./report-bug.en.html)---file a clear, actionable report.
-- [Getting started with QA](./get-started-qa.en.html)---test OpenMandriva and help keep it stable.
+- [Getting started with QA](./getting-started-with-qa.en.html)---test OpenMandriva and help keep it stable.

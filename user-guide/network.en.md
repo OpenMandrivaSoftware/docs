@@ -190,4 +190,4 @@ nmcli connection up br0
 ## Related Topics
 
 - [User Guide](index.en.html)
-- [Managing Software](software.en.html)
+- [Managing Software](managing-software.en.html)

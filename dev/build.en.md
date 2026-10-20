@@ -35,9 +35,9 @@ Build locally before submitting. It is faster to fix a local failure than a queu
 
 ## Building for Release
 
-A Cooker build is not enough. Packages move through the [release plan](../community/releases/release-plan.html)-—-Cooker, then the rolling release, then the stable release. QA verifies each package before it leaves Cooker. Do not edit the release repositories directly.
+A Cooker build is not enough. Packages move through the [release plan](../community/releases/index.en.html)-—-Cooker, then the rolling release, then the stable release. QA verifies each package before it leaves Cooker. Do not edit the release repositories directly.
 
 ## Related Topics
 
 - [How to report a bug](../report-bug.en.html)
-- [Getting started with QA](../get-started-qa.en.html)
+- [Getting started with QA](../getting-started-with-qa.en.html)
