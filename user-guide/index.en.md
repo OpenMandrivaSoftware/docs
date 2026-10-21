@@ -11,13 +11,13 @@ cards:
     url: "/user-guide/first-steps.en.html"
   - title: "Post Installation Configuration"
     description: "Set your user avatar, configure partitions, and set up printers."
-    url: "/user-guide/post-installation-configuration.en.html"
+    url: "/user-guide/post-installation-configuration/index.en.html"
   - title: "Managing Software"
     description: "Install, remove, and update software using DNF, DnfDrake, and Steam."
-    url: "/user-guide/managing-software.en.html"
+    url: "/user-guide/managing-software/index.en.html"
   - title: "Maintaining Your System"
     description: "Update your system, switch between Rock and ROME, and compile custom software."
-    url: "/user-guide/maintaining-your-system.en.html"
+    url: "/user-guide/maintaining-your-system/index.en.html"
   - title: "Desktop Environments"
     description: "Learn about available desktop environments and customize your system."
     url: "/user-guide/desktop.en.html"
@@ -26,7 +26,7 @@ cards:
     url: "/user-guide/network.en.html"
   - title: "Troubleshooting"
     description: "Fix broken bootloaders, connect in recovery mode, and resolve time issues."
-    url: "/user-guide/troubleshooting.en.html"
+    url: "/user-guide/troubleshooting/index.en.html"
 ---
 
 # User Guide
