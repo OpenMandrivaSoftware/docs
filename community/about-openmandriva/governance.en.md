@@ -14,7 +14,7 @@ The Council outlines the overall purpose, structure, and processes for OMA. The 
 
 ## The Council
 
-The Council tends to meet twice a month to discuss regular activities, and publishes an annual activity and financial report. The current council members are listed on the [About page](../about-openmandriva/index.en.html). The Chairman is Bernhard Rosenkränzer, the Secretary is Kate Lebedeff, and the Treasurer is Jean-Claude Vanier.
+The Council tends to meet twice a month to discuss regular activities, and publishes an annual activity and financial report. The current council members are listed on the [About page](../about-openmandriva.en.html). The Chairman is Bernhard Rosenkränzer, the Secretary is Kate Lebedeff, and the Treasurer is Jean-Claude Vanier.
 
 ## Technical Committee
 
