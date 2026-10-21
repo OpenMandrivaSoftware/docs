@@ -152,29 +152,29 @@ The sidebar shows 5 top-level sections:
 
 ## File Naming Convention
 
-Per the Jekyll Polyglot setup:
+Per the Jekyll Polyglot setup,
 - Extensionless `.md` files (no `.en` suffix) → render to `{slug}.html`
 - `.en.md` files → render to `{slug}.en.html`
 
-For sidebar links:
+For sidebar links,
 - Section indices like `getting-started/index.en.md` → `/getting-started/index.en.html`
 - Pages use relative links based on current file location
 
 ## Determining Correct URLs
 
-To determine the correct relative path for a link in a markdown file:
+To determine the correct relative path for a link in a markdown file,
 
 ### Step 1: Identify the Source File Location
-Note the full path of the file containing the link. For example:
+Note the full path of the file containing the link. For example,
 - `user-guide/desktop.en.md` → located in `/docs/user-guide/`
 
 ### Step 2: Identify the Target File Location
-Note the full path of the target file. For example:
+Note the full path of the target file. For example,
 - `getting-started/downloading-openmandriva.en.md` → located in `/docs/getting-started/`
 
 ### Step 3: Calculate the Relative Path
 
-To calculate the relative path from a source file to a target file:
+To calculate the relative path from a source file to a target file,
 
 **Example: From `user-guide/desktop.en.md` to `getting-started/downloading-openmandriva.en.md`**
 - From `user-guide/` directory, you need to go up one level to reach `docs/`

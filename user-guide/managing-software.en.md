@@ -20,7 +20,7 @@ These package managers provide graphical interfaces for searching, installing, a
 
 - *DnfDrake* adds system-level features Discover does not, such as system-wide upgrades and package history. It also opens the Software Repository Selector.
 
-- *OM Updater* is a small, fast system updater that sits in your tray, notifies you of updates, and installs them when you select it. It comes with an equally small and fast OM Installer for installing packages graphically. 
+- *OM Updater* is a small, fast system updater that sits in your tray, notifies you of updates, and installs them when you select it. It comes with an equally small and fast OM Installer for installing packages graphically. See [OpenMandriva Updater](./managing-software/openmandriva-updater.en.html).
 
 The only graphical package manager installed by default is Discover, because it ships with the KDE Plasma desktop. This means by default, you must remember to run updates periodically, because currently you can't update OpenMandriva with Discover. All three of the above package managers include a tray utility to notify you of updates. 
 
