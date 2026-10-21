@@ -2,7 +2,7 @@
 layout: default
 title: Restore Your Files After Installation
 nav_order: 20
-parent: Set Your User Avatar
+parent: Post Installation Configuration
 has_toc: true
 lang: en
 ---

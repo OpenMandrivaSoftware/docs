@@ -2,7 +2,7 @@
 layout: default
 title: Configure a Printer
 nav_order: 30
-parent: Set Your User Avatar
+parent: Post Installation Configuration
 has_toc: true
 lang: en
 ---

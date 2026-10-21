@@ -2,7 +2,7 @@
 layout: default
 title: Partitioning Schemas
 nav_order: 10
-parent: Partitioning
+parent: Installing OpenMandriva
 has_toc: true
 lang: en
 ---

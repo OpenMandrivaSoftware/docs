@@ -2,7 +2,7 @@
 layout: default
 title: Switch Update Channels
 nav_order: 20
-parent: Update Your System
+parent: Maintaining Your System
 has_toc: true
 lang: en
 ---

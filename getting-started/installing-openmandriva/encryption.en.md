@@ -2,7 +2,7 @@
 layout: default
 title: Disk Encryption
 nav_order: 20
-parent: Partitioning
+parent: Installing OpenMandriva
 has_toc: true
 lang: en
 ---

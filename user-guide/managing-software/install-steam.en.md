@@ -2,7 +2,7 @@
 layout: default
 title: Install Steam
 nav_order: 40
-parent: Using DNF
+parent: Managing Software
 has_toc: true
 lang: en
 ---

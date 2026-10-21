@@ -2,7 +2,7 @@
 layout: default
 title: Software Repository Selector
 nav_order: 20
-parent: Using DNF
+parent: Managing Software
 has_toc: true
 lang: en
 ---

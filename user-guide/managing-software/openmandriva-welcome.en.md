@@ -2,7 +2,7 @@
 layout: default
 title: OpenMandriva Welcome
 nav_order: 60
-parent: Using DNF
+parent: Managing Software
 has_toc: true
 lang: en
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: Release Life Cycle
 nav_order: 80
-parent: Release Plan and Repositories
+parent: Releases
 has_toc: true
 lang: en
 ---

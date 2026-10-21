@@ -2,7 +2,7 @@
 layout: default
 title: Connect to the Internet in Recovery Mode
 nav_order: 20
-parent: Fix a Broken Bootloader
+parent: Troubleshooting
 has_toc: true
 lang: en
 ---

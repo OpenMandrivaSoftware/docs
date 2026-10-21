@@ -2,7 +2,7 @@
 layout: default
 title: Release QA Checklist
 nav_order: 20
-parent: Bug Report Tool
+parent: Getting Started with QA
 has_toc: true
 lang: en
 ---

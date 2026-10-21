@@ -2,7 +2,7 @@
 layout: default
 title: Report Bugs Effectively
 nav_order: 30
-parent: Bug Report Tool
+parent: Getting Started with QA
 has_toc: true
 lang: en
 ---

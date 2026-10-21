@@ -2,7 +2,7 @@
 layout: default
 title: Release Codenames
 nav_order: 100
-parent: Release Plan and Repositories
+parent: Releases
 has_toc: true
 lang: en
 ---

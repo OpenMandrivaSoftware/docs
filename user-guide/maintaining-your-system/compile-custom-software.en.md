@@ -2,7 +2,7 @@
 layout: default
 title: Compile Custom Software
 nav_order: 40
-parent: Update Your System
+parent: Maintaining Your System
 has_toc: true
 lang: en
 ---

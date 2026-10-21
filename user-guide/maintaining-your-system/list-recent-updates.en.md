@@ -2,7 +2,7 @@
 layout: default
 title: List Recent Updates
 nav_order: 30
-parent: Update Your System
+parent: Maintaining Your System
 has_toc: true
 lang: en
 ---

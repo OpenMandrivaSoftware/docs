@@ -2,7 +2,7 @@
 layout: default
 title: Setting Up a Mirror
 nav_order: 90
-parent: Release Plan and Repositories
+parent: Releases
 has_toc: true
 lang: en
 ---

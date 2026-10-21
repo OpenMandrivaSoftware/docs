@@ -2,7 +2,7 @@
 layout: default
 title: Repository Policies
 nav_order: 70
-parent: Release Plan and Repositories
+parent: Releases
 has_toc: true
 lang: en
 ---

@@ -2,7 +2,7 @@
 layout: default
 title: List Packages in the ISO
 nav_order: 50
-parent: Using DNF
+parent: Managing Software
 has_toc: true
 lang: en
 ---

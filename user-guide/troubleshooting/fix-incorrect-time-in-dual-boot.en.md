@@ -2,7 +2,7 @@
 layout: default
 title: Fix Incorrect Time in Dual Boot
 nav_order: 30
-parent: Fix a Broken Bootloader
+parent: Troubleshooting
 has_toc: true
 lang: en
 ---

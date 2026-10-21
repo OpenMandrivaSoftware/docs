@@ -2,7 +2,7 @@
 layout: default
 title: Governance
 nav_order: 20
-parent: Bylaws
+parent: About OpenMandriva
 has_toc: true
 lang: en
 ---

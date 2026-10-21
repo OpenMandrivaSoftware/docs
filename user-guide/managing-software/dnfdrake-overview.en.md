@@ -2,7 +2,7 @@
 layout: default
 title: DnfDrake Overview
 nav_order: 30
-parent: Using DNF
+parent: Managing Software
 has_toc: true
 lang: en
 ---
