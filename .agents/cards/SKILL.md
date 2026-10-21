@@ -61,7 +61,7 @@ card_columns: 3
 cards:
   - title: "Managing Software"
     description: "Install, remove, and update software."
-    url: "/user-guide/software.en.html"
+    url: "/user-guide/managing-software.en.html"
   - title: "Troubleshooting"
     description: "Fix common problems."
     url: "/user-guide/troubleshooting/index.en.html"

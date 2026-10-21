@@ -57,38 +57,98 @@ has_toc: true
 ---
 ```
 
+## Parent Files and Child Directories
+
+Each section may contain **parent files**---regular markdown files (`*.en.md`)
+that act as landing pages for a group of related child pages. When a parent
+file has children, a **child directory** with the same name (minus `.en.md`)
+is created, containing an `index.en.md` as the first-born child.
+
+The parent file:
+- Has `card_columns:` and a `cards:` frontmatter list pointing to its children
+- Contains `{% include section_cards.html %}` in its body
+- Its `parent:` field points to the section index (e.g., `parent: User Guide`)
+
+The first-born child (`index.en.md` in the child directory):
+- Has `nav_order: 10` (lowest, making it first in navigation)
+- Its `parent:` field matches the **parent file's** title (e.g., `parent: Managing Software`)
+- All other children in the directory also have `parent:` set to the parent file's title
+
+### Parent File vs. Card URL Format
+
+- **Section landing page cards** point to the parent file: `/user-guide/managing-software.en.html`
+- **Parent file's own cards** point to child files: `/user-guide/managing-software/index.en.html`
+
+Card URLs in section index files (e.g., `user-guide/index.en.md`) should
+target the parent file (`.en.html`)---**not** the child directory's `index.en.html`.
+The parent file is the section landing page; the child `index.en.md` is just
+the first article.
+
 ## Navigation Structure
 
-The sidebar shows 4 top-level sections:
+The sidebar shows 5 top-level sections:
 
 1. **Home** - Link to index.en.html
 2. **Getting Started** - Expanded by default with sub-items
+   - System Requirements
    - Downloading OpenMandriva
    - Copying OpenMandriva to a USB Stick
-   - Installing OpenMandriva
+   - Installing OpenMandriva → (expandable)
+     - Partitioning
+     - Disk Encryption
+     - Partitioning Schemas
 3. **User Guide** - Expandable with nested content
-   - Software Management → (expandable)
+   - Maintaining Your System → (expandable)
+     - Update Your System
+     - Switch Update Channels
+     - List Recent Updates
+     - Compile Custom Software
+   - Managing Software → (expandable)
      - Using DNF
      - Software Repository Selector
+     - DnfDrake Overview
+     - List Packages in the ISO
+     - OpenMandriva Welcome
+     - Install Steam
+   - Post Installation Configuration → (expandable)
+     - Set Your User Avatar
+     - Restore Your Files After Installation
+     - Configure a Printer
+   - First Ten Tasks After Installation
    - Desktop Environments
    - Network Configuration
+   - Troubleshooting → (expandable)
+     - Fix a Broken Bootloader
+     - Connect to the Internet in Recovery Mode
+     - Fix Incorrect Time in Dual Boot
 4. **Developer Docs** - Expandable with technical content
    - Build System
-   - Create, maintain, and update packages
+   - How to Build and Submit Packages
+   - OpenMandriva Cooker
    - Contributing to OpenMandriva
    - How to Report a Bug
-   - Getting Started with QA
+   - Getting Started with QA → (expandable)
+     - Bug Report Tool
+     - Release QA Checklist
+     - Report Bugs Effectively
 5. **OpenMandriva Community** - Expandable with nested content
    - Chat with OpenMandriva
-   - Release Plan and Repositories
-   - Repository Policies
-   - Release Life Cycle
-   - Setting Up a Mirror
    - About OpenMandriva → (expandable)
+     - Bylaws
      - Governance
      - Statutes
-     - Bylaws
-   - Mailing Lists
+   - Artwork
+   - Donation
+   - Links
+   - Releases → (expandable)
+     - Release Plan and Repositories
+     - Repository Policies
+     - Release Life Cycle
+     - Setting Up a Mirror
+     - Release Codenames
+   - Official Naming Policy
+   - Trademark License
+   - Terms of Service
 
 ## File Naming Convention
 
@@ -133,10 +193,10 @@ Always use the `.en.html` extension for English pages, not `.md`.
 - Sibling directory: `./sibling/page.en.html`
 
 **Example: Linking to a sibling section**
-If you're in `user-guide/software/repositories-tldr.en.md` and want to link to `software.en.md` in the parent `user-guide/` directory:
-- Source: `user-guide/software/repositories-tldr.en.md`
-- Target: `user-guide/software.en.md`
-- Relative path: `../software.en.html` (go up from `software/` to `user-guide/`, then access `software.en.md`)
+If you're in `user-guide/managing-software/software-repository-selector.en.md` and want to link to `managing-software.en.md` in the parent `user-guide/` directory:
+- Source: `user-guide/managing-software/software-repository-selector.en.md`
+- Target: `user-guide/managing-software.en.md`
+- Relative path: `../managing-software.en.html` (go up from `managing-software/` to `user-guide/`, then access `managing-software.en.md`)
 
 ### Step 5: Verify the Link
 Before committing, verify the target file exists at the calculated path.
@@ -162,7 +222,7 @@ parent: OpenMandriva Community  # Matches exactly
 **Symptom**: Links lead to 404 errors
 **Fix**: 
 - Use `.en.html` extension for English pages
-- Use relative paths (e.g., `./packaging.en.html` not `./packaging.md`)
+- Use relative paths (e.g., `./how-to-build-and-submit-packages.en.html` not `./packaging.md`)
 - Check that target files exist before linking
 
 ### 4. Missing Pages for Home Cards
@@ -209,11 +269,13 @@ lang: en
 Content here.
 ```
 
-## Lessons Learned from Community Section Fix
+## Lessons Learned from Restructuring
 
-The community section required careful attention to parent references:
+The repository underwent a major restructuring applying the Getting Started pattern. Key lessons:
 
-1. **Section Index**: `community/index.en.md` has `title: OpenMandriva Community` and NO parent
-2. **Direct Children**: Files in `community/` (like `chat.en.md`, `mailing-lists.en.md`) need `parent: OpenMandriva Community`
-3. **Subdirectory Children**: Files in `community/about/` need `parent: About OpenMandriva` (matching the title)
-4. **Releases Files**: Were incorrectly using `parent: Release Engineering` (a non-existent title), needed `parent: OpenMandriva Community`
+1. **Section Indices**: `community/index.en.md`, `user-guide/index.en.md`, `dev/index.en.md`, `getting-started/index.en.md` have `title:` set to the section name and NO `parent` field (top-level sections)
+2. **Direct Children**: Files directly under a section (e.g., `user-guide/desktop.en.md`) need `parent:` set to the section index's title (e.g., `parent: User Guide`)
+3. **Parent Files**: Each parent file (e.g., `community/about-openmandriva.en.md`) has `parent:` set to the section index title (e.g., `parent: OpenMandriva Community`)
+4. **Subdirectory Children**: Files in child directories (e.g., `community/about-openmandriva/governance.en.md`) need `parent:` set to the **parent file's** title, NOT the first-born child's title
+5. **Card URLs**: Section landing page card URLs point to parent file URLs (`.en.html`), not child directory indexes (`/index.en.html`)
+6. **Mailing List Links**: The old mailing-lists page was replaced by the Links page in `home_cards.yml`
