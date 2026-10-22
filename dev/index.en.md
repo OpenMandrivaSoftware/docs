@@ -6,9 +6,9 @@ card_columns: 3
 has_toc: true
 lang: en
 cards:
-  - title: "Build System"
+  - title: "Build System Overview"
     description: "Learn about the ABF build system and how OpenMandriva packages software."
-    url: "/dev/build.en.html"
+    url: "/dev/build-system-overview.en.html"
   - title: "How to Build and Submit Packages"
     description: "Write, build, and submit an RPM to the repositories."
     url: "/dev/how-to-build-and-submit-packages.en.html"

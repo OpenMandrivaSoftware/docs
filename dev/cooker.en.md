@@ -33,5 +33,5 @@ Advanced users and developers who want to experiment with unstable software can 
 ## Related Topics
 
 - [Repository Policies](../community/releases/repository-policies.en.html)
-- [Build System](./build.en.html)
+- [Build System Overview](./build-system-overview.en.html)
 - [How to Build and Submit Packages](./how-to-build-and-submit-packages.en.html)
