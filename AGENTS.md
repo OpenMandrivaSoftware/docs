@@ -35,6 +35,35 @@ When asked to write or edit content, always load the technical writing skills yo
 
 This platform (Jekyll) and this theme (Just the Docs) generates a Table of Contents at the bottom of every file that has children. Therefore, do not generate Related Topics headings on these pages. Generate Related Topics only on leaf nodes (files that have no children in the navigation). 
 
+## Callouts
+
+This theme uses [Just the Docs callouts](https://just-the-docs.com/docs/ui-components/callouts/), which require kramdown **block IALs** (`{: .TYPE }`) — not Markdown blockquotes with bold labels (e.g., `> **Note**`). The available callout types are configured in `_config.yml`:
+
+| Type | Title | Use for |
+| --- | --- | --- |
+| `note` | Note | Supplementary information |
+| `warning` | Warning | Potentially harmful actions |
+| `important` | Important | Critical instructions |
+| `tip` | Tip | Helpful shortcuts or best practices |
+
+### Syntax
+
+Place the `{: .TYPE }` IAL **before** the content it styles. For a single paragraph:
+
+```
+{: .note }
+This is a note.
+```
+
+For multi-line content, combine with blockquote syntax:
+
+```
+{: .warning }
+> This is a warning.
+>
+> This is a second paragraph.
+```
+
 ## Package References
 
 Always verify DNF package names against the OpenMandriva package database at [pkgs.org](https://pkgs.org). Do not assume package names from other distributions (e.g., Fedora's `gstreamer1.0-codec-installer` does not exist in OpenMandriva). Search by distribution to confirm:

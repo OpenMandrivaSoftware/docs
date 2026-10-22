@@ -1,7 +1,7 @@
 ---
 layout: default
 title: OpenMandriva Updater
-nav_order: 70
+nav_order: 50
 parent: Managing Software
 has_toc: true
 lang: en
