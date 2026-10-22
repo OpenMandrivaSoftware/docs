@@ -23,7 +23,7 @@ cards:
     url: "/user-guide/desktop-environments.en.html"
   - title: "Network Configuration"
     description: "Configure wired and wireless network connections."
-    url: "/user-guide/network.en.html"
+    url: "/user-guide/network-configuration.en.html"
   - title: "Troubleshooting"
     description: "Fix broken bootloaders, connect in recovery mode, and resolve time issues."
     url: "/user-guide/troubleshooting.en.html"

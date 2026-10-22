@@ -8,36 +8,36 @@ lang: en
 ---
 # Network Configuration
 
-OpenMandriva Lx provides tools to configure and manage network connections. This guide covers graphical and command-line methods.
+You can configure and manage network connections on OpenMandriva Lx using graphical and command-line methods.
 
 ## Graphical Network Configuration
 
-Use these methods to set up and manage network connections through a graphical interface.
+Set up and manage network connections through a graphical interface.
 
 ### NetworkManager
 
-OpenMandriva uses NetworkManager to manage connections. Click the network icon in the system tray to access it.
+You manage network connections using *NetworkManager*. Click the network icon in the system tray to open network settings.
 
-1. Click the network icon in the system tray
-1. Select *Edit Connections...*
-1. Choose the connection to configure, or click *+* to create a new one
-1. Configure settings (IPv4, IPv6, DNS, etc.)
-1. Click *Save*
+1. Click the network icon in the system tray.
+1. Click the Gear icon, labeled *Configure Network Connections...*.
+1. Choose the connection to configure, or click *+* to create a new one.
+1. Configure settings in the various tabs: General, Wi-Fi, IPv4, IPv6, and DNS.
+1. Click *Apply* when finished.
 
 ### Plasma Network Management
 
-For KDE Plasma users, access additional network settings through
+In KDE Plasma, you can access additional network settings:
 
-- **System Settings** → **Network** → **Connections**
-- Or run `kcmshell5 kcm_networkmanager` from the terminal
+- *System Settings* → *Network* → *Connections*
+- Or run `kcmshell6 kcm_networkmanager` from the terminal.
 
 ## Command-Line Network Configuration
 
-Use these tools to manage connections from the terminal.
+Manage connections from the terminal using these tools.
 
 ### Using `nmcli`
 
-`nmcli` (NetworkManager Command Line Interface) manages connections from the terminal.
+Use `nmcli` (NetworkManager command-line interface) to manage connections from the terminal.
 
 ```bash
 # List available connections
@@ -50,24 +50,24 @@ nmcli device status
 nmcli connection add type ethernet ifname eth0
 
 # Modify a connection
-nmcli connection modify "Connection Name" ipv4.addresses "192.168.1.100/24"
+nmcli connection modify "[Connection Name]" ipv4.addresses "192.168.1.100/24"
 
 # Activate a connection
-nmcli connection up "Connection Name"
+nmcli connection up "[Connection Name]"
 
 # Deactivate a connection
-nmcli connection down "Connection Name"
+nmcli connection down "[Connection Name]"
 ```
 
 ### Using `nmtui`
 
-`nmtui` (Ninja Text User Interface) provides a text-based interface for NetworkManager:
+`nmtui` (NetworkManager Text User Interface) is a text-based interface for managing network connections.
 
 ```bash
 nmtui
 ```
 
-This opens an interactive menu for configuring
+When you run `nmtui`, an interactive menu opens where you can configure
 
 - Editing connections
 - Activating and deactivating connections
@@ -75,7 +75,7 @@ This opens an interactive menu for configuring
 
 ### Using the `ip` Command
 
-For basic network configuration, use the `ip` command:
+For basic network configuration, use the `ip` command from the terminal:
 
 ```bash
 # Show network interfaces
@@ -97,10 +97,10 @@ Configure wireless connections using these methods.
 
 ### Graphical Method
 
-1. Click the network icon in the system tray
-1. Select a Wi-Fi network from the list
-1. Enter the password when prompted
-1. Check *Remember this network* if desired
+1. Click the network icon in the system tray.
+1. Select a Wi-Fi network from the list.
+1. Enter the password when prompted.
+1. Check *Remember this network* if desired.
 
 ### Command-Line Method
 
@@ -109,7 +109,7 @@ Configure wireless connections using these methods.
 nmcli device wifi list
 
 # Connect to a Wi-Fi network
-nmcli device wifi connect "SSID" password "password"
+nmcli device wifi connect "[SSID]" password "[password]"
 
 # Scan for networks
 nmcli device wifi rescan
@@ -139,15 +139,15 @@ cat /etc/resolv.conf
 
 ### Common Issues
 
-**No network connection after boot:**
+**No network connection after boot**
 - Check if the network interface is enabled: `nmcli device status`
 - Restart NetworkManager: `systemctl restart NetworkManager`
 
-**Can't resolve domain names:**
+**Can't resolve domain names**
 - Check DNS settings in `/etc/resolv.conf`
 - Use `dnssec-trigger` if DNS issues persist
 
-**Wi-Fi not showing available networks:**
+**Wi-Fi not showing available networks**
 - Bring up the interface: `ip link set wlan0 up`
 - Check if the wireless adapter is recognized: `lspci | grep -i wireless`
 
@@ -157,7 +157,7 @@ Configure complex networking setups with these tools.
 
 ### Bonding (Link Aggregation)
 
-Create bonded interfaces for increased throughput and redundancy:
+Bonding aggregates multiple network interfaces into a single logical connection for increased throughput and redundancy:
 
 ```bash
 nmcli connection add type bond ifname bond0 mode active-backup
@@ -168,7 +168,7 @@ nmcli connection up bond0
 
 ### VLAN Configuration
 
-Create VLAN interfaces to segment network traffic on specific tags:
+VLAN tagging segments network traffic on specific tags:
 
 ```bash
 nmcli connection add type vlan con-name vlan10 dev eth0 id 10
@@ -178,7 +178,7 @@ nmcli connection up vlan10
 
 ### Bridge Configuration
 
-Create a bridge for virtualization or container networking:
+A bridge connects multiple network interface segments, useful for virtualization and container networking:
 
 ```bash
 nmcli connection add type bridge ifname br0

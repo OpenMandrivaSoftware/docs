@@ -41,6 +41,8 @@ Files should be named the same as their titles, using hyphen case. For example, 
 
 If you find files names that do not match their titles, offer to rename them, and then scan the rest of the repository for links to the old file name (which will have a `.en.html` extension, as Jekyll converts the Markdown to HTML when publishing) and fix them. 
 
+The exception to this rule is when you have a hierarchy. A parent file's children go in a directory named for that parent file. For example, a file called `installing-openmandriva.en.md` that has children should have a corresponding subdirectory next to the file called `installing-openmandriva`. The "first-born child," or the first child in the navigation becomes `index.en.md` in this directory, and the rest of the children are named according to their titles like normal. 
+
 ## Callouts
 
 This theme uses [Just the Docs callouts](https://just-the-docs.com/docs/ui-components/callouts/), which require kramdown **block IALs** (`{: .TYPE }`) — not Markdown blockquotes with bold labels (e.g., `> **Note**`). The available callout types are configured in `_config.yml`:
