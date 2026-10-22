@@ -9,30 +9,33 @@ lang: en
 
 # Switch Update Channels
 
-OpenMandriva offers two main release branches: *Rock* (stable) and *ROME* (rolling). If you want to switch from Rock to ROME---or vice versa---update your repository channel and run a system upgrade.
+OpenMandriva offers two main release branches: *Rock* (stable) and *ROME* (rolling). Switch from Rock to ROME, or vice versa, by updating your repository channel and running a system upgrade.
 
-> **Note:** As a ROME user, you should be comfortable with the command line and familiar with basic DNF commands. Read [Release Plan and Repositories](../../community/releases/index.en.html) before switching.
 {: .note }
+
+ROME requires comfort with the command line and basic *DNF* commands. Read [Release Plan and Repositories](../../community/releases/index.en.html) before switching.
 
 ## Switch from Rock to ROME
 
+Update your repository channels from the stable *Rock* branch to the rolling *ROME* branch.
+
 1. Open *Software Repository Selector* (`om-repo-picker`) from the application menu, or open it from OM Welcome.
 
-   ![Repository Selector](./images/switch-update-channels-01.jpg)
+   ![The Software Repository Selector window opens with update channel options.](./images/switch-update-channels-01.jpg)
 
 1. In OM Welcome, select the OpenMandriva repo-picker.
 
-   ![OM Welcome repo picker](./images/switch-update-channels-02.jpg)
+   ![OM Welcome highlights the repo-picker option for launching the selector.](./images/switch-update-channels-02.jpg)
 
 1. Navigate to the *Update channel* section.
 
-   ![Update channel section](./images/switch-update-channels-03.jpg)
+   ![The Update channel section displays available channel options.](./images/switch-update-channels-03.jpg)
 
 1. Select *Rolling* from the dropdown menu, confirm with *OK*, and enter your root password when prompted.
 
-   ![Select Rolling](./images/switch-update-channels-04.jpg)
+   ![The dropdown menu presents Rock and Rolling as update channel choices.](./images/switch-update-channels-04.jpg)
 
-   This changes your repositories from Rock to Rolling. The window may disappear briefly---wait for the process to finish.
+   This changes your repositories from Rock to Rolling. The window may disappear briefly; wait for the process to finish.
 
 1. Run a system upgrade to apply the changes:
 
@@ -43,9 +46,9 @@ OpenMandriva offers two main release branches: *Rock* (stable) and *ROME* (rolli
 
 ## Switch from ROME to Rock
 
-To go back to Rock, you must reinstall the distribution. Back up your data first, then install the latest Rock ISO.
+Reverting to Rock requires a fresh installation. Back up your data first, then install the latest Rock ISO.
 
 ## Related Topics
 
-- [Managing Software](../managing-software.en.html)
+- [Maintaining Your System](../maintaining-your-system.en.html)
 - [Update Your System](./index.en.html)

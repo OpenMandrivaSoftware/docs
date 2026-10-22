@@ -9,17 +9,17 @@ lang: en
 
 # List Recent Updates
 
-When troubleshooting a malfunctioning system, it helps to know which packages were recently installed or updated. This guide shows you how to generate a list of packages sorted by installation date.
+When troubleshooting a malfunctioning system, identify which packages were recently installed or updated. Generate a list of packages sorted by installation date.
 
 ## Generate a Complete List
 
-Run the main command to see all installed packages sorted by date, most recent first:
+View all installed packages sorted by date, most recent first:
 
 ```bash
 rpm -qa --last
 ```
 
-This outputs a list like:
+Here is a sample of the output:
 
 ```
 korganizer-17.12.2-1-omv2015.0.x86_64         Thu 15 Mar 2018 05:27:48 PM CET
@@ -27,18 +27,19 @@ incidenceeditor-17.12.2-1-omv2015.0.x86_64    Thu 15 Mar 2018 05:27:48 PM CET
 spectacle-17.12.2-1-omv2015.0.x86_64          Thu 15 Mar 2018 05:27:45 PM CET
 ```
 
-> **Note:** The list can be very long and some rows may scroll off screen. Save the output to a text file for easier reading.
 {: .note }
+
+The list can be lengthy, and some rows may scroll off screen. Save the output to a text file for easier reading.
 
 ## Save the List to a File
 
-To save the list to a text file in your home directory:
+Save the list to a text file in your home directory:
 
 ```bash
 rpm -qa --last > rpmlast.txt
 ```
 
-Use a descriptive filename---including a date---to avoid overwriting previous lists:
+Include a date in the filename to avoid overwriting previous lists:
 
 ```bash
 rpm -qa --last > rpmlast_20180315.txt
@@ -46,7 +47,7 @@ rpm -qa --last > rpmlast_20180315.txt
 
 ## Export to CSV Format
 
-To import the list into a spreadsheet such as *LibreOffice Calc*, save as CSV:
+Save the list as CSV for import into a spreadsheet such as *LibreOffice Calc*:
 
 ```bash
 rpm -qa --last > rpmlast_20180315.csv
@@ -54,13 +55,13 @@ rpm -qa --last > rpmlast_20180315.csv
 
 ## Filter by Date
 
-Narrow the list by piping through `grep`. For example, to see only March updates:
+Narrow the list by piping through `grep`. See only March updates:
 
 ```bash
 rpm -qa --last | grep Mar
 ```
 
-Or to see packages updated on a specific day:
+See packages updated on a specific day:
 
 ```bash
 rpm -qa --last | grep "Thu 15 Mar"

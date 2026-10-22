@@ -9,28 +9,31 @@ lang: en
 
 # Connect to the Internet in Recovery Mode
 
-Sometimes you need to boot into console or recovery mode---for example, to perform maintenance or repair. In these modes, Wi-Fi may not work automatically. This guide shows you how to connect using the command line.
+Sometimes you must boot into console or recovery mode for routine maintenance or system repair. In these modes, Wi-Fi may not work automatically; connect using the command line.
 
-> **Note:** This guide assumes your internet was working before something went wrong. It will not help if networking was never configured.
 {: .note }
+
+Your internet must have worked before something went wrong. If networking was never configured, these commands will not help.
 
 ## Boot Into Console or Recovery Mode
 
-1. At the GRUB boot menu, press <kbd>E</kbd> to edit the boot entry.
+At the GRUB menu, change the boot target to access a text console or recovery environment:
 
-   ![Boot advanced options](./images/connect-to-the-internet-in-recovery-mode-01.jpg)
+1. At the GRUB boot menu, press `E` to edit the boot entry.
 
-1. Find the line starting with `linux` and add a `3` to the end to boot into console mode.
+   ![The GRUB boot menu shows the cursor on the boot entry with the E key highlighted.](./images/connect-to-the-internet-in-recovery-mode-01.jpg)
 
-   ![Console mode boot](./images/connect-to-the-internet-in-recovery-mode-02.jpg)
+1. Find the line starting with `linux` and append `3` to boot into console mode.
+
+   ![The boot entry editor shows the linux line with a 3 being appended.](./images/connect-to-the-internet-in-recovery-mode-02.jpg)
 
 1. Alternatively, select *Advanced options* and then *Recovery mode*.
 
-   ![Recovery mode boot](./images/connect-to-the-internet-in-recovery-mode-03.jpg)
+   ![The Advanced options menu shows Recovery mode as a selectable entry.](./images/connect-to-the-internet-in-recovery-mode-03.jpg)
 
 ## Connect via Wi-Fi
 
-Use the `nmcli` command to manage network connections from the command line.
+Use the `nmcli` command to manage network connections when the graphical interface is unavailable.
 
 1. List available network devices:
 
@@ -38,7 +41,7 @@ Use the `nmcli` command to manage network connections from the command line.
    $ nmcli dev status
    ```
 
-   This shows network devices such as `wifi`, `wifi-p2p`, and `ethernet`. Identify your Wi-Fi device name---for example, `wlp4s0`.
+   This shows network devices such as `wifi`, `wifi-p2p`, and `ethernet`. Identify your Wi-Fi device name, for example `wlp4s0`.
 
 1. Connect to a Wi-Fi network:
 
@@ -64,7 +67,7 @@ If you use an ethernet cable, the connection usually activates automatically:
 $ nmcli dev status
 ```
 
-If your ethernet device---for example `elp4s0`---shows as disconnected, connect it:
+If your ethernet device, such as `elp4s0`, shows as disconnected, connect it:
 
 ```bash
 $ nmcli dev con elp4s0

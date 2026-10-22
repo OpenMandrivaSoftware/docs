@@ -9,11 +9,11 @@ lang: en
 
 # Fix a Broken Bootloader
 
-OpenMandriva uses GRUB2 as its bootloader. If GRUB stops working---for example, after a disk change or a failed update---you can repair it with a few commands.
+OpenMandriva uses GRUB2 as its bootloader. If GRUB stops working---for example, after a disk change or a failed update---repair it with a few commands.
 
 ## Regenerate the GRUB Configuration
 
-Probe your system and write a comprehensive GRUB menu:
+Refresh the boot menu after a system change or failed update to detect installed operating systems:
 
 ```bash
 $ sudo grub2-mkconfig -o /boot/grub2/grub.cfg
@@ -27,13 +27,13 @@ $ sudo update-grub2
 
 ## Install GRUB to a Drive
 
-Install the bootloader to the drive you want to boot from, replacing `[drive]` with your drive name---for example `sda` or `nvme0n1`:
+Write the bootloader to the drive you want to boot from---typically needed when the bootloader is damaged, missing, or moved to a different drive:
 
 ```bash
 $ sudo grub2-install /dev/[drive]
 ```
 
-To identify your drives, list them with:
+Replace `[drive]` with your drive name---for example `sda` or `nvme0n1`. List your drives to identify the correct drive name:
 
 ```bash
 $ sudo fdisk -l
@@ -41,14 +41,15 @@ $ sudo fdisk -l
 
 ## Boot Without Your Hard Drive
 
-If you cannot access your system, boot from external tools:
+If you cannot access your system, boot from an external rescue tool:
 
-- [Super Grub2 Disk](https://sourceforge.net/p/supergrub2/)---try this first to boot without reinstalling.
-- [Rescatux](https://sourceforge.net/p/rescatux/)---a rescue distribution.
+- [SystemRescue](https://www.system-rescue.org/)---a comprehensive, actively maintained toolkit with GRUB, filesystem, and partition repair utilities.
+- [Boot-Repair-Disk](https://sourceforge.net/projects/boot-repair-cd/)---focuses on automated boot repair with a recommended repair option.
+- [Super Grub2 Disk](https://www.supergrubdisk.org/)---detects and boots operating systems without modifying your system.
 
 ## Additional Information
 
-The `grub2-mkconfig` and `update-grub2` commands use the `os-prober` utility to detect other operating systems. You can run it independently:
+The `grub2-mkconfig` and `update-grub2` commands use the `os-prober` utility to detect other operating systems. Run it independently to verify detected systems:
 
 ```bash
 $ sudo os-prober

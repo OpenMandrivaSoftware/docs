@@ -13,30 +13,30 @@ If you dual-boot OpenMandriva with Windows and the system clock shows the wrong 
 
 ## Diagnose the Problem
 
-Check your current time configuration:
+Check your time configuration to determine whether the hardware clock is set to local time or UTC:
 
 ```bash
 $ timedatectl
 ```
 
-Look at the last line of the output:
+Inspect the last line of the output:
 
-- If `RTC in local TZ: yes`---your clock is set correctly. The problem is elsewhere.
-- If `RTC in local TZ: no`---this is the most common cause. Fix it with the steps below.
+- If `RTC in local TZ: yes`, your clock is set correctly. The problem is elsewhere.
+- If `RTC in local TZ: no`, this is the most common cause. Set the clock to local time.
 
 ## Set the Clock to Local Time
 
-Tell Linux to use local time for the hardware clock:
+Set the hardware clock to local time to match Windows:
 
 ```bash
 $ sudo timedatectl set-local-rtc 1 --adjust-system-clock
 ```
 
-You will be asked for your root password.
+The command prompts for your root password.
 
 ## Verify the Fix
 
-Run the command again to confirm:
+Run `timedatectl` again to confirm the change:
 
 ```bash
 $ timedatectl
@@ -44,13 +44,15 @@ $ timedatectl
 
 The last line should now show `RTC in local TZ: yes`.
 
-> **Warning:** A warning about the system being configured to read the RTC in local time is expected. It will appear every time you run `timedatectl`. You can safely ignore it.
 {: .warning }
+
+A warning about the system being configured to read the RTC in local time is expected and appears every time you run `timedatectl`. You can safely ignore it.
 
 ## Definitions
 
-- **RTC**---Real Time Clock, also called the hardware clock or `hwclock`.
-- **TZ**---Time Zone.
+**RTC**: Real Time Clock, also called the hardware clock or `hwclock`.
+
+**TZ**: Time Zone.
 
 ## Related Topics
 

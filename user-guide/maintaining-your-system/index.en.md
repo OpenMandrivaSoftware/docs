@@ -9,9 +9,11 @@ lang: en
 
 # Update Your System
 
-OpenMandriva's package manager (*DNF*) handles all system updates. Unlike some distributions, you should **not** use *Discover* for system upgrades---use one of the methods below instead.
+*DNF* manages all system updates on OpenMandriva. Don't use *Discover* for system upgrades; use one of the methods below instead.
 
 ## Update from the Command Line
+
+Use the command line when you need full control over the update process or when no graphical environment is available.
 
 1. Open *Konsole* and refresh the package lists:
 
@@ -27,23 +29,31 @@ OpenMandriva's package manager (*DNF*) handles all system updates. Unlike some d
 
 ## Update Using the Graphical Menu
 
-Alternatively, you can update using a graphical tool:
+Check for and install updates through the desktop's graphical update menu.
 
-![Update menu](./images/index-01.png)
+![The graphical update menu shows available system updates.](./images/index-01.png)
 
 ## Update Using Task Manager
 
-Or use the task manager interface:
+Monitor and manage background update tasks through the Task Manager.
 
-![Task manager update](./images/index-02.jpg)
+![The Task Manager window displays running update tasks.](./images/index-02.jpg)
 
 ## Update Using DnfDrake
 
-Or use *DnfDrake*---see [DnfDrake Overview](../managing-software/dnfdrake-overview.en.html) for details:
+Use *DnfDrake* for a graphical interface to *DNF*. See [DnfDrake Overview](../managing-software/dnfdrake-overview.en.html) for details.
 
-![DnfDrake update](./images/index-03.png)
+![DnfDrake displays available updates for review.](./images/index-03.png)
+
+## Update Using the OpenMandriva Updater
+
+Use the *OpenMandriva Updater* for automatic background checks and desktop notifications. See [OpenMandriva Updater](../managing-software/openmandriva-updater.en.html) for details.
+
+![The OpenMandriva Updater window shows pending updates.](./images/index-04.png)
 
 ## Related Topics
 
 - [Maintaining Your System](../maintaining-your-system.en.html)
+- [DnfDrake Overview](../managing-software/dnfdrake-overview.en.html)
+- [OpenMandriva Updater](../managing-software/openmandriva-updater.en.html)
 - [Switch Update Channels](./switch-update-channels.en.html)
