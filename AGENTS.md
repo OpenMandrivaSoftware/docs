@@ -35,6 +35,12 @@ When asked to write or edit content, always load the technical writing skills yo
 
 This platform (Jekyll) and this theme (Just the Docs) generates a Table of Contents at the bottom of every file that has children. Therefore, do not generate Related Topics headings on these pages. Generate Related Topics only on leaf nodes (files that have no children in the navigation). 
 
+## File Naming Conventions
+
+Files should be named the same as their titles, using hyphen case. For example, a Markdown with the title "Downloading OpenMandriva" should be in a file called `downloading-openmandriva.en.md`. Similarly, a file titled "Copying OpenMandriva to a USB Stick" should have the file name `copying-openmandriva-to-a-usb-stick.en.md`. 
+
+If you find files names that do not match their titles, offer to rename them, and then scan the rest of the repository for links to the old file name (which will have a `.en.html` extension, as Jekyll converts the Markdown to HTML when publishing) and fix them. 
+
 ## Callouts
 
 This theme uses [Just the Docs callouts](https://just-the-docs.com/docs/ui-components/callouts/), which require kramdown **block IALs** (`{: .TYPE }`) — not Markdown blockquotes with bold labels (e.g., `> **Note**`). The available callout types are configured in `_config.yml`:

@@ -129,7 +129,7 @@ Stay connected with other users and contributors.
 ## Related Topics
 
 - [Managing Software](managing-software.en.html)
-- [Desktop Environments](desktop.en.html)
+- [Desktop Environments](desktop-environments.en.html)
 - [Network Configuration](network.en.html)
 - [Using DNF](managing-software/index.en.html)
 - [Software Repository Selector](managing-software/software-repository-selector.en.html)

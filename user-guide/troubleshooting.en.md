@@ -3,28 +3,23 @@ layout: default
 title: Troubleshooting
 nav_order: 70
 parent: User Guide
+card_columns: 3
 has_toc: true
 lang: en
+cards:
+  - title: "Fix a Broken Bootloader"
+    description: "Reinstall or repair the GRUB2 bootloader if it does not appear at startup."
+    url: "/user-guide/troubleshooting/index.en.html"
+  - title: "Connect to the Internet in Recovery Mode"
+    description: "Connect to Wi-Fi from the command line when booted into recovery mode."
+    url: "/user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode.en.html"
+  - title: "Fix Incorrect Time in Dual Boot"
+    description: "Fix clock time differences caused by dual-boot with Windows."
+    url: "/user-guide/troubleshooting/fix-incorrect-time-in-dual-boot.en.html"
 ---
 
 # Troubleshooting
 
 When something goes wrong with your system, these guides help you diagnose and fix common problems.
 
-## Fix a Broken Bootloader
-
-If GRUB does not appear at startup, reinstall or repair the GRUB2 bootloader.
-
-- [Fix a Broken Bootloader](./troubleshooting/index.en.html)
-
-## Connect to the Internet in Recovery Mode
-
-When booted into console or recovery mode, Wi-Fi may not work. Connect using the command-line network tool.
-
-- [Connect to the Internet in Recovery Mode](./troubleshooting/connect-to-the-internet-in-recovery-mode.en.html)
-
-## Fix Incorrect Time in Dual Boot
-
-Windows stores the hardware clock in local time, but Linux expects UTC. This mismatch causes the clock to appear wrong after a dual-boot.
-
-- [Fix Incorrect Time in Dual Boot](./troubleshooting/fix-incorrect-time-in-dual-boot.en.html)
+{% include section_cards.html %}
