@@ -7,7 +7,7 @@ has_toc: true
 lang: en
 cards:
   - title: "Using Cooker"
-    description: "Learn about Cooker, the unstable development branch where all packages begin."
+    description: "Learn about Cooker, the development branch where all packages begin."
     url: "/dev/using-cooker.en.html"
   - title: "Preparing Your System"
     description: "Set up Virt Manager, create a Cooker VM, and install packaging tools."
@@ -23,10 +23,10 @@ cards:
     url: "/dev/maintaining-packages.en.html"
   - title: "Contributing to OpenMandriva"
     description: "Ways to help beyond the code---artwork, documentation, translation, and more."
-    url: "/dev/contribute.en.html"
+    url: "/dev/contributing-to-openmandriva.en.html"
   - title: "How to Report a Bug"
     description: "Write effective bug reports that get fixed quickly."
-    url: "/dev/report-bug.en.html"
+    url: "/dev/how-to-report-a-bug.en.html"
   - title: "Getting Started with QA"
     description: "Test releases and help keep the project stable."
     url: "/dev/getting-started-with-qa.en.html"

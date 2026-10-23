@@ -42,5 +42,5 @@ After collecting the information, the tool creates a file named `omdv-bug-report
 ## Related Topics
 
 - [Getting Started with QA](../getting-started-with-qa.en.html)
-- [How to Report a Bug](../report-bug.en.html)
+- [How to Report a Bug](../how-to-report-a-bug.en.html)
 - [How to Report Bugs Effectively](./report-bugs-effectively.en.html)

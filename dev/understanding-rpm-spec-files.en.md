@@ -8,7 +8,7 @@ lang: en
 ---
 # Understanding RPM Spec Files
 
-An RPM package is defined by a *specification file*---a `.spec` file that describes how to build a piece of software. Spec files range from simple to complex depending on what you are building. The RPM packaging guide and Red Hat's packaging blog cover the format in depth:
+An RPM package is defined by a *specification file* (`.spec`) that describes how to build a piece of software. Spec files range from simple to complex depending on what you are building. The RPM packaging guide and Red Hat's packaging blog cover the format in depth:
 
 - [RPM Packaging Guide](https://rpm-packaging-guide.github.io)
 - [Create your first RPM](https://www.redhat.com/en/blog/create-rpm-package)
@@ -17,9 +17,9 @@ An RPM package is defined by a *specification file*---a `.spec` file that descri
 
 Use the appropriate `v*` tool from `packaging-tools` to generate a template for your package type. You can find the available tools in [Installing Packaging Tools](./preparing-your-system/packaging-tools.en.html).
 
-As you learn to write spec files, start with an existing `.spec` file from another RPM-based distribution. Because OpenMandriva is its own distribution and not descended from any others, you will likely need to modify the template to get it working.
+As you learn to write spec files, start with an existing `.spec` file from another RPM-based distribution. Because OpenMandriva is its own distribution and not descended from any others, the `spec` file must be modified to work.
 
-When you run a `v*` tool, the `.spec` file is created in `~/abf/[package-name]`. Work from that directory throughout the build process.
+When you run a `v*` tool, the tool creates the `.spec` file in `~/abf/[package-name]`. Work from that directory throughout the build process.
 
 ## What a Spec File Contains
 
@@ -39,9 +39,9 @@ BuildSystem: autotools
 A longer description of what the package does.
 ```
 
-The **top fields** describe the package: name, version, release, summary, license, and source files.
+The top fields describe the package: `Name`, `Version`, `Release`, `Summary`, `License`, and source files.
 
-The **sections** tell the build system what to do during each phase:
+The sections tell the build system what to do during each phase:
 
 `%prep`: unpacks and prepares the source code.
 

@@ -84,9 +84,9 @@ The default storage pool points to `/var/lib/libvirt/images`, which is not a goo
    sudo systemctl enable --now libvirtd.service
    ```
 
-2. Right-click *QEMU/KVM* and select *Details*. 
+1. Right-click *QEMU/KVM* and select *Details*. 
 
-3. Click the *Storage* tab on the Connection Details dialog box. 
+1. Click the *Storage* tab on the Connection Details dialog box. 
 
    This opens the storage volume manager, where you create your storage pools for the first time. You only do this once, and then you can use them when you create VMs. 
 
@@ -97,13 +97,13 @@ The default storage pool points to `/var/lib/libvirt/images`, which is not a goo
    - One for downloaded ISOs, for example, `/home/[your-user]/Downloads/Linux`.
    - One for VM disk images, for example, `/home/[your-user]/VMs`.
 
-6. Click the *+* button in the bottom-left corner to create a new storage pool.
+1. Click the *+* button in the bottom-left corner to create a new storage pool.
 
-7. In the dialog that appears, enter a name for your ISO pool, for example, `ISOs`. Click *Browse*, navigate to the ISO directory you created, and click *Finish*.
+1. In the dialog that appears, enter a name for your ISO pool, for example, `ISOs`. Click *Browse*, navigate to the ISO directory you created, and click *Finish*.
 
    ![The Create a new storage pool dialog prompts for a pool name and path.](./images/virt-manager-03.png)
 
-8. Repeat the same process to create a second pool for your VM disk images, for example, name it `VMs` and point it to `/home/[your-user]/VMs`.
+1. Repeat the same process to create a second pool for your VM disk images, for example, name it `VMs` and point it to `/home/[your-user]/VMs`.
 
    You have now configured Virt Manager to use your chosen directories for all future virtual machines. 
 

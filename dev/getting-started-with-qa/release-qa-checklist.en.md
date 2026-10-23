@@ -125,4 +125,4 @@ The QA team produces a detailed [checklist on GitHub](https://github.com/OpenMan
 
 - [Getting Started with QA](../getting-started-with-qa.en.html)
 - [Bug Report Tool](./index.en.html)
-- [How to Report a Bug](../report-bug.en.html)
+- [How to Report a Bug](../how-to-report-a-bug.en.html)

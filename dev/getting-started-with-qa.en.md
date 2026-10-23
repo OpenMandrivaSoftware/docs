@@ -52,7 +52,7 @@ Testing new Alpha, Beta, and RC ISOs gets planned before each release. Find what
 
 ## Triage new bugs
 
-Once someone has [reported a bug](./report-bug.en.html), triage puts it in front of the right person. That process is still coming together, so check the [issue tracker](https://github.com/OpenMandrivaAssociation/distribution/issues) for where help is most needed.
+Once someone has [reported a bug](./how-to-report-a-bug.en.html), triage puts it in front of the right person. That process is still coming together, so check the [issue tracker](https://github.com/OpenMandrivaAssociation/distribution/issues) for where help is most needed.
 
 {:.important}
 
