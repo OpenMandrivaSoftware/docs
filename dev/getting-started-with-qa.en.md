@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Getting Started with QA
-nav_order: 60
+nav_order: 80
 parent: Developer Docs
 has_toc: true
 lang: en

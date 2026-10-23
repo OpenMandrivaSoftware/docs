@@ -1,7 +1,7 @@
 ---
 layout: default
 title: How to Report a Bug
-nav_order: 50
+nav_order: 70
 parent: Developer Docs
 has_toc: true
 lang: en

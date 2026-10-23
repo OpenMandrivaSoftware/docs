@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Contributing to OpenMandriva
-nav_order: 40
+nav_order: 60
 parent: Developer Docs
 has_toc: true
 lang: en
