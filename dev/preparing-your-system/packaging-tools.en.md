@@ -8,7 +8,7 @@ lang: en
 ---
 # Installing Packaging Tools
 
-The `packaging-tools` package provides everything you need to create and build RPM packages on OpenMandriva. It includes spec file templates and the build tools that connect to the ABF build system.
+The `packaging-tools` package provides everything you need to create and build RPM packages on OpenMandriva. It includes spec file templates and the build tools that connect to the ABF build system. You should have these installed on your daily driver and in your Cooker VM. 
 
 ## Install packaging-tools
 

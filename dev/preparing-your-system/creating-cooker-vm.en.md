@@ -40,7 +40,7 @@ Cooker snapshots are published as ISO images. Download the latest build for your
 
 9. Enter a name for the disk image, for example, `cooker`.
 
-10. Choose the disk size. A minimum of 20 GB is recommended for a development environment. Click *Finish*.
+10. Choose the disk size. A minimum of 50 GB is recommended for a development environment. Click *Finish*.
 
     ![The disk image creation dialog asks for a name and size.](./images/cooker-vm-02.png)
 
