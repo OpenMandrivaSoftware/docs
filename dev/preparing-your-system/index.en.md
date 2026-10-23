@@ -27,7 +27,7 @@ lang: en
 
    Replace `[your-user]` with your actual username.
 
-Newer versions of `libvirt` rely on TPM for encryption, which OpenMandriva does not support. Until OpenMandriva patches the Virt Manager packages, you must fix the secrets encryption manually. It takes some typing, but thankfully, only a few steps: 
+Newer versions of `libvirt` rely on TPM for encryption, which OpenMandriva does not support. Until OpenMandriva patches the Virt Manager packages, you must fix the secrets encryption manually. It takes only a few steps: 
 
 1. Make sure the secrets directory exists and has the right permissions: 
 
@@ -41,9 +41,7 @@ Newer versions of `libvirt` rely on TPM for encryption, which OpenMandriva does 
 
    ```bash
 
-    sudo sh -c 'umask 0077; dd if=/dev/urandom status=none bs=32 count=1 | \
-      systemd-creds encrypt --with-key=host --name=secrets-encryption-key \
-      - /var/lib/libvirt/secrets/secrets-encryption-key'
+    sudo sh -c 'umask 0077; dd if=/dev/urandom status=none bs=32 count=1 | systemd-creds encrypt --with-key=host --name=secrets-encryption-key - /var/lib/libvirt/secrets/secrets-encryption-key'
    ```
 
 1. Patch the service yourself, so `libvirt` doesn't try using TPM again. Edit the service:  
@@ -86,32 +84,26 @@ The default storage pool points to `/var/lib/libvirt/images`, which is not a goo
    sudo systemctl enable --now libvirtd.service
    ```
 
-2. Double-click *QEMU/KVM* to connect. The label changes to *QEMU/KVM* once connected.
+2. Right-click *QEMU/KVM* and select *Details*. 
 
-3. Click the *Create a new virtual machine* button in the toolbar.
+3. Click the *Storage* tab on the Connection Details dialog box. 
 
-   ![The virt-manager toolbar shows the Create a virtual machine button.](./images/virt-manager-01.png)
-
-4. Choose *Local install media* and click *Forward*.
-
-5. Under *Choose ISO or CDROM install media*, click *Browse*.
-
-   This opens the storage volume manager, where you create your storage pools for the first time. You only do this once; future VMs reuse the pools you create here.
+   This opens the storage volume manager, where you create your storage pools for the first time. You only do this once, and then you can use them when you create VMs. 
 
    ![The storage volume manager dialog lists available directories and pools.](./images/virt-manager-02.png)
 
    By default, only the `var/lib/libvirt/images` directory appears. You will not use this. Instead, create two folders in your home directory:
 
-   - One for downloaded ISOs---for example, `/home/[your-user]/Downloads/Linux`.
-   - One for VM disk images---for example, `/home/[your-user]/VMs`.
+   - One for downloaded ISOs, for example, `/home/[your-user]/Downloads/Linux`.
+   - One for VM disk images, for example, `/home/[your-user]/VMs`.
 
 6. Click the *+* button in the bottom-left corner to create a new storage pool.
 
-7. In the dialog that appears, enter a name for your ISO pool---for example, `ISOs`. Click *Browse*, navigate to the ISO directory you created, and click *Finish*.
+7. In the dialog that appears, enter a name for your ISO pool, for example, `ISOs`. Click *Browse*, navigate to the ISO directory you created, and click *Finish*.
 
    ![The Create a new storage pool dialog prompts for a pool name and path.](./images/virt-manager-03.png)
 
-8. Repeat the same process to create a second pool for your VM disk images---for example, name it `VMs` and point it to `/home/[your-user]/VMs`.
+8. Repeat the same process to create a second pool for your VM disk images, for example, name it `VMs` and point it to `/home/[your-user]/VMs`.
 
    You have now configured Virt Manager to use your chosen directories for all future virtual machines. You will not need to repeat these steps.
 

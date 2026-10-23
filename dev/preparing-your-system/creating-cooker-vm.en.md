@@ -38,7 +38,7 @@ Cooker snapshots are published as ISO images. Download the latest build for your
 
 8. Click the *+* button next to *Volumes* to create a new disk image.
 
-9. Enter a name for the disk image---for example, `cooker`.
+9. Enter a name for the disk image, for example, `cooker`.
 
 10. Choose the disk size. A minimum of 20 GB is recommended for a development environment. Click *Finish*.
 
@@ -48,7 +48,7 @@ Cooker snapshots are published as ISO images. Download the latest build for your
 
 12. Click *Forward*.
 
-13. Enter a name for the VM---for example, `Cooker`. **Check** *Customize configuration before install*, then click *Finish*.
+13. Enter a name for the VM, for example, `Cooker`. **Check** *Customize configuration before install*, then click *Finish*.
 
     ![The virtual machine configuration screen shows the VM name and the customize option.](./images/cooker-vm-03.png)
 

@@ -14,7 +14,7 @@ Cooker is the development branch of OpenMandriva Lx. It reflects the current pro
 
 The OpenMandriva Lx distribution exists through two major fields of technical contribution:
 
-- Creation and maintenance of the tools, configuration, and art special to the distribution---such as the installer, the configuration center, and themes.
+- Creation and maintenance of the tools, configuration, and art special to the distribution, such as the installer, the configuration center, and themes.
 - Consistent packaging of thousands of programs and libraries so they are available to users in a simple, unified way.
 
 Guidelines and rules for both areas are documented in the [Repository Policies](../community/releases/repository-policies.en.html).
