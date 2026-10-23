@@ -20,15 +20,15 @@ Cooker snapshots are published as ISO images. Download the latest build for your
 
 1. In Virt Manager, click *Create a new virtual machine* in the toolbar.
 
-   ![The virt-manager toolbar shows the Create a virtual machine button.](../images/virt-manager-01.png)
+   ![The virt-manager toolbar shows the Create a virtual machine button.](./images/cooker-vm-really-01.png)
 
 2. Choose *Local install media*, then click *Forward*.
 
-3. Click *Browse*, navigate to your ISO storage pool, select the Cooker ISO you downloaded, and click *Choose Volume*.
+3. Click *Browse*, navigate to your ISO storage pool, select the Cooker ISO you downloaded, and click *Choose Volume*. If the ISO doesn't appear, click the *Refresh* icon. 
 
    ![The storage volume dialog shows the Cooker ISO selected from the ISOs pool.](./images/cooker-vm-01.png)
 
-4. Virt Manager cannot auto-detect OpenMandriva. De-select *Automatically detect from the installation media / source*, type *Generic*, and select *Generic Linux 2022*. Click *Forward*.
+4. Virt Manager cannot auto-detect OpenMandriva. De-select *Automatically detect from the installation media / source*, type *Generic*, and select *Generic Linux 2024*. Click *Forward*.
 
 5. Choose the amount of memory and CPUs to dedicate to the VM. The defaults of 4 GB and 2 CPUs are sufficient for package building. Click *Forward*.
 
@@ -52,18 +52,17 @@ Cooker snapshots are published as ISO images. Download the latest build for your
 
     ![The virtual machine configuration screen shows the VM name and the customize option.](./images/cooker-vm-03.png)
 
-14. In the configuration editor, locate the *Firmware* drop-down at the bottom. The default is BIOS; change it to *UEFI*. Click *Begin Installation*.
+14. In the configuration editor, locate the *Firmware* drop-down at the bottom. The default is BIOS; change it to *UEFI*, and then click *Apply*. 
 
-    ![The VM configuration editor shows the firmware selection dropdown, set to UEFI.](./images/cooker-vm-04.png)
+    ![The VM configuration editor shows the firmware selection drop-down, set to UEFI.](./images/cooker-vm-04.png)
 
-15. The VM boots from the Cooker ISO. Proceed with the installation as you would for any OpenMandriva release.
+15. Click *Begin Installation*. The VM boots from the Cooker ISO. Proceed with the [installation](../../getting-started/installing-openmandriva.en.html) as you would for any OpenMandriva release.
 
 After installation, double-click the VM in the Virt Manager window and click its *Play* button to launch it.
-
-![The virt-manager main window displays a list of configured virtual machines.](./images/cooker-vm-05.png)
 
 ## Related Topics
 
 - [Installing and Using Virt Manager](./index.en.html)
 - [Preparing Your System](../preparing-your-system.en.html)
 - [Using Cooker](../using-cooker.en.html)
+- [Installing OpenMandriva](../../getting-started/installing-openmandriva.en.html)

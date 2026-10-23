@@ -12,10 +12,10 @@ lang: en
 
 ## Install Virt Manager
 
-1. Install the `virt-manager` package along with `iptables` for network access:
+1. Install `virt-manager`, `qemu-char-spice`, and `qemu-image` along with `iptables` for network configuration:
 
    ```bash
-   sudo dnf install virt-manager iptables
+   sudo dnf install virt-manager qemu-img qemu-char-spice iptables
    ```
 
 1. Add your user account to the `qemu` and `libvirt` groups so you can manage virtual machines without root privileges:
@@ -105,7 +105,7 @@ The default storage pool points to `/var/lib/libvirt/images`, which is not a goo
 
 8. Repeat the same process to create a second pool for your VM disk images, for example, name it `VMs` and point it to `/home/[your-user]/VMs`.
 
-   You have now configured Virt Manager to use your chosen directories for all future virtual machines. You will not need to repeat these steps.
+   You have now configured Virt Manager to use your chosen directories for all future virtual machines. 
 
 ## Next Steps
 
