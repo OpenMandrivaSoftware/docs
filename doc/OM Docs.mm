@@ -110,6 +110,17 @@
 <node TEXT="Installing Developer Tools" ID="ID_691397100" CREATED="1791423830620" MODIFIED="1791423843410"/>
 <node TEXT="Building Packages for OpenMandriva" ID="ID_102790032" CREATED="1791423844222" MODIFIED="1791423851070"/>
 <node TEXT="Installing virt-manager" ID="ID_331113683" CREATED="1791424315623" MODIFIED="1791424321677"/>
+<node TEXT="Maintaining Packages" ID="ID_152346548" CREATED="1792443162431" MODIFIED="1792443167656">
+<node TEXT="You could use this one locally:&#xa;https://github.com/OpenMandrivaSoftware/packaging-tools/blob/master/update&#xa;&#xa;You would need to get more info from Bero on this one:&#xa;https://github.com/OpenMandrivaSoftware/packaging-tools/blob/master/auto-update" ID="ID_652926198" CREATED="1792443168068" MODIFIED="1792443183006">
+<node TEXT="" ID="ID_758039540" CREATED="1792497887580" MODIFIED="1792497887580">
+<node TEXT="" ID="ID_840442204" CREATED="1792497889464" MODIFIED="1792497889464">
+<node TEXT="" ID="ID_745309907" CREATED="1792497890121" MODIFIED="1792497890121">
+<node TEXT="" ID="ID_1868219015" CREATED="1792497890355" MODIFIED="1792497890355"/>
+</node>
+</node>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="Community" POSITION="top_or_left" ID="ID_1407504569" CREATED="1791421546226" MODIFIED="1791421551582">
 <edge COLOR="#00dd00"/>
