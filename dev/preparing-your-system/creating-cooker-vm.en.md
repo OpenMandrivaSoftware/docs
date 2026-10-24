@@ -104,7 +104,7 @@ Before you begin, shut down the VM if it is running.
     hostshare  /mnt/hostshare  virtiofs  defaults  0  0
     ```
 
-Files you place in `~/VMs/vmshare` on your host now appear in `/mnt/hostshare` inside the VM.
+Files you place in `~/VMs/vmshare` on your host now appear in `/mnt/hostshare` inside the VM. When you build RPMs on your host system, you can copy them here to test installing them in the VM. If you decide to build RPMs in the VM, you can also share then with the host system this way. 
 
 ## Related Topics
 

@@ -12,10 +12,10 @@ lang: en
 
 ## Install Virt Manager
 
-1. Install `virt-manager`, `qemu-char-spice`, and `qemu-image` along with `iptables` for network configuration:
+1. Install `virt-manager`, `qemu-char-spice`, and `qemu-image` along with `iptables` and `iproute2-tc` for network configuration:
 
    ```bash
-   sudo dnf install virt-manager qemu-img qemu-char-spice iptables
+   sudo dnf install virt-manager qemu-img qemu-char-spice iptables iproute2-tc
    ```
 
 1. Add your user account to the `qemu` and `libvirt` groups so you can manage virtual machines without root privileges:
