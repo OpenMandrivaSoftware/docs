@@ -58,13 +58,6 @@
   grid-template-columns: repeat(3, 1fr) !important;
 }
 
-@media (max-width: 66.5rem) {
-  .home-cards.cols-3,
-  .section-cards.cols-3 {
-    grid-template-columns: 1fr !important;
-  }
-}
-
 .section-cards {
   display: grid;
   gap: 25px;
@@ -72,8 +65,26 @@
   width: 100%;
 }
 
+.section-cards.cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.section-cards.cols-2 {
+  grid-template-columns: repeat(2, 1fr) !important;
+}
+
 .section-cards.cols-3 {
   grid-template-columns: repeat(3, 1fr) !important;
+}
+
+/* Responsive: collapse all multi-column card grids to a single column on small screens */
+@media (max-width: 66.5rem) {
+  .home-cards.cols-2,
+  .home-cards.cols-3,
+  .section-cards.cols-2,
+  .section-cards.cols-3 {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .section-card {

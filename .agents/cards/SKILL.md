@@ -111,6 +111,8 @@ The `{% include section_cards.html %}` tag renders this HTML structure:
 
 ```scss
 .section-cards          // Grid container (mirrors .home-cards)
+.section-cards.cols-1   // Single column
+.section-cards.cols-2   // Two columns
 .section-cards.cols-3   // Three columns on desktop, 1 on mobile
 .section-card           // Individual card (same visual style as .home-card)
 ```
@@ -118,7 +120,9 @@ The `{% include section_cards.html %}` tag renders this HTML structure:
 ### Responsive Behavior
 
 - On screens wider than 66.5rem: cards display in the specified column count (2 or 3).
-- On smaller screens: all cards collapse to a single column.
+- On smaller screens (≤ 66.5rem): all multi-column grids collapse to a single column.
+- The responsive media query must come **after** all base `cols-N` rules in the source order. Otherwise the later base rule (with `!important`) will override the media query, defeating the mobile collapse.
+- The media query covers `cols-2` and `cols-3` for both `.home-cards` and `.section-cards`.
 
 ### Visual Consistency
 
