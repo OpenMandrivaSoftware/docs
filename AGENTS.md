@@ -35,6 +35,16 @@ When asked to write or edit content, always load the technical writing skills yo
 
 This platform (Jekyll) and this theme (Just the Docs) generates a Table of Contents at the bottom of every file that has children. Therefore, do not generate Related Topics headings on these pages. Generate Related Topics only on leaf nodes (files that have no children in the navigation). 
 
+## Multilingual Grep Scoping
+
+This repository uses language-specific file suffixes (`.en.md`, `.fr.md`, `.pt.md`, `.ja.md`). The technical writing skills use generic grep patterns (`--include="*.md"`). When running those greps against this repository, override the include pattern to scope to English only:
+
+```bash
+grep -rnE '<pattern>' --include="*.en.md" .
+```
+
+This prevents false positives from non-English content that the English-language writing rules do not apply to.
+
 ## File Naming Conventions
 
 Files should be named the same as their titles, using hyphen case. For example, a Markdown with the title "Downloading OpenMandriva" should be in a file called `downloading-openmandriva.en.md`. Similarly, a file titled "Copying OpenMandriva to a USB Stick" should have the file name `copying-openmandriva-to-a-usb-stick.en.md`. 

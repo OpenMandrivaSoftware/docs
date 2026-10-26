@@ -6,7 +6,6 @@ parent: Getting Started with QA
 has_toc: true
 lang: en
 ---
-
 # Bug Report Tool
 
 The `om-bug-report` tool collects system information to help diagnose problems. Run it and attach the generated report file to any bug report you file.
@@ -15,13 +14,13 @@ The `om-bug-report` tool collects system information to help diagnose problems. 
 
 1. Open *OM Welcome*.
 
-1. Navigate to *OM Features > Bug report tool*.
+1. Navigate to *Contribute* &rarr; *Bug Report Tool*.
 
-The tool opens a window and begins gathering information from your system.
+The tool opens a window and gathers information from your system.
 
 ## Information Collected
 
-The tool collects the following data:
+The tool collects this data:
 
 - Configuration files in `/etc/*`
 - Kernel configuration from `/proc` entries
@@ -34,10 +33,10 @@ The tool collects the following data:
 - `rpm -qa` output (list of installed packages)
 - GCC version
 
-After collecting the information, the tool creates a file named `omdv-bug-report` in your home directory.
+After collecting the information, the tool creates a file named `omv-bug-report` in your home directory.
 
-> **Important:** Attach this file to any bug report you file. It speeds up diagnosis by giving developers the system details they need.
 {: .important }
+Attach this file to bug reports you file. It speeds up diagnosis by giving developers the system details they need.
 
 ## Related Topics
 
