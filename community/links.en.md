@@ -28,7 +28,7 @@ A quick reference to the most useful resources for OpenMandriva users and contri
 
 ## Translation and Localization
 
-- [Transifex](https://www.transifex.com/openmandriva/public/)
+- [Transifex](https://explore.transifex.com/openmandriva/)
 
 ## Mirror Infrastructure
 
@@ -38,7 +38,7 @@ A quick reference to the most useful resources for OpenMandriva users and contri
 
 ## Community
 
-- [Chwido meeting logs](https://chwido.openmandriva.org/meetings/%23openmandriva-cooker/)
+<!-- - [Chwido meeting logs](https://chwido.openmandriva.org/meetings/%23openmandriva-cooker/) -->
 - [Gallery](https://gallery.openmandriva.org/)
 
 ## Social Media
@@ -46,9 +46,9 @@ A quick reference to the most useful resources for OpenMandriva users and contri
 - [Facebook](https://www.facebook.com/OpenMandriva)
 - [Twitter](https://twitter.com/OpenMandrivaOrg)
 - [Reddit](https://www.reddit.com/r/OpenMandriva/)
-- [Mastodon](https://hostux.social/@OpenMandriva)
+<!-- - [Mastodon](https://hostux.social/@OpenMandriva)-->
 
 ## Related Topics
 
-- [Chat with OpenMandriva](./chat.en.html)
+- [Chat with OpenMandriva](./chat-with-openmandriva.en.html)
 - [Setting Up a Mirror](./releases/setting-up-a-mirror.en.html)

@@ -20,7 +20,7 @@ OpenMandriva is 100 % community driven. It believes in the values of free softwa
 
 OpenMandriva was founded on development, equality, cooperation, openness, freedom, group achievement, independence, and solidarity. Those values drive how the project makes decisions.
 
-You can connect with the community by chatting on [Matrix](./chat.en.html) or in the [forum](https://forum.openmandriva.org/).
+You can connect with the community by chatting on [Matrix](./chat-with-openmandriva.en.html) or in the [forum](https://forum.openmandriva.org/).
 
 ## The Association's organs
 

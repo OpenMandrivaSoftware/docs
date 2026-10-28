@@ -27,6 +27,6 @@ If you can, [donate](https://www.openmandriva.org/donate) to keep the servers ru
 
 ## Related Topics
 
-- [Chat with OpenMandriva](./chat.en.html)
+- [Chat with OpenMandriva](./chat-with-openmandriva.en.html)
 - [About OpenMandriva](./about-openmandriva.en.html)
 - [Contributing to OpenMandriva](../dev/contributing-to-openmandriva.en.html)

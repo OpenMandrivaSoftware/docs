@@ -13,7 +13,7 @@ This page defines how you should refer to the OpenMandriva Association, its prod
 
 ## Association Naming
 
-When referring to the Association, write "OpenMandriva" or "OpenMandriva Association"---without quotation marks. Note that it is one word, with no space between "Open" and "Mandriva". You may also use the shortened form "OMA".
+When referring to the Association, write "OpenMandriva" or "OpenMandriva Association" without quotation marks. Note that it is one word, with no space between "Open" and "Mandriva". You may also use the shortened form "OMA."
 
 ## Distribution Naming
 
@@ -21,11 +21,11 @@ When referring to the distribution, write "OpenMandriva Lx". You may also use "O
 
 The rolling release branch takes its official name from the [codename](./releases/release-codenames.en.html): *ROME*. Refer to it as "ROME" (all uppercase, no quotation marks) or "OpenMandriva ROME".
 
-A release number may be appended for clarity, for example "OpenMandriva Lx 4.3" or "OMLx 4.3" for the stable branch, or "ROME 22.12" using the `YY.MM` pattern for the rolling edition.
+A release number may be appended for clarity, for example "OpenMandriva Lx 6.0" or "OMLx 6.0" for the stable branch, or "ROME 26.09" using the `YY.MM` pattern for the rolling edition.
 
 ## Naming Restrictions
 
-- Any use of the "Mandriva" brand alone---without "Open"---is not allowed.
+- Any use of the "Mandriva" brand alone (without "Open") is not allowed.
 - Never use "Mandriva" when referring to the OpenMandriva Association or OpenMandriva products.
 
 The "Mandriva" brand and logos are owned by Mandriva SA or its legal successor.

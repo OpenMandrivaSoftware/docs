@@ -8,13 +8,16 @@ lang: en
 ---
 # Release Plan and Repositories
 
-An OpenMandriva release is a set of software packages put together to form an operating system. Each release is also called an *update channel*. There are four update channels: Cooker, ROME, Rock, and Release. **Do not mix update channels on one system** — doing so will cause package conflicts.
+An OpenMandriva release is a set of software packages put together to form an operating system. Each release is also called an *update channel*. There are four update channels: Cooker, ROME, Rock, and Release.
 
-## The update channels
+{: .warning }
+Do not mix update channels on one system; doing so causes package conflicts.
 
-The workflow runs one direction:
+## The Update Channels
 
-```
+The workflow runs in one direction:
+
+```text
 Cooker → ROME → Release
 ```
 
@@ -22,9 +25,14 @@ Cooker → ROME → Release
 
 **ROME** is the rolling release. It holds the newest packages that the team considers ready, so it is up to date but should still work as a daily system. ROME users should be comfortable with the command line.
 
-**Rock** is the stable release. Rocks point to the latest stable release, so a Rock updates in place as OpenMandriva Lx releases new stable versions. Rock is designed for people who want a system that does not change.
+**Rock** is the stable release. Rock points to the latest stable release, so Rock updates in place as OpenMandriva Lx releases new stable versions. Rock is designed for people who want a system that does not change.
 
 **Release** is the most stable and least changing channel. Package updates here are mostly bug fixes and security patches, and each version eventually reaches end of life.
+
+{: .important }
+Rock, ROME, and Cooker are the only downloadable and installable releases. To use the Release channel, which only receives security patches and bug fixes, select it in the Software Repository Selector. When a Release reaches end of life, it receives no further updates.
+
+Rock upgrades annually, ROME monthly, and Cooker daily.
 
 ## Repositories
 

@@ -8,7 +8,7 @@ lang: en
 cards:
   - title: "Chat with OpenMandriva"
     description: "Get help and chat with other users and contributors on Matrix."
-    url: "/community/chat.en.html"
+    url: "/community/chat-with-openmandriva.en.html"
   - title: "About OpenMandriva"
     description: "Learn about the Association, its bylaws, governance, and statutes."
     url: "/community/about-openmandriva.en.html"
@@ -17,7 +17,7 @@ cards:
     url: "/community/artwork.en.html"
   - title: "Donation"
     description: "Support the project with a donation or by contributing your skills."
-    url: "/community/donation-sponsorship.en.html"
+    url: "/community/donation.en.html"
   - title: "Links"
     description: "A directory of useful links---forums, repositories, social media, and more."
     url: "/community/links.en.html"

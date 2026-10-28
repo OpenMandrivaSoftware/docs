@@ -10,7 +10,7 @@ lang: en
 
 OpenMandriva Lx releases go through a series of stages before they are stable. Each stage narrows the window of what you can install.
 
-## Stages and what they are for
+## Stages and What They Are for
 
 | Stage | For |
 | --- | --- |
@@ -19,7 +19,7 @@ OpenMandriva Lx releases go through a series of stages before they are stable. E
 | RC (Release Candidate) | Power users and testers. Almost ready to ship. |
 | Final release | Everyone. The stable version you should run. |
 
-## Early previews and testing
+## Early Previews and Testing
 
 Early preview ISOs are for internal development and QA only. They often break and are not safe for daily use.
 
@@ -27,6 +27,12 @@ Alpha and beta builds let advanced users shake out bugs before a release, so exp
 
 Release candidates are very close to the final version. Test them if you want a preview of what is coming next, but keep a stable system for daily work.
 
-## The final release
+## The Final Release
 
 Once a release ships, it is stable and suitable for everyone. This is what most people should run.
+
+## Related Topics
+
+- [Release Plan and Repositories](../index.en.html)
+- [Repository Policies](./repository-policies.en.html)
+- [Setting Up a Mirror](./setting-up-a-mirror.en.html)

@@ -31,6 +31,16 @@ Use `./getting-started/installing-openmandriva.en.md` as an example.
 
 When asked to write or edit content, always load the technical writing skills you find, either globally or in this project, to mimic the operator's voice *before* you start writing or editing. 
 
+## Naming Policy
+
+The [Official Naming Policy](./community/official-naming-policy.en.md) defines how to refer to the OpenMandriva Association, its products, and its trademarks. Key rules for writing:
+
+- **Association:** Use *OpenMandriva* or *OpenMandriva Association* (one word, no internal space). *OMA* is acceptable as a shortened form.
+- **Distribution:** Use *OpenMandriva Lx* or *OMLx* (uppercase L, lowercase x, no space).
+- **Rolling release:** Use *ROME* (all uppercase, no quotation marks) or *OpenMandriva ROME*.
+- **Version appending:** For stable, append a release number (e.g., *OpenMandriva Lx 6.0* or *OMLx 6.0*). For ROME, use the `YY.MM` calendar pattern (e.g., *ROME 26.09*).
+- **Restrictions:** Never use *Mandriva* alone without the *Open* prefix. Never use *Mandriva* when referring to the OpenMandriva Association or its products.
+
 ## Writing Overrides 
 
 This platform (Jekyll) and this theme (Just the Docs) generates a Table of Contents at the bottom of every file that has children. Therefore, do not generate Related Topics headings on these pages. Generate Related Topics only on leaf nodes (files that have no children in the navigation). 

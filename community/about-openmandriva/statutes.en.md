@@ -8,7 +8,8 @@ lang: en
 ---
 # Statutes
 
-> This is the translation of the French statutes, for convenience. The French version is however the only legal document.
+{: .note }
+This is the translation of the French statutes, for convenience. The French version is however the only legal document.
 
 ## Article 1 - Creation
 
@@ -129,4 +130,4 @@ The liquidators perform all declarations and formalities of publication provided
 
 ---
 
-![header-tr-asso.png](/assets/header-tr-asso.png){.align-abstopright}
+![header-tr-asso.png](/assets/images/header-tr-asso.png)

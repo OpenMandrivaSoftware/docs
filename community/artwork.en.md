@@ -78,5 +78,5 @@ Chwido is the unofficial mascot of OpenMandriva.
 
 ## Related Topics
 
-- [About OpenMandriva](./about-openmandriva.en.html)---the OpenMandriva Association behind the project.
-- [Chat with OpenMandriva](./chat.en.html)---the Matrix space for getting help and chatting.
+- [About OpenMandriva](./about-openmandriva.en.html)
+- [Chat with OpenMandriva](./chat-with-openmandriva.en.html)
