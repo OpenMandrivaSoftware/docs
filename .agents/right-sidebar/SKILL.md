@@ -17,7 +17,9 @@ Main component that:
 - Parses `page.content` for `<h2>`–`<h4>` elements with `id` attributes
 - Extracts heading text and IDs
 - Renders a nested list with proper indentation
-- Only renders if `page.has_toc != false` and headings exist
+- Always renders the sidebar when `page.has_toc != false`
+- Includes an **Edit on GitHub** button at the *bottom* of the sidebar (below the TOC), linking to the source file on GitHub using `site.git_repo_org`, `site.git_repo`, and `page.path`
+- Only renders the sidebar when the page has h2–h4 headings; landing pages without headings do not show a sidebar or button
 
 ### 2. `_layouts/default.html` (site override)
 Wraps main content and right sidebar in a flex container:
@@ -33,6 +35,8 @@ Styles for desktop layout:
 - `.main-content-with-sidebar` — flex container with gap
 - `.right-sidebar` — fixed 16rem width, sticky positioning, scrollable
 - `.right-sidebar-inner` — sticky content within sidebar
+- `.edit-on-github-wrapper` — container for the GitHub button
+- `.edit-on-github` — styled link button with pencil icon; hovers with inverted colors
 - Only active at `@media (min-width: 66.5rem)`
 
 ### 4. `_includes/components/sidebar.html` (site override)
@@ -56,5 +60,18 @@ The component automatically picks up all h2-h4 headings that have IDs (generated
 
 - **Desktop (≥66.5rem)**: Right sidebar visible, sticky, scrollable
 - **Tablet/Mobile (<66.5rem)**: Hidden (content uses full width)
-- **No headings**: Sidebar doesn't render
+- **No headings**: Sidebar does not render (no Edit button either)
 - **Children nav** (subpages): Still renders in main content area below page content
+
+## Edit on GitHub Button
+
+An "Edit on GitHub" button is rendered at the **bottom** of the right sidebar (below the TOC list) on pages that have h2–h4 headings. It links to the source Markdown file on GitHub using the following config variables:
+
+- `site.git_repo_org` — GitHub organization/user (default: `OpenMandrivaSoftware`)
+- `site.git_repo` — repository name (default: `docs`)
+- `site.git_repo_branch` — branch to edit on (default: `master`)
+
+The edit URL is constructed as:
+```
+https://github.com/{{ site.git_repo_org }}/{{ site.git_repo }}/edit/{{ site.git_repo_branch }}/{{ page.path }}
+```

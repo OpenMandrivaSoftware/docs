@@ -210,6 +210,37 @@
     position: sticky;
     top: 0;
   }
+
+  .edit-on-github-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  .edit-on-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--link-color, #007bff);
+    border-radius: 6px;
+    background: var(--link-color, #007bff);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  }
+
+  .edit-on-github:hover {
+    background: var(--body-background-color, #ffffff);
+    color: var(--link-color, #007bff);
+    border-color: var(--border-color, #dfe2e5);
+  }
+
+  .edit-on-github .svg-icon {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+  }
 }
 
 /* Footer copyright */

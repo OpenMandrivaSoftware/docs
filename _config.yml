@@ -6,6 +6,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: OpenMandrivaOrg
 github_username:  OpenMandrivaAssociation
+git_repo_org:     OpenMandrivaSoftware
+git_repo:         docs
+git_repo_branch:  master
 copyright: "OpenMandriva Association"
 
 # Polyglot (multilingual) settings
