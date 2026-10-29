@@ -64,7 +64,7 @@ Testing new Alpha, Beta, and RC ISOs gets planned before each release. Find what
 
 ## Triage New Bugs
 
-Once someone has [reported a bug](./how-to-report-a-bug.en.html), triage puts it in front of the right person. That process is still coming together, so check the [issue tracker](https://github.com/OpenMandrivaAssociation/distribution/issues) for where help is most needed.
+Once someone has [reported a bug](../user-guide/getting-help/how-to-report-a-bug.en.html), triage puts it in front of the right person. That process is still coming together, so check the [issue tracker](https://github.com/OpenMandrivaAssociation/distribution/issues) for where help is most needed.
 
 {: .important }
 Testing repositories by definition contain software that could have bugs. Enable them only when you are actively testing and disable them again when you are done.

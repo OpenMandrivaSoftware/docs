@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Release Codenames
-nav_order: 100
+nav_order: 120
 parent: Releases
 has_toc: true
 lang: en

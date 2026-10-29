@@ -84,5 +84,5 @@ Developers must know whether the bug is specific to your machine or happens more
 
 - [Getting Started with QA](../getting-started-with-qa.en.html)
 - [Bug Report Tool](./index.en.html)
-- [How to Report a Bug](../how-to-report-a-bug.en.html)
+- [How to Report a Bug](../../user-guide/getting-help/how-to-report-a-bug.en.html)
 - [Release QA Checklist](./release-qa-checklist.en.html)

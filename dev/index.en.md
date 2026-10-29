@@ -26,10 +26,13 @@ cards:
     url: "/dev/contributing-to-openmandriva.en.html"
   - title: "How to Report a Bug"
     description: "Write effective bug reports that get fixed quickly."
-    url: "/dev/how-to-report-a-bug.en.html"
+    url: "/user-guide/getting-help/how-to-report-a-bug.en.html"
   - title: "Getting Started with QA"
     description: "Test releases and help keep the project stable."
     url: "/dev/getting-started-with-qa.en.html"
+  - title: "Releases"
+    description: "Release notes, errata, and changelogs for current OpenMandriva releases."
+    url: "/community/releases.en.html"
 ---
 
 # Developer Docs

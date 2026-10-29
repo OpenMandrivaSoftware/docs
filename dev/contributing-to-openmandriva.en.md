@@ -39,5 +39,5 @@ OpenMandriva is a non-profit association. The OpenMandriva Association welcomes 
 
 ## Related Topics
 
-- [How to Report a Bug](./how-to-report-a-bug.en.html)
+- [How to Report a Bug](../user-guide/getting-help/how-to-report-a-bug.en.html)
 - [Getting Started with QA](./getting-started-with-qa.en.html)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Release Life Cycle
-nav_order: 80
+nav_order: 100
 parent: Releases
 has_toc: true
 lang: en
@@ -35,4 +35,4 @@ Once a release ships, it is stable and suitable for everyone. This is what most 
 
 - [Release Plan and Repositories](../index.en.html)
 - [Repository Policies](./repository-policies.en.html)
-- [Setting Up a Mirror](./setting-up-a-mirror.en.html)
+- [Setting Up a Mirror](../setting-up-a-mirror.en.html)

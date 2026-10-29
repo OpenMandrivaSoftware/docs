@@ -1,8 +1,8 @@
 ---
 layout: default
 title: How to Report a Bug
-nav_order: 70
-parent: Developer Docs
+nav_order: 20
+parent: Getting Help
 has_toc: true
 lang: en
 ---
@@ -35,20 +35,23 @@ Use the [Issue Tracker](https://github.com/OpenMandrivaAssociation/distribution/
 
 ## My Program Does Not Start
 
-1. Open a terminal in your desktop session. In KDE Plasma open Konsole; in LXQt open the LXQt Terminal.
+1. Open a terminal in your desktop session. In KDE Plasma open *Konsole*; in LXQt open the LXQt Terminal.
 2. Launch the program from the command line. If you do not know the command, find its binary in the package manager; for example, typing `dolphin` opens the Dolphin file manager.
-3. Type the first few letters and press <kbd>Tab</kbd> to use auto-completion.
+3. Type the first few letters and press `Tab` to use auto-completion.
 4. If the program crashes, capture the error output. Save it to a text file.
 
 ## My Graphical Desktop Does Not Start
 
-If the screen stays black, switch to a virtual terminal with <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>F2</kbd> (or <kbd>F3</kbd>–<kbd>F6</kbd>). Log in there and let developers know which graphics hardware you are using:
+If the screen stays black, switch to a virtual terminal with `Ctrl`+`Alt`+`F2` (or `F3`–`F6`). Log in there and let developers know which graphics hardware you are using:
 
 ```bash
-lspci -nnk | grep -EiA3 'vga|3d|display'
+$ lspci -nnk | grep -EiA3 'vga|3d|display'
 ```
 
 ## Related Topics
 
-- [Contributing to OpenMandriva](./contributing-to-openmandriva.en.html)
-- [Getting Started with QA](./getting-started-with-qa.en.html)
+- [Getting Support on the Forum](./getting-support-on-the-forum.en.html)
+- [Get Logs and Hardware Info for Issue Reports](./get-logs-and-hardware-info-for-issue-reports.en.html)
+- [Using DNF](../index.en.html)
+- [Contributing to OpenMandriva](../../dev/contributing-to-openmandriva.en.html)
+- [Getting Started with QA](../../dev/getting-started-with-qa.en.html)

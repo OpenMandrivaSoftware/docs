@@ -27,6 +27,9 @@ cards:
   - title: "Troubleshooting"
     description: "Fix broken bootloaders, connect in recovery mode, and resolve time issues."
     url: "/user-guide/troubleshooting.en.html"
+  - title: "Getting Help"
+    description: "Get support on the forum, report bugs, and gather logs for issue reports."
+    url: "/user-guide/getting-help.en.html"
 ---
 
 # User Guide

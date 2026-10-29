@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Release Plan and Repositories
-nav_order: 60
+nav_order: 10
 parent: Releases
 has_toc: true
 lang: en

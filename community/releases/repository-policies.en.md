@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Repository Policies
-nav_order: 70
+nav_order: 90
 parent: Releases
 has_toc: true
 lang: en
@@ -30,4 +30,4 @@ Once a package reaches its update channel, the team marks it complete and moves 
 
 - [Release Plan and Repositories](../index.en.html)
 - [Release Life Cycle](./release-life-cycle.en.html)
-- [Setting Up a Mirror](./setting-up-a-mirror.en.html)
+- [Setting Up a Mirror](../setting-up-a-mirror.en.html)

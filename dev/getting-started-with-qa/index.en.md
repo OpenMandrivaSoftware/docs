@@ -41,5 +41,5 @@ Attach this file to bug reports you file. It speeds up diagnosis by giving devel
 ## Related Topics
 
 - [Getting Started with QA](../getting-started-with-qa.en.html)
-- [How to Report a Bug](../how-to-report-a-bug.en.html)
+- [How to Report a Bug](../../user-guide/getting-help/how-to-report-a-bug.en.html)
 - [How to Report Bugs Effectively](./report-bugs-effectively.en.html)

@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Setting Up a Mirror
-nav_order: 90
-parent: Releases
+nav_order: 25
+parent: OpenMandriva Community
 has_toc: true
 lang: en
 ---
@@ -43,5 +43,5 @@ Mirrorbits always redirects to ABF if a file does not exist on any mirror.
 
 ## Related Topics
 
-- [Release Codenames](./release-codenames.en.html)
-- [Repository Policies](./repository-policies.en.html)
+- [Release Codenames](./releases/release-codenames.en.html)
+- [Repository Policies](./releases/repository-policies.en.html)
