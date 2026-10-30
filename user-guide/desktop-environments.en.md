@@ -11,7 +11,7 @@ lang: en
 
 OpenMandriva includes the *KDE Plasma* desktop environment by default. You begin with a complete, working desktop ready for use, and there's no need to change it. You can customize nearly every part of this flexible, modern desktop. 
 
-*GNOME*, *LXQt*, and other desktops are also available for a simpler or lighter experience. Changing the desktop does not change your files, your settings, or your applications. The desktop is the outer layer; the system, your files, and your software stay in place. Once you install a new desktop, wwitching back requires only choosing again at the login screen.
+*GNOME*, *LXQt*, and other desktops are also available for a simpler or lighter experience. Changing the desktop does not change your files, your settings, or your applications. The desktop is the outer layer; the system, your files, and your software stay in place. Once you install a new desktop, switching back requires only choosing again at the login screen.
 
 ## Available Desktops
 
@@ -116,7 +116,9 @@ You can install multiple desktops on the same system. However, *Plasma* and *Son
 {: .tip }
 Try a desktop in [live mode](../../getting-started/downloading-openmandriva.en.html) first. Boot from the USB and explore before committing, so you confirm a look you like before changing your system.
 
-## Related Topics
+## Window Managers
 
-- [Managing Software](managing-software.en.html)
-- [Getting Started](../../getting-started/index.en.html)
+For a lighter, keyboard-driven setup, install a standalone window manager instead of a full desktop environment. These use fewer resources but require more manual configuration than the task-package-based desktops above.
+
+- [Installing i3](desktop-environments/index.en.html)---a tiling window manager for the X11 display server
+- [Installing Hyprland](desktop-environments/installing-hyprland.en.html)---a dynamic tiling compositor for the Wayland display server

@@ -44,9 +44,19 @@
     root.setAttribute('data-theme', theme);
     root.setAttribute('data-mode', mode);
 
-    var css = document.querySelector('[rel="stylesheet"]');
+    // Swap to the correct per-scheme stylesheet before first paint. The link is
+    // emitted with id="jtd-stylesheet" in head.html. The browser keeps the
+    // default stylesheet applied while the target downloads, so there's no
+    // unstyled gap — just a seamless swap (dark→dark for dark mode, dark→light
+    // for light mode, with the light stylesheet already cached from the prior
+    // page load in a multi-page site).
+    var css = document.getElementById('jtd-stylesheet') ||
+              document.querySelector('link[rel="stylesheet"]');
     if (css) {
-      css.setAttribute('href', base + theme + '.css');
+      var href = base + theme + '.css';
+      if (css.getAttribute('href') !== href) {
+        css.setAttribute('href', href);
+      }
     }
   })();
 </script>

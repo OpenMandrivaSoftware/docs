@@ -11,8 +11,10 @@
  * — and an explicit return to auto — are persisted to localStorage; an auto-detected
  * first visit is applied but NOT saved, so the site keeps following the system.
  *
- * The stylesheet is swapped the way the theme's own `jtd.setTheme()` does, by updating
- * the `href` of the first `[rel="stylesheet"]` link in the document.
+ * The stylesheet is swapped by updating the `href` of the
+ * `#jtd-stylesheet` link (emitted by `head.html`). The browser keeps the
+ * default stylesheet applied during the swap, so there is no unstyled gap —
+ * just a seamless transition to the resolved scheme.
  */
 (function () {
   'use strict';
@@ -34,7 +36,8 @@
   }
 
   function getStylesheet() {
-    return document.querySelector('[rel="stylesheet"]');
+    return document.getElementById('jtd-stylesheet') ||
+           document.querySelector('[rel="stylesheet"]');
   }
 
   // Raw stored value: 'auto', 'dark', 'light', or null (never chosen).

@@ -16,8 +16,9 @@ function makeContext(opts = {}) {
   };
 
   const linkEl = {
-    getAttribute: (n) => (n === 'href' ? state.href : null),
-    setAttribute: (n, v) => { if (n === 'href') { state.appliedHref.push(v); state.href = v; } },
+    _attrs: { id: 'jtd-stylesheet', href: state.href, media: 'none' },
+    getAttribute: (n) => linkEl._attrs[n] || null,
+    setAttribute: (n, v) => { linkEl._attrs[n] = v; if (n === 'href') { state.appliedHref.push(v); state.href = v; } },
   };
 
   const rootEl = {
@@ -51,7 +52,7 @@ function makeContext(opts = {}) {
     readyState: state.readyState,
     documentElement: rootEl,
     querySelector: (sel) => (sel === '[rel="stylesheet"]' ? linkEl : null),
-    getElementById: (id) => (id === 'theme-toggle' ? btn : null),
+    getElementById: (id) => (id === 'theme-toggle' ? btn : id === 'jtd-stylesheet' ? linkEl : null),
     addEventListener: (type, fn) => { if (type === 'DOMContentLoaded') fn(); },
   };
 
