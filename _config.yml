@@ -75,6 +75,7 @@ exclude:
    - Gemfile.lock
    - node_modules/
    - old-wiki/
+   - test/
    - vendor/bundle/
    - vendor/cache/
    - vendor/gems/

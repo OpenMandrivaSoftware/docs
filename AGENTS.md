@@ -13,6 +13,7 @@ This site includes several custom modifications to the base theme. For detailed 
 - [Cards Functionality](./.agents/cards/): Implementation of the dynamic home page cards.
 - [Layout Customizations](./.agents/layout/): Overrides for the theme's default centering and width constraints.
 - [Multilingual Support](./.agents/multilingual/): Multilingual implementation with the jekyll-polyglot plugin.
+- [Theme Toggle (Light/Dark)](./.agents/theme-toggle/): System-aware dark/light color-scheme toggle with a persistent user preference.
 - [Removable Theme Footer](./.agents/remove-theme-footer/): Removing the default theme footer messages.
 - [Right Sidebar (Page TOC)](./.agents/right-sidebar/): Right sidebar that displays a table of contents.
 

@@ -252,3 +252,120 @@ footer {
   font-size: 0.875rem;
   text-align: center;
 }
+
+/* ============================ Theme toggle ============================ */
+
+/*
+ * Expose the per-scheme SCSS color variables as CSS custom properties.
+ *
+ * The language switcher and the "Edit on GitHub" button are authored with
+ * `var(--border-color, …)` style fallbacks, but Just the Docs never actually
+ * defines those properties — the fallbacks (dark scheme values) win in every
+ * case, which made the switcher look wrong in light mode. Emitting the
+ * scheme-appropriate value into `:root` lets those `var()` references resolve to
+ * the correct color for whichever stylesheet was swapped in.
+ *
+ * Because `_sass/custom/custom.scss` is imported into *every* color-scheme build
+ * (just-the-docs-{light,dark,default}.css), each file gets its own values
+ * automatically.
+ */
+:root {
+  --body-background-color: #{$body-background-color};
+  --body-text-color: #{$body-text-color};
+  --body-heading-color: #{$body-heading-color};
+  --link-color: #{$link-color};
+  --border-color: #{$border-color};
+  --sidebar-color: #{$sidebar-color};
+  --code-background-color: #{$code-background-color};
+  --base-button-color: #{$base-button-color};
+  --btn-primary-color: #{$btn-primary-color};
+}
+
+/* Group the theme toggle with the language switcher in the header. */
+.header-extras {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Color-scheme toggle button — rendered to the left of the language switcher. */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 36px;
+  height: 36px;
+  padding: 0.375rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: $body-text-color;
+  background: transparent;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease,
+    box-shadow 0.15s ease;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba($link-color, 0.3);
+  }
+}
+
+@if $color-scheme == 'dark' {
+  .theme-toggle:hover {
+    border-color: $link-color;
+    background-color: rgba($grey-lt-300, 0.08);
+  }
+} @else {
+  .theme-toggle:hover {
+    border-color: $link-color;
+    background-color: rgba($grey-dk-300, 0.05);
+  }
+}
+
+/* Icons: the button shows an icon representing its current *mode*.
+   - auto  : sun + moon (follows the system)
+   - dark  : moon
+   - light : sun
+   Visibility is driven by `data-mode` set on <html> by the anti-flicker script
+   and theme-toggle.js. With no `data-mode` (no JS) the auto icon shows, matching
+   the default stylesheet. */
+.theme-toggle-icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme-toggle-icon--auto {
+  display: block;
+}
+
+.theme-toggle-icon--dark {
+  display: none;
+}
+
+.theme-toggle-icon--light {
+  display: none;
+}
+
+html[data-mode='dark'] .theme-toggle-icon--auto {
+  display: none;
+}
+
+html[data-mode='dark'] .theme-toggle-icon--dark {
+  display: block;
+}
+
+html[data-mode='light'] .theme-toggle-icon--auto {
+  display: none;
+}
+
+html[data-mode='light'] .theme-toggle-icon--light {
+  display: block;
+}

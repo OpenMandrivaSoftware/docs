@@ -1,0 +1,25 @@
+// Custom setup code goes here.
+//
+// OpenMandriva branding: use OpenMandriva Blue (#257FBA) for the accent
+// (link and primary-button) color instead of the theme's default purple / light
+// blue, in BOTH the light and dark schemes.
+//
+// Why this file: Just the Docs imports `setup.scss` *before* the color-scheme
+// files. The light scheme file assigns `$link-color`/`$btn-primary-color` with
+// `!default`, so those assignments stick. The dark scheme file assigns them
+// *without* `!default` (so it would normally win), but it derives them from
+// `$blue-000`/`$blue-200`:
+//
+//   dark: $link-color:        lighten($blue-000, 10%)
+//   dark: $btn-primary-color: $blue-200
+//
+// So we pin those upstream inputs so the dark scheme resolves to the same OM
+// Blue, too — without touching any of the unused blue utility classes.
+
+$link-color: #257FBA;
+$btn-primary-color: #257FBA;
+
+// Make `lighten($blue-000, 10%)` resolve to OM Blue (#257FBA) in the dark scheme.
+$blue-000: darken(#257FBA, 10%);
+// Make `$btn-primary-color` (= `$blue-200`) resolve to OM Blue in the dark scheme.
+$blue-200: #257FBA;

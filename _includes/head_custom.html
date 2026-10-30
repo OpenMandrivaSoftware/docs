@@ -1,0 +1,54 @@
+{%- comment -%}
+  Custom <head> additions for the OpenMandriva docs site.
+  Auto-included by the Just-the-Docs `head.html` include.
+
+  - Anti-Flicker (FOUT) inline script: resolves the color-scheme preference
+    (saved choice in localStorage — 'auto'/'dark'/'light', falling back to the OS
+    `prefers-color-scheme` media query) and swaps the Just-the-Docs per-scheme
+    stylesheet (`just-the-docs-{light,dark}.css`) *before* the first paint, so the
+    page never flashes with the wrong scheme. Also exposes `data-theme` (the scheme
+    to compile colors with) and `data-mode` (auto/dark/light, drives the toggle's
+    icon) on <html>, both reused by the external theme-toggle.js.
+  - Deferred external script that wires up the toggle button's behaviour.
+{%- endcomment -%}
+
+<script>
+  (function () {
+    // Base path for the theme's per-scheme stylesheets. `relative_url` respects
+    // the configured `baseurl`; the output is reused by theme-toggle.js.
+    var base = "{{ 'assets/css/just-the-docs-' | relative_url }}";
+    var root = document.documentElement;
+    root.setAttribute('data-theme-css-base', base);
+
+    function savedMode() {
+      try {
+        return localStorage.getItem('theme');
+      } catch (e) {
+        return null;
+      }
+    }
+
+    function systemTheme() {
+      try {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      } catch (e) {
+        return 'dark';
+      }
+    }
+
+    var saved = savedMode();
+    // 'auto' (and an unset/never-chosen state) both mean "follow the system".
+    var mode = (saved === 'auto' || saved === 'dark' || saved === 'light') ? saved : 'auto';
+    var theme = (mode === 'auto') ? systemTheme() : mode;
+
+    root.setAttribute('data-theme', theme);
+    root.setAttribute('data-mode', mode);
+
+    var css = document.querySelector('[rel="stylesheet"]');
+    if (css) {
+      css.setAttribute('href', base + theme + '.css');
+    }
+  })();
+</script>
+
+<script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
