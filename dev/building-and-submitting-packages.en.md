@@ -181,6 +181,7 @@ The [RPM packaging guide](https://rpm-packaging-guide.github.io) and the [packag
 
 ## Related Topics
 
+- [Building a Rust Package](./building-and-submitting-packages/building-a-rust-package.en.html)
 - [Understanding RPM Spec Files](./understanding-rpm-spec-files.en.html)
 - [Installing Packaging Tools](./preparing-your-system/packaging-tools.en.html)
 - [Using Cooker](./using-cooker.en.html)
