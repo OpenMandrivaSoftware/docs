@@ -62,17 +62,17 @@ has_toc: true
 Each section may contain **parent files**---regular markdown files (`*.en.md`)
 that act as landing pages for a group of related child pages. When a parent
 file has children, a **child directory** with the same name (minus `.en.md`)
-is created, containing an `index.en.md` as the first-born child.
+is created to hold the child pages.
 
 The parent file:
 - Has `card_columns:` and a `cards:` frontmatter list pointing to its children
 - Contains `{% include section_cards.html %}` in its body
 - Its `parent:` field points to the section index (e.g., `parent: User Guide`)
 
-The first-born child (`index.en.md` in the child directory):
-- Has `nav_order: 10` (lowest, making it first in navigation)
-- Its `parent:` field matches the **parent file's** title (e.g., `parent: Managing Software`)
-- All other children in the directory also have `parent:` set to the parent file's title
+Children in the child directory:
+- Have their own `nav_order:` values that determine their position in the navigation
+- Have `parent:` set to the **parent file's** title (e.g., `parent: Managing Software`)
+- Are named by their own titles, following the file naming convention
 
 ### Parent File vs. Card URL Format
 
@@ -81,8 +81,7 @@ The first-born child (`index.en.md` in the child directory):
 
 Card URLs in section index files (e.g., `user-guide/index.en.md`) should
 target the parent file (`.en.html`)---**not** the child directory's `index.en.html`.
-The parent file is the section landing page; the child `index.en.md` is just
-the first article.
+The parent file is the section landing page; its cards point to the child pages.
 
 ## Navigation Structure
 
@@ -268,14 +267,3 @@ lang: en
 
 Content here.
 ```
-
-## Lessons Learned from Restructuring
-
-The repository underwent a major restructuring applying the Getting Started pattern. Key lessons:
-
-1. **Section Indices**: `community/index.en.md`, `user-guide/index.en.md`, `dev/index.en.md`, `getting-started/index.en.md` have `title:` set to the section name and NO `parent` field (top-level sections)
-2. **Direct Children**: Files directly under a section (e.g., `user-guide/desktop.en.md`) need `parent:` set to the section index's title (e.g., `parent: User Guide`)
-3. **Parent Files**: Each parent file (e.g., `community/about-openmandriva.en.md`) has `parent:` set to the section index title (e.g., `parent: OpenMandriva Community`)
-4. **Subdirectory Children**: Files in child directories (e.g., `community/about-openmandriva/governance.en.md`) need `parent:` set to the **parent file's** title, NOT the first-born child's title
-5. **Card URLs**: Section landing page card URLs point to parent file URLs (`.en.html`), not child directory indexes (`/index.en.html`)
-6. **Mailing List Links**: The old mailing-lists page was replaced by the Links page in `home_cards.yml`
