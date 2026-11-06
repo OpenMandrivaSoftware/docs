@@ -51,7 +51,7 @@ URL: https://github.com/[user]/[package-name]
 Source0: https://github.com/[user]/[package-name]/archive/refs/tags/[package-name]-[version].tar.gz
 Source1: [package-name]-[version]-vendor.tar.xz
 
-BuildRequires: rust-packaging
+BuildRequires: cargo
 
 %description
 Short description of the project.
@@ -75,7 +75,7 @@ install -Dpm 0755 -t target/release/%{name} %{buildroot}%{_bindir}
 
 `Source1` points to the `vendor` tarball you created.
 
-`BuildRequires: rust-packaging` provides the Rust build tools and the `%cargo_prep` macro.
+`BuildRequires: cargo` provides the Rust build tools and the `%cargo_prep` macro.
 
 `%autosetup -p1` unpacks the source archive.
 
