@@ -51,7 +51,7 @@ URL: https://github.com/[user]/[package-name]
 Source0: https://github.com/[user]/[package-name]/archive/refs/tags/[package-name]-[version].tar.gz
 Source1: [package-name]-[version]-vendor.tar.xz
 
-BuildRequires: cargo
+BuildRequires: rust-packaging
 
 %description
 Short description of the project.
