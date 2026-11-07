@@ -122,6 +122,8 @@ Run `abb build` to build the package locally and fix the errors it reports. Subm
 ## Related Topics
 
 - [Building and Submitting Packages](../building-and-submitting-packages.en.html)
+- [Building a Python Package](./building-a-python-package.en.html)
+- [Building a Go Package](./building-a-go-package.en.html)
 - [Installing Packaging Tools](../preparing-your-system/packaging-tools.en.html)
 - [Understanding RPM Spec Files](../understanding-rpm-spec-files.en.html)
 - [Preparing Your System](../preparing-your-system.en.html)
