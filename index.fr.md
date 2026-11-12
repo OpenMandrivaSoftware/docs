@@ -1,10 +1,14 @@
 ---
-title: Documentation OpenMandriva
 layout: home
-card_columns: 2
+title: Documentation OpenMandriva
+nav_order: 1
+page_id: home
 lang: fr
-lang-exclusive: [fr]
+source_lang: en
 permalink: /index.html
+card_columns: 2
+lang-exclusive:
+- fr
 ---
 Bienvenue dans la documentation d'OpenMandriva !
 

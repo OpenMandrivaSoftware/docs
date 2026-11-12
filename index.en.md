@@ -1,10 +1,14 @@
 ---
-title: Home
 layout: home
-card_columns: 2
+title: Home
 nav_order: 1
+page_id: home
 lang: en
-lang-exclusive: [en]
+source_lang: en
+permalink: /index.en.html
+card_columns: 2
+lang-exclusive:
+- en
 ---
 Welcome to the OpenMandriva documentation!
 
