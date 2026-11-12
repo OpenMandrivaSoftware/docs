@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '>= 3.2.0', '< 4.1.0'
+
 # Core Jekyll and theme
 gem 'jekyll', '~> 4.4.1'
 gem 'just-the-docs', '~> 0.12.0'

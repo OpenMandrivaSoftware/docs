@@ -5,14 +5,14 @@ This repository builds the OpenMandriva documentation site with Jekyll, the Just
 ## Prerequisites
 
 To build and run the documentation site locally, you need:
-- **Ruby** (3.1 or later)
+- **Ruby** (3.2 to 4.0; verified on Ruby 4.0.9 on OpenMandriva Lx 26.09)
 - **Ruby development headers** (for native gems such as `sass-embedded`)
-- **Bundler**
+- **Bundler** (4.0 or compatible 2.4+; included with Ruby on OpenMandriva Lx)
 - **Build tools** (`gcc`, `g++`, `make`, `git`)
 
 ### OpenMandriva Lx
 ```sh
-sudo dnf --refresh install ruby ruby-devel rubygem-bundler gcc gcc-c++ make git
+sudo dnf --refresh install ruby ruby-devel gcc gcc-c++ make git
 ```
 
 ### Fedora / RHEL
