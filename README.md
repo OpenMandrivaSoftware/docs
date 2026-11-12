@@ -41,12 +41,27 @@ Open the [English home page](http://localhost:4000/index.en.html) or the [French
 
 ## Testing and Verification
 
-To verify that the site builds cleanly and test for broken internal links:
+To run all automated checks locally (Python unit tests, JavaScript theme toggle tests, production build, and link/asset validation):
 
 ```sh
-bundle exec jekyll build
-python3 test/check_links.py
+./test/run_checks.sh
 ```
+
+Individual checks can also be executed separately:
+
+- **Python validator unit tests:**
+  ```sh
+  python3 -m unittest discover -s test -p "test_*.py"
+  ```
+- **JavaScript theme toggle tests:**
+  ```sh
+  node test/theme-toggle.test.js
+  ```
+- **Internal link and asset validation:**
+  ```sh
+  bundle exec jekyll build
+  python3 test/check_links.py --site-dir _site
+  ```
 
 ## Build and publish
 
