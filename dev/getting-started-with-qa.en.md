@@ -24,7 +24,7 @@ Pre-release software arrives through the testing repositories. Packages in the m
 
 The package workflow is `Cooker → Rolling → Stable repo`. The maintainers build packages in Cooker first, and QA tests them before they move on. This is why QA members keep a Rolling system handy.
 
-Enable the testing repositories with the [Software Repository Selector](../../user-guide/managing-software/software-repository-selector.en.html), or use the command line.
+Enable the testing repositories with the [Software Repository Selector](/user-guide/managing-software/software-repository-selector.en.html), or use the command line.
 
 Use this command for the main testing repo only:
 

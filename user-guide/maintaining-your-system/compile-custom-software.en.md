@@ -47,9 +47,9 @@ make CC=clang CXX=clang++ LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy O
 
 ## Package Your Software
 
-Distribute your software through the official repositories by joining the packaging team. See [How to Build and Submit Packages](../../dev/how-to-build-and-submit-packages.en.html) for instructions.
+Distribute your software through the official repositories by joining the packaging team. See [Building and Submitting Packages](/dev/building-and-submitting-packages.en.html) for instructions.
 
 ## Related Topics
 
 - [Maintaining Your System](../maintaining-your-system.en.html)
-- [How to Build and Submit Packages](../../dev/how-to-build-and-submit-packages.en.html)
+- [Building and Submitting Packages](/dev/building-and-submitting-packages.en.html)

@@ -34,6 +34,6 @@ If something feels wrong with a channel's behavior, do not change it without dis
 
 ## Related Topics
 
-- [OpenMandriva Community](../index.en.html)
-- [Community Links](../links.en.html)
-- [About OpenMandriva](../about-openmandriva.en.html)
+- [OpenMandriva Community](./index.en.html)
+- [Community Links](./links.en.html)
+- [About OpenMandriva](./about-openmandriva.en.html)
