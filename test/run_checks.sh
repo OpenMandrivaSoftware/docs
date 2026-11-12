@@ -10,11 +10,25 @@ python3 -m unittest discover -s test -p "test_*.py"
 
 echo ""
 echo "=== 2/4: Running theme-toggle JavaScript unit tests ==="
-if command -v node >/dev/null 2>&1; then
-    node test/theme-toggle.test.js
-else
-    echo "Notice: node is not installed; skipping test/theme-toggle.test.js (tested in CI)."
+if ! command -v node >/dev/null 2>&1; then
+    for candidate in \
+        "$HOME/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin" \
+        "/usr/lib/chatgpt/resources/cua_node/bin"
+    do
+        if [ -x "$candidate/node" ]; then
+            export PATH="$candidate:$PATH"
+            break
+        fi
+    done
 fi
+
+if ! command -v node >/dev/null 2>&1; then
+    echo "Error: Node.js is required for running the complete test suite (theme-toggle.test.js)." >&2
+    echo "Please install Node.js (18+) or ensure it is in your PATH." >&2
+    exit 1
+fi
+
+node test/theme-toggle.test.js
 
 echo ""
 echo "=== 3/4: Building site with Jekyll (production) ==="

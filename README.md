@@ -5,25 +5,30 @@ This repository builds the OpenMandriva documentation site with Jekyll, the Just
 ## Prerequisites
 
 To build and run the documentation site locally, you need:
-- **Ruby** (3.2 to 4.0; verified on Ruby 4.0.9 on OpenMandriva Lx 26.09)
-- **Ruby development headers** (for native gems such as `sass-embedded`)
-- **Bundler** (4.0 or compatible 2.4+; included with Ruby on OpenMandriva Lx)
-- **Build tools** (`gcc`, `g++`, `make`, `git`)
+- **Ruby:** 3.2 to 4.0 (`Gemfile` specifies `>= 3.2.0, < 4.1.0`; verified on Ruby 3.3 in CI and Ruby 4.0.9 on OpenMandriva Lx 26.09 ROME)
+- **RubyGems:** 3.4.1+ (RubyGems 4.0.24 is included with Ruby on OpenMandriva Lx)
+- **Bundler:** 4.0.24 (locked in `Gemfile.lock`)
+- **Ruby development headers:** `ruby-devel` / `ruby-full` (for native gem compilation, including `sass-embedded`)
+- **Build tools:** `gcc`, `g++`, `make`, `git`
+
+For running the complete automated verification suite (`./test/run_checks.sh`):
+- **Python:** 3.10+ (for `test/check_links.py` and unit tests, standard library only)
+- **Node.js:** 18+ (for `test/theme-toggle.test.js`)
 
 ### OpenMandriva Lx
 ```sh
-sudo dnf --refresh install ruby ruby-devel gcc gcc-c++ make git
+sudo dnf --refresh install ruby ruby-devel gcc gcc-c++ make git nodejs python3
 ```
 
 ### Fedora / RHEL
 ```sh
-sudo dnf install ruby ruby-devel rubygem-bundler gcc gcc-c++ make git
+sudo dnf install ruby ruby-devel rubygem-bundler gcc gcc-c++ make git nodejs python3
 ```
 
 ### Debian / Ubuntu
 ```sh
-sudo apt-get update && sudo apt-get install ruby-full build-essential zlib1g-dev git
-gem install bundler
+sudo apt-get update && sudo apt-get install ruby-full build-essential zlib1g-dev git nodejs python3
+gem install bundler -v 4.0.24
 ```
 
 ## Run the site locally
@@ -34,8 +39,6 @@ From the repository root, install the dependencies and start Jekyll:
 bundle install
 bundle exec jekyll serve
 ```
-
-> **Tip:** If running with Bundler 2.x and you see a lockfile version warning, run `bundle install` to adapt the lockfile to your local environment.
 
 Open the [English home page](http://localhost:4000/index.en.html) or the [French home page](http://localhost:4000/fr/index.fr.html). The site root redirects to the English home page.
 

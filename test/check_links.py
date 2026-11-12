@@ -3,11 +3,11 @@
 Internal Link and Asset Validator for OpenMandriva Docs.
 
 Scans the compiled Jekyll site directory to verify:
-- Internal links (href) and assets (src) exist on disk.
-- Page anchors (#id or <a name>) exist in current and target documents.
-- Relative and absolute paths resolve correctly.
-- Same-origin URLs matching site_url are validated as internal paths.
-- URL-encoded characters and query parameters are properly handled.
+- Internal links (href) and assets (src) exist on disk within site_dir.
+- Link resolution accurately models the published web site (using urljoin).
+- Links respect the configured baseurl publication scope (with segment boundary checks).
+- Page anchors (#id or <a name>) exist in current and target HTML documents.
+- Query strings and URL fragments are parsed correctly without breaking file resolution.
 - Directory links require a valid index.html.
 
 Usage:
@@ -18,7 +18,7 @@ import argparse
 import os
 import sys
 from html.parser import HTMLParser
-from urllib.parse import urlparse, unquote
+from urllib.parse import urlparse, urljoin, unquote
 
 
 class HTMLResourceParser(HTMLParser):
@@ -60,27 +60,51 @@ class LinkChecker:
     def __init__(self, site_dir="_site", site_url="https://docs.openmandriva.org", baseurl=""):
         self.site_dir = os.path.abspath(site_dir)
         self.site_url = site_url.rstrip("/") if site_url else ""
-        self.baseurl = ("/" + baseurl.strip("/")) if baseurl and baseurl.strip("/") else ""
-        self.parsed_site_url = urlparse(self.site_url) if self.site_url else None
+
+        # Normalize baseurl: empty string or leading slash with no trailing slash, e.g. "/docs"
+        raw_base = baseurl.strip() if baseurl else ""
+        self.baseurl = ("/" + raw_base.strip("/")) if raw_base.strip("/") else ""
+
+        # Default origin for URL resolution
+        if self.site_url:
+            self.origin = self.site_url
+            self.expected_netloc = urlparse(self.site_url).netloc
+        else:
+            self.origin = "http://localhost"
+            self.expected_netloc = "localhost"
 
         self.file_anchors = {}  # {abs_html_path: set(anchors)}
         self.file_links = {}    # {abs_html_path: list((tag, attr, url, line))}
         self.errors = []        # list of dict(source, link, reason, line)
         self.checked_count = 0
 
-    def is_same_origin(self, parsed_url, raw_url):
-        """Determine if a URL belongs to the site origin."""
-        if not self.parsed_site_url or not self.parsed_site_url.netloc:
-            return False
+    def is_within_baseurl(self, path):
+        """Check if URL path is within the configured baseurl with strict segment boundaries."""
+        if not self.baseurl:
+            return True
+        if path == self.baseurl or path == self.baseurl + "/":
+            return True
+        return path.startswith(self.baseurl + "/")
 
-        if raw_url.startswith("//"):
-            netloc = raw_url[2:].split("/")[0]
-            return netloc == self.parsed_site_url.netloc
+    def strip_baseurl(self, path):
+        """Remove baseurl prefix from URL path."""
+        if not self.baseurl:
+            return path
+        if path == self.baseurl or path == self.baseurl + "/":
+            return "/"
+        if path.startswith(self.baseurl + "/"):
+            return path[len(self.baseurl):]
+        return path
 
-        if parsed_url.scheme in ("http", "https"):
-            return parsed_url.netloc == self.parsed_site_url.netloc
-
-        return False
+    def get_source_public_url(self, src_path):
+        """Determine the public URL of a source HTML file."""
+        rel_path = os.path.relpath(src_path, self.site_dir)
+        rel_url_path = "/".join(rel_path.split(os.sep))
+        if self.baseurl:
+            doc_path = f"{self.baseurl}/{rel_url_path}"
+        else:
+            doc_path = f"/{rel_url_path}"
+        return f"{self.origin}{doc_path}"
 
     def scan(self):
         """Pass 1: Traverse the site directory and parse all HTML files."""
@@ -98,11 +122,13 @@ class LinkChecker:
                     self.file_links[file_path] = parser.links
 
     def validate(self):
-        """Pass 2: Validate all links and anchors."""
+        """Pass 2: Validate all links and anchors by modeling the published site."""
         self.errors = []
         self.checked_count = 0
 
         for src_path, links in self.file_links.items():
+            source_public_url = self.get_source_public_url(src_path)
+
             for tag, attr, raw_link, line in links:
                 link = raw_link.strip()
                 if not link:
@@ -112,85 +138,96 @@ class LinkChecker:
                 if link.startswith(("mailto:", "tel:", "javascript:", "data:", "irc:", "magnet:", "news:")):
                     continue
 
-                parsed = urlparse(link)
+                # Step 1 & 2: Resolve URL relative to source document using standard urljoin
+                resolved_url = urljoin(source_public_url, link)
+                parsed = urlparse(resolved_url)
 
-                # Skip external links
-                if parsed.scheme in ("http", "https") or link.startswith("//"):
-                    if not self.is_same_origin(parsed, link):
-                        continue
+                # Step 3: Check origin (skip external links)
+                if parsed.netloc != self.expected_netloc:
+                    continue
 
                 self.checked_count += 1
 
-                path_part = unquote(parsed.path)
-                fragment = unquote(parsed.fragment)
-
-                # Strip baseurl prefix if configured
-                if self.baseurl and path_part.startswith(self.baseurl):
-                    path_part = path_part[len(self.baseurl):]
-                    if not path_part.startswith("/"):
-                        path_part = "/" + path_part
-
-                # Resolve filesystem target
-                if not path_part:
-                    # Same-page link (e.g. href="#anchor")
-                    target_file = src_path
-                elif path_part.startswith("/"):
-                    # Site-root relative link
-                    rel_to_root = path_part.lstrip("/")
-                    target_path = os.path.normpath(os.path.join(self.site_dir, rel_to_root))
-                    if os.path.isdir(target_path) or path_part.endswith("/"):
-                        target_file = os.path.join(target_path, "index.html")
-                    else:
-                        target_file = target_path
-                else:
-                    # Document-relative link
-                    src_dir = os.path.dirname(src_path)
-                    target_path = os.path.normpath(os.path.join(src_dir, path_part))
-                    if os.path.isdir(target_path) or path_part.endswith("/"):
-                        target_file = os.path.join(target_path, "index.html")
-                    else:
-                        target_file = target_path
-
-                # Check file existence
-                if not os.path.exists(target_file):
+                # Check publication scope (baseurl segment boundary)
+                if not self.is_within_baseurl(parsed.path):
                     self.errors.append({
                         "source": src_path,
                         "link": raw_link,
                         "line": line,
-                        "reason": f"Target file does not exist: '{os.path.relpath(target_file, self.site_dir)}'"
+                        "reason": f"Target URL '{parsed.path}' is outside baseurl scope '{self.baseurl}'"
+                    })
+                    continue
+
+                # Step 4: Transform URL path into local file path
+                unquoted_path = unquote(parsed.path)
+                stripped_path = self.strip_baseurl(unquoted_path)
+                rel_file_path = stripped_path.lstrip("/")
+
+                if not rel_file_path or stripped_path.endswith("/"):
+                    target_path = os.path.normpath(os.path.join(self.site_dir, rel_file_path, "index.html"))
+                else:
+                    candidate = os.path.normpath(os.path.join(self.site_dir, rel_file_path))
+                    if os.path.isdir(candidate):
+                        target_path = os.path.join(candidate, "index.html")
+                    else:
+                        target_path = candidate
+
+                # Step 5: Ensure target stays strictly inside site_dir
+                abs_target = os.path.abspath(target_path)
+                try:
+                    in_bounds = os.path.commonpath([self.site_dir, abs_target]) == self.site_dir
+                except ValueError:
+                    in_bounds = False
+
+                if not in_bounds:
+                    self.errors.append({
+                        "source": src_path,
+                        "link": raw_link,
+                        "line": line,
+                        "reason": f"Target resolves outside published site directory: '{raw_link}'"
+                    })
+                    continue
+
+                # Step 6: Check file existence
+                if not os.path.exists(target_path):
+                    self.errors.append({
+                        "source": src_path,
+                        "link": raw_link,
+                        "line": line,
+                        "reason": f"Target file does not exist: '{os.path.relpath(target_path, self.site_dir)}'"
                     })
                     continue
 
                 # If target is a directory, require index.html
-                if os.path.isdir(target_file):
-                    index_file = os.path.join(target_file, "index.html")
+                if os.path.isdir(target_path):
+                    index_file = os.path.join(target_path, "index.html")
                     if not os.path.isfile(index_file):
                         self.errors.append({
                             "source": src_path,
                             "link": raw_link,
                             "line": line,
-                            "reason": f"Directory has no index.html: '{os.path.relpath(target_file, self.site_dir)}'"
+                            "reason": f"Directory has no index.html: '{os.path.relpath(target_path, self.site_dir)}'"
                         })
-                    continue
+                    target_path = index_file
 
-                # Check anchor existence in HTML documents
-                if fragment and target_file.endswith(".html"):
-                    anchors = self.file_anchors.get(target_file)
+                # Check anchor existence in target HTML file
+                fragment = unquote(parsed.fragment)
+                if fragment and target_path.endswith(".html"):
+                    anchors = self.file_anchors.get(target_path)
                     if anchors is None:
-                        # Target is an external HTML or unparsed file
-                        if not os.path.isfile(target_file):
+                        if not os.path.isfile(target_path):
                             self.errors.append({
                                 "source": src_path,
                                 "link": raw_link,
                                 "line": line,
-                                "reason": f"Target file does not exist: '{os.path.relpath(target_file, self.site_dir)}'"
+                                "reason": f"Target file does not exist: '{os.path.relpath(target_path, self.site_dir)}'"
                             })
                     elif fragment not in anchors:
                         self.errors.append({
                             "source": src_path,
                             "link": raw_link,
                             "line": line,
-                            "reason": f"Anchor '#{fragment}' not found in '{os.path.relpath(target_file, self.site_dir)}'"
+                            "reason": f"Anchor '#{fragment}' not found in '{os.path.relpath(target_path, self.site_dir)}'"
                         })
 
         return len(self.errors) == 0
