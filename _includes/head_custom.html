@@ -62,3 +62,8 @@
 </script>
 
 <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
+{%- if page.page_id -%}
+<meta name="doc-page-id" content="{{ page.page_id }}">
+<meta name="doc-content-lang" content="{{ page.lang }}">
+{%- endif -%}
+

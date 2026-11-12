@@ -44,7 +44,7 @@ Open the [English home page](http://localhost:4000/index.en.html) or the [French
 
 ## Testing and Verification
 
-To run all automated checks locally (Python unit tests, JavaScript theme toggle tests, production build, and link/asset validation):
+To run all automated checks locally (Ruby metadata tests, Python unit tests, JavaScript theme toggle tests, production build, generated site verification, and link/asset validation):
 
 ```sh
 ./test/run_checks.sh
@@ -52,6 +52,11 @@ To run all automated checks locally (Python unit tests, JavaScript theme toggle 
 
 Individual checks can also be executed separately:
 
+- **Source metadata validation and unit tests (Ruby):**
+  ```sh
+  ruby test/test_metadata_validator.rb
+  ruby test/validate_metadata.rb --check-migration
+  ```
 - **Python validator unit tests:**
   ```sh
   python3 -m unittest discover -s test -p "test_*.py"
@@ -59,6 +64,10 @@ Individual checks can also be executed separately:
 - **JavaScript theme toggle tests:**
   ```sh
   node test/theme-toggle.test.js
+  ```
+- **Generated site route verification:**
+  ```sh
+  python3 test/verify_generated_site.py --site-dir _site
   ```
 - **Internal link and asset validation:**
   ```sh
