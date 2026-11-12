@@ -5,14 +5,8 @@ Unit tests for test/check_links.py link and asset validator.
 
 import os
 import shutil
-import sys
 import tempfile
 import unittest
-
-# Ensure this directory is on sys.path to avoid collision with standard library 'test' package
-_test_dir = os.path.dirname(os.path.abspath(__file__))
-if _test_dir not in sys.path:
-    sys.path.insert(0, _test_dir)
 
 from check_links import LinkChecker, main
 
