@@ -55,16 +55,24 @@ class MetadataValidator
 
   # Parse YAML frontmatter from a markdown file.
   def parse_frontmatter(path)
+    rel_path = path.is_a?(Pathname) ? path.relative_path_from(@repo_root).to_s : path.to_s
     content = File.read(path, encoding: 'UTF-8')
     match = content.match(/\A---\s*\r?\n(.*?)\r?\n---\s*\r?\n/m)
-    return nil unless match
+    unless match
+      @errors << "#{rel_path}: Missing valid YAML frontmatter block (file must begin with '---')"
+      return nil
+    end
 
     fm = YAML.safe_load(match[1])
-    return nil unless fm.is_a?(Hash)
+    unless fm.is_a?(Hash)
+      @errors << "#{rel_path}: Frontmatter is not a valid YAML mapping/hash"
+      return nil
+    end
 
     fm
   rescue Psych::SyntaxError => e
-    @errors << "#{path}: YAML syntax error in frontmatter: #{e.message}"
+    rel_path = path.is_a?(Pathname) ? path.relative_path_from(@repo_root).to_s : path.to_s
+    @errors << "#{rel_path}: YAML syntax error in frontmatter: #{e.message}"
     nil
   end
 
@@ -152,14 +160,10 @@ class MetadataValidator
       @errors << "#{rel}: Invalid source_lang '#{doc[:source_lang]}'. Allowed languages from _config.yml: #{@languages.inspect}"
     end
 
-    # Validate nav_order is a valid integer
+    # Validate nav_order is strictly an Integer type
     val_order = fm['nav_order']
-    if val_order
-      begin
-        Integer(val_order)
-      rescue ArgumentError, TypeError
-        @errors << "#{rel}: Field 'nav_order' must be an integer, got '#{val_order.inspect}'"
-      end
+    if val_order && !val_order.is_a?(Integer)
+      @errors << "#{rel}: Field 'nav_order' must be an integer, got #{val_order.class} (#{val_order.inspect})"
     end
 
     # Validate permalink syntax

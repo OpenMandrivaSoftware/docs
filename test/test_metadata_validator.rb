@@ -224,22 +224,81 @@ class TestMetadataValidator < Minitest::Test
     end
   end
 
-  def test_invalid_nav_order
+  def test_invalid_nav_order_rejects_string_and_float
+    # Reject string nav_order (both words and string integers)
     Dir.mktmpdir do |tmp|
       tmp_path = Pathname.new(tmp)
       validator = MetadataValidator.new(repo_root: tmp_path, config: { 'languages' => ['en'], 'default_lang' => 'en' })
 
       create_fixture_doc(tmp, 'article/index.en.md', {
-        'page_id' => 'bad.order',
+        'page_id' => 'bad.order.str',
         'lang' => 'en',
         'source_lang' => 'en',
-        'title' => 'Bad Order',
-        'permalink' => '/article/',
-        'nav_order' => 'first' # Not an integer
+        'title' => 'String Order',
+        'permalink' => '/article-str/',
+        'nav_order' => '10' # String integer must be rejected
       })
 
       refute validator.validate
-      assert validator.errors.any? { |e| e.include?("Field 'nav_order' must be an integer") }
+      assert validator.errors.any? { |e| e.include?("Field 'nav_order' must be an integer, got String") }
+    end
+
+    # Reject float nav_order
+    Dir.mktmpdir do |tmp|
+      tmp_path = Pathname.new(tmp)
+      validator = MetadataValidator.new(repo_root: tmp_path, config: { 'languages' => ['en'], 'default_lang' => 'en' })
+
+      create_fixture_doc(tmp, 'article/index.en.md', {
+        'page_id' => 'bad.order.float',
+        'lang' => 'en',
+        'source_lang' => 'en',
+        'title' => 'Float Order',
+        'permalink' => '/article-float/',
+        'nav_order' => 10.5 # Float must be rejected
+      })
+
+      refute validator.validate
+      assert validator.errors.any? { |e| e.include?("Field 'nav_order' must be an integer, got Float") }
+    end
+  end
+
+  def test_production_candidate_without_frontmatter_fails
+    Dir.mktmpdir do |tmp|
+      tmp_path = Pathname.new(tmp)
+      config = {
+        'languages' => ['en'],
+        'default_lang' => 'en',
+        'exclude' => ['README.md', 'AGENTS.md', 'test/']
+      }
+      validator = MetadataValidator.new(repo_root: tmp_path, config: config)
+
+      # 1. Repository-only file without frontmatter (must be safely ignored via exclude)
+      readme = tmp_path.join('README.md')
+      File.write(readme, "# Project Readme\nThis is a readme file without frontmatter.\n")
+
+      # 2. Production document candidate without frontmatter (must fail validation)
+      prod_doc = tmp_path.join('user-guide/getting-started/index.en.md')
+      prod_doc.parent.mkpath
+      File.write(prod_doc, "# Topic Without Frontmatter\nSome content without YAML headers.\n")
+
+      refute validator.validate
+      assert validator.errors.any? { |e| e.include?("user-guide/getting-started/index.en.md: Missing valid YAML frontmatter block") }
+      # Ensure README.md was not complained about
+      refute validator.errors.any? { |e| e.include?("README.md") }
+    end
+  end
+
+  def test_non_hash_frontmatter_fails
+    Dir.mktmpdir do |tmp|
+      tmp_path = Pathname.new(tmp)
+      validator = MetadataValidator.new(repo_root: tmp_path, config: { 'languages' => ['en'], 'default_lang' => 'en' })
+
+      prod_doc = tmp_path.join('article/index.en.md')
+      prod_doc.parent.mkpath
+      File.write(prod_doc, "---\n- item 1\n- item 2\n---\nBody\n")
+
+      refute validator.validate
+      assert validator.errors.any? { |e| e.include?("Frontmatter is not a valid YAML mapping/hash") }
     end
   end
 

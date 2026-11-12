@@ -10,7 +10,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from test.verify_generated_site import SiteVerifier
+from verify_generated_site import SiteVerifier
 
 
 class TestSiteVerifier(unittest.TestCase):
