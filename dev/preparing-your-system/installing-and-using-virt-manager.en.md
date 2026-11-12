@@ -107,6 +107,12 @@ The default storage pool points to `/var/lib/libvirt/images`, which is not a goo
 
    You have now configured Virt Manager to use your chosen directories for all future virtual machines. 
 
+{: .tip }
+> If Virt Manager later complains that it can't access your VMs in this directory, give the `qemu` group access to it: 
+> ```bash
+> sudo setfacl -m u:qemu:x /home/[user name]
+> ```
+
 ## Next Steps
 
 With Virt Manager installed and configured, you are ready to create your first virtual machine. See [Creating a Cooker VM](./creating-cooker-vm.en.html) to set up a development environment for OpenMandriva's Cooker branch.
