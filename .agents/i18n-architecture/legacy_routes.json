@@ -1,0 +1,1776 @@
+{
+  "baseline_commit": "b3014780fc0e53194e83cc822dad29f3fc289ba2",
+  "total_generated_routes": 177,
+  "routes": [
+    {
+      "public_url": "/404.html",
+      "file_in_site": "404.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "system.404",
+      "canonical_destination": "/404.html",
+      "redirect_requirement": "System error page",
+      "notes": "Root 404 handler"
+    },
+    {
+      "public_url": "/index.en.html",
+      "file_in_site": "index.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "home",
+      "canonical_destination": "/",
+      "redirect_requirement": "Legacy EN home path -> redirect to /",
+      "notes": "Legacy English homepage URL"
+    },
+    {
+      "public_url": "/index.html",
+      "file_in_site": "index.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "home",
+      "canonical_destination": "/",
+      "redirect_requirement": "Root entry point -> becomes canonical EN homepage",
+      "notes": "Legacy HTTP-equiv refresh redirect to /index.en.html"
+    },
+    {
+      "public_url": "/community/about-openmandriva.en.html",
+      "file_in_site": "community/about-openmandriva.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.about-openmandriva",
+      "canonical_destination": "/community/about-openmandriva/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/about-openmandriva/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/artwork.en.html",
+      "file_in_site": "community/artwork.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.artwork",
+      "canonical_destination": "/community/artwork/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/artwork/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/chat-with-openmandriva.en.html",
+      "file_in_site": "community/chat-with-openmandriva.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.chat-with-openmandriva",
+      "canonical_destination": "/community/chat-with-openmandriva/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/chat-with-openmandriva/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/donation.en.html",
+      "file_in_site": "community/donation.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.donation",
+      "canonical_destination": "/community/donation/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/donation/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/index.en.html",
+      "file_in_site": "community/index.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community",
+      "canonical_destination": "/community/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/links.en.html",
+      "file_in_site": "community/links.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.links",
+      "canonical_destination": "/community/links/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/links/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/official-naming-policy.en.html",
+      "file_in_site": "community/official-naming-policy.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.official-naming-policy",
+      "canonical_destination": "/community/official-naming-policy/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/official-naming-policy/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/oma-tm-licence.en.html",
+      "file_in_site": "community/oma-tm-licence.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.oma-tm-licence",
+      "canonical_destination": "/community/oma-tm-licence/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/oma-tm-licence/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases.en.html",
+      "file_in_site": "community/releases.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases",
+      "canonical_destination": "/community/releases/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/setting-up-a-mirror.en.html",
+      "file_in_site": "community/setting-up-a-mirror.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.setting-up-a-mirror",
+      "canonical_destination": "/community/setting-up-a-mirror/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/setting-up-a-mirror/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/terms-of-service.en.html",
+      "file_in_site": "community/terms-of-service.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.terms-of-service",
+      "canonical_destination": "/community/terms-of-service/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/terms-of-service/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/about-openmandriva/bylaws.en.html",
+      "file_in_site": "community/about-openmandriva/bylaws.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.about-openmandriva.bylaws",
+      "canonical_destination": "/community/about-openmandriva/bylaws/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/about-openmandriva/bylaws/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/about-openmandriva/governance.en.html",
+      "file_in_site": "community/about-openmandriva/governance.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.about-openmandriva.governance",
+      "canonical_destination": "/community/about-openmandriva/governance/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/about-openmandriva/governance/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/about-openmandriva/statutes.en.html",
+      "file_in_site": "community/about-openmandriva/statutes.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.about-openmandriva.statutes",
+      "canonical_destination": "/community/about-openmandriva/statutes/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/about-openmandriva/statutes/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/current-releases.en.html",
+      "file_in_site": "community/releases/current-releases.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.current-releases",
+      "canonical_destination": "/community/releases/current-releases/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/current-releases/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/release-codenames.en.html",
+      "file_in_site": "community/releases/release-codenames.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.release-codenames",
+      "canonical_destination": "/community/releases/release-codenames/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/release-codenames/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/release-life-cycle.en.html",
+      "file_in_site": "community/releases/release-life-cycle.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.release-life-cycle",
+      "canonical_destination": "/community/releases/release-life-cycle/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/release-life-cycle/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/release-plan-and-repositories.en.html",
+      "file_in_site": "community/releases/release-plan-and-repositories.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.release-plan-and-repositories",
+      "canonical_destination": "/community/releases/release-plan-and-repositories/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/release-plan-and-repositories/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/repository-policies.en.html",
+      "file_in_site": "community/releases/repository-policies.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.repository-policies",
+      "canonical_destination": "/community/releases/repository-policies/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/repository-policies/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/rock-6.0-changelog.en.html",
+      "file_in_site": "community/releases/rock-6.0-changelog.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rock-6.0-changelog",
+      "canonical_destination": "/community/releases/rock-6.0-changelog/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/rock-6.0-changelog/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/rock-6.0-errata.en.html",
+      "file_in_site": "community/releases/rock-6.0-errata.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rock-6.0-errata",
+      "canonical_destination": "/community/releases/rock-6.0-errata/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/rock-6.0-errata/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/rock-6.0-release-notes.en.html",
+      "file_in_site": "community/releases/rock-6.0-release-notes.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rock-6.0-release-notes",
+      "canonical_destination": "/community/releases/rock-6.0-release-notes/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/rock-6.0-release-notes/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/rome-changelog.en.html",
+      "file_in_site": "community/releases/rome-changelog.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rome-changelog",
+      "canonical_destination": "/community/releases/rome-changelog/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/rome-changelog/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/rome-errata.en.html",
+      "file_in_site": "community/releases/rome-errata.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rome-errata",
+      "canonical_destination": "/community/releases/rome-errata/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/rome-errata/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/community/releases/rome-release-notes.en.html",
+      "file_in_site": "community/releases/rome-release-notes.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rome-release-notes",
+      "canonical_destination": "/community/releases/rome-release-notes/",
+      "redirect_requirement": "Legacy EN route -> redirect to /community/releases/rome-release-notes/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/building-and-submitting-packages.en.html",
+      "file_in_site": "dev/building-and-submitting-packages.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.building-and-submitting-packages",
+      "canonical_destination": "/dev/building-and-submitting-packages/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/building-and-submitting-packages/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/contributing-to-openmandriva.en.html",
+      "file_in_site": "dev/contributing-to-openmandriva.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.contributing-to-openmandriva",
+      "canonical_destination": "/dev/contributing-to-openmandriva/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/contributing-to-openmandriva/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/getting-started-with-qa.en.html",
+      "file_in_site": "dev/getting-started-with-qa.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.getting-started-with-qa",
+      "canonical_destination": "/dev/getting-started-with-qa/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/getting-started-with-qa/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/index.en.html",
+      "file_in_site": "dev/index.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev",
+      "canonical_destination": "/dev/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/maintaining-packages.en.html",
+      "file_in_site": "dev/maintaining-packages.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.maintaining-packages",
+      "canonical_destination": "/dev/maintaining-packages/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/maintaining-packages/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/preparing-your-system.en.html",
+      "file_in_site": "dev/preparing-your-system.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.preparing-your-system",
+      "canonical_destination": "/dev/preparing-your-system/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/preparing-your-system/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/understanding-rpm-spec-files.en.html",
+      "file_in_site": "dev/understanding-rpm-spec-files.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.understanding-rpm-spec-files",
+      "canonical_destination": "/dev/understanding-rpm-spec-files/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/understanding-rpm-spec-files/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/using-cooker.en.html",
+      "file_in_site": "dev/using-cooker.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.using-cooker",
+      "canonical_destination": "/dev/using-cooker/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/using-cooker/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/getting-started-with-qa/bug-report-tool.en.html",
+      "file_in_site": "dev/getting-started-with-qa/bug-report-tool.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.getting-started-with-qa.bug-report-tool",
+      "canonical_destination": "/dev/getting-started-with-qa/bug-report-tool/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/getting-started-with-qa/bug-report-tool/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/getting-started-with-qa/release-qa-checklist.en.html",
+      "file_in_site": "dev/getting-started-with-qa/release-qa-checklist.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.getting-started-with-qa.release-qa-checklist",
+      "canonical_destination": "/dev/getting-started-with-qa/release-qa-checklist/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/getting-started-with-qa/release-qa-checklist/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/getting-started-with-qa/report-bugs-effectively.en.html",
+      "file_in_site": "dev/getting-started-with-qa/report-bugs-effectively.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.getting-started-with-qa.report-bugs-effectively",
+      "canonical_destination": "/dev/getting-started-with-qa/report-bugs-effectively/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/getting-started-with-qa/report-bugs-effectively/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/building-and-submitting-packages/building-a-go-package.en.html",
+      "file_in_site": "dev/building-and-submitting-packages/building-a-go-package.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.building-and-submitting-packages.building-a-go-package",
+      "canonical_destination": "/dev/building-and-submitting-packages/building-a-go-package/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/building-and-submitting-packages/building-a-go-package/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/building-and-submitting-packages/building-a-python-package.en.html",
+      "file_in_site": "dev/building-and-submitting-packages/building-a-python-package.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.building-and-submitting-packages.building-a-python-package",
+      "canonical_destination": "/dev/building-and-submitting-packages/building-a-python-package/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/building-and-submitting-packages/building-a-python-package/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/building-and-submitting-packages/building-a-rust-package.en.html",
+      "file_in_site": "dev/building-and-submitting-packages/building-a-rust-package.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.building-and-submitting-packages.building-a-rust-package",
+      "canonical_destination": "/dev/building-and-submitting-packages/building-a-rust-package/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/building-and-submitting-packages/building-a-rust-package/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/preparing-your-system/creating-cooker-vm.en.html",
+      "file_in_site": "dev/preparing-your-system/creating-cooker-vm.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.preparing-your-system.creating-cooker-vm",
+      "canonical_destination": "/dev/preparing-your-system/creating-cooker-vm/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/preparing-your-system/creating-cooker-vm/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/preparing-your-system/installing-and-using-virt-manager.en.html",
+      "file_in_site": "dev/preparing-your-system/installing-and-using-virt-manager.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.preparing-your-system.installing-and-using-virt-manager",
+      "canonical_destination": "/dev/preparing-your-system/installing-and-using-virt-manager/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/preparing-your-system/installing-and-using-virt-manager/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/dev/preparing-your-system/packaging-tools.en.html",
+      "file_in_site": "dev/preparing-your-system/packaging-tools.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "dev.preparing-your-system.packaging-tools",
+      "canonical_destination": "/dev/preparing-your-system/packaging-tools/",
+      "redirect_requirement": "Legacy EN route -> redirect to /dev/preparing-your-system/packaging-tools/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/desktop-environments.en.html",
+      "file_in_site": "user-guide/desktop-environments.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.desktop-environments",
+      "canonical_destination": "/user-guide/desktop-environments/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/desktop-environments/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/first-steps.en.html",
+      "file_in_site": "user-guide/first-steps.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.first-steps",
+      "canonical_destination": "/user-guide/first-steps/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/first-steps/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/getting-help.en.html",
+      "file_in_site": "user-guide/getting-help.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.getting-help",
+      "canonical_destination": "/user-guide/getting-help/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/getting-help/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/index.en.html",
+      "file_in_site": "user-guide/index.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide",
+      "canonical_destination": "/user-guide/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/maintaining-your-system.en.html",
+      "file_in_site": "user-guide/maintaining-your-system.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.maintaining-your-system",
+      "canonical_destination": "/user-guide/maintaining-your-system/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/maintaining-your-system/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software.en.html",
+      "file_in_site": "user-guide/managing-software.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software",
+      "canonical_destination": "/user-guide/managing-software/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/network-configuration.en.html",
+      "file_in_site": "user-guide/network-configuration.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.network-configuration",
+      "canonical_destination": "/user-guide/network-configuration/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/network-configuration/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/post-installation-configuration.en.html",
+      "file_in_site": "user-guide/post-installation-configuration.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.post-installation-configuration",
+      "canonical_destination": "/user-guide/post-installation-configuration/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/post-installation-configuration/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/troubleshooting.en.html",
+      "file_in_site": "user-guide/troubleshooting.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.troubleshooting",
+      "canonical_destination": "/user-guide/troubleshooting/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/troubleshooting/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/maintaining-your-system/compile-custom-software.en.html",
+      "file_in_site": "user-guide/maintaining-your-system/compile-custom-software.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.maintaining-your-system.compile-custom-software",
+      "canonical_destination": "/user-guide/maintaining-your-system/compile-custom-software/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/maintaining-your-system/compile-custom-software/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/maintaining-your-system/list-recent-updates.en.html",
+      "file_in_site": "user-guide/maintaining-your-system/list-recent-updates.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.maintaining-your-system.list-recent-updates",
+      "canonical_destination": "/user-guide/maintaining-your-system/list-recent-updates/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/maintaining-your-system/list-recent-updates/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/maintaining-your-system/switch-update-channels.en.html",
+      "file_in_site": "user-guide/maintaining-your-system/switch-update-channels.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.maintaining-your-system.switch-update-channels",
+      "canonical_destination": "/user-guide/maintaining-your-system/switch-update-channels/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/maintaining-your-system/switch-update-channels/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/maintaining-your-system/update-your-system.en.html",
+      "file_in_site": "user-guide/maintaining-your-system/update-your-system.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.maintaining-your-system.update-your-system",
+      "canonical_destination": "/user-guide/maintaining-your-system/update-your-system/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/maintaining-your-system/update-your-system/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/post-installation-configuration/configure-a-printer.en.html",
+      "file_in_site": "user-guide/post-installation-configuration/configure-a-printer.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.post-installation-configuration.configure-a-printer",
+      "canonical_destination": "/user-guide/post-installation-configuration/configure-a-printer/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/post-installation-configuration/configure-a-printer/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/post-installation-configuration/restore-your-files-after-installation.en.html",
+      "file_in_site": "user-guide/post-installation-configuration/restore-your-files-after-installation.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.post-installation-configuration.restore-your-files-after-installation",
+      "canonical_destination": "/user-guide/post-installation-configuration/restore-your-files-after-installation/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/post-installation-configuration/restore-your-files-after-installation/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/post-installation-configuration/set-your-user-avatar.en.html",
+      "file_in_site": "user-guide/post-installation-configuration/set-your-user-avatar.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.post-installation-configuration.set-your-user-avatar",
+      "canonical_destination": "/user-guide/post-installation-configuration/set-your-user-avatar/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/post-installation-configuration/set-your-user-avatar/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode.en.html",
+      "file_in_site": "user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.troubleshooting.connect-to-the-internet-in-recovery-mode",
+      "canonical_destination": "/user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/troubleshooting/fix-a-broken-bootloader.en.html",
+      "file_in_site": "user-guide/troubleshooting/fix-a-broken-bootloader.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.troubleshooting.fix-a-broken-bootloader",
+      "canonical_destination": "/user-guide/troubleshooting/fix-a-broken-bootloader/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/troubleshooting/fix-a-broken-bootloader/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/troubleshooting/fix-incorrect-time-in-dual-boot.en.html",
+      "file_in_site": "user-guide/troubleshooting/fix-incorrect-time-in-dual-boot.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.troubleshooting.fix-incorrect-time-in-dual-boot",
+      "canonical_destination": "/user-guide/troubleshooting/fix-incorrect-time-in-dual-boot/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/troubleshooting/fix-incorrect-time-in-dual-boot/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/dnfdrake-overview.en.html",
+      "file_in_site": "user-guide/managing-software/dnfdrake-overview.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.dnfdrake-overview",
+      "canonical_destination": "/user-guide/managing-software/dnfdrake-overview/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/dnfdrake-overview/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/installing-steam.en.html",
+      "file_in_site": "user-guide/managing-software/installing-steam.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.installing-steam",
+      "canonical_destination": "/user-guide/managing-software/installing-steam/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/installing-steam/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/openmandriva-updater.en.html",
+      "file_in_site": "user-guide/managing-software/openmandriva-updater.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.openmandriva-updater",
+      "canonical_destination": "/user-guide/managing-software/openmandriva-updater/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/openmandriva-updater/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/openmandriva-welcome.en.html",
+      "file_in_site": "user-guide/managing-software/openmandriva-welcome.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.openmandriva-welcome",
+      "canonical_destination": "/user-guide/managing-software/openmandriva-welcome/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/openmandriva-welcome/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/software-repository-selector.en.html",
+      "file_in_site": "user-guide/managing-software/software-repository-selector.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.software-repository-selector",
+      "canonical_destination": "/user-guide/managing-software/software-repository-selector/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/software-repository-selector/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/tips-and-tricks.en.html",
+      "file_in_site": "user-guide/managing-software/tips-and-tricks.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.tips-and-tricks",
+      "canonical_destination": "/user-guide/managing-software/tips-and-tricks/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/tips-and-tricks/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/using-dnf.en.html",
+      "file_in_site": "user-guide/managing-software/using-dnf.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.using-dnf",
+      "canonical_destination": "/user-guide/managing-software/using-dnf/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/using-dnf/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list.en.html",
+      "file_in_site": "user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.tips-and-tricks.create-an-install-command-from-a-package-list",
+      "canonical_destination": "/user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso.en.html",
+      "file_in_site": "user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.tips-and-tricks.list-all-packages-in-the-iso",
+      "canonical_destination": "/user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/tips-and-tricks/list-the-latest-updates.en.html",
+      "file_in_site": "user-guide/managing-software/tips-and-tricks/list-the-latest-updates.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.tips-and-tricks.list-the-latest-updates",
+      "canonical_destination": "/user-guide/managing-software/tips-and-tricks/list-the-latest-updates/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/tips-and-tricks/list-the-latest-updates/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/managing-software/tips-and-tricks/listing-installed-packages.en.html",
+      "file_in_site": "user-guide/managing-software/tips-and-tricks/listing-installed-packages.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.tips-and-tricks.listing-installed-packages",
+      "canonical_destination": "/user-guide/managing-software/tips-and-tricks/listing-installed-packages/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/managing-software/tips-and-tricks/listing-installed-packages/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports.en.html",
+      "file_in_site": "user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.getting-help.get-logs-and-hardware-info-for-issue-reports",
+      "canonical_destination": "/user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/getting-help/getting-support-on-the-forum.en.html",
+      "file_in_site": "user-guide/getting-help/getting-support-on-the-forum.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.getting-help.getting-support-on-the-forum",
+      "canonical_destination": "/user-guide/getting-help/getting-support-on-the-forum/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/getting-help/getting-support-on-the-forum/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/getting-help/how-to-report-a-bug.en.html",
+      "file_in_site": "user-guide/getting-help/how-to-report-a-bug.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.getting-help.how-to-report-a-bug",
+      "canonical_destination": "/user-guide/getting-help/how-to-report-a-bug/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/getting-help/how-to-report-a-bug/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/desktop-environments/installing-hyprland.en.html",
+      "file_in_site": "user-guide/desktop-environments/installing-hyprland.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.desktop-environments.installing-hyprland",
+      "canonical_destination": "/user-guide/desktop-environments/installing-hyprland/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/desktop-environments/installing-hyprland/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/user-guide/desktop-environments/installing-i3.en.html",
+      "file_in_site": "user-guide/desktop-environments/installing-i3.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.desktop-environments.installing-i3",
+      "canonical_destination": "/user-guide/desktop-environments/installing-i3/",
+      "redirect_requirement": "Legacy EN route -> redirect to /user-guide/desktop-environments/installing-i3/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/getting-started/copying-openmandriva-to-a-usb-stick.en.html",
+      "file_in_site": "getting-started/copying-openmandriva-to-a-usb-stick.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.copying-openmandriva-to-a-usb-stick",
+      "canonical_destination": "/getting-started/copying-openmandriva-to-a-usb-stick/",
+      "redirect_requirement": "Legacy EN route -> redirect to /getting-started/copying-openmandriva-to-a-usb-stick/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/getting-started/downloading-openmandriva.en.html",
+      "file_in_site": "getting-started/downloading-openmandriva.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.downloading-openmandriva",
+      "canonical_destination": "/getting-started/downloading-openmandriva/",
+      "redirect_requirement": "Legacy EN route -> redirect to /getting-started/downloading-openmandriva/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/getting-started/index.en.html",
+      "file_in_site": "getting-started/index.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "getting-started",
+      "canonical_destination": "/getting-started/",
+      "redirect_requirement": "Legacy EN route -> redirect to /getting-started/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/getting-started/installing-openmandriva.en.html",
+      "file_in_site": "getting-started/installing-openmandriva.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.installing-openmandriva",
+      "canonical_destination": "/getting-started/installing-openmandriva/",
+      "redirect_requirement": "Legacy EN route -> redirect to /getting-started/installing-openmandriva/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/getting-started/requirements.en.html",
+      "file_in_site": "getting-started/requirements.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.requirements",
+      "canonical_destination": "/getting-started/requirements/",
+      "redirect_requirement": "Legacy EN route -> redirect to /getting-started/requirements/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/getting-started/installing-openmandriva/encryption.en.html",
+      "file_in_site": "getting-started/installing-openmandriva/encryption.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.installing-openmandriva.encryption",
+      "canonical_destination": "/getting-started/installing-openmandriva/encryption/",
+      "redirect_requirement": "Legacy EN route -> redirect to /getting-started/installing-openmandriva/encryption/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive.en.html",
+      "file_in_site": "getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.installing-openmandriva.installing-openmandriva-to-a-usb-flash-drive",
+      "canonical_destination": "/getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive/",
+      "redirect_requirement": "Legacy EN route -> redirect to /getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/getting-started/installing-openmandriva/linux-partitions.en.html",
+      "file_in_site": "getting-started/installing-openmandriva/linux-partitions.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.installing-openmandriva.linux-partitions",
+      "canonical_destination": "/getting-started/installing-openmandriva/linux-partitions/",
+      "redirect_requirement": "Legacy EN route -> redirect to /getting-started/installing-openmandriva/linux-partitions/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/getting-started/installing-openmandriva/partitioning.en.html",
+      "file_in_site": "getting-started/installing-openmandriva/partitioning.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.installing-openmandriva.partitioning",
+      "canonical_destination": "/getting-started/installing-openmandriva/partitioning/",
+      "redirect_requirement": "Legacy EN route -> redirect to /getting-started/installing-openmandriva/partitioning/",
+      "notes": "English canonical content"
+    },
+    {
+      "public_url": "/fr/404.html",
+      "file_in_site": "fr/404.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "fr",
+      "page_id": "system.404",
+      "canonical_destination": "/fr/404.html",
+      "redirect_requirement": "System error page",
+      "notes": "French 404 handler"
+    },
+    {
+      "public_url": "/fr/index.html",
+      "file_in_site": "fr/index.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "fr",
+      "page_id": "home",
+      "canonical_destination": "/fr/",
+      "redirect_requirement": "French home entry point -> becomes canonical FR homepage",
+      "notes": "Legacy French homepage URL"
+    },
+    {
+      "public_url": "/fr/community/about-openmandriva.en.html",
+      "file_in_site": "fr/community/about-openmandriva.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.about-openmandriva",
+      "canonical_destination": "/fr/community/about-openmandriva/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/about-openmandriva/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/artwork.en.html",
+      "file_in_site": "fr/community/artwork.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.artwork",
+      "canonical_destination": "/fr/community/artwork/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/artwork/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/chat-with-openmandriva.en.html",
+      "file_in_site": "fr/community/chat-with-openmandriva.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.chat-with-openmandriva",
+      "canonical_destination": "/fr/community/chat-with-openmandriva/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/chat-with-openmandriva/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/donation.en.html",
+      "file_in_site": "fr/community/donation.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.donation",
+      "canonical_destination": "/fr/community/donation/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/donation/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/index.en.html",
+      "file_in_site": "fr/community/index.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community",
+      "canonical_destination": "/fr/community/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/links.en.html",
+      "file_in_site": "fr/community/links.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.links",
+      "canonical_destination": "/fr/community/links/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/links/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/official-naming-policy.en.html",
+      "file_in_site": "fr/community/official-naming-policy.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.official-naming-policy",
+      "canonical_destination": "/fr/community/official-naming-policy/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/official-naming-policy/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/oma-tm-licence.en.html",
+      "file_in_site": "fr/community/oma-tm-licence.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.oma-tm-licence",
+      "canonical_destination": "/fr/community/oma-tm-licence/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/oma-tm-licence/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases.en.html",
+      "file_in_site": "fr/community/releases.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases",
+      "canonical_destination": "/fr/community/releases/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/setting-up-a-mirror.en.html",
+      "file_in_site": "fr/community/setting-up-a-mirror.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.setting-up-a-mirror",
+      "canonical_destination": "/fr/community/setting-up-a-mirror/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/setting-up-a-mirror/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/terms-of-service.en.html",
+      "file_in_site": "fr/community/terms-of-service.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.terms-of-service",
+      "canonical_destination": "/fr/community/terms-of-service/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/terms-of-service/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/about-openmandriva/bylaws.en.html",
+      "file_in_site": "fr/community/about-openmandriva/bylaws.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.about-openmandriva.bylaws",
+      "canonical_destination": "/fr/community/about-openmandriva/bylaws/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/about-openmandriva/bylaws/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/about-openmandriva/governance.en.html",
+      "file_in_site": "fr/community/about-openmandriva/governance.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.about-openmandriva.governance",
+      "canonical_destination": "/fr/community/about-openmandriva/governance/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/about-openmandriva/governance/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/about-openmandriva/statutes.en.html",
+      "file_in_site": "fr/community/about-openmandriva/statutes.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.about-openmandriva.statutes",
+      "canonical_destination": "/fr/community/about-openmandriva/statutes/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/about-openmandriva/statutes/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/current-releases.en.html",
+      "file_in_site": "fr/community/releases/current-releases.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.current-releases",
+      "canonical_destination": "/fr/community/releases/current-releases/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/current-releases/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/release-codenames.en.html",
+      "file_in_site": "fr/community/releases/release-codenames.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.release-codenames",
+      "canonical_destination": "/fr/community/releases/release-codenames/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/release-codenames/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/release-life-cycle.en.html",
+      "file_in_site": "fr/community/releases/release-life-cycle.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.release-life-cycle",
+      "canonical_destination": "/fr/community/releases/release-life-cycle/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/release-life-cycle/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/release-plan-and-repositories.en.html",
+      "file_in_site": "fr/community/releases/release-plan-and-repositories.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.release-plan-and-repositories",
+      "canonical_destination": "/fr/community/releases/release-plan-and-repositories/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/release-plan-and-repositories/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/repository-policies.en.html",
+      "file_in_site": "fr/community/releases/repository-policies.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.repository-policies",
+      "canonical_destination": "/fr/community/releases/repository-policies/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/repository-policies/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/rock-6.0-changelog.en.html",
+      "file_in_site": "fr/community/releases/rock-6.0-changelog.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rock-6.0-changelog",
+      "canonical_destination": "/fr/community/releases/rock-6.0-changelog/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/rock-6.0-changelog/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/rock-6.0-errata.en.html",
+      "file_in_site": "fr/community/releases/rock-6.0-errata.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rock-6.0-errata",
+      "canonical_destination": "/fr/community/releases/rock-6.0-errata/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/rock-6.0-errata/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/rock-6.0-release-notes.en.html",
+      "file_in_site": "fr/community/releases/rock-6.0-release-notes.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rock-6.0-release-notes",
+      "canonical_destination": "/fr/community/releases/rock-6.0-release-notes/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/rock-6.0-release-notes/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/rome-changelog.en.html",
+      "file_in_site": "fr/community/releases/rome-changelog.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rome-changelog",
+      "canonical_destination": "/fr/community/releases/rome-changelog/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/rome-changelog/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/rome-errata.en.html",
+      "file_in_site": "fr/community/releases/rome-errata.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rome-errata",
+      "canonical_destination": "/fr/community/releases/rome-errata/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/rome-errata/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/community/releases/rome-release-notes.en.html",
+      "file_in_site": "fr/community/releases/rome-release-notes.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "community.releases.rome-release-notes",
+      "canonical_destination": "/fr/community/releases/rome-release-notes/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/community/releases/rome-release-notes/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/building-and-submitting-packages.en.html",
+      "file_in_site": "fr/dev/building-and-submitting-packages.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.building-and-submitting-packages",
+      "canonical_destination": "/fr/dev/building-and-submitting-packages/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/building-and-submitting-packages/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/contributing-to-openmandriva.en.html",
+      "file_in_site": "fr/dev/contributing-to-openmandriva.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.contributing-to-openmandriva",
+      "canonical_destination": "/fr/dev/contributing-to-openmandriva/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/contributing-to-openmandriva/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/getting-started-with-qa.en.html",
+      "file_in_site": "fr/dev/getting-started-with-qa.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.getting-started-with-qa",
+      "canonical_destination": "/fr/dev/getting-started-with-qa/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/getting-started-with-qa/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/index.en.html",
+      "file_in_site": "fr/dev/index.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev",
+      "canonical_destination": "/fr/dev/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/maintaining-packages.en.html",
+      "file_in_site": "fr/dev/maintaining-packages.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.maintaining-packages",
+      "canonical_destination": "/fr/dev/maintaining-packages/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/maintaining-packages/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/preparing-your-system.en.html",
+      "file_in_site": "fr/dev/preparing-your-system.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.preparing-your-system",
+      "canonical_destination": "/fr/dev/preparing-your-system/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/preparing-your-system/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/understanding-rpm-spec-files.en.html",
+      "file_in_site": "fr/dev/understanding-rpm-spec-files.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.understanding-rpm-spec-files",
+      "canonical_destination": "/fr/dev/understanding-rpm-spec-files/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/understanding-rpm-spec-files/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/using-cooker.en.html",
+      "file_in_site": "fr/dev/using-cooker.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.using-cooker",
+      "canonical_destination": "/fr/dev/using-cooker/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/using-cooker/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/getting-started-with-qa/bug-report-tool.en.html",
+      "file_in_site": "fr/dev/getting-started-with-qa/bug-report-tool.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.getting-started-with-qa.bug-report-tool",
+      "canonical_destination": "/fr/dev/getting-started-with-qa/bug-report-tool/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/getting-started-with-qa/bug-report-tool/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/getting-started-with-qa/release-qa-checklist.en.html",
+      "file_in_site": "fr/dev/getting-started-with-qa/release-qa-checklist.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.getting-started-with-qa.release-qa-checklist",
+      "canonical_destination": "/fr/dev/getting-started-with-qa/release-qa-checklist/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/getting-started-with-qa/release-qa-checklist/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/getting-started-with-qa/report-bugs-effectively.en.html",
+      "file_in_site": "fr/dev/getting-started-with-qa/report-bugs-effectively.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.getting-started-with-qa.report-bugs-effectively",
+      "canonical_destination": "/fr/dev/getting-started-with-qa/report-bugs-effectively/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/getting-started-with-qa/report-bugs-effectively/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/building-and-submitting-packages/building-a-go-package.en.html",
+      "file_in_site": "fr/dev/building-and-submitting-packages/building-a-go-package.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.building-and-submitting-packages.building-a-go-package",
+      "canonical_destination": "/fr/dev/building-and-submitting-packages/building-a-go-package/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/building-and-submitting-packages/building-a-go-package/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/building-and-submitting-packages/building-a-python-package.en.html",
+      "file_in_site": "fr/dev/building-and-submitting-packages/building-a-python-package.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.building-and-submitting-packages.building-a-python-package",
+      "canonical_destination": "/fr/dev/building-and-submitting-packages/building-a-python-package/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/building-and-submitting-packages/building-a-python-package/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/building-and-submitting-packages/building-a-rust-package.en.html",
+      "file_in_site": "fr/dev/building-and-submitting-packages/building-a-rust-package.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.building-and-submitting-packages.building-a-rust-package",
+      "canonical_destination": "/fr/dev/building-and-submitting-packages/building-a-rust-package/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/building-and-submitting-packages/building-a-rust-package/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/preparing-your-system/creating-cooker-vm.en.html",
+      "file_in_site": "fr/dev/preparing-your-system/creating-cooker-vm.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.preparing-your-system.creating-cooker-vm",
+      "canonical_destination": "/fr/dev/preparing-your-system/creating-cooker-vm/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/preparing-your-system/creating-cooker-vm/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/preparing-your-system/installing-and-using-virt-manager.en.html",
+      "file_in_site": "fr/dev/preparing-your-system/installing-and-using-virt-manager.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.preparing-your-system.installing-and-using-virt-manager",
+      "canonical_destination": "/fr/dev/preparing-your-system/installing-and-using-virt-manager/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/preparing-your-system/installing-and-using-virt-manager/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/dev/preparing-your-system/packaging-tools.en.html",
+      "file_in_site": "fr/dev/preparing-your-system/packaging-tools.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "dev.preparing-your-system.packaging-tools",
+      "canonical_destination": "/fr/dev/preparing-your-system/packaging-tools/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/dev/preparing-your-system/packaging-tools/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/desktop-environments.en.html",
+      "file_in_site": "fr/user-guide/desktop-environments.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.desktop-environments",
+      "canonical_destination": "/fr/user-guide/desktop-environments/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/desktop-environments/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/first-steps.en.html",
+      "file_in_site": "fr/user-guide/first-steps.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.first-steps",
+      "canonical_destination": "/fr/user-guide/first-steps/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/first-steps/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/getting-help.en.html",
+      "file_in_site": "fr/user-guide/getting-help.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.getting-help",
+      "canonical_destination": "/fr/user-guide/getting-help/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/getting-help/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/index.en.html",
+      "file_in_site": "fr/user-guide/index.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide",
+      "canonical_destination": "/fr/user-guide/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/maintaining-your-system.en.html",
+      "file_in_site": "fr/user-guide/maintaining-your-system.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.maintaining-your-system",
+      "canonical_destination": "/fr/user-guide/maintaining-your-system/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/maintaining-your-system/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software.en.html",
+      "file_in_site": "fr/user-guide/managing-software.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software",
+      "canonical_destination": "/fr/user-guide/managing-software/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/network-configuration.en.html",
+      "file_in_site": "fr/user-guide/network-configuration.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.network-configuration",
+      "canonical_destination": "/fr/user-guide/network-configuration/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/network-configuration/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/post-installation-configuration.en.html",
+      "file_in_site": "fr/user-guide/post-installation-configuration.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.post-installation-configuration",
+      "canonical_destination": "/fr/user-guide/post-installation-configuration/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/post-installation-configuration/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/troubleshooting.en.html",
+      "file_in_site": "fr/user-guide/troubleshooting.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.troubleshooting",
+      "canonical_destination": "/fr/user-guide/troubleshooting/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/troubleshooting/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/maintaining-your-system/compile-custom-software.en.html",
+      "file_in_site": "fr/user-guide/maintaining-your-system/compile-custom-software.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.maintaining-your-system.compile-custom-software",
+      "canonical_destination": "/fr/user-guide/maintaining-your-system/compile-custom-software/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/maintaining-your-system/compile-custom-software/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/maintaining-your-system/list-recent-updates.en.html",
+      "file_in_site": "fr/user-guide/maintaining-your-system/list-recent-updates.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.maintaining-your-system.list-recent-updates",
+      "canonical_destination": "/fr/user-guide/maintaining-your-system/list-recent-updates/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/maintaining-your-system/list-recent-updates/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/maintaining-your-system/switch-update-channels.en.html",
+      "file_in_site": "fr/user-guide/maintaining-your-system/switch-update-channels.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.maintaining-your-system.switch-update-channels",
+      "canonical_destination": "/fr/user-guide/maintaining-your-system/switch-update-channels/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/maintaining-your-system/switch-update-channels/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/maintaining-your-system/update-your-system.en.html",
+      "file_in_site": "fr/user-guide/maintaining-your-system/update-your-system.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.maintaining-your-system.update-your-system",
+      "canonical_destination": "/fr/user-guide/maintaining-your-system/update-your-system/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/maintaining-your-system/update-your-system/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/post-installation-configuration/configure-a-printer.en.html",
+      "file_in_site": "fr/user-guide/post-installation-configuration/configure-a-printer.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.post-installation-configuration.configure-a-printer",
+      "canonical_destination": "/fr/user-guide/post-installation-configuration/configure-a-printer/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/post-installation-configuration/configure-a-printer/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/post-installation-configuration/restore-your-files-after-installation.en.html",
+      "file_in_site": "fr/user-guide/post-installation-configuration/restore-your-files-after-installation.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.post-installation-configuration.restore-your-files-after-installation",
+      "canonical_destination": "/fr/user-guide/post-installation-configuration/restore-your-files-after-installation/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/post-installation-configuration/restore-your-files-after-installation/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/post-installation-configuration/set-your-user-avatar.en.html",
+      "file_in_site": "fr/user-guide/post-installation-configuration/set-your-user-avatar.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.post-installation-configuration.set-your-user-avatar",
+      "canonical_destination": "/fr/user-guide/post-installation-configuration/set-your-user-avatar/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/post-installation-configuration/set-your-user-avatar/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode.en.html",
+      "file_in_site": "fr/user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.troubleshooting.connect-to-the-internet-in-recovery-mode",
+      "canonical_destination": "/fr/user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/troubleshooting/fix-a-broken-bootloader.en.html",
+      "file_in_site": "fr/user-guide/troubleshooting/fix-a-broken-bootloader.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.troubleshooting.fix-a-broken-bootloader",
+      "canonical_destination": "/fr/user-guide/troubleshooting/fix-a-broken-bootloader/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/troubleshooting/fix-a-broken-bootloader/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/troubleshooting/fix-incorrect-time-in-dual-boot.en.html",
+      "file_in_site": "fr/user-guide/troubleshooting/fix-incorrect-time-in-dual-boot.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.troubleshooting.fix-incorrect-time-in-dual-boot",
+      "canonical_destination": "/fr/user-guide/troubleshooting/fix-incorrect-time-in-dual-boot/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/troubleshooting/fix-incorrect-time-in-dual-boot/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/dnfdrake-overview.en.html",
+      "file_in_site": "fr/user-guide/managing-software/dnfdrake-overview.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.dnfdrake-overview",
+      "canonical_destination": "/fr/user-guide/managing-software/dnfdrake-overview/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/dnfdrake-overview/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/installing-steam.en.html",
+      "file_in_site": "fr/user-guide/managing-software/installing-steam.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.installing-steam",
+      "canonical_destination": "/fr/user-guide/managing-software/installing-steam/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/installing-steam/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/openmandriva-updater.en.html",
+      "file_in_site": "fr/user-guide/managing-software/openmandriva-updater.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.openmandriva-updater",
+      "canonical_destination": "/fr/user-guide/managing-software/openmandriva-updater/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/openmandriva-updater/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/openmandriva-welcome.en.html",
+      "file_in_site": "fr/user-guide/managing-software/openmandriva-welcome.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.openmandriva-welcome",
+      "canonical_destination": "/fr/user-guide/managing-software/openmandriva-welcome/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/openmandriva-welcome/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/software-repository-selector.en.html",
+      "file_in_site": "fr/user-guide/managing-software/software-repository-selector.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.software-repository-selector",
+      "canonical_destination": "/fr/user-guide/managing-software/software-repository-selector/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/software-repository-selector/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/tips-and-tricks.en.html",
+      "file_in_site": "fr/user-guide/managing-software/tips-and-tricks.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.tips-and-tricks",
+      "canonical_destination": "/fr/user-guide/managing-software/tips-and-tricks/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/tips-and-tricks/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/using-dnf.en.html",
+      "file_in_site": "fr/user-guide/managing-software/using-dnf.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.using-dnf",
+      "canonical_destination": "/fr/user-guide/managing-software/using-dnf/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/using-dnf/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list.en.html",
+      "file_in_site": "fr/user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.tips-and-tricks.create-an-install-command-from-a-package-list",
+      "canonical_destination": "/fr/user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso.en.html",
+      "file_in_site": "fr/user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.tips-and-tricks.list-all-packages-in-the-iso",
+      "canonical_destination": "/fr/user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/tips-and-tricks/list-the-latest-updates.en.html",
+      "file_in_site": "fr/user-guide/managing-software/tips-and-tricks/list-the-latest-updates.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.tips-and-tricks.list-the-latest-updates",
+      "canonical_destination": "/fr/user-guide/managing-software/tips-and-tricks/list-the-latest-updates/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/tips-and-tricks/list-the-latest-updates/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/managing-software/tips-and-tricks/listing-installed-packages.en.html",
+      "file_in_site": "fr/user-guide/managing-software/tips-and-tricks/listing-installed-packages.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.managing-software.tips-and-tricks.listing-installed-packages",
+      "canonical_destination": "/fr/user-guide/managing-software/tips-and-tricks/listing-installed-packages/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/managing-software/tips-and-tricks/listing-installed-packages/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports.en.html",
+      "file_in_site": "fr/user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.getting-help.get-logs-and-hardware-info-for-issue-reports",
+      "canonical_destination": "/fr/user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/getting-help/getting-support-on-the-forum.en.html",
+      "file_in_site": "fr/user-guide/getting-help/getting-support-on-the-forum.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.getting-help.getting-support-on-the-forum",
+      "canonical_destination": "/fr/user-guide/getting-help/getting-support-on-the-forum/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/getting-help/getting-support-on-the-forum/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/getting-help/how-to-report-a-bug.en.html",
+      "file_in_site": "fr/user-guide/getting-help/how-to-report-a-bug.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.getting-help.how-to-report-a-bug",
+      "canonical_destination": "/fr/user-guide/getting-help/how-to-report-a-bug/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/getting-help/how-to-report-a-bug/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/desktop-environments/installing-hyprland.en.html",
+      "file_in_site": "fr/user-guide/desktop-environments/installing-hyprland.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.desktop-environments.installing-hyprland",
+      "canonical_destination": "/fr/user-guide/desktop-environments/installing-hyprland/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/desktop-environments/installing-hyprland/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/user-guide/desktop-environments/installing-i3.en.html",
+      "file_in_site": "fr/user-guide/desktop-environments/installing-i3.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "user-guide.desktop-environments.installing-i3",
+      "canonical_destination": "/fr/user-guide/desktop-environments/installing-i3/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/user-guide/desktop-environments/installing-i3/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/getting-started/copying-openmandriva-to-a-usb-stick.fr.html",
+      "file_in_site": "fr/getting-started/copying-openmandriva-to-a-usb-stick.fr.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "fr",
+      "page_id": "getting-started.copying-openmandriva-to-a-usb-stick",
+      "canonical_destination": "/fr/getting-started/copying-openmandriva-to-a-usb-stick/",
+      "redirect_requirement": "Legacy FR translation route -> redirect to /fr/getting-started/copying-openmandriva-to-a-usb-stick/",
+      "notes": "Actual French translated content"
+    },
+    {
+      "public_url": "/fr/getting-started/downloading-openmandriva.fr.html",
+      "file_in_site": "fr/getting-started/downloading-openmandriva.fr.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "fr",
+      "page_id": "getting-started.downloading-openmandriva",
+      "canonical_destination": "/fr/getting-started/downloading-openmandriva/",
+      "redirect_requirement": "Legacy FR translation route -> redirect to /fr/getting-started/downloading-openmandriva/",
+      "notes": "Actual French translated content"
+    },
+    {
+      "public_url": "/fr/getting-started/index.fr.html",
+      "file_in_site": "fr/getting-started/index.fr.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "fr",
+      "page_id": "getting-started",
+      "canonical_destination": "/fr/getting-started/",
+      "redirect_requirement": "Legacy FR translation route -> redirect to /fr/getting-started/",
+      "notes": "Actual French translated content"
+    },
+    {
+      "public_url": "/fr/getting-started/installing-openmandriva.en.html",
+      "file_in_site": "fr/getting-started/installing-openmandriva.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.installing-openmandriva",
+      "canonical_destination": "/fr/getting-started/installing-openmandriva/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/getting-started/installing-openmandriva/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/getting-started/requirements.en.html",
+      "file_in_site": "fr/getting-started/requirements.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.requirements",
+      "canonical_destination": "/fr/getting-started/requirements/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/getting-started/requirements/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/getting-started/installing-openmandriva/encryption.en.html",
+      "file_in_site": "fr/getting-started/installing-openmandriva/encryption.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.installing-openmandriva.encryption",
+      "canonical_destination": "/fr/getting-started/installing-openmandriva/encryption/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/getting-started/installing-openmandriva/encryption/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive.en.html",
+      "file_in_site": "fr/getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.installing-openmandriva.installing-openmandriva-to-a-usb-flash-drive",
+      "canonical_destination": "/fr/getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/getting-started/installing-openmandriva/linux-partitions.en.html",
+      "file_in_site": "fr/getting-started/installing-openmandriva/linux-partitions.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.installing-openmandriva.linux-partitions",
+      "canonical_destination": "/fr/getting-started/installing-openmandriva/linux-partitions/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/getting-started/installing-openmandriva/linux-partitions/",
+      "notes": "French subsite fallback rendering English content"
+    },
+    {
+      "public_url": "/fr/getting-started/installing-openmandriva/partitioning.en.html",
+      "file_in_site": "fr/getting-started/installing-openmandriva/partitioning.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "getting-started.installing-openmandriva.partitioning",
+      "canonical_destination": "/fr/getting-started/installing-openmandriva/partitioning/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/getting-started/installing-openmandriva/partitioning/",
+      "notes": "French subsite fallback rendering English content"
+    }
+  ]
+}

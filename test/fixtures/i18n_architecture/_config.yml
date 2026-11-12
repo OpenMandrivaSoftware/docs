@@ -1,0 +1,10 @@
+title: "i18n Architecture Proof"
+url: "https://docs.openmandriva.org"
+baseurl: ""
+languages: ['en', 'fr', 'de', 'ru']
+default_lang: 'en'
+exclude_from_localization: ['assets', 'images', 'js', 'css', 'vendor']
+parallel_localization: false
+plugins:
+  - jekyll-polyglot
+permalink: pretty

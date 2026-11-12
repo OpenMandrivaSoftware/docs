@@ -1,34 +1,33 @@
-# Architecture Specification: Scalable Multilingual Documentation
+# Architecture Specification: Scalable Multilingual Documentation (v2.0)
 
-This document defines the target architecture, verified dependency behavior, metadata schema, and migration strategy for OpenMandriva Docs internationalization.
+**Baseline Commit:** `b3014780fc0e53194e83cc822dad29f3fc289ba2`  
+**Dependencies:** `jekyll 4.4.1`, `jekyll-polyglot 1.14.0`, `just-the-docs 0.12.0`  
+**Target Languages:** English (`default_lang: en`), French (`fr`), German (`de`), Russian (`ru`)
 
 ---
 
-## 1. Executive Summary & Principles
+## 1. Architectural Principles & Requirements
 
-The goal of this architecture is to provide a robust, maintainable, and scalable multilingual foundation for OpenMandriva Docs, supporting English (`en`), French (`fr`), German (`de`), Russian (`ru`), and future languages without hardcoded engine logic.
-
-### Core Architectural Rules:
 1. **Default Language:** English remains `default_lang: en`.
-2. **Logical Identity (`page_id`):** Every logical document has an immutable, language-neutral `page_id` (e.g. `user-guide.managing-software.using-dnf`) shared across all its translations.
-3. **Declared Content Locale (`lang`):** Each document file declares its actual language (`lang: en`, `lang: fr`, `lang: de`, `lang: ru`).
-4. **Declared Original Locale (`source_lang`):** Each document declares `source_lang` identifying the original authoring language (e.g. `source_lang: fr` for French original articles).
+2. **Immutable Identity (`page_id`):** Every logical document has an immutable, language-neutral `page_id` (e.g. `user-guide.managing-software.using-dnf`) shared by all its translations.
+3. **Content Locale (`lang`):** Every source file declares its actual language (`lang: en`, `lang: fr`, etc.).
+4. **Authoritative Source Locale (`source_lang`):** Every document declares `source_lang`, identifying the authoritative repository variant used for translation and fallback. A document must never declare a `source_lang` that does not exist in the repository.
 5. **Canonical Language-Neutral Permalink:** All translations of a logical document declare the exact same clean permalink (e.g. `permalink: /user-guide/managing-software/using-dnf/`).
 6. **Clean Public Routing:**
-   - English default: `/user-guide/managing-software/using-dnf/` (served from site root)
-   - French: `/fr/user-guide/managing-software/using-dnf/`
-   - German: `/de/user-guide/managing-software/using-dnf/`
-   - Russian: `/ru/user-guide/managing-software/using-dnf/`
-7. **Robust Hierarchy (`parent_id`):** Page hierarchy is established by referencing the parent's `page_id` via `parent_id:` rather than translated page titles. This eliminates title collisions, title translation mismatches, and broken navigation when parents or children are in fallback mode.
+   - English default: `/section/doc/` (served from root)
+   - French: `/fr/section/doc/`
+   - German: `/de/section/doc/`
+   - Russian: `/ru/section/doc/`
+7. **Robust Hierarchy (`parent_id`):** Hierarchy is established by referencing the parent's `page_id` via `parent_id:` rather than translated page titles.
 8. **Deterministic Ordering (`nav_order`):** Explicit numeric ordering for predictable sibling sequencing.
-9. **Zero Language Branching in Engine:** The engine, templates, and plugins contain zero hardcoded conditionals for specific languages (`en`, `fr`, `de`, `ru`).
-10. **Zero Re-engineering for New Languages:** Adding a language requires only adding its code to `languages` in `_config.yml` and creating Markdown files.
+9. **Zero Language Branching in Engine:** Zero hardcoded conditionals for specific languages (`en`, `fr`, `de`, `ru`) in layouts, includes, or plugins.
+10. **Zero Re-engineering for New Languages:** Adding a language requires only adding its code to `languages` in `_config.yml` and authoring Markdown files.
 
 ---
 
-## 2. Target Source Organization
+## 2. Source Organization & Target Routing
 
-Translations are co-located by logical document folder:
+Documents are co-located by logical document folder:
 
 ```
 getting-started/
@@ -43,60 +42,35 @@ getting-started/
       step-01.png
 ```
 
-### Routing Mapping:
-| Logical Document | Language | Source File | Public Route | Output File |
-|---|---|---|---|---|
-| `home` | `en` | `index.en.md` | `/` | `_site/index.html` |
-| `home` | `fr` | `index.fr.md` | `/fr/` | `_site/fr/index.html` |
-| `getting-started` | `en` | `getting-started/index.en.md` | `/getting-started/` | `_site/getting-started/index.html` |
-| `getting-started` | `fr` | `getting-started/index.fr.md` | `/fr/getting-started/` | `_site/fr/getting-started/index.html` |
-| `getting-started.installation` | `en` | `getting-started/installation/index.en.md` | `/getting-started/installation/` | `_site/getting-started/installation/index.html` |
-| `getting-started.installation` | `de` | `getting-started/installation/index.de.md` | `/de/getting-started/installation/` | `_site/de/getting-started/installation/index.html` |
+### Public Route Model:
+- **Default (`en`):** Output at site root (e.g. `_site/getting-started/installation/index.html` -> `/getting-started/installation/`).
+- **Non-default (`fr`, `de`, `ru`):** Output in language subdirectory (e.g. `_site/fr/getting-started/installation/index.html` -> `/fr/getting-started/installation/`).
+- **Homepage:** `index.{lang}.md` with `permalink: /` renders directly to `/` (`_site/index.html`) for English, `/fr/` (`_site/fr/index.html`) for French, etc.
 
 ---
 
-## 3. Dependency Behavior & Verification
+## 3. Dependency Behavior & Gap Analysis
 
-Verified against installed dependencies:
-- **Jekyll:** `4.4.1`
-- **Jekyll Polyglot:** `1.14.0`
-- **Just the Docs:** `0.12.0`
-
-### 3.1 Jekyll Polyglot Analysis
-Source inspection of `jekyll-polyglot-1.14.0/lib/jekyll/polyglot/patches/jekyll/site.rb`:
-- **`page_id`:** Native first-class support (`page_id = doc.data['page_id'] || url`). Used by `find_translations` to correlate variants.
-- **Identical `permalink`:** When translations share `permalink: /path/`, Polyglot sets `@dest = "#{dest}/#{active_lang}"` during subsite processing and relativizes internal URLs in output HTML. Root-relative permalinks naturally resolve to localized subdirectories without manually prefixing `/lang/`.
-- **`site.active_lang`:** Exported into site payload during each language pass.
-- **`rendered_lang`:** Native field set on each page to indicate which language variant actually provided the rendered content. When a page falls back (e.g. English rendered on French subsite), `page.rendered_lang != site.active_lang`.
-- **`permalink_lang`:** Hash `{ lang => permalink }` computed by `find_translations`.
-- **`available_languages`:** Array of language codes for which actual variants exist.
-- **`missing_languages`:** Configured languages lacking an actual variant (`configured - available_languages`).
-- **Discovery of Assets:** `exclude_from_localization: ['assets', 'images', ...]` ensures static files are processed only once in the default pass and placed at root (`_site/assets/...`), preventing asset duplication.
-- **Execution Lifecycle:** Polyglot coordinates documents in a `:site, :post_read` hook (`hooks/coordinate.rb`), before generators and renderers run.
+### 3.1 Jekyll Polyglot 1.14.0
+- **`page_id`:** Native first-class support in `Site#coordinate_documents` and `Site#find_translations`.
+- **Identical `permalink`:** Polyglot sets `@dest = "#{@dest}/#{@active_lang}"` during localized passes and automatically relativizes internal URLs in HTML.
+- **Native metadata:** `rendered_lang` (actual language of rendered content), `permalink_lang` (map of available translations), `available_languages`, and `missing_languages`.
+- **Static assets:** Configured via `exclude_from_localization` (`assets`, `images`), keeping shared assets at root without duplication.
+- **Execution hook:** Document coordination occurs at `:site, :post_read`.
 
 ### 3.2 The Polyglot Fallback Gap & Solution
-#### The Native Limitation:
+#### The Limitation:
 The fallback policy requires:
 1. Actual translation in requested locale.
 2. English variant (`default_lang`), if available.
 3. Original variant identified by `source_lang`.
-4. Error if declared original is missing.
+4. Metadata validation error if missing.
 
-In native Polyglot (`site.rb` lines 186-196):
-```ruby
-next if @file_langs[page_id] == @active_lang
-next if @file_langs[page_id] == @default_lang && lang != @active_lang
-approved[page_id] = doc
-@file_langs[page_id] = lang
-```
-When an article exists in French (`source_lang: fr`) and German (`de`), but has **no English translation**, and a Russian visitor (`ru`) requests the page:
-- If `fr` is processed first, `approved[page_id] = fr`.
-- When `de` is processed, `@file_langs[page_id]` is `"fr"` (neither `@active_lang` nor `@default_lang`).
-- Therefore, line 194 blindly replaces `fr` with `de`!
-- The variant selected for fallback is dictated solely by file discovery order on disk, completely ignoring `source_lang`.
+In native Polyglot (`site.rb` lines 186–196):
+When an article has no English translation, and a visitor requests a language lacking a translation (e.g. Russian visitor, article exists only in French `source_lang: fr` and German `de`), Polyglot's fallback is non-deterministic: whichever file happens to be read second by the filesystem overwrites the first, ignoring `source_lang`.
 
 #### The Minimal Compatible Adapter:
-Without forking Polyglot, we introduce a 20-line adapter in `_plugins/polyglot_fallback_adapter.rb`:
+A 20-line plugin in `_plugins/polyglot_fallback_adapter.rb`:
 ```ruby
 module Jekyll
   class Site
@@ -118,146 +92,126 @@ module Jekyll
   end
 end
 ```
-By sorting documents in ascending priority order (`other < source_lang < default_lang < active_lang`), the most authoritative variant is processed last and deterministically wins. Proven in test fixtures to yield 100% deterministic, policy-compliant fallbacks.
+By sorting documents in ascending fallback priority (`other (0) < source_lang (1) < default_lang (2) < active_lang (3)`), the most authoritative variant is processed last and deterministically wins. Tested and proven in `test/test_i18n_architecture.py`.
 
 ---
 
-## 4. Navigation Architecture (Just the Docs Override)
+## 4. Navigation Architecture: Approach Comparison & Selection
 
-### 4.1 The Native Just the Docs Limitation
-Native Just the Docs (`_includes/components/nav/pages.html` and `children.html`) structures hierarchy using translated page titles:
-`nav_candidates = nav_parenthood | where: "name", include.node.title`
-This causes critical failures in multilingual documentation:
-1. Parent translated title changes break child linkage.
-2. Mixed-language fallback leaves parents in English while children reference localized titles.
-3. Identical titles in different sections cause hierarchy collisions.
+### 4.1 Evaluation of Approaches
 
-### 4.2 The `page_id` / `parent_id` Navigation Engine
-Because Polyglot's `coordinate_documents` already guarantees that `site.html_pages` contains exactly one coordinated page per `page_id` during each language pass, we override `_includes/components/nav/pages.html`:
-
-```liquid
-{%- assign by_parent = include.pages
-      | where_exp: "item", "item.page_id != nil"
-      | group_by: "parent_id" -%}
-
-{%- assign top_group = by_parent
-      | where_exp: "item", "item.name == nil or item.name == ''"
-      | first -%}
-
-{%- assign nav_top_nodes = top_group.items | sort: "nav_order" -%}
-{%- assign nav_ancestors = "" | split: "" -%}
-{%- include components/nav/links.html pages=nav_top_nodes ancestors=nav_ancestors all=include.all -%}
-```
-
-And in `children.html`:
-```liquid
-{%- assign child_group = nav_parenthood
-      | where: "name", include.node.page_id
-      | first -%}
-{%- assign nav_children = child_group.items | sort: "nav_order" -%}
-```
-
-**Benefits:**
-- 100% language-agnostic.
-- Zero string matching on translated titles.
-- Sibling ordering strictly follows numeric `nav_order`.
-- Completely immune to title changes and fallback states.
-
----
-
-## 5. Isolated Architecture Proof (Experimental Results)
-
-Conducted in isolated sandbox fixture (`/tmp/om_polyglot_proof` and `/tmp/om_polyglot_adapter_proof`).
-
-### Verified Scenarios:
-1. **English original with French and German translations (`articles.installation`):**
-   - `_site/articles/installation/index.html` rendered EN (Title: "Installation Guide EN").
-   - `_site/fr/articles/installation/index.html` rendered FR (Title: "Guide d'installation FR").
-   - `_site/de/articles/installation/index.html` rendered DE (Title: "Installationsanleitung DE").
-   - `_site/ru/articles/installation/index.html` rendered EN fallback (`rendered_lang: en`).
-2. **English-only article (`articles.kernel`):**
-   - Rendered across all language trees (`/`, `/fr/`, `/de/`, `/ru/`) with `rendered_lang: en`.
-3. **French original with English translation (`articles.cooker`):**
-   - EN subsite rendered EN translation.
-   - FR subsite rendered FR original.
-   - DE and RU subsites rendered EN fallback.
-4. **French original with German translation, NO English translation (`articles.packaging-spec`):**
-   - With native Polyglot: Non-deterministic fallback between FR and DE in RU tree depending on file order.
-   - With `polyglot_fallback_adapter.rb`: RU tree deterministically rendered FR original (`rendered_lang: fr`) regardless of file read order.
-5. **French-only article (`articles.association-statutes`):**
-   - Rendered across all language trees (`/`, `/fr/`, `/de/`, `/ru/`) with `rendered_lang: fr`.
-6. **Nested hierarchy with mixed translations (`user-guide` parent, `dnf` child, `steam` child):**
-   - Tree structure remained perfectly intact across all languages.
-   - French child `steam` nested under English parent `user-guide` in RU subsite without orphan errors.
-7. **Localized Homepage on Root Route (`/`):**
-   - Root `/index.html` generated EN homepage directly.
-   - `/fr/index.html` generated FR homepage.
-   - `/de/index.html` generated DE homepage.
-   - `/ru/index.html` generated RU homepage.
-   - Eliminates legacy redirect hack in root `index.html`.
-8. **Shared Assets:**
-   - Single instance of `/assets/images/shared-logo.png` at root; correctly referenced by all localized documents.
-9. **Non-empty Baseurl (`baseurl: /docs`):**
-   - Build succeeded with code 0; all relative links correctly prefixed.
-
----
-
-## 6. Metadata Schema Specification
-
-Every production documentation file must conform to this schema:
-
+#### Approach A: Metadata Resolution Adapter (Selected)
+Author writes clean, immutable metadata in Markdown:
 ```yaml
----
-layout: default
-page_id: string          # Required. Dot-delimited logical identifier (e.g. 'getting-started.installation')
-parent_id: string        # Optional. Reference to parent's page_id (omit or null for section roots)
-lang: string             # Required. Two-letter ISO code of content ('en', 'fr', 'de', 'ru')
-source_lang: string      # Required. Two-letter ISO code of original article authoring language
-title: string            # Required. Localized human-readable title
-permalink: string        # Required. Language-neutral canonical path with leading/trailing slash (e.g. '/getting-started/installation/')
-nav_order: integer       # Required for ordered siblings. Numeric ordering weight
-has_children: boolean    # Optional. Set true if page has child articles
-has_toc: boolean         # Optional. True to render right-sidebar page TOC
----
+page_id: user-guide.managing-software.dnf
+parent_id: user-guide.managing-software
+nav_order: 10
+```
+A lightweight Jekyll hook (`:site, :post_read`, priority: low) resolves `parent_id` into the exact title strings expected by Just the Docs:
+```ruby
+Jekyll::Hooks.register :site, :post_read, priority: :low do |site|
+  pages_by_id = site.pages.each_with_object({}) { |p, h| h[p.data['page_id']] = p if p.data['page_id'] }
+  site.pages.each do |p|
+    if (parent_id = p.data['parent_id']) && (parent = pages_by_id[parent_id])
+      p.data['parent'] = parent.data['title']
+      if (g_id = parent.data['parent_id']) && (grand = pages_by_id[g_id])
+        p.data['grand_parent'] = grand.data['title']
+      end
+    end
+  end
+end
 ```
 
----
+**Why Approach A is superior:**
+1. **Zero Upstream Template Overrides:** Leaves `breadcrumbs.html`, `links.html`, `children.html`, and `children_nav.html` completely standard and untouched.
+2. **Breadcrumbs Compatibility:** Just the Docs `breadcrumbs.html` parses `site_nav` HTML and requires `page.parent` to be non-nil. Approach A populates `page.parent` dynamically with the parent's actual localized title.
+3. **Fallback Child / Localized Parent:** If parent is in French ("Premiers pas") and child is English fallback, child's `parent` is resolved to "Premiers pas", maintaining intact hierarchy.
+4. **Translated Child / Fallback Parent:** If parent is English fallback ("User Guide") and child is French, child's `parent` is resolved to "User Guide", seamlessly attaching it.
+5. **Arbitrary Nesting & Ordering:** Preserves Just the Docs 3-level nesting, `child_nav_order`, and numeric `nav_order`.
+6. **Cache Isolation:** The repository already overrides `_includes/components/sidebar.html` to omit `include_cached`, ensuring nav is re-evaluated per locale.
 
-## 7. Migration Plan
-
-The migration will be carried out in 5 distinct, independently testable phases:
-
-### Phase 1: Core Plugins & Navigation Overrides
-- Add `_plugins/polyglot_fallback_adapter.rb` (deterministic `source_lang` fallback).
-- Add `_plugins/metadata_validator.rb` (verifies `page_id`, `parent_id`, `source_lang` integrity at build time).
-- Override `_includes/components/nav/pages.html` and `children.html` to support `parent_id` while maintaining backwards compatibility with legacy `parent:` title strings during migration.
-
-### Phase 2: Content Reorganization & Metadata Migration (Sections 1 & 2)
-- Reorganize `getting-started/` and `user-guide/` into logical document folders (`getting-started/installation/index.en.md`, etc.).
-- Inject canonical `page_id`, `parent_id`, `source_lang`, and clean `permalink`.
-
-### Phase 3: Content Reorganization & Metadata Migration (Sections 3 & 4 + Homepage)
-- Reorganize `dev/`, `community/`, and root `index.{en,fr}.md`.
-- Replace root `index.html` redirect with clean `permalink: /` on `index.en.md`.
-
-### Phase 4: Backward-Compatible Legacy Redirects
-- Implement `_plugins/legacy_redirects.rb` generator.
-- Generates static redirect stubs with `<meta http-equiv="refresh">` and `<link rel="canonical">` for all 87 legacy `.en.html` and `.fr.html` paths.
-- Ensures existing external links, bookmarks, and search engine indices do not 404.
-
-### Phase 5: Language Switcher & Final Cleanup
-- Refactor `_includes/components/lang_switcher.html` to use `page.permalink_lang` from Polyglot.
-- Remove client-side JS path-guessing workarounds.
-- Update link validator test suite to verify canonical URLs.
+#### Approach B: Full Custom Navigation Tree (Rejected)
+Overriding `site_nav.html`, `nav/pages.html`, `nav/children.html`, `nav/links.html`, `breadcrumbs.html`, and `children_nav.html` to use `page_id` directly.
+- **Drawbacks:** High maintenance overhead, breaks on theme updates, risks markup/accessibility regressions (expander buttons, aria attributes).
 
 ---
 
-## 8. Remaining Risks & Editorial Decisions
+## 5. Source Language (`source_lang`) Semantics
 
-1. **Original Language Verification:**
-   - 4 documents have French variants (`index`, `getting-started/index`, `downloading-openmandriva`, `copying-openmandriva-to-a-usb-stick`).
-   - Editorial confirmation is required on whether the French variants were translated from English, or if certain community bylaws originated in French. By default, `source_lang: en` is assigned to technical docs and `source_lang: fr` to French association legal texts where applicable.
-2. **External Link Influx:**
-   - Existing external links to `*.en.html` must remain operational indefinitely via the legacy redirect generator.
-3. **Card Links:**
-   - `_data/home_cards.yml` and section landing page cards currently point to legacy URLs. They will be updated to clean permalinks in Phase 2 & 3.
+### Definition:
+`source_lang` strictly identifies the **authoritative source variant currently present in the repository** that translations derive from and that fallback resolves to.
+
+### Semantic Rules:
+1. A document **must never** reference `source_lang: fr` if no French variant exists in the repository.
+2. For all 83 English-only documents, `source_lang: en`. (Historical authoring language is an editorial concern and can be recorded as optional `original_lang:` without affecting engine fallback).
+3. For the 4 translated documents in the repository:
+   - `index.{en,fr}.md`: Authoritative source is `en`. (`source_lang: en`).
+   - `getting-started/index.{en,fr}.md`: Authoritative source is `en`. (`source_lang: en`).
+   - `getting-started/downloading-openmandriva.{en,fr}.md`: Authoritative source is `en`. (`source_lang: en`).
+   - `getting-started/copying-openmandriva-to-a-usb-stick.{en,fr}.md`: Authoritative source is `en`. (`source_lang: en`).
+4. Any document originating in French (e.g. future association statutes or community French drafts) that has a French source variant will set `source_lang: fr`.
+
+---
+
+## 6. Approved Phased Migration Sequence
+
+To prevent broken intermediate states, the migration is strictly divided into sequential, verified iterations:
+
+### Iteration 03B: Stable Identities & File Reorganization
+- Introduce stable frontmatter schema (`page_id`, `parent_id`, `source_lang`).
+- Reorganize Markdown files into logical directories (`section/doc/index.{lang}.md`).
+- **Preserve existing public routes:** Documents declare explicit `permalink:` pointing to their current legacy paths (e.g. `permalink: /getting-started/downloading-openmandriva.en.html`), ensuring zero URL breakage.
+- Add `_plugins/metadata_validator.rb` to enforce ID uniqueness and parent validity at build time.
+
+### Iteration 03C: Canonical Permalinks & Legacy Route Preservation
+- Switch documents to clean canonical permalinks (`permalink: /getting-started/downloading-openmandriva/`).
+- Preserve legacy routes via `redirect_from`:
+  - Each document variant declares its old `.html` path in `redirect_from:`.
+  - Verified redirect mechanism emits standard static redirect stubs with `<meta http-equiv="refresh">`, `<link rel="canonical">`, and JavaScript query/hash preservation.
+- Update internal markdown links to canonical paths.
+- Replace root `index.html` static redirect with canonical `/` on `index.en.md`.
+
+### Iteration 04: Deterministic Fallback & Metadata-Driven Language Switching
+- Implement `_plugins/polyglot_fallback_adapter.rb`.
+- Refactor `_includes/components/lang_switcher.html` to use Polyglot's native `page.permalink_lang` instead of client-side path guessing.
+
+### Iteration 05: Hierarchical Navigation & Parent Resolution
+- Implement Approach A adapter (`_plugins/parent_id_adapter.rb`) resolving `parent_id` into Just the Docs parent/ancestor metadata.
+- Clean up obsolete nav filters.
+
+---
+
+## 7. Redirect and Asset Strategy
+
+### 7.1 Redirect Mechanism Verification
+- Both `jekyll-redirect-from` and a dedicated zero-dependency generator emit the standard HTML redirect contract:
+  ```html
+  <link rel="canonical" href="https://docs.openmandriva.org/section/doc/">
+  <meta http-equiv="refresh" content="0; url=https://docs.openmandriva.org/section/doc/">
+  <script>window.location.href = 'https://docs.openmandriva.org/section/doc/' + window.location.search + window.location.hash;</script>
+  ```
+- **Preservation:** Fragment anchors (`#heading`) and query parameters (`?query`) are preserved by the script window location concatenation.
+- **Cycles:** Zero risk of cycles because target `/section/doc/` is physically distinct from legacy `/section/doc.en.html`.
+
+### 7.2 Asset Strategy
+- **Global Assets:** Remain in `/assets/images/` and are excluded from localization (`exclude_from_localization`).
+- **Document-Specific Images:** Co-located in `./images/` within the document folder. When moving `section/doc.en.md` to `section/doc/index.en.md`, the associated `images/` directory is moved to `section/doc/images/`. All relative links `./images/image-01.png` remain completely intact.
+
+---
+
+## 8. Reproducible Test Suite & Verification
+
+The architecture and fallback behavior are backed by an automated integration test suite in `test/test_i18n_architecture.py` using fixture `test/fixtures/i18n_architecture/`:
+- **Execution:** `python3 -m unittest test/test_i18n_architecture.py` (or `python3 -m unittest discover -s test -p "test_*.py"`).
+- **Runtime:** ~1.5s for 10 automated test cases.
+- **Scenarios Verified:**
+  1. Localized homepages on `/`, `/fr/`, `/de/`, `/ru/`.
+  2. English original with French/German translations; Russian fallback to English.
+  3. English-only article rendering across all language trees in English.
+  4. French original with English translation; German/Russian fallback to English.
+  5. French original with German translation, no English; Russian fallback deterministically to French original (`source_lang: fr`).
+  6. French-only article rendering across all language trees in French.
+  7. Nested hierarchy with mixed translation availability and `resolved_parent` verification under Approach A.
+  8. Shared assets excluded from localization and preserved at site root.
+  9. Non-empty baseurl build.
+  10. Document order determinism proof (permutations yield identical fallback).
