@@ -14,7 +14,7 @@ Installing OpenMandriva is quick. Once you have your USB stick ready, the instal
 
 Always back up your data before you begin. Installing OpenMandriva may shrink, reformat, or wipe hard-drive partitions.
 
-1. Copy OpenMandriva to a USB stick with at least 8 GB of storage. See [Copying OpenMandriva to a USB Stick](./copying-openmandriva-to-a-usb-stick.en.html). When finished shut down your computer completely (don't put it to sleep; shut it off). 
+1. Copy OpenMandriva to a USB stick with at least 8 GB of storage. See [Copying OpenMandriva to a USB Stick](./copying-openmandriva-to-a-usb-stick.{{ site.active_lang | default: 'en' }}.html). When finished shut down your computer completely (don't put it to sleep; shut it off). 
 
 1. Boot from the USB stick by inserting the stick and turning your computer on. Some computers boot from the USB stick automatically; most don't. If yours doesn't, press the boot-menu key during startup. Common keys include F12 and ESC; F2 and F10 also work. Most computers show the correct key while the vendor logo is displayed.
 

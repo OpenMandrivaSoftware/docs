@@ -114,7 +114,7 @@ After installing a new desktop, select it at the login screen:
 You can install multiple desktops on the same system. However, *Plasma* and *SonicDE* are mutually exclusive---only one of them can be installed at a time. The other desktops can co-exist, but adding more desktops increases the number of packages on your system and the complexity of updates.
 
 {: .tip }
-Try a desktop in [live mode](/getting-started/downloading-openmandriva.en.html) first. Boot from the USB and explore before committing, so you confirm a look you like before changing your system.
+Try a desktop in [live mode](/getting-started/downloading-openmandriva.{{ site.active_lang | default: 'en' }}.html) first. Boot from the USB and explore before committing, so you confirm a look you like before changing your system.
 
 ## Window Managers
 

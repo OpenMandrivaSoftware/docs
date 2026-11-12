@@ -41,4 +41,4 @@ Parfait ! Maintenant que vous êtes prêt·e, rendez-vous sur la page de [sélec
 
 [Copier OpenMandriva sur une clé USB](./copying-openmandriva-to-a-usb-stick.fr.html)
 
-[Installer OpenMandriva](./installing-openmandriva.fr.html)
+[Installer OpenMandriva](./installing-openmandriva.en.html)

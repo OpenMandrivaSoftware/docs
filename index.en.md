@@ -4,6 +4,7 @@ layout: home
 card_columns: 2
 nav_order: 1
 lang: en
+lang-exclusive: [en]
 ---
 Welcome to the OpenMandriva documentation!
 

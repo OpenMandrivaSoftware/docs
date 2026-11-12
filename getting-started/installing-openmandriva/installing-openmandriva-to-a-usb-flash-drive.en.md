@@ -117,4 +117,4 @@ If the installed system fails to boot on another computer:
 ## Related Topics
 
 - [Installing OpenMandriva](../installing-openmandriva.en.html)
-- [Copying OpenMandriva to a USB Stick](../copying-openmandriva-to-a-usb-stick.en.html)
+- [Copying OpenMandriva to a USB Stick](../copying-openmandriva-to-a-usb-stick.{{ site.active_lang | default: 'en' }}.html)

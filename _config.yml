@@ -3,7 +3,7 @@ email: om@openmandriva.org
 description: >- # this means to ignore newlines until "baseurl:"
   Documentation for the OpenMandriva Linux distribution.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://docs.openmandriva.org" # the base hostname & protocol for your site
 twitter_username: OpenMandrivaOrg
 github_username:  OpenMandrivaAssociation
 git_repo_org:     OpenMandrivaSoftware
@@ -21,7 +21,7 @@ parallel_localization: false
 logo: "/assets/images/OM-200pl.png"
 aux_links: 
   "OpenMandriva": 
-    - "//openmandriva.org"
+    - "https://openmandriva.org"
 aux_links_new_tab: true
 color_scheme: dark
 callouts: 
