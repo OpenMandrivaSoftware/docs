@@ -7,7 +7,9 @@ page_id: user-guide.post-installation-configuration.restore-your-files-after-ins
 parent_id: user-guide.post-installation-configuration
 lang: en
 source_lang: en
-permalink: /user-guide/post-installation-configuration/restore-your-files-after-installation.en.html
+permalink: /user-guide/post-installation-configuration/restore-your-files-after-installation/
+redirect_from:
+- /user-guide/post-installation-configuration/restore-your-files-after-installation.en.html
 has_toc: true
 ---
 # Restore Your Files After Installation
@@ -53,6 +55,6 @@ Hidden files and directories (starting with a dot) store application settings. T
 
 ## Related Topics
 
-- [Set Your User Avatar](./set-your-user-avatar.en.html)
-- [Configure a Printer](./configure-a-printer.en.html)
-- [Post Installation Configuration](../post-installation-configuration.en.html)
+- [Set Your User Avatar](/user-guide/post-installation-configuration/set-your-user-avatar/)
+- [Configure a Printer](/user-guide/post-installation-configuration/configure-a-printer/)
+- [Post Installation Configuration](/user-guide/post-installation-configuration/)

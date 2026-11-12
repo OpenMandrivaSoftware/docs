@@ -7,7 +7,9 @@ page_id: user-guide.troubleshooting.connect-to-the-internet-in-recovery-mode
 parent_id: user-guide.troubleshooting
 lang: en
 source_lang: en
-permalink: /user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode.en.html
+permalink: /user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode/
+redirect_from:
+- /user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode.en.html
 has_toc: true
 ---
 # Connect to the Internet in Recovery Mode
@@ -24,15 +26,15 @@ At the GRUB menu, change the boot target to access a text console or recovery en
 
 1. At the GRUB boot menu, press `E` to edit the boot entry.
 
-   ![The GRUB boot menu shows the cursor on the boot entry with the E key highlighted.](./images/connect-to-the-internet-in-recovery-mode-01.jpg)
+   ![The GRUB boot menu shows the cursor on the boot entry with the E key highlighted.](../images/connect-to-the-internet-in-recovery-mode-01.jpg)
 
 1. Find the line starting with `linux` and append `3` to boot into console mode.
 
-   ![The boot entry editor shows the linux line with a 3 being appended.](./images/connect-to-the-internet-in-recovery-mode-02.jpg)
+   ![The boot entry editor shows the linux line with a 3 being appended.](../images/connect-to-the-internet-in-recovery-mode-02.jpg)
 
 1. Alternatively, select *Advanced options* and then *Recovery mode*.
 
-   ![The Advanced options menu shows Recovery mode as a selectable entry.](./images/connect-to-the-internet-in-recovery-mode-03.jpg)
+   ![The Advanced options menu shows Recovery mode as a selectable entry.](../images/connect-to-the-internet-in-recovery-mode-03.jpg)
 
 ## Connect via Wi-Fi
 
@@ -80,5 +82,5 @@ The `--ask` option is not needed for ethernet, since the system already has perm
 
 ## Related Topics
 
-- [Fix a Broken Bootloader](./fix-a-broken-bootloader.en.html)
-- [Maintaining Your System](../maintaining-your-system.en.html)
+- [Fix a Broken Bootloader](/user-guide/troubleshooting/fix-a-broken-bootloader/)
+- [Maintaining Your System](/user-guide/maintaining-your-system/)

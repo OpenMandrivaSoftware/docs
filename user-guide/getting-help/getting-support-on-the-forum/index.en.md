@@ -7,7 +7,9 @@ page_id: user-guide.getting-help.getting-support-on-the-forum
 parent_id: user-guide.getting-help
 lang: en
 source_lang: en
-permalink: /user-guide/getting-help/getting-support-on-the-forum.en.html
+permalink: /user-guide/getting-help/getting-support-on-the-forum/
+redirect_from:
+- /user-guide/getting-help/getting-support-on-the-forum.en.html
 has_toc: true
 ---
 # Getting Support on the Forum
@@ -21,13 +23,13 @@ Spend time carefully describing your question in as much detail as you can. If y
 
 1. Search the [forum](https://forum.openmandriva.org/search) for existing topics similar to yours.
 
-2. Read the [Release Notes and Errata](../../community/releases/current-releases.en.html) for your version of *OpenMandriva Lx* before reporting an issue.
+2. Read the [Release Notes and Errata](/community/releases/current-releases/) for your version of *OpenMandriva Lx* before reporting an issue.
 
 3. Check the [Resources category](https://forum.openmandriva.org/c/resources/13)---most common questions are already answered there, including detailed how-tos.
 
 4. Choose the proper category for your post.
 
-5. Use a descriptive subject title. Avoid vague titles like "Help me!" or "It's broken." Posts like "Graphics broken" are useless unless you tell what graphics hardware and driver you use. Posts like "System broken after updates" are useless unless you list the packages that updated recently---see [the list of latest updates](../managing-software/tips-and-tricks/list-the-latest-updates.en.html).
+5. Use a descriptive subject title. Avoid vague titles like "Help me!" or "It's broken." Posts like "Graphics broken" are useless unless you tell what graphics hardware and driver you use. Posts like "System broken after updates" are useless unless you list the packages that updated recently---see [the list of latest updates](/user-guide/managing-software/tips-and-tricks/list-the-latest-updates/).
 
 6. Tag your post with relevant information.
 
@@ -55,7 +57,7 @@ Spend time carefully describing your question in as much detail as you can. If y
 
 2. Provide logs and/or output of `journalctl` pertinent to the issue.
 
-3. Provide the output of `inxi -Fz` to show your hardware information. See [Get Logs and Hardware Info for Issue Reports](./get-logs-and-hardware-info-for-issue-reports.en.html) for details.
+3. Provide the output of `inxi -Fz` to show your hardware information. See [Get Logs and Hardware Info for Issue Reports](/user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/) for details.
 
 4. When someone requests the full console output, include everything---starting from the command you typed to the end---not only the part you assume is relevant.
 
@@ -86,6 +88,6 @@ Other Linux distributions such as Arch Linux, Fedora, Gentoo, openSUSE, and Ubun
 
 ## Related Topics
 
-- [How to Report a Bug](./how-to-report-a-bug.en.html)
-- [Get Logs and Hardware Info for Issue Reports](./get-logs-and-hardware-info-for-issue-reports.en.html)
-- [Using DNF](../index.en.html)
+- [How to Report a Bug](/user-guide/getting-help/how-to-report-a-bug/)
+- [Get Logs and Hardware Info for Issue Reports](/user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/)
+- [Using DNF](/user-guide/)

@@ -7,7 +7,9 @@ page_id: getting-started.installing-openmandriva.installing-openmandriva-to-a-us
 parent_id: getting-started.installing-openmandriva
 lang: en
 source_lang: en
-permalink: /getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive.en.html
+permalink: /getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive/
+redirect_from:
+- /getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive.en.html
 has_toc: true
 ---
 # Installing OpenMandriva to a USB Flash Drive
@@ -81,7 +83,7 @@ Notice the partition table and device partitions have been removed from the outp
 
 With the USB drive properly blanched, start the OpenMandriva installer:
 
-1. Boot from your installation media as described in [Installing OpenMandriva](../installing-openmandriva.en.html).
+1. Boot from your installation media as described in [Installing OpenMandriva](/getting-started/installing-openmandriva/).
 
 1. When you reach the partitioning screen in Calamares, select **Erase disk and install OpenMandriva**. Calamares recognizes your blanched USB drive as a valid installation target.
 
@@ -120,5 +122,5 @@ If the installed system fails to boot on another computer:
 
 ## Related Topics
 
-- [Installing OpenMandriva](../installing-openmandriva.en.html)
-- [Copying OpenMandriva to a USB Stick](../copying-openmandriva-to-a-usb-stick.{{ site.active_lang | default: 'en' }}.html)
+- [Installing OpenMandriva](/getting-started/installing-openmandriva/)
+- [Copying OpenMandriva to a USB Stick](/getting-started/copying-openmandriva-to-a-usb-stick/)

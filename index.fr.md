@@ -5,10 +5,8 @@ nav_order: 1
 page_id: home
 lang: fr
 source_lang: en
-permalink: /index.html
+permalink: /
 card_columns: 2
-lang-exclusive:
-- fr
 ---
 Bienvenue dans la documentation d'OpenMandriva !
 
@@ -17,15 +15,9 @@ Bienvenue dans la documentation d'OpenMandriva !
   <div class="home-card">
     <h3>
       {% if card.base_url %}
-        {% assign fr_section_url = card.base_url | append: '/index.fr.html' %}
-        {% assign fr_section = site.pages | where: "url", fr_section_url | first %}
-        {% if fr_section %}
-          <a href="{{ fr_section_url }}">{{ card.title }}</a>
-        {% else %}
-          <a href="{{ card.base_url }}/index.en.html">{{ card.title }}</a>
-        {% endif %}
+      <a href="{{ card.base_url }}/">{{ card.title }}</a>
       {% else %}
-        {{ card.title }}
+      {{ card.title }}
       {% endif %}
     </h3>
     <div class="description">{{ card.description }}</div>
@@ -34,13 +26,7 @@ Bienvenue dans la documentation d'OpenMandriva !
       {% if link.url %}
         <li><a href="{{ link.url }}">{{ link.name }}</a></li>
       {% elsif link.base_url %}
-        {% assign fr_link_url = link.base_url | append: '.fr.html' %}
-        {% assign fr_page = site.pages | where: "url", fr_link_url | first %}
-        {% if fr_page %}
-          <li><a href="{{ fr_link_url }}">{{ link.name }}</a></li>
-        {% else %}
-          <li><a href="{{ link.base_url }}.en.html">{{ link.name }}</a></li>
-        {% endif %}
+        <li><a href="{{ link.base_url }}/">{{ link.name }}</a></li>
       {% endif %}
       {% endfor %}
     </ul>

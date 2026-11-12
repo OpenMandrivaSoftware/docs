@@ -7,7 +7,9 @@ page_id: user-guide.post-installation-configuration.set-your-user-avatar
 parent_id: user-guide.post-installation-configuration
 lang: en
 source_lang: en
-permalink: /user-guide/post-installation-configuration/set-your-user-avatar.en.html
+permalink: /user-guide/post-installation-configuration/set-your-user-avatar/
+redirect_from:
+- /user-guide/post-installation-configuration/set-your-user-avatar.en.html
 has_toc: true
 ---
 # Set Your User Avatar
@@ -16,25 +18,25 @@ The user avatar is the picture that represents your account in the login screen,
 
 1. Open *System Settings*.
 
-   ![System Settings contains many settings, among them user avatar settings.](./images/index-01.png)
+   ![System Settings contains many settings, among them user avatar settings.](../images/index-01.png)
 
 1. Scroll to the bottom and click *Users*. 
 
-   ![Open Users to see user settings.](./images/index-02.png)
+   ![Open Users to see user settings.](../images/index-02.png)
 
 1. Your account should be selected already. All accounts appear here. 
 
 1. Click the default user image to open the avatar selection dialog.
 
-   ![Select the default user image to open a dialog to select images.](./images/index-03.png)
+   ![Select the default user image to open a dialog to select images.](../images/index-03.png)
 
 1. Browse the available images. Pick one you like, or select *Choose File...* to select an image you already have on your machine. 
 
-   ![Choose the avatar you want. ](./images/index-04.png)
+   ![Choose the avatar you want. ](../images/index-04.png)
 
 1. Click *Apply* to make the change. 
 
 ## Related Topics
 
-- [Post Installation Configuration](../post-installation-configuration.en.html)
-- [Maintaining Your System](../maintaining-your-system.en.html)
+- [Post Installation Configuration](/user-guide/post-installation-configuration/)
+- [Maintaining Your System](/user-guide/maintaining-your-system/)

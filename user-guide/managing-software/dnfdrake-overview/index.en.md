@@ -7,7 +7,9 @@ page_id: user-guide.managing-software.dnfdrake-overview
 parent_id: user-guide.managing-software
 lang: en
 source_lang: en
-permalink: /user-guide/managing-software/dnfdrake-overview.en.html
+permalink: /user-guide/managing-software/dnfdrake-overview/
+redirect_from:
+- /user-guide/managing-software/dnfdrake-overview.en.html
 has_toc: true
 ---
 # DnfDrake Overview
@@ -70,6 +72,6 @@ DnfDrake provides a shortcut to the Software Repository Selector (`om-repo-picke
 
 ## Related Topics
 
-- [Using DNF](./using-dnf.en.html)
-- [Software Repository Selector](./software-repository-selector.en.html)
-- [Managing Software](../managing-software.en.html)
+- [Using DNF](/user-guide/managing-software/using-dnf/)
+- [Software Repository Selector](/user-guide/managing-software/software-repository-selector/)
+- [Managing Software](/user-guide/managing-software/)

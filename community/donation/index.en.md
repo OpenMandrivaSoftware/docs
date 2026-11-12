@@ -7,7 +7,9 @@ page_id: community.donation
 parent_id: community
 lang: en
 source_lang: en
-permalink: /community/donation.en.html
+permalink: /community/donation/
+redirect_from:
+- /community/donation.en.html
 has_toc: true
 ---
 # Donation
@@ -30,6 +32,6 @@ If you can, [donate](https://www.openmandriva.org/donate) to keep the servers ru
 
 ## Related Topics
 
-- [Chat with OpenMandriva](./chat-with-openmandriva.en.html)
-- [About OpenMandriva](./about-openmandriva.en.html)
-- [Contributing to OpenMandriva](../dev/contributing-to-openmandriva.en.html)
+- [Chat with OpenMandriva](/community/chat-with-openmandriva/)
+- [About OpenMandriva](/community/about-openmandriva/)
+- [Contributing to OpenMandriva](/dev/contributing-to-openmandriva/)

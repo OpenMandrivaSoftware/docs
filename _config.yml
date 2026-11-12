@@ -14,7 +14,7 @@ copyright: "OpenMandriva Association"
 # Polyglot (multilingual) settings
 languages: ['en', 'fr']
 default_lang: 'en'
-exclude_from_localization: ['assets', 'images', 'js', 'css', 'scss', 'sass', 'vendor', 'index.html', 'llms.txt']
+exclude_from_localization: ['assets', 'images', 'js', 'css', 'scss', 'sass', 'vendor', 'llms.txt']
 parallel_localization: false
 
 # Sass / SCSS build settings

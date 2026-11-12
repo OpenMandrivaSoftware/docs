@@ -7,7 +7,9 @@ page_id: dev.getting-started-with-qa
 parent_id: dev
 lang: en
 source_lang: en
-permalink: /dev/getting-started-with-qa.en.html
+permalink: /dev/getting-started-with-qa/
+redirect_from:
+- /dev/getting-started-with-qa.en.html
 has_toc: true
 ---
 # Getting Started with QA
@@ -28,7 +30,7 @@ Pre-release software arrives through the testing repositories. Packages in the m
 
 The package workflow is `Cooker → Rolling → Stable repo`. The maintainers build packages in Cooker first, and QA tests them before they move on. This is why QA members keep a Rolling system handy.
 
-Enable the testing repositories with the [Software Repository Selector](/user-guide/managing-software/software-repository-selector.en.html), or use the command line.
+Enable the testing repositories with the [Software Repository Selector](/user-guide/managing-software/software-repository-selector/), or use the command line.
 
 Use this command for the main testing repo only:
 
@@ -64,11 +66,11 @@ Browse the waiting packages in *Recent Builds*. Vote with a thumbs up or a thumb
 
 ## Test New Releases
 
-Testing new Alpha, Beta, and RC ISOs gets planned before each release. Find what to test and when in the [release QA guide](./getting-started-with-qa/release-qa-checklist.en.html).
+Testing new Alpha, Beta, and RC ISOs gets planned before each release. Find what to test and when in the [release QA guide](/dev/getting-started-with-qa/release-qa-checklist/).
 
 ## Triage New Bugs
 
-Once someone has [reported a bug](../user-guide/getting-help/how-to-report-a-bug.en.html), triage puts it in front of the right person. That process is still coming together, so check the [issue tracker](https://github.com/OpenMandrivaAssociation/distribution/issues) for where help is most needed.
+Once someone has [reported a bug](/user-guide/getting-help/how-to-report-a-bug/), triage puts it in front of the right person. That process is still coming together, so check the [issue tracker](https://github.com/OpenMandrivaAssociation/distribution/issues) for where help is most needed.
 
 {: .important }
 Testing repositories by definition contain software that could have bugs. Enable them only when you are actively testing and disable them again when you are done.

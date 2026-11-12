@@ -7,7 +7,9 @@ page_id: community.releases.rome-errata
 parent_id: community.releases
 lang: en
 source_lang: en
-permalink: /community/releases/rome-errata.en.html
+permalink: /community/releases/rome-errata/
+redirect_from:
+- /community/releases/rome-errata.en.html
 has_toc: true
 ---
 # ROME Errata — Known Issues
@@ -15,7 +17,7 @@ has_toc: true
 {: .note }
 > As with any release, there are still issues and bugs that may not have been resolved. This page documents those that may cause inconvenience and where possible, details how they may be worked around.
 
-Please read the [ROME Release Notes](./rome-release-notes.en.html) as well.
+Please read the [ROME Release Notes](/community/releases/rome-release-notes/) as well.
 
 ## Known Issues and Workarounds
 
@@ -209,7 +211,7 @@ If help is needed, seek it [here](https://forum.openmandriva.org/c/en/support).
 
 ### Discover New Software
 
-To explore additional repositories' packages, enable them with the [Software Repository Selector](../../user-guide/managing-software/software-repository-selector.en.html) and refresh the cache. Use the `--refresh` option:
+To explore additional repositories' packages, enable them with the [Software Repository Selector](/user-guide/managing-software/software-repository-selector/) and refresh the cache. Use the `--refresh` option:
 
 ```bash
 sudo dnf --refresh install [package_name]
@@ -273,6 +275,6 @@ Some modules in System Settings may not display correctly on the first launch. T
 
 ## Related Topics
 
-- [ROME Release Notes](./rome-release-notes.en.html)
-- [ROME Changelog](./rome-changelog.en.html)
-- [Getting Support on the Forum](../../user-guide/getting-help/getting-support-on-the-forum.en.html)
+- [ROME Release Notes](/community/releases/rome-release-notes/)
+- [ROME Changelog](/community/releases/rome-changelog/)
+- [Getting Support on the Forum](/user-guide/getting-help/getting-support-on-the-forum/)

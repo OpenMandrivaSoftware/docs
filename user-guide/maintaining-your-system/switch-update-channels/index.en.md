@@ -7,7 +7,9 @@ page_id: user-guide.maintaining-your-system.switch-update-channels
 parent_id: user-guide.maintaining-your-system
 lang: en
 source_lang: en
-permalink: /user-guide/maintaining-your-system/switch-update-channels.en.html
+permalink: /user-guide/maintaining-your-system/switch-update-channels/
+redirect_from:
+- /user-guide/maintaining-your-system/switch-update-channels.en.html
 has_toc: true
 ---
 # Switch Update Channels
@@ -16,7 +18,7 @@ OpenMandriva offers two main release branches: *Rock* (stable) and *ROME* (rolli
 
 {: .note }
 
-ROME requires comfort with the command line and basic *DNF* commands. Read [Release Plan and Repositories](../../community/releases/release-plan-and-repositories.en.html) before switching.
+ROME requires comfort with the command line and basic *DNF* commands. Read [Release Plan and Repositories](/community/releases/release-plan-and-repositories/) before switching.
 
 ## Switch from Rock to ROME
 
@@ -24,19 +26,19 @@ Update your repository channels from the stable *Rock* branch to the rolling *RO
 
 1. Open *Software Repository Selector* (`om-repo-picker`) from the application menu, or open it from OM Welcome.
 
-   ![The Software Repository Selector window opens with update channel options.](./images/switch-update-channels-01.jpg)
+   ![The Software Repository Selector window opens with update channel options.](../images/switch-update-channels-01.jpg)
 
 1. In OM Welcome, select the OpenMandriva repo-picker.
 
-   ![OM Welcome highlights the repo-picker option for launching the selector.](./images/switch-update-channels-02.jpg)
+   ![OM Welcome highlights the repo-picker option for launching the selector.](../images/switch-update-channels-02.jpg)
 
 1. Navigate to the *Update channel* section.
 
-   ![The Update channel section displays available channel options.](./images/switch-update-channels-03.jpg)
+   ![The Update channel section displays available channel options.](../images/switch-update-channels-03.jpg)
 
 1. Select *Rolling* from the dropdown menu, confirm with *OK*, and enter your root password when prompted.
 
-   ![The dropdown menu presents Rock and Rolling as update channel choices.](./images/switch-update-channels-04.jpg)
+   ![The dropdown menu presents Rock and Rolling as update channel choices.](../images/switch-update-channels-04.jpg)
 
    This changes your repositories from Rock to Rolling. The window may disappear briefly; wait for the process to finish.
 
@@ -53,5 +55,5 @@ Reverting to Rock requires a fresh installation. Back up your data first, then i
 
 ## Related Topics
 
-- [Maintaining Your System](../maintaining-your-system.en.html)
-- [Update Your System](./update-your-system.en.html)
+- [Maintaining Your System](/user-guide/maintaining-your-system/)
+- [Update Your System](/user-guide/maintaining-your-system/update-your-system/)

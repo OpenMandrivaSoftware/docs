@@ -7,7 +7,9 @@ page_id: getting-started.downloading-openmandriva
 parent_id: getting-started
 lang: en
 source_lang: en
-permalink: /getting-started/downloading-openmandriva.en.html
+permalink: /getting-started/downloading-openmandriva/
+redirect_from:
+- /getting-started/downloading-openmandriva.en.html
 has_toc: true
 ---
 # Downloading OpenMandriva 
@@ -43,6 +45,6 @@ Great! Now that you're ready, head over to the [release picking](https://openman
 
 ## Related Topics 
 
-[Copying OpenMandriva to a USB](./copying-openmandriva-to-a-usb-stick.en.html)
+[Copying OpenMandriva to a USB](/getting-started/copying-openmandriva-to-a-usb-stick/)
 
-[Installing OpenMandriva](./installing-openmandriva.en.html)
+[Installing OpenMandriva](/getting-started/installing-openmandriva/)

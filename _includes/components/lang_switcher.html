@@ -1,40 +1,33 @@
 {%- comment -%}
-  Language switcher component (Jekyll native)
+  Language switcher component (Language-agnostic)
 {%- endcomment -%}
 
 <div class="lang-switcher">
   <div class="dropdown">
     <button type="button" class="site-button btn-reset dropdown-toggle" aria-label="Select language" aria-expanded="false" aria-haspopup="true">
-      <span class="lang-current-text">{{ site.active_lang | default: 'en' | upcase }}</span>
+      <span class="lang-current-text">{{ site.active_lang | default: site.default_lang | upcase }}</span>
       <svg viewBox="0 0 24 24" class="icon" aria-hidden="true" style="width: 14px; height: 14px; flex-shrink: 0;"><path d="M7 10l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </button>
     <div class="dropdown-menu">
-      {%- if site.active_lang == 'fr' -%}
-        {%- if page.url == '/fr/index.html' or page.url == '/fr/' -%}
-          {%- assign en_url = '/index.en.html' -%}
+      {%- for l in site.languages -%}
+        {%- if l == site.active_lang -%}
+          <a href="{{ page.url }}" class="dropdown-item active" data-lang="{{ l }}" aria-current="true">{{ l | upcase }}</a>
         {%- else -%}
-          {%- assign en_url = page.url | replace_first: '/fr/', '/' | replace: '.fr.html', '.en.html' -%}
-        {%- endif -%}
-        <a {% static_href %}href="{{ en_url }}"{% endstatic_href %} class="dropdown-item" data-lang="en">EN</a>
-        <a href="{{ page.url }}" class="dropdown-item active" data-lang="fr" aria-current="true">FR</a>
-      {%- else -%}
-        {%- if page.url == '/index.en.html' or page.url == '/index.html' or page.url == '/' -%}
-          {%- assign fr_href = '/fr/' -%}
-        {%- else -%}
-          {%- assign target_fr_url = '/fr' | append: page.url | replace: '.en.html', '.fr.html' -%}
-          {%- assign fr_match = site.pages | where: "url", target_fr_url | first -%}
-          {%- if fr_match -%}
-            {%- assign fr_href = target_fr_url -%}
+          {%- if l == site.default_lang -%}
+            {%- assign target_href = page.permalink | default: '/' -%}
           {%- else -%}
-            {%- assign fr_href = '/fr/' -%}
+            {%- assign p_url = page.permalink | default: '/' -%}
+            {%- if p_url == '/' -%}
+              {%- assign target_href = '/' | append: l | append: '/' -%}
+            {%- else -%}
+              {%- assign target_href = '/' | append: l | append: p_url -%}
+            {%- endif -%}
           {%- endif -%}
+          <a {% static_href %}href="{{ target_href }}"{% endstatic_href %} class="dropdown-item" data-lang="{{ l }}">{{ l | upcase }}</a>
         {%- endif -%}
-        <a href="{{ page.url }}" class="dropdown-item active" data-lang="en" aria-current="true">EN</a>
-        <a {% static_href %}href="{{ fr_href }}"{% endstatic_href %} class="dropdown-item" data-lang="fr">FR</a>
-      {%- endif -%}
+      {%- endfor -%}
     </div>
   </div>
 </div>
 
 <script src="{{ '/assets/js/lang-switcher.js' | relative_url }}"></script>
-

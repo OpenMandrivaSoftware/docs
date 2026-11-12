@@ -7,7 +7,9 @@ page_id: user-guide.managing-software.openmandriva-updater
 parent_id: user-guide.managing-software
 lang: en
 source_lang: en
-permalink: /user-guide/managing-software/openmandriva-updater.en.html
+permalink: /user-guide/managing-software/openmandriva-updater/
+redirect_from:
+- /user-guide/managing-software/openmandriva-updater.en.html
 has_toc: true
 ---
 # OpenMandriva Updater
@@ -18,11 +20,11 @@ has_toc: true
 
 The updater sits in your system tray as a small icon. When updates are available, the icon changes to indicate the status:
 
-![The tray icon shows an update is needed.](./images/openmandriva-updater-01.png)
+![The tray icon shows an update is needed.](../images/openmandriva-updater-01.png)
 
 Click the tray icon to open the updater window and review pending updates:
 
-![The updater has a simple interface.](./images/openmandriva-updater-02.png)
+![The updater has a simple interface.](../images/openmandriva-updater-02.png)
 
 The updater handles both RPM packages and Flatpaks. Snaps update automatically through the Snap subsystem.
 
@@ -30,7 +32,7 @@ The updater handles both RPM packages and Flatpaks. Snaps update automatically t
 
 *OM Installer* is a graphical tool for searching for and installing RPM, Flatpak, and Snap packages. It provides an alternative to command-line package management when you need to find and install software interactively.
 
-![Search for a package, right-click to mark packages for installation or removal, and click Install Marked to install.](./images/openmandriva-updater-03.png)
+![Search for a package, right-click to mark packages for installation or removal, and click Install Marked to install.](../images/openmandriva-updater-03.png)
 
 To install or remove packages,
 
@@ -43,6 +45,6 @@ Flatpak and Snap packages can be searched in separate categories by clicking the
 
 ## Related Topics
 
-- [Using DNF](./using-dnf.en.html)
-- [OpenMandriva Welcome](./openmandriva-welcome.en.html)
-- [First Ten Tasks After Installation](../first-steps.en.html)
+- [Using DNF](/user-guide/managing-software/using-dnf/)
+- [OpenMandriva Welcome](/user-guide/managing-software/openmandriva-welcome/)
+- [First Ten Tasks After Installation](/user-guide/first-steps/)

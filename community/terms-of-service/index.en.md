@@ -7,7 +7,9 @@ page_id: community.terms-of-service
 parent_id: community
 lang: en
 source_lang: en
-permalink: /community/terms-of-service.en.html
+permalink: /community/terms-of-service/
+redirect_from:
+- /community/terms-of-service.en.html
 has_toc: true
 ---
 # Terms of Service
@@ -134,5 +136,5 @@ We use this information internally to improve the user interface and maintain a 
 
 ## Related Topics
 
-- [Official Naming Policy](./official-naming-policy.en.html)
-- [Repository Policies](./releases/repository-policies.en.html)
+- [Official Naming Policy](/community/official-naming-policy/)
+- [Repository Policies](/community/releases/repository-policies/)

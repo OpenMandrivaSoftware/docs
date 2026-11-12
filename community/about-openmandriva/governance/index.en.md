@@ -7,18 +7,20 @@ page_id: community.about-openmandriva.governance
 parent_id: community.about-openmandriva
 lang: en
 source_lang: en
-permalink: /community/about-openmandriva/governance.en.html
+permalink: /community/about-openmandriva/governance/
+redirect_from:
+- /community/about-openmandriva/governance.en.html
 has_toc: true
 ---
 # Governance
 
 The OpenMandriva Association *(OMA)* runs through a number of organs.
 
-The Council outlines the overall purpose, structure, and processes for OMA. The [Statutes](./statutes.en.html) and [Bylaws](./bylaws.en.html) of OMA document the Association's policies and procedures as a non-profit organization under French law.
+The Council outlines the overall purpose, structure, and processes for OMA. The [Statutes](/community/about-openmandriva/statutes/) and [Bylaws](/community/about-openmandriva/bylaws/) of OMA document the Association's policies and procedures as a non-profit organization under French law.
 
 ## The Council
 
-The Council tends to meet twice a month to discuss regular activities, and publishes an annual activity and financial report. The current council members are listed on the [About page](../about-openmandriva.en.html). The Chairman is Bernhard Rosenkränzer, the Secretary is Kate Lebedeff, and the Treasurer is Jean-Claude Vanier.
+The Council tends to meet twice a month to discuss regular activities, and publishes an annual activity and financial report. The current council members are listed on the [About page](/community/about-openmandriva/). The Chairman is Bernhard Rosenkränzer, the Secretary is Kate Lebedeff, and the Treasurer is Jean-Claude Vanier.
 
 ## Technical Committee
 

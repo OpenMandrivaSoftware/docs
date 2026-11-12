@@ -7,7 +7,9 @@ page_id: user-guide.network-configuration
 parent_id: user-guide
 lang: en
 source_lang: en
-permalink: /user-guide/network-configuration.en.html
+permalink: /user-guide/network-configuration/
+redirect_from:
+- /user-guide/network-configuration.en.html
 has_toc: true
 ---
 # Network Configuration
@@ -193,5 +195,5 @@ nmcli connection up br0
 
 ## Related Topics
 
-- [User Guide](index.en.html)
-- [Managing Software](managing-software.en.html)
+- [User Guide](/user-guide/)
+- [Managing Software](/user-guide/managing-software/)

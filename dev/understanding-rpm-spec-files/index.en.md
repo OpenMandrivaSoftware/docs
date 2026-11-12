@@ -7,7 +7,9 @@ page_id: dev.understanding-rpm-spec-files
 parent_id: dev
 lang: en
 source_lang: en
-permalink: /dev/understanding-rpm-spec-files.en.html
+permalink: /dev/understanding-rpm-spec-files/
+redirect_from:
+- /dev/understanding-rpm-spec-files.en.html
 has_toc: true
 ---
 # Understanding RPM Spec Files
@@ -19,7 +21,7 @@ An RPM package is defined by a *specification file* (`.spec`) that describes how
 
 ## Creating a Spec File
 
-Use the appropriate `v*` tool from `packaging-tools` to generate a template for your package type. You can find the available tools in [Installing Packaging Tools](./preparing-your-system/packaging-tools.en.html).
+Use the appropriate `v*` tool from `packaging-tools` to generate a template for your package type. You can find the available tools in [Installing Packaging Tools](/dev/preparing-your-system/packaging-tools/).
 
 As you learn to write spec files, start with an existing `.spec` file from another RPM-based distribution. Because OpenMandriva is its own distribution and not descended from any others, the `spec` file must be modified to work.
 
@@ -63,5 +65,5 @@ The `BuildSystem:` directive tells the build system how to compile your software
 
 ## Related Topics
 
-- [Installing Packaging Tools](./preparing-your-system/packaging-tools.en.html)
-- [Building and Submitting Packages](./building-and-submitting-packages.en.html)
+- [Installing Packaging Tools](/dev/preparing-your-system/packaging-tools/)
+- [Building and Submitting Packages](/dev/building-and-submitting-packages/)

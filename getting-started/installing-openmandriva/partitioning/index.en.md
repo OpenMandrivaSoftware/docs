@@ -7,7 +7,9 @@ page_id: getting-started.installing-openmandriva.partitioning
 parent_id: getting-started.installing-openmandriva
 lang: en
 source_lang: en
-permalink: /getting-started/installing-openmandriva/partitioning.en.html
+permalink: /getting-started/installing-openmandriva/partitioning/
+redirect_from:
+- /getting-started/installing-openmandriva/partitioning.en.html
 has_toc: true
 ---
 # Partitioning
@@ -112,4 +114,4 @@ If you do not need hibernation, a small 4&ndash;8 GB swap partition is enough fo
 
 ## Planning Your Layout
 
-With these topics in mind, decide on your partition layout. [Partitioning Schemas](./linux-partitions.en.html) walks through the common approaches and their trade-offs. [Disk Encryption](./encryption.en.html) covers full-disk encryption with Calamares.
+With these topics in mind, decide on your partition layout. [Partitioning Schemas](/getting-started/installing-openmandriva/linux-partitions/) walks through the common approaches and their trade-offs. [Disk Encryption](/getting-started/installing-openmandriva/encryption/) covers full-disk encryption with Calamares.

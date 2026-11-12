@@ -7,7 +7,9 @@ page_id: user-guide.managing-software.openmandriva-welcome
 parent_id: user-guide.managing-software
 lang: en
 source_lang: en
-permalink: /user-guide/managing-software/openmandriva-welcome.en.html
+permalink: /user-guide/managing-software/openmandriva-welcome/
+redirect_from:
+- /user-guide/managing-software/openmandriva-welcome.en.html
 has_toc: true
 ---
 # OM Welcome
@@ -18,7 +20,7 @@ has_toc: true
 
 The first screen introduces OpenMandriva, the community behind it, and the values the distribution is built on. All screens are accessible via direct links in the top bar. Near the bottom, you can disable OM Welcome from starting at boot.
 
-![The Welcome screen shows an introduction to OpenMandriva and its community values.](./images/openmandriva-welcome-01.jpg)
+![The Welcome screen shows an introduction to OpenMandriva and its community values.](../images/openmandriva-welcome-01.jpg)
 
 Click *Next* to continue.
 
@@ -26,7 +28,7 @@ Click *Next* to continue.
 
 The second screen shows the key technical features of OpenMandriva Lx and introduces distribution-specific applications.
 
-![The Features screen highlights key technical details of OpenMandriva Lx.](./images/openmandriva-welcome-02.jpg)
+![The Features screen highlights key technical details of OpenMandriva Lx.](../images/openmandriva-welcome-02.jpg)
 
 Click *Next* to continue.
 
@@ -40,15 +42,15 @@ This screen gives you quick access to system configuration tools. The options co
 - **Desktop**---appearance, themes, and panel settings
 - **Security**---firewall and privacy settings
 
-![The Configure screen shows quick-access tools for system customization.](./images/openmandriva-welcome-03.jpg)
+![The Configure screen shows quick-access tools for system customization.](../images/openmandriva-welcome-03.jpg)
 
-![The System configuration panel shows power management and display settings.](./images/openmandriva-welcome-04.jpg)
+![The System configuration panel shows power management and display settings.](../images/openmandriva-welcome-04.jpg)
 
-![The Hardware configuration panel shows printer and Bluetooth settings.](./images/openmandriva-welcome-05.jpg)
+![The Hardware configuration panel shows printer and Bluetooth settings.](../images/openmandriva-welcome-05.jpg)
 
-![The Software configuration panel shows package management and repository tools.](./images/openmandriva-welcome-06.jpg)
+![The Software configuration panel shows package management and repository tools.](../images/openmandriva-welcome-06.jpg)
 
-![The Security configuration panel shows firewall and privacy settings.](./images/openmandriva-welcome-07.jpg)
+![The Security configuration panel shows firewall and privacy settings.](../images/openmandriva-welcome-07.jpg)
 
 Click *Next* to continue.
 
@@ -56,25 +58,25 @@ Click *Next* to continue.
 
 This screen helps you install commonly used applications by category---browsers, office suites, graphics tools, multimedia players, and more. Select the applications you want and click *Install* to add them to your system.
 
-![The Applications screen shows categories of software available to install.](./images/openmandriva-welcome-08.jpg)
+![The Applications screen shows categories of software available to install.](../images/openmandriva-welcome-08.jpg)
 
-![Browsing the application categories reveals more software options.](./images/openmandriva-welcome-09.jpg)
+![Browsing the application categories reveals more software options.](../images/openmandriva-welcome-09.jpg)
 
-![A grid view displays application icons with brief descriptions.](./images/openmandriva-welcome-10.jpg)
+![A grid view displays application icons with brief descriptions.](../images/openmandriva-welcome-10.jpg)
 
-![The web browsers category lists Firefox and other browsers.](./images/openmandriva-welcome-11.jpg)
+![The web browsers category lists Firefox and other browsers.](../images/openmandriva-welcome-11.jpg)
 
-![The office suites category shows LibreOffice and related tools.](./images/openmandriva-welcome-12.jpg)
+![The office suites category shows LibreOffice and related tools.](../images/openmandriva-welcome-12.jpg)
 
-![The graphics tools category displays image and video editors.](./images/openmandriva-welcome-13.jpg)
+![The graphics tools category displays image and video editors.](../images/openmandriva-welcome-13.jpg)
 
-![The multimedia players category shows audio and video players.](./images/openmandriva-welcome-14.jpg)
+![The multimedia players category shows audio and video players.](../images/openmandriva-welcome-14.jpg)
 
-![The development tools category lists IDEs and code editors.](./images/openmandriva-welcome-15.jpg)
+![The development tools category lists IDEs and code editors.](../images/openmandriva-welcome-15.jpg)
 
-![Additional application categories are available in the grid view.](./images/openmandriva-welcome-16.jpg)
+![Additional application categories are available in the grid view.](../images/openmandriva-welcome-16.jpg)
 
-![The selected applications are ready to be installed with one click.](./images/openmandriva-welcome-17.jpg)
+![The selected applications are ready to be installed with one click.](../images/openmandriva-welcome-17.jpg)
 
 Click *Next* to continue.
 
@@ -82,7 +84,7 @@ Click *Next* to continue.
 
 This screen gives an overview of the different OpenMandriva software repositories---Main, Extra, Restricted, and Non-Free. Read about what each one contains and manage your repository selection.
 
-![The Repositories screen shows an overview of OpenMandriva's software repositories.](./images/openmandriva-welcome-18.jpg)
+![The Repositories screen shows an overview of OpenMandriva's software repositories.](../images/openmandriva-welcome-18.jpg)
 
 Click *Next* to continue.
 
@@ -90,10 +92,10 @@ Click *Next* to continue.
 
 The final screen links to the broader OpenMandriva world. From here you can reach the forum, the contributing page, social media, and other community resources.
 
-![The Contribute screen shows links to the forum, social media, and community resources.](./images/openmandriva-welcome-19.jpg)
+![The Contribute screen shows links to the forum, social media, and community resources.](../images/openmandriva-welcome-19.jpg)
 
 ## Related Topics
 
-- [First Ten Tasks After Installation](../first-steps.en.html)
-- [Software Repository Selector](./software-repository-selector.en.html)
-- [Setting Up a Printer](../post-installation-configuration/configure-a-printer.en.html)
+- [First Ten Tasks After Installation](/user-guide/first-steps/)
+- [Software Repository Selector](/user-guide/managing-software/software-repository-selector/)
+- [Setting Up a Printer](/user-guide/post-installation-configuration/configure-a-printer/)

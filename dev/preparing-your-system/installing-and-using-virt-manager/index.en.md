@@ -7,7 +7,9 @@ page_id: dev.preparing-your-system.installing-and-using-virt-manager
 parent_id: dev.preparing-your-system
 lang: en
 source_lang: en
-permalink: /dev/preparing-your-system/installing-and-using-virt-manager.en.html
+permalink: /dev/preparing-your-system/installing-and-using-virt-manager/
+redirect_from:
+- /dev/preparing-your-system/installing-and-using-virt-manager.en.html
 has_toc: true
 ---
 # Installing and Using Virt Manager
@@ -94,7 +96,7 @@ The default storage pool points to `/var/lib/libvirt/images`, which is not a goo
 
    This opens the storage volume manager, where you create your storage pools for the first time. You only do this once, and then you can use them when you create VMs. 
 
-   ![The storage volume manager dialog lists available directories and pools.](./images/virt-manager-02.png)
+   ![The storage volume manager dialog lists available directories and pools.](../images/virt-manager-02.png)
 
    By default, only the `var/lib/libvirt/images` directory appears. You will not use this. Instead, create two folders in your home directory:
 
@@ -105,7 +107,7 @@ The default storage pool points to `/var/lib/libvirt/images`, which is not a goo
 
 1. In the dialog that appears, enter a name for your ISO pool, for example, `ISOs`. Click *Browse*, navigate to the ISO directory you created, and click *Finish*.
 
-   ![The Create a new storage pool dialog prompts for a pool name and path.](./images/virt-manager-03.png)
+   ![The Create a new storage pool dialog prompts for a pool name and path.](../images/virt-manager-03.png)
 
 1. Repeat the same process to create a second pool for your VM disk images, for example, name it `VMs` and point it to `/home/[your-user]/VMs`.
 
@@ -119,10 +121,10 @@ The default storage pool points to `/var/lib/libvirt/images`, which is not a goo
 
 ## Next Steps
 
-With Virt Manager installed and configured, you are ready to create your first virtual machine. See [Creating a Cooker VM](./creating-cooker-vm.en.html) to set up a development environment for OpenMandriva's Cooker branch.
+With Virt Manager installed and configured, you are ready to create your first virtual machine. See [Creating a Cooker VM](/dev/preparing-your-system/creating-cooker-vm/) to set up a development environment for OpenMandriva's Cooker branch.
 
 ## Related Topics
 
-- [Creating a Cooker VM](./creating-cooker-vm.en.html)
-- [Preparing Your System](../preparing-your-system.en.html)
-- [Using Cooker](../using-cooker.en.html)
+- [Creating a Cooker VM](/dev/preparing-your-system/creating-cooker-vm/)
+- [Preparing Your System](/dev/preparing-your-system/)
+- [Using Cooker](/dev/using-cooker/)

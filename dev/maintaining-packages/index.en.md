@@ -7,7 +7,9 @@ page_id: dev.maintaining-packages
 parent_id: dev
 lang: en
 source_lang: en
-permalink: /dev/maintaining-packages.en.html
+permalink: /dev/maintaining-packages/
+redirect_from:
+- /dev/maintaining-packages.en.html
 has_toc: true
 ---
 # Maintaining Packages
@@ -178,11 +180,11 @@ Key build lists include
 
 ## Best Practices
 
-Run `auto-update --dry-run` first to review planned changes before applying updates. Never run `auto-update` on packages that belong to coordinated build lists; use `update` with the appropriate build list instead. When a shared library changes, run `depending-packages` to identify packages that may need rebuilding. Test changes with `local-rebuild` before pushing to GitHub. Run `fix-builddeps` periodically to catch missing dependencies. Check the [release plan](../community/releases/release-plan-and-repositories.en.html) before migrating packages between Cooker, Rolling, and Rock branches.
+Run `auto-update --dry-run` first to review planned changes before applying updates. Never run `auto-update` on packages that belong to coordinated build lists; use `update` with the appropriate build list instead. When a shared library changes, run `depending-packages` to identify packages that may need rebuilding. Test changes with `local-rebuild` before pushing to GitHub. Run `fix-builddeps` periodically to catch missing dependencies. Check the [release plan](/community/releases/release-plan-and-repositories/) before migrating packages between Cooker, Rolling, and Rock branches.
 
 ## Related Topics
 
-- [Understanding RPM Spec Files](./understanding-rpm-spec-files.en.html)
-- [Building and Submitting Packages](./building-and-submitting-packages.en.html)
-- [Installing Packaging Tools](./preparing-your-system/packaging-tools.en.html)
-- [Repository Policies](../community/releases/repository-policies.en.html)
+- [Understanding RPM Spec Files](/dev/understanding-rpm-spec-files/)
+- [Building and Submitting Packages](/dev/building-and-submitting-packages/)
+- [Installing Packaging Tools](/dev/preparing-your-system/packaging-tools/)
+- [Repository Policies](/community/releases/repository-policies/)

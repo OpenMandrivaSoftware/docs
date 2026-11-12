@@ -7,7 +7,9 @@ page_id: community.links
 parent_id: community
 lang: en
 source_lang: en
-permalink: /community/links.en.html
+permalink: /community/links/
+redirect_from:
+- /community/links.en.html
 has_toc: true
 ---
 # Useful Links
@@ -53,5 +55,5 @@ A quick reference to the most useful resources for OpenMandriva users and contri
 
 ## Related Topics
 
-- [Chat with OpenMandriva](./chat-with-openmandriva.en.html)
-- [Setting Up a Mirror](./setting-up-a-mirror.en.html)
+- [Chat with OpenMandriva](/community/chat-with-openmandriva/)
+- [Setting Up a Mirror](/community/setting-up-a-mirror/)

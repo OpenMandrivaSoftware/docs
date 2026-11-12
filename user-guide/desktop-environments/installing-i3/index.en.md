@@ -7,14 +7,16 @@ page_id: user-guide.desktop-environments.installing-i3
 parent_id: user-guide.desktop-environments
 lang: en
 source_lang: en
-permalink: /user-guide/desktop-environments/installing-i3.en.html
+permalink: /user-guide/desktop-environments/installing-i3/
+redirect_from:
+- /user-guide/desktop-environments/installing-i3.en.html
 has_toc: true
 ---
 # Installing i3
 
 *i3* is a tiling window manager for the X11 display server. Instead of stacking windows on top of each other, i3 arranges them in a grid that you control with keyboard shortcuts. It uses minimal resources and starts quickly, making it ideal for older hardware and users who prefer keyboard-driven workflows.
 
-Unlike the full desktop environments described in [Desktop Environments](../desktop-environments.en.html), i3 does not include a file manager, panel, or notification daemon. You start with a bare window manager and add only the components you need.
+Unlike the full desktop environments described in [Desktop Environments](/user-guide/desktop-environments/), i3 does not include a file manager, panel, or notification daemon. You start with a bare window manager and add only the components you need.
 
 {: .note }
 *Rock* 6.0 stores `i3-wm` in the *Extra* repository. On *ROME*, it is in *Main*.
@@ -32,7 +34,7 @@ znver1 users replace `x86_64` with `znver1` in the repository names.
 On ROME, skip this step. `i3-wm` is available from Main.
 
 {: .tip }
-You can also manage repositories with the [Software Repository Selector](../managing-software/software-repository-selector.en.html).
+You can also manage repositories with the [Software Repository Selector](/user-guide/managing-software/software-repository-selector/).
 
 ## Update Your System
 
@@ -85,6 +87,6 @@ i3 coexists with other desktop environments. You can keep *Plasma* or *GNOME* in
 
 ## Related Topics
 
-- [Desktop Environments](../desktop-environments.en.html)
-- [Using DNF](../managing-software/using-dnf.en.html)
-- [Software Repository Selector](../managing-software/software-repository-selector.en.html)
+- [Desktop Environments](/user-guide/desktop-environments/)
+- [Using DNF](/user-guide/managing-software/using-dnf/)
+- [Software Repository Selector](/user-guide/managing-software/software-repository-selector/)

@@ -7,12 +7,14 @@ page_id: dev.building-and-submitting-packages.building-a-rust-package
 parent_id: dev.building-and-submitting-packages
 lang: en
 source_lang: en
-permalink: /dev/building-and-submitting-packages/building-a-rust-package.en.html
+permalink: /dev/building-and-submitting-packages/building-a-rust-package/
+redirect_from:
+- /dev/building-and-submitting-packages/building-a-rust-package.en.html
 has_toc: true
 ---
 # Building a Rust Package
 
-Rust projects depend on many small libraries, called *crates*, that ship on [crates.io](https://crates.io). Because ABF builds run offline, they cannot fetch crates during a build. Before you build a Rust package, you must download every crate your project needs and bundle them with the source. For the rest of the process, follow the [general package workflow](../building-and-submitting-packages.en.html).
+Rust projects depend on many small libraries, called *crates*, that ship on [crates.io](https://crates.io). Because ABF builds run offline, they cannot fetch crates during a build. Before you build a Rust package, you must download every crate your project needs and bundle them with the source. For the rest of the process, follow the [general package workflow](/dev/building-and-submitting-packages/).
 
 ## Vendor the Rust Crates
 
@@ -121,13 +123,13 @@ Each sub-project must reference the shared `vendor` directory with a relative pa
 
 ## Build and Submit
 
-Run `abb build` to build the package locally and fix the errors it reports. Submit the package with `abf submit`. The [general package workflow](../building-and-submitting-packages.en.html) covers the remaining steps.
+Run `abb build` to build the package locally and fix the errors it reports. Submit the package with `abf submit`. The [general package workflow](/dev/building-and-submitting-packages/) covers the remaining steps.
 
 ## Related Topics
 
-- [Building and Submitting Packages](../building-and-submitting-packages.en.html)
-- [Building a Python Package](./building-a-python-package.en.html)
-- [Building a Go Package](./building-a-go-package.en.html)
-- [Installing Packaging Tools](../preparing-your-system/packaging-tools.en.html)
-- [Understanding RPM Spec Files](../understanding-rpm-spec-files.en.html)
-- [Preparing Your System](../preparing-your-system.en.html)
+- [Building and Submitting Packages](/dev/building-and-submitting-packages/)
+- [Building a Python Package](/dev/building-and-submitting-packages/building-a-python-package/)
+- [Building a Go Package](/dev/building-and-submitting-packages/building-a-go-package/)
+- [Installing Packaging Tools](/dev/preparing-your-system/packaging-tools/)
+- [Understanding RPM Spec Files](/dev/understanding-rpm-spec-files/)
+- [Preparing Your System](/dev/preparing-your-system/)

@@ -7,7 +7,9 @@ page_id: user-guide.post-installation-configuration.configure-a-printer
 parent_id: user-guide.post-installation-configuration
 lang: en
 source_lang: en
-permalink: /user-guide/post-installation-configuration/configure-a-printer.en.html
+permalink: /user-guide/post-installation-configuration/configure-a-printer/
+redirect_from:
+- /user-guide/post-installation-configuration/configure-a-printer.en.html
 has_toc: true
 ---
 # Configure a Printer
@@ -16,7 +18,7 @@ Printers connected via USB are often auto-configured when turned on. Network pri
 
 ## Install the Driver Package
 
-Some printer manufacturers require an extra driver package that is not installed by default. If your printer requires one, [install](../managing-software.en.html) the matching package for your printer brand before configuring the printer:
+Some printer manufacturers require an extra driver package that is not installed by default. If your printer requires one, [install](/user-guide/managing-software/) the matching package for your printer brand before configuring the printer:
 
 - `task-printing-canon`---Canon
 - `task-printing-epson`---Epson
@@ -95,6 +97,6 @@ If the printer still does not work, check that the printer is powered on, its ne
 
 ## Related Topics
 
-- [Managing Software](../managing-software.en.html)
-- [Post Installation Configuration](../post-installation-configuration.en.html)
-- [Set Your User Avatar](./set-your-user-avatar.en.html)
+- [Managing Software](/user-guide/managing-software/)
+- [Post Installation Configuration](/user-guide/post-installation-configuration/)
+- [Set Your User Avatar](/user-guide/post-installation-configuration/set-your-user-avatar/)

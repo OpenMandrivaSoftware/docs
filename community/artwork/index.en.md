@@ -7,7 +7,9 @@ page_id: community.artwork
 parent_id: community
 lang: en
 source_lang: en
-permalink: /community/artwork.en.html
+permalink: /community/artwork/
+redirect_from:
+- /community/artwork.en.html
 has_toc: true
 ---
 # Artwork
@@ -81,5 +83,5 @@ Chwido is the unofficial mascot of OpenMandriva.
 
 ## Related Topics
 
-- [About OpenMandriva](./about-openmandriva.en.html)
-- [Chat with OpenMandriva](./chat-with-openmandriva.en.html)
+- [About OpenMandriva](/community/about-openmandriva/)
+- [Chat with OpenMandriva](/community/chat-with-openmandriva/)

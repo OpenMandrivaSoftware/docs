@@ -7,7 +7,9 @@ page_id: community.releases.repository-policies
 parent_id: community.releases
 lang: en
 source_lang: en
-permalink: /community/releases/repository-policies.en.html
+permalink: /community/releases/repository-policies/
+redirect_from:
+- /community/releases/repository-policies.en.html
 has_toc: true
 ---
 # Repository Policies
@@ -28,10 +30,10 @@ Release must stay usable at all times. Anything sent there must build in Cooker 
 
 ## End of the line
 
-Once a package reaches its update channel, the team marks it complete and moves on to the next. Do not spam maintainers asking when something is released or updated; they work in their free time. If you would like to help, read how to [create, maintain, and update packages](../../dev/building-and-submitting-packages.en.html) and [join the QA team](../../dev/getting-started-with-qa.en.html).
+Once a package reaches its update channel, the team marks it complete and moves on to the next. Do not spam maintainers asking when something is released or updated; they work in their free time. If you would like to help, read how to [create, maintain, and update packages](/dev/building-and-submitting-packages/) and [join the QA team](/dev/getting-started-with-qa/).
 
 ## Related Topics
 
-- [Release Plan and Repositories](./release-plan-and-repositories.en.html)
-- [Release Life Cycle](./release-life-cycle.en.html)
-- [Setting Up a Mirror](../setting-up-a-mirror.en.html)
+- [Release Plan and Repositories](/community/releases/release-plan-and-repositories/)
+- [Release Life Cycle](/community/releases/release-life-cycle/)
+- [Setting Up a Mirror](/community/setting-up-a-mirror/)

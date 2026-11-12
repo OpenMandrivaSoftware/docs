@@ -7,7 +7,9 @@ page_id: community.releases.rock-6.0-errata
 parent_id: community.releases
 lang: en
 source_lang: en
-permalink: /community/releases/rock-6.0-errata.en.html
+permalink: /community/releases/rock-6.0-errata/
+redirect_from:
+- /community/releases/rock-6.0-errata.en.html
 has_toc: true
 ---
 # OpenMandriva Lx 6.0 Errata — Known Issues
@@ -15,7 +17,7 @@ has_toc: true
 {: .note }
 > As with any release, there are still issues and bugs that may not have been resolved. This page documents those that may cause inconvenience and, where possible, details how they may be worked around.
 
-Please read the [OpenMandriva Lx 6.0 Release Notes](./rock-6.0-release-notes.en.html) as well.
+Please read the [OpenMandriva Lx 6.0 Release Notes](/community/releases/rock-6.0-release-notes/) as well.
 
 ## Known Issues and Workarounds
 
@@ -195,7 +197,7 @@ If help is needed, seek it [here](https://forum.openmandriva.org/c/en/support).
 
 ### Discover New Software
 
-To explore additional repositories' packages, enable them with the [Software Repository Selector](../../user-guide/managing-software/software-repository-selector.en.html) and refresh the cache. Use the `--refresh` option:
+To explore additional repositories' packages, enable them with the [Software Repository Selector](/user-guide/managing-software/software-repository-selector/) and refresh the cache. Use the `--refresh` option:
 
 ```bash
 sudo dnf --refresh install [package_name]
@@ -253,6 +255,6 @@ Some modules in System Settings may not display correctly on the first launch. T
 
 ## Related Topics
 
-- [OpenMandriva Lx 6.0 Release Notes](./rock-6.0-release-notes.en.html)
-- [OpenMandriva Lx 6.0 Changelog](./rock-6.0-changelog.en.html)
-- [Getting Support on the Forum](../../user-guide/getting-help/getting-support-on-the-forum.en.html)
+- [OpenMandriva Lx 6.0 Release Notes](/community/releases/rock-6.0-release-notes/)
+- [OpenMandriva Lx 6.0 Changelog](/community/releases/rock-6.0-changelog/)
+- [Getting Support on the Forum](/user-guide/getting-help/getting-support-on-the-forum/)

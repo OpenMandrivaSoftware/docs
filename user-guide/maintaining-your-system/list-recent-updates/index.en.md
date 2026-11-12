@@ -7,7 +7,9 @@ page_id: user-guide.maintaining-your-system.list-recent-updates
 parent_id: user-guide.maintaining-your-system
 lang: en
 source_lang: en
-permalink: /user-guide/maintaining-your-system/list-recent-updates.en.html
+permalink: /user-guide/maintaining-your-system/list-recent-updates/
+redirect_from:
+- /user-guide/maintaining-your-system/list-recent-updates.en.html
 has_toc: true
 ---
 # List Recent Updates
@@ -72,5 +74,5 @@ rpm -qa --last | grep "Thu 15 Mar"
 
 ## Related Topics
 
-- [Maintaining Your System](../maintaining-your-system.en.html)
-- [Update Your System](./update-your-system.en.html)
+- [Maintaining Your System](/user-guide/maintaining-your-system/)
+- [Update Your System](/user-guide/maintaining-your-system/update-your-system/)

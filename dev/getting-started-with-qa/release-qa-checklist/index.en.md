@@ -7,7 +7,9 @@ page_id: dev.getting-started-with-qa.release-qa-checklist
 parent_id: dev.getting-started-with-qa
 lang: en
 source_lang: en
-permalink: /dev/getting-started-with-qa/release-qa-checklist.en.html
+permalink: /dev/getting-started-with-qa/release-qa-checklist/
+redirect_from:
+- /dev/getting-started-with-qa/release-qa-checklist.en.html
 has_toc: true
 ---
 # Release QA Checklist
@@ -125,6 +127,6 @@ The QA team produces a detailed [checklist on GitHub](https://github.com/OpenMan
 
 ## Related Topics
 
-- [Getting Started with QA](../getting-started-with-qa.en.html)
-- [Bug Report Tool](./bug-report-tool.en.html)
-- [How to Report a Bug](../../user-guide/getting-help/how-to-report-a-bug.en.html)
+- [Getting Started with QA](/dev/getting-started-with-qa/)
+- [Bug Report Tool](/dev/getting-started-with-qa/bug-report-tool/)
+- [How to Report a Bug](/user-guide/getting-help/how-to-report-a-bug/)

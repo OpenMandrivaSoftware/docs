@@ -5,28 +5,32 @@ nav_order: 40
 page_id: community
 lang: en
 source_lang: en
-permalink: /community/index.en.html
+permalink: /community/
+redirect_from:
+- /community/index.en.html
 has_toc: true
 card_columns: 3
 cards:
 - title: Chat with OpenMandriva
   description: Get help and chat with other users and contributors on Matrix.
-  url: /community/chat-with-openmandriva.en.html
+  url: /community/chat-with-openmandriva/
 - title: About OpenMandriva
   description: Learn about the Association, its bylaws, governance, and statutes.
-  url: /community/about-openmandriva.en.html
+  url: /community/about-openmandriva/
 - title: Setting Up a Mirror
   description: Support the project by running a mirror to distribute packages and
     ISO images.
-  url: /community/setting-up-a-mirror.en.html
+  url: /community/setting-up-a-mirror/
 - title: Artwork
   description: Official logos, color palettes, and visual identity assets.
-  url: /community/artwork.en.html
+  url: /community/artwork/
 - title: Donation
   description: Support the project with a donation or by contributing your skills.
-  url: /community/donation.en.html
+  url: /community/donation/
 - title: Links
-  description: A directory of useful links---forums, repositories, social media, and
+  description: A directory of useful links
+---
+forums, repositories, social media, and
     more.
   url: /community/links.en.html
 - title: Releases

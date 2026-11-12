@@ -7,7 +7,9 @@ page_id: user-guide.getting-help.get-logs-and-hardware-info-for-issue-reports
 parent_id: user-guide.getting-help
 lang: en
 source_lang: en
-permalink: /user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports.en.html
+permalink: /user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/
+redirect_from:
+- /user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports.en.html
 has_toc: true
 ---
 # Get Logs and Hardware Info for Issue Reports
@@ -24,7 +26,7 @@ Open *Konsole* (terminal) and run:
 $ inxi -Fz
 ```
 
-![The inxi -Fz command output shows detailed hardware information in the terminal.](./images/get-logs-and-hardware-info-for-issue-reports-01.jpg)
+![The inxi -Fz command output shows detailed hardware information in the terminal.](../images/get-logs-and-hardware-info-for-issue-reports-01.jpg)
 
 Save the output to a file for your forum post or bug report:
 
@@ -70,7 +72,7 @@ People helping with problems may ask you to use `journalctl` with other options.
 
 Additional logs live in the `/var/log` directory:
 
-![The /var/log directory shows various log files in the file manager.](./images/get-logs-and-hardware-info-for-issue-reports-02.jpg)
+![The /var/log directory shows various log files in the file manager.](../images/get-logs-and-hardware-info-for-issue-reports-02.jpg)
 
 The logs you most often need are:
 
@@ -95,15 +97,15 @@ The `omv-bug-report` tool collects comprehensive system information into a singl
 
 The tool creates a file in your home directory. Scroll through the contents to see all the information it provides. Include this file in bug reports involving technical issues.
 
-![The OM-Welcome window shows the OM-Features tab with the omv-bug-report tool icon.](./images/get-logs-and-hardware-info-for-issue-reports-03.jpg)
+![The OM-Welcome window shows the OM-Features tab with the omv-bug-report tool icon.](../images/get-logs-and-hardware-info-for-issue-reports-03.jpg)
 
-![The omv-bug-report tool creates a log file in your home directory.](./images/get-logs-and-hardware-info-for-issue-reports-04.jpg)
+![The omv-bug-report tool creates a log file in your home directory.](../images/get-logs-and-hardware-info-for-issue-reports-04.jpg)
 
 ## Forum Posting Reminders
 
 When posting in the OpenMandriva forums, keep these reminders in mind:
 
-![A forum reminder showing how to format console output using code blocks.](./images/get-logs-and-hardware-info-for-issue-reports-05.png)
+![A forum reminder showing how to format console output using code blocks.](../images/get-logs-and-hardware-info-for-issue-reports-05.png)
 
 If your computer output is not in English, prefix commands with `LC_ALL=C`:
 
@@ -111,10 +113,10 @@ If your computer output is not in English, prefix commands with `LC_ALL=C`:
 $ sudo LC_ALL=C dnf [command]
 ```
 
-![A forum reminder showing the LC_ALL=C prefix for non-English console output.](./images/get-logs-and-hardware-info-for-issue-reports-06.png)
+![A forum reminder showing the LC_ALL=C prefix for non-English console output.](../images/get-logs-and-hardware-info-for-issue-reports-06.png)
 
 ## Related Topics
 
-- [Getting Support on the Forum](./getting-support-on-the-forum.en.html)
-- [How to Report a Bug](./how-to-report-a-bug.en.html)
-- [Using DNF](../index.en.html)
+- [Getting Support on the Forum](/user-guide/getting-help/getting-support-on-the-forum/)
+- [How to Report a Bug](/user-guide/getting-help/how-to-report-a-bug/)
+- [Using DNF](/user-guide/)

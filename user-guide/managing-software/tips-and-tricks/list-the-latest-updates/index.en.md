@@ -7,7 +7,9 @@ page_id: user-guide.managing-software.tips-and-tricks.list-the-latest-updates
 parent_id: user-guide.managing-software.tips-and-tricks
 lang: en
 source_lang: en
-permalink: /user-guide/managing-software/tips-and-tricks/list-the-latest-updates.en.html
+permalink: /user-guide/managing-software/tips-and-tricks/list-the-latest-updates/
+redirect_from:
+- /user-guide/managing-software/tips-and-tricks/list-the-latest-updates.en.html
 has_toc: true
 ---
 # List the Latest Updates
@@ -77,6 +79,6 @@ $ rpm -qa --last | grep "Thu 15 Mar"
 
 ## Related Topics
 
-- [Listing Installed Packages](./listing-installed-packages.en.html)
-- [Create an Install Command from a Package List](./create-an-install-command-from-a-package-list.en.html)
-- [Using DNF](../using-dnf.en.html)
+- [Listing Installed Packages](/user-guide/managing-software/tips-and-tricks/listing-installed-packages/)
+- [Create an Install Command from a Package List](/user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list/)
+- [Using DNF](/user-guide/managing-software/using-dnf/)

@@ -7,7 +7,9 @@ page_id: community.about-openmandriva
 parent_id: community
 lang: en
 source_lang: en
-permalink: /community/about-openmandriva.en.html
+permalink: /community/about-openmandriva/
+redirect_from:
+- /community/about-openmandriva.en.html
 has_toc: true
 ---
 # About OpenMandriva
@@ -24,8 +26,8 @@ OpenMandriva is 100 % community driven. It believes in the values of free softwa
 
 OpenMandriva was founded on development, equality, cooperation, openness, freedom, group achievement, independence, and solidarity. Those values drive how the project makes decisions.
 
-You can connect with the community by chatting on [Matrix](./chat-with-openmandriva.en.html) or in the [forum](https://forum.openmandriva.org/).
+You can connect with the community by chatting on [Matrix](/community/chat-with-openmandriva/) or in the [forum](https://forum.openmandriva.org/).
 
 ## The Association's organs
 
-The Association runs through a number of organs. See [Governance](./about-openmandriva/governance.en.html) for what each one does.
+The Association runs through a number of organs. See [Governance](/community/about-openmandriva/governance/) for what each one does.

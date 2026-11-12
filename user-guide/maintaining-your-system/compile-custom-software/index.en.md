@@ -7,7 +7,9 @@ page_id: user-guide.maintaining-your-system.compile-custom-software
 parent_id: user-guide.maintaining-your-system
 lang: en
 source_lang: en
-permalink: /user-guide/maintaining-your-system/compile-custom-software.en.html
+permalink: /user-guide/maintaining-your-system/compile-custom-software/
+redirect_from:
+- /user-guide/maintaining-your-system/compile-custom-software.en.html
 has_toc: true
 ---
 # Compile Custom Software
@@ -32,7 +34,7 @@ Development tool packages provide the compilers, headers, and libraries needed t
 
 1. Install the basic development tool sets from OM Welcome:
 
-   ![The OM Welcome development tools page shows available tool sets for installation.](./images/compile-custom-software-01.png)
+   ![The OM Welcome development tools page shows available tool sets for installation.](../images/compile-custom-software-01.png)
 
 1. Or install them from the command line:
 
@@ -50,9 +52,9 @@ make CC=clang CXX=clang++ LD=ld.lld AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy O
 
 ## Package Your Software
 
-Distribute your software through the official repositories by joining the packaging team. See [Building and Submitting Packages](/dev/building-and-submitting-packages.en.html) for instructions.
+Distribute your software through the official repositories by joining the packaging team. See [Building and Submitting Packages](/dev/building-and-submitting-packages/) for instructions.
 
 ## Related Topics
 
-- [Maintaining Your System](../maintaining-your-system.en.html)
-- [Building and Submitting Packages](/dev/building-and-submitting-packages.en.html)
+- [Maintaining Your System](/user-guide/maintaining-your-system/)
+- [Building and Submitting Packages](/dev/building-and-submitting-packages/)

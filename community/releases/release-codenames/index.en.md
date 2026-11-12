@@ -7,7 +7,9 @@ page_id: community.releases.release-codenames
 parent_id: community.releases
 lang: en
 source_lang: en
-permalink: /community/releases/release-codenames.en.html
+permalink: /community/releases/release-codenames/
+redirect_from:
+- /community/releases/release-codenames.en.html
 has_toc: true
 ---
 # Release Codenames
@@ -33,6 +35,6 @@ Here is the list of codenames for OpenMandriva releases starting from 2013.0:
 
 ## Related Topics
 
-- [Release Plan and Repositories](./release-plan-and-repositories.en.html)
-- [Repository Policies](./repository-policies.en.html)
-- [Release Life Cycle](./release-life-cycle.en.html)
+- [Release Plan and Repositories](/community/releases/release-plan-and-repositories/)
+- [Repository Policies](/community/releases/repository-policies/)
+- [Release Life Cycle](/community/releases/release-life-cycle/)

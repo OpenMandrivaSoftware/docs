@@ -7,7 +7,9 @@ page_id: community.releases.rome-release-notes
 parent_id: community.releases
 lang: en
 source_lang: en
-permalink: /community/releases/rome-release-notes.en.html
+permalink: /community/releases/rome-release-notes/
+redirect_from:
+- /community/releases/rome-release-notes.en.html
 has_toc: true
 ---
 # ROME Release Notes
@@ -128,7 +130,7 @@ You can boot this release from a USB storage device. To create the live/installa
 
 - SUSE Studio ImageWriter and Balena Etcher have also been tested and work to transfer ISO images to USB storage devices.
 
-- Ventoy is not fully supported. Under some circumstances it may or may not work. Use one of the suggested methods above. See [ROME Errata](./rome-errata.en.html) for Ventoy workarounds.
+- Ventoy is not fully supported. Under some circumstances it may or may not work. Use one of the suggested methods above. See [ROME Errata](/community/releases/rome-errata/) for Ventoy workarounds.
 
 ## Installing from USB
 
@@ -153,10 +155,10 @@ Booting from DVD is deprecated, but ROME ISOs boot from DVD using Legacy or UEFI
 
 ## About Repositories
 
-Use the [Software Repository Selector](../../user-guide/managing-software/software-repository-selector.en.html) (also known as *om-repo-picker*) to select additional repositories for more package availability.
+Use the [Software Repository Selector](/user-guide/managing-software/software-repository-selector/) (also known as *om-repo-picker*) to select additional repositories for more package availability.
 
 {: .warning }
-> **Do not mix repositories from different release versions or update channels.** For example, do not use Cooker repositories on a ROME system. If you use Rock, use Rock repositories only. This is explained in more detail in [Release Plan and Repositories](../../community/releases/release-plan-and-repositories.en.html). If you mix different release/update channel repositories and break your computer, the solution is a fresh install. Do not do this again after the fresh install.
+> **Do not mix repositories from different release versions or update channels.** For example, do not use Cooker repositories on a ROME system. If you use Rock, use Rock repositories only. This is explained in more detail in [Release Plan and Repositories](/community/releases/release-plan-and-repositories/). If you mix different release/update channel repositories and break your computer, the solution is a fresh install. Do not do this again after the fresh install.
 
 ## How to Install and Remove Packages
 
@@ -220,7 +222,7 @@ The standard kernel for ROME is clang compiled. The `kernel-desktop-gcc` and `ke
 
 ## Nvidia Graphics Hardware
 
-See the [ROME Errata](./rome-errata.en.html) for NVIDIA graphics information.
+See the [ROME Errata](/community/releases/rome-errata/) for NVIDIA graphics information.
 
 ## Server Installation
 
@@ -238,8 +240,8 @@ It comes only with basic services and an ssh server already running. You are exp
 
 ## Related Topics
 
-- [ROME Errata](./rome-errata.en.html)
-- [ROME Changelog](./rome-changelog.en.html)
-- [OpenMandriva Lx 6.0 Release Notes](./rock-6.0-release-notes.en.html)
-- [Using DNF](../../user-guide/index.en.html)
-- [Getting Support on the Forum](../../user-guide/getting-help/getting-support-on-the-forum.en.html)
+- [ROME Errata](/community/releases/rome-errata/)
+- [ROME Changelog](/community/releases/rome-changelog/)
+- [OpenMandriva Lx 6.0 Release Notes](/community/releases/rock-6.0-release-notes/)
+- [Using DNF](/user-guide/)
+- [Getting Support on the Forum](/user-guide/getting-help/getting-support-on-the-forum/)

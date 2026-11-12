@@ -2,7 +2,7 @@
 """
 Unit and regression tests for SiteVerifier (test/verify_generated_site.py).
 Tests detection of missing directory, missing routes, identity mismatches,
-and content language mismatches.
+content language mismatches, redirect following, cycle detection, and broken targets.
 """
 
 import json
@@ -105,7 +105,7 @@ class TestSiteVerifier(unittest.TestCase):
                         "file_in_site": "article.html",
                         "public_url": "/article.html",
                         "page_id": "my.article",
-                        "actual_content_lang": "en" # Expected en, but page has fr
+                        "actual_content_lang": "en"
                     }
                 ]
             }), encoding="utf-8")
@@ -114,6 +114,113 @@ class TestSiteVerifier(unittest.TestCase):
             success = verifier.verify()
             self.assertFalse(success)
             self.assertTrue(any("content language mismatch" in e for e in verifier.errors))
+
+    def test_follows_redirect_to_destination(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            site_dir = tmp_path / "_site"
+            site_dir.mkdir()
+
+            # Redirect page
+            (site_dir / "legacy.html").write_text(
+                '<!DOCTYPE html><html><head>'
+                '<meta http-equiv="refresh" content="0; url=/canonical/">'
+                '</head><body>Redirecting to /canonical/...</body></html>',
+                encoding="utf-8"
+            )
+            # Destination document at canonical/index.html
+            canon_dir = site_dir / "canonical"
+            canon_dir.mkdir()
+            (canon_dir / "index.html").write_text(
+                '<!DOCTYPE html><html><head>'
+                '<meta name="doc-page-id" content="my.canonical.doc">'
+                '<meta name="doc-content-lang" content="en">'
+                '</head><body>Content longer than fifty bytes for testing purposes</body></html>',
+                encoding="utf-8"
+            )
+
+            routes_file = tmp_path / "routes.json"
+            routes_file.write_text(json.dumps({
+                "routes": [
+                    {
+                        "file_in_site": "legacy.html",
+                        "public_url": "/legacy.html",
+                        "page_id": "my.canonical.doc",
+                        "actual_content_lang": "en",
+                        "requested_locale": "en"
+                    }
+                ]
+            }), encoding="utf-8")
+
+            verifier = SiteVerifier(site_dir=site_dir, routes_path=routes_file)
+            success = verifier.verify()
+            self.assertTrue(success, f"Expected success but got errors: {verifier.errors}")
+            self.assertEqual(verifier.verified_count, 1)
+
+    def test_detects_redirect_cycle(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            site_dir = tmp_path / "_site"
+            site_dir.mkdir()
+
+            (site_dir / "page-a.html").write_text(
+                '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/page-b.html"></head>'
+                '<body>Content exceeding fifty bytes in page a for cycle test</body></html>',
+                encoding="utf-8"
+            )
+            (site_dir / "page-b.html").write_text(
+                '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/page-a.html"></head>'
+                '<body>Content exceeding fifty bytes in page b for cycle test</body></html>',
+                encoding="utf-8"
+            )
+
+            routes_file = tmp_path / "routes.json"
+            routes_file.write_text(json.dumps({
+                "routes": [
+                    {
+                        "file_in_site": "page-a.html",
+                        "public_url": "/page-a.html",
+                        "page_id": "cycle.doc",
+                        "actual_content_lang": "en",
+                        "requested_locale": "en"
+                    }
+                ]
+            }), encoding="utf-8")
+
+            verifier = SiteVerifier(site_dir=site_dir, routes_path=routes_file)
+            success = verifier.verify()
+            self.assertFalse(success)
+            self.assertTrue(any("cycle detected" in e.lower() for e in verifier.errors))
+
+    def test_detects_broken_redirect_target(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            site_dir = tmp_path / "_site"
+            site_dir.mkdir()
+
+            (site_dir / "broken-ref.html").write_text(
+                '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/missing-target/"></head>'
+                '<body>Content exceeding fifty bytes in broken reference test</body></html>',
+                encoding="utf-8"
+            )
+
+            routes_file = tmp_path / "routes.json"
+            routes_file.write_text(json.dumps({
+                "routes": [
+                    {
+                        "file_in_site": "broken-ref.html",
+                        "public_url": "/broken-ref.html",
+                        "page_id": "broken.doc",
+                        "actual_content_lang": "en",
+                        "requested_locale": "en"
+                    }
+                ]
+            }), encoding="utf-8")
+
+            verifier = SiteVerifier(site_dir=site_dir, routes_path=routes_file)
+            success = verifier.verify()
+            self.assertFalse(success)
+            self.assertTrue(any("does not exist" in e for e in verifier.errors))
 
     def test_valid_site_passes(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -126,9 +233,18 @@ class TestSiteVerifier(unittest.TestCase):
                 "<!DOCTYPE html><html><body><h1>404 Not Found</h1><p>Sorry</p></body></html>",
                 encoding="utf-8"
             )
-            # Root redirect
+            # Root homepage (canonical EN)
             (site_dir / "index.html").write_text(
-                '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/index.en.html" /></head></html>',
+                '<!DOCTYPE html><html><head>'
+                '<meta name="doc-page-id" content="home">'
+                '<meta name="doc-content-lang" content="en">'
+                '</head><body>Homepage body exceeding fifty bytes length requirement</body></html>',
+                encoding="utf-8"
+            )
+            # Legacy index.en.html redirecting to /
+            (site_dir / "index.en.html").write_text(
+                '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=/" /></head>'
+                '<body>Redirecting to root homepage exceeding fifty bytes length requirement</body></html>',
                 encoding="utf-8"
             )
             # Document
@@ -153,13 +269,22 @@ class TestSiteVerifier(unittest.TestCase):
                         "file_in_site": "index.html",
                         "public_url": "/index.html",
                         "page_id": "home",
-                        "actual_content_lang": "en"
+                        "actual_content_lang": "en",
+                        "requested_locale": "en"
+                    },
+                    {
+                        "file_in_site": "index.en.html",
+                        "public_url": "/index.en.html",
+                        "page_id": "home",
+                        "actual_content_lang": "en",
+                        "requested_locale": "en"
                     },
                     {
                         "file_in_site": "doc.html",
                         "public_url": "/doc.html",
                         "page_id": "sample.doc",
-                        "actual_content_lang": "en"
+                        "actual_content_lang": "en",
+                        "requested_locale": "en"
                     }
                 ]
             }), encoding="utf-8")
@@ -167,7 +292,7 @@ class TestSiteVerifier(unittest.TestCase):
             verifier = SiteVerifier(site_dir=site_dir, routes_path=routes_file)
             success = verifier.verify()
             self.assertTrue(success, f"Expected success but got errors: {verifier.errors}")
-            self.assertEqual(verifier.verified_count, 3)
+            self.assertEqual(verifier.verified_count, 4)
 
 
 if __name__ == "__main__":

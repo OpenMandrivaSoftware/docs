@@ -7,7 +7,9 @@ page_id: getting-started.installing-openmandriva.encryption
 parent_id: getting-started.installing-openmandriva
 lang: en
 source_lang: en
-permalink: /getting-started/installing-openmandriva/encryption.en.html
+permalink: /getting-started/installing-openmandriva/encryption/
+redirect_from:
+- /getting-started/installing-openmandriva/encryption.en.html
 has_toc: true
 ---
 # Disk Encryption
@@ -99,5 +101,5 @@ Before you encrypt, write down your passphrase and store it in a safe place. Cal
 
 ## Related Topics
 
-- [Partitioning](./partitioning.en.html)
-- [Partitioning Schemas](./linux-partitions.en.html)
+- [Partitioning](/getting-started/installing-openmandriva/partitioning/)
+- [Partitioning Schemas](/getting-started/installing-openmandriva/linux-partitions/)

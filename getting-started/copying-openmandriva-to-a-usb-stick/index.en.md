@@ -7,12 +7,14 @@ page_id: getting-started.copying-openmandriva-to-a-usb-stick
 parent_id: getting-started
 lang: en
 source_lang: en
-permalink: /getting-started/copying-openmandriva-to-a-usb-stick.en.html
+permalink: /getting-started/copying-openmandriva-to-a-usb-stick/
+redirect_from:
+- /getting-started/copying-openmandriva-to-a-usb-stick.en.html
 has_toc: true
 ---
 # Copying OpenMandriva to a USB Stick
 
-The ISO file you downloaded in the [previous step](./downloading-openmandriva.en.html) can't be copied directly to a USB stick for installation. Instead, the whole USB stick must be reserved for the contents of the ISO, so you need to copy it to the USB block by block. Make sure you have a USB stick that's 8GB or larger. 
+The ISO file you downloaded in the [previous step](/getting-started/downloading-openmandriva/) can't be copied directly to a USB stick for installation. Instead, the whole USB stick must be reserved for the contents of the ISO, so you need to copy it to the USB block by block. Make sure you have a USB stick that's 8GB or larger. 
 
 If you're on Windows, there are programs you can do that for you. If you're already on a different Linux, you already have everything you need. 
 

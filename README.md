@@ -40,7 +40,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-Open the [English home page](http://localhost:4000/index.en.html) or the [French home page](http://localhost:4000/fr/index.fr.html). The site root redirects to the English home page.
+Open the [English home page](http://localhost:4000/) or the [French home page](http://localhost:4000/fr/). The site root serves the English home page directly.
 
 ## Testing and Verification
 
@@ -116,7 +116,7 @@ Both home pages read card titles, descriptions, and link labels from [`_data/hom
       base_url: /getting-started/copying-openmandriva-to-a-usb-stick
 ```
 
-On the English home page, this card links to `/getting-started/index.en.html` and its list item links to `/getting-started/copying-openmandriva-to-a-usb-stick.en.html`. The French home page uses the same labels and generates French paths, even for destinations without a translation. Check both home pages when changing the shared data.
+On the English home page, this card links to `/getting-started/` and its list item links to `/getting-started/copying-openmandriva-to-a-usb-stick/`. The French home page uses the same labels and generates French paths (`/fr/...`), even for destinations without a translation. Check both home pages when changing the shared data.
 
 ### Section pages
 
@@ -127,15 +127,18 @@ Section landing pages keep their cards in front matter. Each card has a `title`,
 layout: default
 title: User Guide
 nav_order: 20
+page_id: user-guide
 lang: en
+source_lang: en
+permalink: /user-guide/
 card_columns: 3
 cards:
   - title: Managing Software
     description: Install, remove, and update software.
-    url: /user-guide/managing-software.en.html
+    url: /user-guide/managing-software/
   - title: Troubleshooting
     description: Fix common system problems.
-    url: /user-guide/troubleshooting.en.html
+    url: /user-guide/troubleshooting/
 ---
 ```
 
@@ -143,7 +146,7 @@ Keep the section card title as a `div` when editing the include. Just the Docs a
 
 ## Add or update a translation
 
-English is the default language and builds at the site root. French builds under `/fr/` and currently covers the home page and part of Getting Started. English fallback pages can retain their `.en.html` suffix under `/fr/`. For example, the installation guide builds at `/fr/getting-started/installing-openmandriva.en.html`. [Language configuration](_config.yml)
+English is the default language and builds at the site root. French builds under `/fr/` and currently covers the home page and part of Getting Started. All language variants share language-neutral permalinks, and English fallback pages build cleanly under `/fr/` without file extension hacks. [Language configuration](_config.yml)
 
 1. Add or edit the localized Markdown file next to the English page. Match the language suffix and `lang` value.
 2. Translate the title and set `parent` to the localized parent's title when the page has a parent. Update links and image descriptions. Link to an existing destination when a related page has yet to be translated.
@@ -153,7 +156,7 @@ The language menu reads its list from `_config.yml`. Its JavaScript supports Eng
 
 ## Add images and other assets
 
-Keep article-specific screenshots in an `images/` directory next to the Markdown file. Use the article's filename stem and number the screenshots in the order they appear. The [installation guide](getting-started/installing-openmandriva.en.md) uses `./images/installing-openmandriva-01.png`.
+Keep article-specific screenshots in an `images/` directory next to the Markdown file. Use the article's filename stem and number the screenshots in the order they appear. The [installation guide](getting-started/installing-openmandriva.en.md) uses `../images/installing-openmandriva-01.png`.
 
 Keep reusable images in `assets/images/`. Polyglot shares the `assets/` directory across languages. For shared assets, use Jekyll's `relative_url` filter to include the site's base path.
 

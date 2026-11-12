@@ -7,7 +7,9 @@ page_id: dev.building-and-submitting-packages.building-a-python-package
 parent_id: dev.building-and-submitting-packages
 lang: en
 source_lang: en
-permalink: /dev/building-and-submitting-packages/building-a-python-package.en.html
+permalink: /dev/building-and-submitting-packages/building-a-python-package/
+redirect_from:
+- /dev/building-and-submitting-packages/building-a-python-package.en.html
 has_toc: true
 ---
 # Building a Python Package
@@ -72,13 +74,13 @@ dnf rq --provides python-example-project
 
 ## Build and Submit
 
-Run `abb build` to build the package locally and fix the errors it reports. Submit the package with `abf submit`. The [general package workflow](../building-and-submitting-packages.en.html) covers the remaining steps.
+Run `abb build` to build the package locally and fix the errors it reports. Submit the package with `abf submit`. The [general package workflow](/dev/building-and-submitting-packages/) covers the remaining steps.
 
 ## Related Topics
 
-- [Building and Submitting Packages](../building-and-submitting-packages.en.html)
-- [Building a Go Package](./building-a-go-package.en.html)
-- [Building a Rust Package](./building-a-rust-package.en.html)
-- [Installing Packaging Tools](../preparing-your-system/packaging-tools.en.html)
-- [Understanding RPM Spec Files](../understanding-rpm-spec-files.en.html)
-- [Preparing Your System](../preparing-your-system.en.html)
+- [Building and Submitting Packages](/dev/building-and-submitting-packages/)
+- [Building a Go Package](/dev/building-and-submitting-packages/building-a-go-package/)
+- [Building a Rust Package](/dev/building-and-submitting-packages/building-a-rust-package/)
+- [Installing Packaging Tools](/dev/preparing-your-system/packaging-tools/)
+- [Understanding RPM Spec Files](/dev/understanding-rpm-spec-files/)
+- [Preparing Your System](/dev/preparing-your-system/)

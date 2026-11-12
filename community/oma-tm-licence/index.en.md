@@ -7,7 +7,9 @@ page_id: community.oma-tm-licence
 parent_id: community
 lang: en
 source_lang: en
-permalink: /community/oma-tm-licence.en.html
+permalink: /community/oma-tm-licence/
+redirect_from:
+- /community/oma-tm-licence.en.html
 has_toc: true
 ---
 # License Agreement
@@ -59,5 +61,5 @@ This agreement licenses the use of "Mandriva" only in conjunction with "Open"---
 
 ## Related Topics
 
-- [Official Naming Policy](./official-naming-policy.en.html)
-- [Release Codenames](./releases/release-codenames.en.html)
+- [Official Naming Policy](/community/official-naming-policy/)
+- [Release Codenames](/community/releases/release-codenames/)

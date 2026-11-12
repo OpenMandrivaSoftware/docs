@@ -7,7 +7,9 @@ page_id: community.releases.release-life-cycle
 parent_id: community.releases
 lang: en
 source_lang: en
-permalink: /community/releases/release-life-cycle.en.html
+permalink: /community/releases/release-life-cycle/
+redirect_from:
+- /community/releases/release-life-cycle.en.html
 has_toc: true
 ---
 # Release Life Cycle
@@ -37,6 +39,6 @@ Once a release ships, it is stable and suitable for everyone. This is what most 
 
 ## Related Topics
 
-- [Release Plan and Repositories](./release-plan-and-repositories.en.html)
-- [Repository Policies](./repository-policies.en.html)
-- [Setting Up a Mirror](../setting-up-a-mirror.en.html)
+- [Release Plan and Repositories](/community/releases/release-plan-and-repositories/)
+- [Repository Policies](/community/releases/repository-policies/)
+- [Setting Up a Mirror](/community/setting-up-a-mirror/)

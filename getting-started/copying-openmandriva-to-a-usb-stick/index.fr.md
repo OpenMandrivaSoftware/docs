@@ -7,7 +7,9 @@ page_id: getting-started.copying-openmandriva-to-a-usb-stick
 parent_id: getting-started
 lang: fr
 source_lang: en
-permalink: /getting-started/copying-openmandriva-to-a-usb-stick.fr.html
+permalink: /getting-started/copying-openmandriva-to-a-usb-stick/
+redirect_from:
+- /getting-started/copying-openmandriva-to-a-usb-stick.fr.html
 has_toc: true
 ---
 # Copier OpenMandriva sur une clé USB

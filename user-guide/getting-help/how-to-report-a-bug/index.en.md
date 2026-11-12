@@ -7,7 +7,9 @@ page_id: user-guide.getting-help.how-to-report-a-bug
 parent_id: user-guide.getting-help
 lang: en
 source_lang: en
-permalink: /user-guide/getting-help/how-to-report-a-bug.en.html
+permalink: /user-guide/getting-help/how-to-report-a-bug/
+redirect_from:
+- /user-guide/getting-help/how-to-report-a-bug.en.html
 has_toc: true
 ---
 # How to Report a Bug
@@ -54,8 +56,8 @@ $ lspci -nnk | grep -EiA3 'vga|3d|display'
 
 ## Related Topics
 
-- [Getting Support on the Forum](./getting-support-on-the-forum.en.html)
-- [Get Logs and Hardware Info for Issue Reports](./get-logs-and-hardware-info-for-issue-reports.en.html)
-- [Using DNF](../index.en.html)
-- [Contributing to OpenMandriva](../../dev/contributing-to-openmandriva.en.html)
-- [Getting Started with QA](../../dev/getting-started-with-qa.en.html)
+- [Getting Support on the Forum](/user-guide/getting-help/getting-support-on-the-forum/)
+- [Get Logs and Hardware Info for Issue Reports](/user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/)
+- [Using DNF](/user-guide/)
+- [Contributing to OpenMandriva](/dev/contributing-to-openmandriva/)
+- [Getting Started with QA](/dev/getting-started-with-qa/)

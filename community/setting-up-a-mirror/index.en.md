@@ -7,7 +7,9 @@ page_id: community.setting-up-a-mirror
 parent_id: community
 lang: en
 source_lang: en
-permalink: /community/setting-up-a-mirror.en.html
+permalink: /community/setting-up-a-mirror/
+redirect_from:
+- /community/setting-up-a-mirror.en.html
 has_toc: true
 ---
 # Mirroring
@@ -47,5 +49,5 @@ Mirrorbits always redirects to ABF if a file does not exist on any mirror.
 
 ## Related Topics
 
-- [Release Codenames](./releases/release-codenames.en.html)
-- [Repository Policies](./releases/repository-policies.en.html)
+- [Release Codenames](/community/releases/release-codenames/)
+- [Repository Policies](/community/releases/repository-policies/)

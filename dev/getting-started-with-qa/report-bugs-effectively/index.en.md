@@ -7,7 +7,9 @@ page_id: dev.getting-started-with-qa.report-bugs-effectively
 parent_id: dev.getting-started-with-qa
 lang: en
 source_lang: en
-permalink: /dev/getting-started-with-qa/report-bugs-effectively.en.html
+permalink: /dev/getting-started-with-qa/report-bugs-effectively/
+redirect_from:
+- /dev/getting-started-with-qa/report-bugs-effectively.en.html
 has_toc: true
 ---
 # Report Bugs Effectively
@@ -86,7 +88,7 @@ Developers must know whether the bug is specific to your machine or happens more
 
 ## Related Topics
 
-- [Getting Started with QA](../getting-started-with-qa.en.html)
-- [Bug Report Tool](./bug-report-tool.en.html)
-- [How to Report a Bug](../../user-guide/getting-help/how-to-report-a-bug.en.html)
-- [Release QA Checklist](./release-qa-checklist.en.html)
+- [Getting Started with QA](/dev/getting-started-with-qa/)
+- [Bug Report Tool](/dev/getting-started-with-qa/bug-report-tool/)
+- [How to Report a Bug](/user-guide/getting-help/how-to-report-a-bug/)
+- [Release QA Checklist](/dev/getting-started-with-qa/release-qa-checklist/)

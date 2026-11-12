@@ -7,7 +7,9 @@ page_id: user-guide.managing-software.tips-and-tricks.list-all-packages-in-the-i
 parent_id: user-guide.managing-software.tips-and-tricks
 lang: en
 source_lang: en
-permalink: /user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso.en.html
+permalink: /user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso/
+redirect_from:
+- /user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso.en.html
 has_toc: true
 ---
 # List All Packages in the ISO
@@ -24,7 +26,7 @@ $ rpm -qa | sort > pkglist-sort.txt
 
 This creates a text file named `pkglist-sort.txt` in your home directory, listing all installed packages sorted alphabetically.
 
-![A terminal window shows the sorted package list saved to a text file in the home directory.](./images/list-all-packages-in-the-iso-01.jpg)
+![A terminal window shows the sorted package list saved to a text file in the home directory.](../images/list-all-packages-in-the-iso-01.jpg)
 
 This trick works in both Live ISO mode and on an installed system. You can run the command any time you need a package list.
 
@@ -38,6 +40,6 @@ $ rpm -qa --last > pkglist-last.txt
 
 ## Related Topics
 
-- [Listing Installed Packages](./listing-installed-packages.en.html)
-- [List the Latest Updates](./list-the-latest-updates.en.html)
-- [Using DNF](../using-dnf.en.html)
+- [Listing Installed Packages](/user-guide/managing-software/tips-and-tricks/listing-installed-packages/)
+- [List the Latest Updates](/user-guide/managing-software/tips-and-tricks/list-the-latest-updates/)
+- [Using DNF](/user-guide/managing-software/using-dnf/)

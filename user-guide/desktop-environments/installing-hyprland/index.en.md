@@ -7,7 +7,9 @@ page_id: user-guide.desktop-environments.installing-hyprland
 parent_id: user-guide.desktop-environments
 lang: en
 source_lang: en
-permalink: /user-guide/desktop-environments/installing-hyprland.en.html
+permalink: /user-guide/desktop-environments/installing-hyprland/
+redirect_from:
+- /user-guide/desktop-environments/installing-hyprland.en.html
 has_toc: true
 ---
 # Installing Hyprland
@@ -80,6 +82,6 @@ The [Hyprland wiki](https://wiki.hypr.land/) has extensive documentation on conf
 
 ## Related Topics
 
-- [Desktop Environments](../desktop-environments.en.html)
-- [Using DNF](../managing-software/using-dnf.en.html)
-- [Software Repository Selector](../managing-software/software-repository-selector.en.html)
+- [Desktop Environments](/user-guide/desktop-environments/)
+- [Using DNF](/user-guide/managing-software/using-dnf/)
+- [Software Repository Selector](/user-guide/managing-software/software-repository-selector/)

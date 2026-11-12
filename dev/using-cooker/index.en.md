@@ -7,7 +7,9 @@ page_id: dev.using-cooker
 parent_id: dev
 lang: en
 source_lang: en
-permalink: /dev/using-cooker.en.html
+permalink: /dev/using-cooker/
+redirect_from:
+- /dev/using-cooker.en.html
 has_toc: true
 ---
 # Using Cooker
@@ -21,7 +23,7 @@ The OpenMandriva Lx distribution exists through two major fields of technical co
 - Creation and maintenance of the tools, configuration, and art special to the distribution, such as the installer, the configuration center, and themes.
 - Consistent packaging of thousands of programs and libraries so they are available to users in a simple, unified way.
 
-Guidelines and rules for both areas are documented in the [Repository Policies](../community/releases/repository-policies.en.html).
+Guidelines and rules for both areas are documented in the [Repository Policies](/community/releases/repository-policies/).
 
 ## Get Cooker
 
@@ -35,10 +37,10 @@ Package updates in Cooker can break your system at any time. Always check the `[
 
 Because package updates can break your system at any time, run Cooker in a virtual machine or on a separate partition rather than installing it alongside your everyday system.
 
-[Preparing Your System](./preparing-your-system.en.html) guides you through installing Virt Manager and creating a Cooker VM.
+[Preparing Your System](/dev/preparing-your-system/) guides you through installing Virt Manager and creating a Cooker VM.
 
 ## Related Topics
 
-- [Preparing Your System](./preparing-your-system.en.html)
-- [Building and Submitting Packages](./building-and-submitting-packages.en.html)
-- [Repository Policies](../community/releases/repository-policies.en.html)
+- [Preparing Your System](/dev/preparing-your-system/)
+- [Building and Submitting Packages](/dev/building-and-submitting-packages/)
+- [Repository Policies](/community/releases/repository-policies/)

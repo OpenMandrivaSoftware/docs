@@ -7,7 +7,9 @@ page_id: community.releases.rock-6.0-changelog
 parent_id: community.releases
 lang: en
 source_lang: en
-permalink: /community/releases/rock-6.0-changelog.en.html
+permalink: /community/releases/rock-6.0-changelog/
+redirect_from:
+- /community/releases/rock-6.0-changelog.en.html
 has_toc: true
 ---
 # What's New in OpenMandriva Lx 6.0?
@@ -70,6 +72,6 @@ Flatpak support included.
 
 ## Related Topics
 
-- [OpenMandriva Lx 6.0 Release Notes](./rock-6.0-release-notes.en.html)
-- [OpenMandriva Lx 6.0 Errata](./rock-6.0-errata.en.html)
-- [Getting Support on the Forum](../../user-guide/getting-help/getting-support-on-the-forum.en.html)
+- [OpenMandriva Lx 6.0 Release Notes](/community/releases/rock-6.0-release-notes/)
+- [OpenMandriva Lx 6.0 Errata](/community/releases/rock-6.0-errata/)
+- [Getting Support on the Forum](/user-guide/getting-help/getting-support-on-the-forum/)

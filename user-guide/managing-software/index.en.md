@@ -7,7 +7,9 @@ page_id: user-guide.managing-software
 parent_id: user-guide
 lang: en
 source_lang: en
-permalink: /user-guide/managing-software.en.html
+permalink: /user-guide/managing-software/
+redirect_from:
+- /user-guide/managing-software.en.html
 has_toc: true
 ---
 # Managing Software
@@ -22,21 +24,21 @@ These package managers provide graphical interfaces for searching, installing, a
 
 - *DNFDragora* is a classic OpenMandriva GUI for finding, installing, and removing packages.
 
-- *DnfDrake* adds system-level features that Discover does not, such as system-wide upgrades and package history. It also opens the Software Repository Selector. See [DNFDrake Overview](./managing-software/dnfdrake-overview.en.html).
+- *DnfDrake* adds system-level features that Discover does not, such as system-wide upgrades and package history. It also opens the Software Repository Selector. See [DNFDrake Overview](/user-guide/managing-software/dnfdrake-overview/).
 
-- *OM Updater* is a small, fast system updater that sits in your tray, notifies you of updates, and installs them when you select it. It also includes a small, fast OM Installer for installing packages graphically. See [OpenMandriva Updater](./managing-software/openmandriva-updater.en.html).
+- *OM Updater* is a small, fast system updater that sits in your tray, notifies you of updates, and installs them when you select it. It also includes a small, fast OM Installer for installing packages graphically. See [OpenMandriva Updater](/user-guide/managing-software/openmandriva-updater/).
 
 Discover is the only graphical package manager installed by default, because it ships with the KDE Plasma desktop. This means you must remember to run updates periodically, because you cannot update OpenMandriva with Discover. All three of the above package managers include a tray utility to notify you of updates.
 
 ## Command-Line Package Manager
 
-For advanced control over software installation and management, use the command-line tools. *DNF* is the fastest and most powerful way to manage software. Almost everything you can do in a GUI, you can do in a terminal. See [Using DNF](./managing-software/using-dnf.en.html).
+For advanced control over software installation and management, use the command-line tools. *DNF* is the fastest and most powerful way to manage software. Almost everything you can do in a GUI, you can do in a terminal. See [Using DNF](/user-guide/managing-software/using-dnf/).
 
 ## Repository Selector and Other Sources
 
 OpenMandriva provides tools for managing different software sources.
 
-- *Software Repository Selector* (`om-repo-picker`) picks which release, architecture, and repositories your system uses. See [Software Repository Selector](./managing-software/software-repository-selector.en.html).
+- *Software Repository Selector* (`om-repo-picker`) picks which release, architecture, and repositories your system uses. See [Software Repository Selector](/user-guide/managing-software/software-repository-selector/).
 
 - *Flatpak* applications are packaged separately from the system repositories.
 

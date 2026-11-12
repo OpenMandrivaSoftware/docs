@@ -7,7 +7,9 @@ page_id: user-guide.troubleshooting.fix-incorrect-time-in-dual-boot
 parent_id: user-guide.troubleshooting
 lang: en
 source_lang: en
-permalink: /user-guide/troubleshooting/fix-incorrect-time-in-dual-boot.en.html
+permalink: /user-guide/troubleshooting/fix-incorrect-time-in-dual-boot/
+redirect_from:
+- /user-guide/troubleshooting/fix-incorrect-time-in-dual-boot.en.html
 has_toc: true
 ---
 # Fix Incorrect Time in Dual Boot
@@ -59,5 +61,5 @@ A warning about the system being configured to read the RTC in local time is exp
 
 ## Related Topics
 
-- [Connect to the Internet in Recovery Mode](./connect-to-the-internet-in-recovery-mode.en.html)
-- [Maintaining Your System](../maintaining-your-system.en.html)
+- [Connect to the Internet in Recovery Mode](/user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode/)
+- [Maintaining Your System](/user-guide/maintaining-your-system/)

@@ -7,7 +7,9 @@ page_id: dev.building-and-submitting-packages
 parent_id: dev
 lang: en
 source_lang: en
-permalink: /dev/building-and-submitting-packages.en.html
+permalink: /dev/building-and-submitting-packages/
+redirect_from:
+- /dev/building-and-submitting-packages.en.html
 has_toc: true
 ---
 # Building and Submitting Packages
@@ -139,7 +141,7 @@ You need ABF access to push the package to a repository, so start that request e
 
 ## Building for Release
 
-A Cooker build is not enough. Packages move through the [release plan](../community/releases/release-plan-and-repositories.en.html): Cooker first, then the rolling release, then the stable release. QA verifies each package before it leaves Cooker. Do not edit the release repositories directly.
+A Cooker build is not enough. Packages move through the [release plan](/community/releases/release-plan-and-repositories/): Cooker first, then the rolling release, then the stable release. QA verifies each package before it leaves Cooker. Do not edit the release repositories directly.
 
 ## Updating Packages to a Newer Version
 
@@ -185,10 +187,10 @@ The [RPM packaging guide](https://rpm-packaging-guide.github.io) and the [packag
 
 ## Related Topics
 
-- [Building a Go Package](./building-and-submitting-packages/building-a-go-package.en.html)
-- [Building a Python Package](./building-and-submitting-packages/building-a-python-package.en.html)
-- [Building a Rust Package](./building-and-submitting-packages/building-a-rust-package.en.html)
-- [Understanding RPM Spec Files](./understanding-rpm-spec-files.en.html)
-- [Installing Packaging Tools](./preparing-your-system/packaging-tools.en.html)
-- [Using Cooker](./using-cooker.en.html)
-- [Maintaining Packages](./maintaining-packages.en.html)
+- [Building a Go Package](/dev/building-and-submitting-packages/building-a-go-package/)
+- [Building a Python Package](/dev/building-and-submitting-packages/building-a-python-package/)
+- [Building a Rust Package](/dev/building-and-submitting-packages/building-a-rust-package/)
+- [Understanding RPM Spec Files](/dev/understanding-rpm-spec-files/)
+- [Installing Packaging Tools](/dev/preparing-your-system/packaging-tools/)
+- [Using Cooker](/dev/using-cooker/)
+- [Maintaining Packages](/dev/maintaining-packages/)

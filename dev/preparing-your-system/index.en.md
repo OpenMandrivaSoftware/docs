@@ -7,7 +7,9 @@ page_id: dev.preparing-your-system
 parent_id: dev
 lang: en
 source_lang: en
-permalink: /dev/preparing-your-system.en.html
+permalink: /dev/preparing-your-system/
+redirect_from:
+- /dev/preparing-your-system.en.html
 has_toc: true
 ---
 # Preparing Your System
@@ -16,8 +18,8 @@ Before you build and submit your first package, prepare an isolated environment.
 
 Preparing your system takes three steps:
 
-1. [Installing and Using Virt Manager](./preparing-your-system/installing-and-using-virt-manager.en.html)---set up the virtualization platform that runs your Cooker virtual machine.
-1. [Creating a Cooker VM](./preparing-your-system/creating-cooker-vm.en.html)---download a Cooker ISO and install it in a virtual machine.
-1. [Installing Packaging Tools](./preparing-your-system/packaging-tools.en.html)---install the `packaging-tools` package and learn the `v*` template utilities.
+1. [Installing and Using Virt Manager](/dev/preparing-your-system/installing-and-using-virt-manager/)---set up the virtualization platform that runs your Cooker virtual machine.
+1. [Creating a Cooker VM](/dev/preparing-your-system/creating-cooker-vm/)---download a Cooker ISO and install it in a virtual machine.
+1. [Installing Packaging Tools](/dev/preparing-your-system/packaging-tools/)---install the `packaging-tools` package and learn the `v*` template utilities.
 
 Complete all three before you start writing spec files.

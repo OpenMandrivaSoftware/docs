@@ -7,7 +7,9 @@ page_id: getting-started.requirements
 parent_id: getting-started
 lang: en
 source_lang: en
-permalink: /getting-started/requirements.en.html
+permalink: /getting-started/requirements/
+redirect_from:
+- /getting-started/requirements.en.html
 has_toc: true
 ---
 # System Requirements
@@ -45,4 +47,4 @@ OpenMandriva also runs on:
 
 ## Related Topics
 
-- [Installing OpenMandriva](installing-openmandriva.en.html)
+- [Installing OpenMandriva](/getting-started/installing-openmandriva/)

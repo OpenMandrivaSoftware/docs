@@ -7,7 +7,9 @@ page_id: user-guide.managing-software.using-dnf
 parent_id: user-guide.managing-software
 lang: en
 source_lang: en
-permalink: /user-guide/managing-software/using-dnf.en.html
+permalink: /user-guide/managing-software/using-dnf/
+redirect_from:
+- /user-guide/managing-software/using-dnf.en.html
 has_toc: true
 ---
 # Using DNF
@@ -72,5 +74,5 @@ OpenMandriva Rock 6 uses DNF 4, so `man dnf4` works there. ROME and Cooker use D
 
 ## Related Topics
 
-- [Managing Software](../managing-software.en.html)
-- [Software Repository Selector](./software-repository-selector.en.html)
+- [Managing Software](/user-guide/managing-software/)
+- [Software Repository Selector](/user-guide/managing-software/software-repository-selector/)

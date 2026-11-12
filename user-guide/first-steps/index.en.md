@@ -7,7 +7,9 @@ page_id: user-guide.first-steps
 parent_id: user-guide
 lang: en
 source_lang: en
-permalink: /user-guide/first-steps.en.html
+permalink: /user-guide/first-steps/
+redirect_from:
+- /user-guide/first-steps.en.html
 has_toc: true
 ---
 # First Ten Tasks After Installation
@@ -33,7 +35,7 @@ Reboot when prompted, especially if the kernel was updated.
 3. Use the *Applications* screen to install commonly used software by category.
 4. Use the *Repositories* screen to review and manage your software sources.
 
-For full details, see [OpenMandriva Welcome](managing-software/openmandriva-welcome.en.html).
+For full details, see [OpenMandriva Welcome](/user-guide/managing-software/openmandriva-welcome/).
 
 ## 3. Manage Software Repositories
 
@@ -132,9 +134,9 @@ Stay connected with other users and contributors.
 
 ## Related Topics
 
-- [Managing Software](managing-software.en.html)
-- [Desktop Environments](desktop-environments.en.html)
-- [Network Configuration](network-configuration.en.html)
-- [Using DNF](managing-software/using-dnf.en.html)
-- [Software Repository Selector](managing-software/software-repository-selector.en.html)
-- [OpenMandriva Welcome](managing-software/openmandriva-welcome.en.html)
+- [Managing Software](/user-guide/managing-software/)
+- [Desktop Environments](/user-guide/desktop-environments/)
+- [Network Configuration](/user-guide/network-configuration/)
+- [Using DNF](/user-guide/managing-software/using-dnf/)
+- [Software Repository Selector](/user-guide/managing-software/software-repository-selector/)
+- [OpenMandriva Welcome](/user-guide/managing-software/openmandriva-welcome/)

@@ -7,7 +7,9 @@ page_id: getting-started.installing-openmandriva.linux-partitions
 parent_id: getting-started.installing-openmandriva
 lang: en
 source_lang: en
-permalink: /getting-started/installing-openmandriva/linux-partitions.en.html
+permalink: /getting-started/installing-openmandriva/linux-partitions/
+redirect_from:
+- /getting-started/installing-openmandriva/linux-partitions.en.html
 has_toc: true
 ---
 # Partitioning Schemas
@@ -44,7 +46,7 @@ Some users create additional partitions for `/boot`, `/var`, `/tmp`, or other di
 - **Fine-grained encryption.** You can encrypt sensitive directories (like `/var/log`) while leaving others plain.
 - **Better fit on small disks.** You can put a modest root partition on a fast SSD and a large `/var` or `/home` on a slow, spacious hard drive.
 - **Management overhead.** More partitions mean more things to size correctly, more mount points in `/etc/fstab`, and more complexity when moving the system to a new disk.
-- **Not all directories benefit.** `/usr` and `/etc` are tightly coupled to the system and rarely need separation. Separating `/boot` is only necessary when you encrypt the root partition (see [Disk Encryption](./encryption.en.html)).
+- **Not all directories benefit.** `/usr` and `/etc` are tightly coupled to the system and rarely need separation. Separating `/boot` is only necessary when you encrypt the root partition (see [Disk Encryption](/getting-started/installing-openmandriva/encryption/)).
 
 This layout suits advanced users, servers, and systems where specific directories grow large or need protection. It is overkill for a typical desktop installation.
 
@@ -64,7 +66,7 @@ Calamares offers three automated choices at the partitioning screen:
 - **Format a partition and install** — formats one existing partition and installs into it.
 - **Install alongside** — shrinks an existing partition and creates space for OpenMandriva.
 
-Each automated option supports the single-partition layout by default. To create a separate `/home` partition or add custom partitions, select **Manual partitioning**. There you click each partition, choose a file system, and assign a mount point (`/`, `/home`, `/boot`, and so on). Check the **Encrypt** box on any partition you want to protect with LUKS (see [Disk Encryption](./encryption.en.html)).
+Each automated option supports the single-partition layout by default. To create a separate `/home` partition or add custom partitions, select **Manual partitioning**. There you click each partition, choose a file system, and assign a mount point (`/`, `/home`, `/boot`, and so on). Check the **Encrypt** box on any partition you want to protect with LUKS (see [Disk Encryption](/getting-started/installing-openmandriva/encryption/)).
 
 ## Manual Partitioning Workflow
 
@@ -78,11 +80,11 @@ This guide applies to all versions of OpenMandriva, including Cooker and ROME.
 
 To control your partition layout, select *Manual Partitioning*.
 
-![Manual partitioning option](./images/linux-partitions-01.png)
+![Manual partitioning option](../images/linux-partitions-01.png)
 
 Accepting the default *Erase disk* option creates only `/boot/efi` and `/` partitions. The installer no longer creates a swap partition by default, since most modern systems do not need one.
 
-![Manual partition screen](./images/linux-partitions-02.png)
+![Manual partition screen](../images/linux-partitions-02.png)
 
 ### Create the Partition Table
 
@@ -90,7 +92,7 @@ Accepting the default *Erase disk* option creates only `/boot/efi` and `/` parti
 
 1. If your system has multiple drives or SSDs, they must all use the same partition table type---all `GPT` or all `MBR`.
 
-   ![Partition table creation](./images/linux-partitions-03.png)
+   ![Partition table creation](../images/linux-partitions-03.png)
 
 ### Add Partitions in Order
 
@@ -106,15 +108,15 @@ The only requirement is that `/boot/efi` comes first; the remaining partitions c
 
 1. Select *Create* for each partition and follow the dialog steps.
 
-   ![Create partition dialog](./images/linux-partitions-04.png)
+   ![Create partition dialog](../images/linux-partitions-04.png)
 
 1. The completed layout should look like this.
 
-   ![Completed partition layout](./images/linux-partitions-05.png)
+   ![Completed partition layout](../images/linux-partitions-05.png)
 
 When satisfied, select *Next* to begin installation.
 
-![EFI partition dialog](./images/linux-partitions-06.png)
+![EFI partition dialog](../images/linux-partitions-06.png)
 
 ### Swap Partition Considerations
 
@@ -132,6 +134,6 @@ You can resize or move partitions later with GParted, but doing so on a mounted 
 
 ## Related Topics
 
-- [Partitioning](./partitioning.en.html)
-- [Disk Encryption](./encryption.en.html)
-- [Installing OpenMandriva](../installing-openmandriva.en.html)
+- [Partitioning](/getting-started/installing-openmandriva/partitioning/)
+- [Disk Encryption](/getting-started/installing-openmandriva/encryption/)
+- [Installing OpenMandriva](/getting-started/installing-openmandriva/)

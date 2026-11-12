@@ -7,7 +7,9 @@ page_id: community.releases.rome-changelog
 parent_id: community.releases
 lang: en
 source_lang: en
-permalink: /community/releases/rome-changelog.en.html
+permalink: /community/releases/rome-changelog/
+redirect_from:
+- /community/releases/rome-changelog.en.html
 has_toc: true
 ---
 # ROME Changelog
@@ -108,6 +110,6 @@ Flatpak support included.
 
 ## Related Topics
 
-- [ROME Release Notes](./rome-release-notes.en.html)
-- [ROME Errata](./rome-errata.en.html)
-- [Getting Support on the Forum](../../user-guide/getting-help/getting-support-on-the-forum.en.html)
+- [ROME Release Notes](/community/releases/rome-release-notes/)
+- [ROME Errata](/community/releases/rome-errata/)
+- [Getting Support on the Forum](/user-guide/getting-help/getting-support-on-the-forum/)

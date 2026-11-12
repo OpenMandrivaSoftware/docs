@@ -7,7 +7,9 @@ page_id: community.releases.rock-6.0-release-notes
 parent_id: community.releases
 lang: en
 source_lang: en
-permalink: /community/releases/rock-6.0-release-notes.en.html
+permalink: /community/releases/rock-6.0-release-notes/
+redirect_from:
+- /community/releases/rock-6.0-release-notes.en.html
 has_toc: true
 ---
 # OpenMandriva Lx 6.0 Release Notes
@@ -116,7 +118,7 @@ You can boot this release from a USB storage device. To create the live/installa
 
 - SUSE Studio ImageWriter and Balena Etcher have also been tested and work to transfer ISO images to USB storage devices.
 
-- Ventoy is not fully supported. Under some circumstances it may or may not work. Use one of the suggested methods above. See [OpenMandriva Lx 6.0 Errata](./rock-6.0-errata.en.html) for Ventoy workarounds.
+- Ventoy is not fully supported. Under some circumstances it may or may not work. Use one of the suggested methods above. See [OpenMandriva Lx 6.0 Errata](/community/releases/rock-6.0-errata/) for Ventoy workarounds.
 
 ## Installing from USB
 
@@ -141,10 +143,10 @@ Booting from DVD is deprecated, but OpenMandriva 6.0 ISOs boot from DVD using Le
 
 ## About Repositories
 
-Use the [Software Repository Selector](../../user-guide/managing-software/software-repository-selector.en.html) (also known as *om-repo-picker*) to select additional repositories for more package availability.
+Use the [Software Repository Selector](/user-guide/managing-software/software-repository-selector/) (also known as *om-repo-picker*) to select additional repositories for more package availability.
 
 {: .warning }
-> **Do not mix repositories from different release versions or update channels.** For example, do not use Cooker repositories on a Rock system. If you use Rock, use Rock repositories only. This is explained in more detail in [Release Plan and Repositories](../../community/releases/release-plan-and-repositories.en.html). If you mix different release/update channel repositories and break your computer, the solution is a fresh install. Do not do this again after the fresh install.
+> **Do not mix repositories from different release versions or update channels.** For example, do not use Cooker repositories on a Rock system. If you use Rock, use Rock repositories only. This is explained in more detail in [Release Plan and Repositories](/community/releases/release-plan-and-repositories/). If you mix different release/update channel repositories and break your computer, the solution is a fresh install. Do not do this again after the fresh install.
 
 ## How to Install and Remove Packages
 
@@ -202,11 +204,11 @@ The standard kernel for OpenMandriva 6.0 is clang compiled. The `kernel-desktop-
 
 ## Nvidia Graphics Hardware
 
-See the [OpenMandriva Lx 6.0 Errata](./rock-6.0-errata.en.html) for NVIDIA graphics information.
+See the [OpenMandriva Lx 6.0 Errata](/community/releases/rock-6.0-errata/) for NVIDIA graphics information.
 
 ## Related Topics
 
-- [OpenMandriva Lx 6.0 Errata](./rock-6.0-errata.en.html)
-- [OpenMandriva Lx 6.0 Changelog](./rock-6.0-changelog.en.html)
-- [Using DNF](../../user-guide/index.en.html)
-- [Getting Support on the Forum](../../user-guide/getting-help/getting-support-on-the-forum.en.html)
+- [OpenMandriva Lx 6.0 Errata](/community/releases/rock-6.0-errata/)
+- [OpenMandriva Lx 6.0 Changelog](/community/releases/rock-6.0-changelog/)
+- [Using DNF](/user-guide/)
+- [Getting Support on the Forum](/user-guide/getting-help/getting-support-on-the-forum/)

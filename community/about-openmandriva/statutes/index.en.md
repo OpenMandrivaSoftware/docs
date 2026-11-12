@@ -7,7 +7,9 @@ page_id: community.about-openmandriva.statutes
 parent_id: community.about-openmandriva
 lang: en
 source_lang: en
-permalink: /community/about-openmandriva/statutes.en.html
+permalink: /community/about-openmandriva/statutes/
+redirect_from:
+- /community/about-openmandriva/statutes.en.html
 has_toc: true
 ---
 # Statutes

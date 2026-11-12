@@ -7,7 +7,9 @@ page_id: dev.preparing-your-system.packaging-tools
 parent_id: dev.preparing-your-system
 lang: en
 source_lang: en
-permalink: /dev/preparing-your-system/packaging-tools.en.html
+permalink: /dev/preparing-your-system/packaging-tools/
+redirect_from:
+- /dev/preparing-your-system/packaging-tools.en.html
 has_toc: true
 ---
 # Installing Packaging Tools
@@ -50,6 +52,6 @@ The tool creates a `.spec` file in `~/abf/[package-name]`. Work from that direct
 
 ## Related Topics
 
-- [Understanding RPM Spec Files](../understanding-rpm-spec-files.en.html)
-- [Preparing Your System](../preparing-your-system.en.html)
-- [Building and Submitting Packages](../building-and-submitting-packages.en.html)
+- [Understanding RPM Spec Files](/dev/understanding-rpm-spec-files/)
+- [Preparing Your System](/dev/preparing-your-system/)
+- [Building and Submitting Packages](/dev/building-and-submitting-packages/)

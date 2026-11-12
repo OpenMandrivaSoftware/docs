@@ -7,14 +7,16 @@ page_id: dev.preparing-your-system.creating-cooker-vm
 parent_id: dev.preparing-your-system
 lang: en
 source_lang: en
-permalink: /dev/preparing-your-system/creating-cooker-vm.en.html
+permalink: /dev/preparing-your-system/creating-cooker-vm/
+redirect_from:
+- /dev/preparing-your-system/creating-cooker-vm.en.html
 has_toc: true
 ---
 # Creating a Cooker VM
 
 Now that Virt Manager is installed and configured, create a virtual machine running OpenMandriva Cooker. This gives you a safe, isolated environment for building and testing packages without affecting your daily system.
 
-If you have not yet installed Virt Manager or configured storage pools, follow [Installing and Using Virt Manager](./installing-and-using-virt-manager.en.html) first.
+If you have not yet installed Virt Manager or configured storage pools, follow [Installing and Using Virt Manager](/dev/preparing-your-system/installing-and-using-virt-manager/) first.
 
 ## Download a Cooker ISO
 
@@ -24,13 +26,13 @@ Cooker snapshots are published as ISO images. Download the latest build for your
 
 1. In Virt Manager, click *Create a new virtual machine* in the toolbar.
 
-   ![The virt-manager toolbar shows the Create a virtual machine button.](./images/cooker-vm-01.png)
+   ![The virt-manager toolbar shows the Create a virtual machine button.](../images/cooker-vm-01.png)
 
 1. Choose *Local install media*, then click *Forward*.
 
 1. Click *Browse*, navigate to your ISO storage pool, select the Cooker ISO you downloaded, and click *Choose Volume*. If the ISO doesn't appear, click the *Refresh* icon. 
 
-   ![The storage volume dialog shows the Cooker ISO selected from the ISOs pool.](./images/cooker-vm-02.png)
+   ![The storage volume dialog shows the Cooker ISO selected from the ISOs pool.](../images/cooker-vm-02.png)
 
 1. Virt Manager cannot auto-detect OpenMandriva. De-select *Automatically detect from the installation media / source*, type *Generic*, and select *Generic Linux 2024*. Click *Forward*.
 
@@ -46,7 +48,7 @@ Cooker snapshots are published as ISO images. Download the latest build for your
 
 1. Choose the disk size. A minimum of 50 GB is recommended for a development environment. Click *Finish*.
 
-   ![The disk image creation dialog asks for a name and size.](./images/cooker-vm-03.png)
+   ![The disk image creation dialog asks for a name and size.](../images/cooker-vm-03.png)
 
 1. Confirm the new disk image is selected, then click *Choose Volume*.
 
@@ -54,13 +56,13 @@ Cooker snapshots are published as ISO images. Download the latest build for your
 
 1. Enter a name for the VM, for example, `Cooker`. **Check** *Customize configuration before install*, then click *Finish*.
 
-   ![The virtual machine configuration screen shows the VM name and the customize option.](./images/cooker-vm-04.png)
+   ![The virtual machine configuration screen shows the VM name and the customize option.](../images/cooker-vm-04.png)
 
 1. In the configuration editor, locate the *Firmware* drop-down at the bottom. The default is BIOS; change it to *UEFI*, and then click *Apply*. 
 
-   ![The VM configuration editor shows the firmware selection drop-down, set to UEFI.](./images/cooker-vm-05.png)
+   ![The VM configuration editor shows the firmware selection drop-down, set to UEFI.](../images/cooker-vm-05.png)
 
-1. Click *Begin Installation*. The VM boots from the Cooker ISO. Proceed with the [installation](../../getting-started/installing-openmandriva.en.html) as you would for any OpenMandriva release.
+1. Click *Begin Installation*. The VM boots from the Cooker ISO. Proceed with the [installation](/getting-started/installing-openmandriva/) as you would for any OpenMandriva release.
 
 After installation, double-click the VM in the Virt Manager window and click its *Play* button to launch it.
 
@@ -112,7 +114,7 @@ Files you place in `~/VMs/vmshare` on your host now appear in `/mnt/hostshare` i
 
 ## Related Topics
 
-- [Installing and Using Virt Manager](./installing-and-using-virt-manager.en.html)
-- [Preparing Your System](../preparing-your-system.en.html)
-- [Using Cooker](../using-cooker.en.html)
-- [Installing OpenMandriva](../../getting-started/installing-openmandriva.en.html)
+- [Installing and Using Virt Manager](/dev/preparing-your-system/installing-and-using-virt-manager/)
+- [Preparing Your System](/dev/preparing-your-system/)
+- [Using Cooker](/dev/using-cooker/)
+- [Installing OpenMandriva](/getting-started/installing-openmandriva/)

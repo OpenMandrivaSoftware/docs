@@ -7,7 +7,9 @@ page_id: user-guide.troubleshooting.fix-a-broken-bootloader
 parent_id: user-guide.troubleshooting
 lang: en
 source_lang: en
-permalink: /user-guide/troubleshooting/fix-a-broken-bootloader.en.html
+permalink: /user-guide/troubleshooting/fix-a-broken-bootloader/
+redirect_from:
+- /user-guide/troubleshooting/fix-a-broken-bootloader.en.html
 has_toc: true
 ---
 # Fix a Broken Bootloader
@@ -35,7 +37,7 @@ When you cannot boot into your system, repair GRUB2 from an OpenMandriva Live IS
 
 2. Open *Konsole* and run `su -` to become root. No password is required in the Live environment.
 
-   ![A terminal window shows the root prompt after running su - in the Live environment](./images/fix-a-broken-bootloader-01.jpg)
+   ![A terminal window shows the root prompt after running su - in the Live environment](../images/fix-a-broken-bootloader-01.jpg)
 
 3. Identify your disk and root partition device name:
 
@@ -45,7 +47,7 @@ When you cannot boot into your system, repair GRUB2 from an OpenMandriva Live IS
 
    The disk name appears as something like `Disk /dev/sda` or, for an NVMe SSD, `Disk /dev/nvme0n1`. The root partition device name is listed under "Device" and includes a number, such as `/dev/sda1` or `/dev/nvme0n1p4`.
 
-   ![The output of fdisk -l lists the disk name and partition device names](./images/fix-a-broken-bootloader-02.jpg)
+   ![The output of fdisk -l lists the disk name and partition device names](../images/fix-a-broken-bootloader-02.jpg)
 
 4. Mount your root partition to `/mnt`:
 
@@ -65,7 +67,7 @@ When you cannot boot into your system, repair GRUB2 from an OpenMandriva Live IS
    # mount /dev/nvme1n1p4 /mnt
    ```
 
-   ![The mount command mounts the root partition to /mnt](./images/fix-a-broken-bootloader-03.jpg)
+   ![The mount command mounts the root partition to /mnt](../images/fix-a-broken-bootloader-03.jpg)
 
 5. Bind-mount the system directories so they are available inside the chroot:
 
@@ -73,7 +75,7 @@ When you cannot boot into your system, repair GRUB2 from an OpenMandriva Live IS
    # for i in /proc /sys /sys/firmware/efi/efivars /run /dev /dev/pts; do mount --bind $i /mnt$i; done
    ```
 
-   ![The bind-mount command makes system directories available inside the chroot](./images/fix-a-broken-bootloader-04.jpg)
+   ![The bind-mount command makes system directories available inside the chroot](../images/fix-a-broken-bootloader-04.jpg)
 
 6. Enter your installed system with `chroot`:
 
@@ -83,7 +85,7 @@ When you cannot boot into your system, repair GRUB2 from an OpenMandriva Live IS
 
    When the chroot succeeds, the shell prompt changes from something like `[root@omv-1602 ~]#` to `[root@omv-1602 /]#`.
 
-   ![The chroot command changes the root to the installed system](./images/fix-a-broken-bootloader-05.jpg)
+   ![The chroot command changes the root to the installed system](../images/fix-a-broken-bootloader-05.jpg)
 
 7. For UEFI boot systems, mount the EFI partition inside the chroot:
 
@@ -93,7 +95,7 @@ When you cannot boot into your system, repair GRUB2 from an OpenMandriva Live IS
 
    Skip this step for BIOS boot systems.
 
-   ![The mount /boot/efi command mounts the EFI system partition for UEFI boot](./images/fix-a-broken-bootloader-06.jpg)
+   ![The mount /boot/efi command mounts the EFI system partition for UEFI boot](../images/fix-a-broken-bootloader-06.jpg)
 
 8. Update the GRUB2 menu:
 
@@ -101,7 +103,7 @@ When you cannot boot into your system, repair GRUB2 from an OpenMandriva Live IS
    # update-grub2
    ```
 
-   ![The update-grub2 command regenerates the GRUB2 configuration](./images/fix-a-broken-bootloader-07.jpg)
+   ![The update-grub2 command regenerates the GRUB2 configuration](../images/fix-a-broken-bootloader-07.jpg)
 
 9. Install the GRUB2 bootloader to your drive:
 
@@ -121,7 +123,7 @@ When you cannot boot into your system, repair GRUB2 from an OpenMandriva Live IS
    # grub2-install /dev/nvme1n1
    ```
 
-   ![The grub2-install command writes the bootloader to the disk](./images/fix-a-broken-bootloader-08.jpg)
+   ![The grub2-install command writes the bootloader to the disk](../images/fix-a-broken-bootloader-08.jpg)
 
 10. Exit the chroot:
 
@@ -129,7 +131,7 @@ When you cannot boot into your system, repair GRUB2 from an OpenMandriva Live IS
     # exit
     ```
 
-    ![The exit command returns from the chroot environment](./images/fix-a-broken-bootloader-09.jpg)
+    ![The exit command returns from the chroot environment](../images/fix-a-broken-bootloader-09.jpg)
 
 11. Unmount the partitions. Use the up-arrow key to recall the mount command from step 4, then change `mount` to `umount`:
 
@@ -143,7 +145,7 @@ When you cannot boot into your system, repair GRUB2 from an OpenMandriva Live IS
     # umount -l /dev/nvme1n1p4 /mnt
     ```
 
-    ![The umount command unmounts the previously mounted partitions](./images/fix-a-broken-bootloader-10.jpg)
+    ![The umount command unmounts the previously mounted partitions](../images/fix-a-broken-bootloader-10.jpg)
 
 12. Reboot the system.
 
@@ -195,5 +197,5 @@ $ sudo os-prober
 
 ## Related Topics
 
-- [Connect to the Internet in Recovery Mode](./connect-to-the-internet-in-recovery-mode.en.html)
-- [Maintaining Your System](../maintaining-your-system.en.html)
+- [Connect to the Internet in Recovery Mode](/user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode/)
+- [Maintaining Your System](/user-guide/maintaining-your-system/)

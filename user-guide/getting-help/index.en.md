@@ -7,20 +7,22 @@ page_id: user-guide.getting-help
 parent_id: user-guide
 lang: en
 source_lang: en
-permalink: /user-guide/getting-help.en.html
+permalink: /user-guide/getting-help/
+redirect_from:
+- /user-guide/getting-help.en.html
 has_toc: true
 card_columns: 2
 cards:
 - title: Getting Support on the Forum
   description: Post questions effectively and get faster responses from the community.
-  url: /user-guide/getting-help/getting-support-on-the-forum.en.html
+  url: /user-guide/getting-help/getting-support-on-the-forum/
 - title: How to Report a Bug
   description: File a clear GitHub bug report with all the details developers need.
-  url: /user-guide/getting-help/how-to-report-a-bug.en.html
+  url: /user-guide/getting-help/how-to-report-a-bug/
 - title: Get Logs and Hardware Info
   description: Collect terminal output, logs, and system information for bug reports
     and forum posts.
-  url: /user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports.en.html
+  url: /user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/
 ---
 # Getting Help
 

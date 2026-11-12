@@ -5,8 +5,9 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$REPO_ROOT"
 
-echo "=== 1/6: Running Ruby metadata validator unit tests ==="
+echo "=== 1/6: Running Ruby validator and generator unit tests ==="
 ruby test/test_metadata_validator.rb
+ruby test/test_redirect_generator.rb
 
 echo ""
 echo "=== 2/6: Validating source document metadata and migration retention ==="

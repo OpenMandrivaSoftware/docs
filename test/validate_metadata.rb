@@ -160,10 +160,12 @@ class MetadataValidator
       @errors << "#{rel}: Invalid source_lang '#{doc[:source_lang]}'. Allowed languages from _config.yml: #{@languages.inspect}"
     end
 
-    # Validate nav_order is strictly an Integer type
+    # Validate nav_order is strictly an Integer type (reject floats, strings, booleans)
     val_order = fm['nav_order']
-    if val_order && !val_order.is_a?(Integer)
-      @errors << "#{rel}: Field 'nav_order' must be an integer, got #{val_order.class} (#{val_order.inspect})"
+    unless val_order.nil?
+      unless val_order.is_a?(Integer)
+        @errors << "#{rel}: Field 'nav_order' must be an integer, got #{val_order.class} (#{val_order.inspect})"
+      end
     end
 
     # Validate permalink syntax
@@ -177,6 +179,12 @@ class MetadataValidator
       end
       if permalink.include?('?') || permalink.include?('#')
         @errors << "#{rel}: Permalink cannot contain query parameters or fragments: '#{permalink}'"
+      end
+      # Reject language prefix in permalinks
+      @languages.each do |lang|
+        if permalink == "/#{lang}" || permalink.start_with?("/#{lang}/")
+          @errors << "#{rel}: Permalink cannot start with language prefix '/#{lang}': '#{permalink}'"
+        end
       end
     end
   end
@@ -220,6 +228,11 @@ class MetadataValidator
         # nav_order must match
         if first[:nav_order] != other[:nav_order]
           @errors << "Translation inconsistency for page_id '#{pid}': '#{first[:rel_path]}' has nav_order #{first[:nav_order]}, but '#{other[:rel_path]}' has #{other[:nav_order]}"
+        end
+
+        # permalink must be identical across translations
+        if first[:permalink] != other[:permalink]
+          @errors << "Translation inconsistency for page_id '#{pid}': '#{first[:rel_path]}' has permalink '#{first[:permalink]}', but '#{other[:rel_path]}' has '#{other[:permalink]}'"
         end
       end
     end
@@ -281,17 +294,50 @@ class MetadataValidator
     end
   end
 
-  # Validate that no two documents produce the same effective public output route
+  # Normalizes a public URL into the actual output file path relative to _site root
+  def output_file_for_route(route)
+    p = route.to_s.sub(%r{^/+}, '')
+    if p.empty? || p == 'index.html'
+      'index.html'
+    elsif p.end_with?('/')
+      "#{p}index.html"
+    else
+      p
+    end
+  end
+
+  # Validate that no two documents produce the same effective public output route or file
   def validate_route_conflicts(docs)
-    routes = {}
+    files = {}
+    by_page_id = docs.group_by { |d| d[:page_id] }
+
     docs.each do |doc|
       route = effective_public_route(doc)
       next unless route
 
-      if routes.key?(route)
-        @errors << "Public route conflict: Both '#{doc[:rel_path]}' and '#{routes[route]}' output to '#{route}'"
+      out_file = output_file_for_route(route)
+      if files.key?(out_file)
+        @errors << "Public route conflict: Both '#{doc[:rel_path]}' and '#{files[out_file][:doc]}' output to '#{route}'"
       else
-        routes[route] = doc[:rel_path]
+        files[out_file] = { doc: doc[:rel_path], page_id: doc[:page_id], lang: doc[:lang] }
+      end
+    end
+
+    # Check fallback routes for default_lang documents when non-default language has no translation
+    docs.select { |d| d[:lang] == @default_lang }.each do |doc|
+      variants = by_page_id[doc[:page_id]] || []
+      existing_langs = variants.map { |v| v[:lang] }.to_set
+
+      (@languages - [@default_lang]).each do |lang|
+        next if existing_langs.include?(lang)
+
+        fallback_route = doc[:permalink] == '/' ? "/#{lang}/" : "/#{lang}#{doc[:permalink]}"
+        out_file = output_file_for_route(fallback_route)
+        if files.key?(out_file) && files[out_file][:page_id] != doc[:page_id]
+          @errors << "Fallback output conflict: Fallback for '#{doc[:rel_path]}' in '#{lang}' conflicts with '#{files[out_file][:doc]}' at '#{out_file}'"
+        else
+          files[out_file] = { doc: "#{doc[:rel_path]} (fallback #{lang})", page_id: doc[:page_id], lang: lang }
+        end
       end
     end
   end

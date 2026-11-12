@@ -7,7 +7,9 @@ page_id: getting-started.downloading-openmandriva
 parent_id: getting-started
 lang: fr
 source_lang: en
-permalink: /getting-started/downloading-openmandriva.fr.html
+permalink: /getting-started/downloading-openmandriva/
+redirect_from:
+- /getting-started/downloading-openmandriva.fr.html
 has_toc: true
 ---
 # Télécharger OpenMandriva
@@ -43,6 +45,6 @@ Parfait ! Maintenant que vous êtes prêt·e, rendez-vous sur la page de [sélec
 
 ## Sujets liés
 
-[Copier OpenMandriva sur une clé USB](./copying-openmandriva-to-a-usb-stick.fr.html)
+[Copier OpenMandriva sur une clé USB](/getting-started/copying-openmandriva-to-a-usb-stick/)
 
-[Installer OpenMandriva](./installing-openmandriva.en.html)
+[Installer OpenMandriva](/getting-started/installing-openmandriva/)

@@ -7,7 +7,9 @@ page_id: dev.contributing-to-openmandriva
 parent_id: dev
 lang: en
 source_lang: en
-permalink: /dev/contributing-to-openmandriva.en.html
+permalink: /dev/contributing-to-openmandriva/
+redirect_from:
+- /dev/contributing-to-openmandriva.en.html
 has_toc: true
 ---
 # Contributing to OpenMandriva
@@ -29,7 +31,7 @@ Help in the areas below. Each one needs people.
 
 ## Spread the Word
 
-Use the [artwork](../community/artwork.en.html) to promote OpenMandriva and the values behind it.
+Use the [artwork](/community/artwork/) to promote OpenMandriva and the values behind it.
 
 ## Share Your Ideas
 
@@ -43,5 +45,5 @@ OpenMandriva is a non-profit association. The OpenMandriva Association welcomes 
 
 ## Related Topics
 
-- [How to Report a Bug](../user-guide/getting-help/how-to-report-a-bug.en.html)
-- [Getting Started with QA](./getting-started-with-qa.en.html)
+- [How to Report a Bug](/user-guide/getting-help/how-to-report-a-bug/)
+- [Getting Started with QA](/dev/getting-started-with-qa/)

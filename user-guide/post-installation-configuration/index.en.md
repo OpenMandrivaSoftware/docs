@@ -7,20 +7,22 @@ page_id: user-guide.post-installation-configuration
 parent_id: user-guide
 lang: en
 source_lang: en
-permalink: /user-guide/post-installation-configuration.en.html
+permalink: /user-guide/post-installation-configuration/
+redirect_from:
+- /user-guide/post-installation-configuration.en.html
 has_toc: true
 card_columns: 3
 cards:
 - title: Set Your User Avatar
   description: Personalize your desktop with a user-specific avatar image.
-  url: /user-guide/post-installation-configuration/set-your-user-avatar.en.html
+  url: /user-guide/post-installation-configuration/set-your-user-avatar/
 - title: Restore Your Files
   description: Learn the Linux home directory structure and where to copy your personal
     files.
-  url: /user-guide/post-installation-configuration/restore-your-files-after-installation.en.html
+  url: /user-guide/post-installation-configuration/restore-your-files-after-installation/
 - title: Configure a Printer
   description: Set up your printer after installation with auto-detection and drivers.
-  url: /user-guide/post-installation-configuration/configure-a-printer.en.html
+  url: /user-guide/post-installation-configuration/configure-a-printer/
 ---
 # Post Installation Configuration
 

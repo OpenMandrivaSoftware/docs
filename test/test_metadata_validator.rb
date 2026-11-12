@@ -344,4 +344,81 @@ class TestMetadataValidator < Minitest::Test
       assert validator.errors.any? { |e| e.include?("Missing required document variant for page_id 'doc.beta'") }
     end
   end
+
+  def test_boolean_nav_order_fails
+    Dir.mktmpdir do |tmp|
+      tmp_path = Pathname.new(tmp)
+      validator = MetadataValidator.new(repo_root: tmp_path, config: { 'languages' => ['en'], 'default_lang' => 'en' })
+
+      create_fixture_doc(tmp, 'article1/index.en.md', {
+        'page_id' => 'article.one', 'lang' => 'en', 'source_lang' => 'en',
+        'title' => 'Article False', 'permalink' => '/article-false/', 'nav_order' => false
+      })
+
+      refute validator.validate
+      assert validator.errors.any? { |e| e.include?("Field 'nav_order' must be an integer, got FalseClass") }
+
+      validator.errors.clear
+      create_fixture_doc(tmp, 'article2/index.en.md', {
+        'page_id' => 'article.two', 'lang' => 'en', 'source_lang' => 'en',
+        'title' => 'Article True', 'permalink' => '/article-true/', 'nav_order' => true
+      })
+
+      refute validator.validate
+      assert validator.errors.any? { |e| e.include?("Field 'nav_order' must be an integer, got TrueClass") }
+    end
+  end
+
+  def test_lang_prefixed_permalink_fails
+    Dir.mktmpdir do |tmp|
+      tmp_path = Pathname.new(tmp)
+      validator = MetadataValidator.new(repo_root: tmp_path, config: { 'languages' => %w[en fr], 'default_lang' => 'en' })
+
+      create_fixture_doc(tmp, 'article/index.en.md', {
+        'page_id' => 'article.prefixed', 'lang' => 'en', 'source_lang' => 'en',
+        'title' => 'Prefixed Permalink', 'permalink' => '/fr/prefixed/', 'nav_order' => 10
+      })
+
+      refute validator.validate
+      assert validator.errors.any? { |e| e.include?("Permalink cannot start with language prefix '/fr'") }
+    end
+  end
+
+  def test_inconsistent_canonical_permalinks_fails
+    Dir.mktmpdir do |tmp|
+      tmp_path = Pathname.new(tmp)
+      validator = MetadataValidator.new(repo_root: tmp_path, config: { 'languages' => %w[en fr], 'default_lang' => 'en' })
+
+      create_fixture_doc(tmp, 'article/index.en.md', {
+        'page_id' => 'article.mismatch', 'lang' => 'en', 'source_lang' => 'en',
+        'title' => 'Article EN', 'permalink' => '/article-canonical/', 'nav_order' => 10
+      })
+      create_fixture_doc(tmp, 'article/index.fr.md', {
+        'page_id' => 'article.mismatch', 'lang' => 'fr', 'source_lang' => 'en',
+        'title' => 'Article FR', 'permalink' => '/article-different/', 'nav_order' => 10
+      })
+
+      refute validator.validate
+      assert validator.errors.any? { |e| e.include?("Translation inconsistency for page_id 'article.mismatch'") && e.include?("permalink") }
+    end
+  end
+
+  def test_output_file_collision_slash_vs_index_html
+    Dir.mktmpdir do |tmp|
+      tmp_path = Pathname.new(tmp)
+      validator = MetadataValidator.new(repo_root: tmp_path, config: { 'languages' => ['en'], 'default_lang' => 'en' })
+
+      create_fixture_doc(tmp, 'article1/index.en.md', {
+        'page_id' => 'article.slash', 'lang' => 'en', 'source_lang' => 'en',
+        'title' => 'Article Slash', 'permalink' => '/topic/', 'nav_order' => 1
+      })
+      create_fixture_doc(tmp, 'article2/index.en.md', {
+        'page_id' => 'article.html', 'lang' => 'en', 'source_lang' => 'en',
+        'title' => 'Article Html', 'permalink' => '/topic/index.html', 'nav_order' => 2
+      })
+
+      refute validator.validate
+      assert validator.errors.any? { |e| e.include?("Public route conflict: Both 'article2/index.en.md' and 'article1/index.en.md' output to '/topic/index.html'") }
+    end
+  end
 end

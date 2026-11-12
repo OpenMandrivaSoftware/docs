@@ -7,7 +7,9 @@ page_id: community.releases.release-plan-and-repositories
 parent_id: community.releases
 lang: en
 source_lang: en
-permalink: /community/releases/release-plan-and-repositories.en.html
+permalink: /community/releases/release-plan-and-repositories/
+redirect_from:
+- /community/releases/release-plan-and-repositories.en.html
 has_toc: true
 ---
 # Release Plan and Repositories
@@ -51,4 +53,4 @@ Each repository has four media sources:
 | `restricted` | Libraries not enabled by default for legal reasons. |
 | `non-free` | Software that does not meet the definition of Free Software. OpenMandriva cannot fix problems caused here. |
 
-Use the [Software Repository Selector](../../user-guide/managing-software/software-repository-selector.en.html) to set which channel and media sources your system uses.
+Use the [Software Repository Selector](/user-guide/managing-software/software-repository-selector/) to set which channel and media sources your system uses.

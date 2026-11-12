@@ -7,7 +7,9 @@ page_id: dev.getting-started-with-qa.bug-report-tool
 parent_id: dev.getting-started-with-qa
 lang: en
 source_lang: en
-permalink: /dev/getting-started-with-qa/bug-report-tool.en.html
+permalink: /dev/getting-started-with-qa/bug-report-tool/
+redirect_from:
+- /dev/getting-started-with-qa/bug-report-tool.en.html
 has_toc: true
 ---
 # Bug Report Tool
@@ -44,6 +46,6 @@ Attach this file to bug reports you file. It speeds up diagnosis by giving devel
 
 ## Related Topics
 
-- [Getting Started with QA](../getting-started-with-qa.en.html)
-- [How to Report a Bug](../../user-guide/getting-help/how-to-report-a-bug.en.html)
-- [How to Report Bugs Effectively](./report-bugs-effectively.en.html)
+- [Getting Started with QA](/dev/getting-started-with-qa/)
+- [How to Report a Bug](/user-guide/getting-help/how-to-report-a-bug/)
+- [How to Report Bugs Effectively](/dev/getting-started-with-qa/report-bugs-effectively/)

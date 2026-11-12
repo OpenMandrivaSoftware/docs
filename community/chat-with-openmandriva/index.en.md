@@ -7,7 +7,9 @@ page_id: community.chat-with-openmandriva
 parent_id: community
 lang: en
 source_lang: en
-permalink: /community/chat-with-openmandriva.en.html
+permalink: /community/chat-with-openmandriva/
+redirect_from:
+- /community/chat-with-openmandriva.en.html
 has_toc: true
 ---
 # Chat with OpenMandriva
@@ -38,6 +40,6 @@ If something feels wrong with a channel's behavior, do not change it without dis
 
 ## Related Topics
 
-- [OpenMandriva Community](./index.en.html)
-- [Community Links](./links.en.html)
-- [About OpenMandriva](./about-openmandriva.en.html)
+- [OpenMandriva Community](/community/)
+- [Community Links](/community/links/)
+- [About OpenMandriva](/community/about-openmandriva/)
