@@ -17,8 +17,16 @@ default_lang: 'en'
 exclude_from_localization: ['assets', 'images', 'js', 'css', 'scss', 'sass', 'vendor', 'index.html', 'llms.txt']
 parallel_localization: false
 
+# Sass / SCSS build settings
+sass:
+  quiet_deps: true
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
+
 # Just-the-Docs Settings 
-logo: "/assets/images/OM-200pl.png"
+logo: "/assets/images/logo/openmandriva-blu.svg"
 aux_links: 
   "OpenMandriva": 
     - "https://openmandriva.org"

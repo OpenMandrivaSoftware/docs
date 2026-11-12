@@ -1,25 +1,35 @@
 // Custom setup code goes here.
 //
-// OpenMandriva branding: use OpenMandriva Blue (#257FBA) for the accent
-// (link and primary-button) color instead of the theme's default purple / light
-// blue, in BOTH the light and dark schemes.
-//
-// Why this file: Just the Docs imports `setup.scss` *before* the color-scheme
-// files. The light scheme file assigns `$link-color`/`$btn-primary-color` with
-// `!default`, so those assignments stick. The dark scheme file assigns them
-// *without* `!default` (so it would normally win), but it derives them from
-// `$blue-000`/`$blue-200`:
-//
-//   dark: $link-color:        lighten($blue-000, 10%)
-//   dark: $btn-primary-color: $blue-200
-//
-// So we pin those upstream inputs so the dark scheme resolves to the same OM
-// Blue, too — without touching any of the unused blue utility classes.
+// OpenMandriva Brand Palette (from https://wiki.openmandriva.org/en/team/artwork)
+$om-blue-eastern:     #2080BB; // Eastern Blue (Primary accent)
+$om-blue-shakespeare: #40A5DA; // Shakespeare (Light accent / hover / dark mode link)
+$om-blue-endeavour:   #005C9D; // Endeavour (Deep accent / active)
+$om-shark:            #21242B; // Shark (Official dark theme base)
+$om-bombay:           #AFB3BD; // Bombay (Muted gray / borders / secondary text)
+$om-cerise:           #E2266E; // Cerise red (Alert / highlight)
 
-$link-color: #257FBA;
-$btn-primary-color: #257FBA;
+// Base overrides for Just-the-docs theme:
+// 1. Dark scheme base colors (replaces purple-tinted grey with Shark)
+$grey-dk-300: $om-shark; // Shark (page & sidebar background in dark mode)
+$grey-dk-250: #282C35;   // Surface background (cards, search, tables)
+$grey-dk-200: #333842;   // Dark borders
+$grey-dk-100: #5C6370;   // Muted dark text
+$grey-dk-000: #828997;   // Nav child link color in dark mode
 
-// Make `lighten($blue-000, 10%)` resolve to OM Blue (#257FBA) in the dark scheme.
-$blue-000: darken(#257FBA, 10%);
-// Make `$btn-primary-color` (= `$blue-200`) resolve to OM Blue in the dark scheme.
-$blue-200: #257FBA;
+// 2. Light scheme accents & subtle gray
+$grey-lt-300: $om-bombay; // Bombay (subtle text & hover states)
+
+// 3. Brand links and primary buttons
+$link-color: $om-blue-eastern;
+$btn-primary-color: $om-blue-eastern;
+
+// In Just-the-docs dark.scss:
+//   $link-color: lighten($blue-000, 10%);
+//   $btn-primary-color: $blue-200;
+// With $blue-000 set to $om-blue-eastern, lighten($om-blue-eastern, 10%) resolves to
+// Shakespeare (#40A5DA), providing accessible, high-contrast links on Shark in dark mode.
+$blue-000: $om-blue-eastern;
+$blue-200: $om-blue-eastern;
+
+// 4. Alert / warning callout accent
+$red-300: $om-cerise;
