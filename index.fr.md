@@ -1,8 +1,12 @@
 ---
-title: Documentation OpenMandriva
 layout: home
-card_columns: 2
+title: Documentation OpenMandriva
+nav_order: 1
+page_id: home
 lang: fr
+source_lang: en
+permalink: /
+card_columns: 2
 ---
 Bienvenue dans la documentation d'OpenMandriva !
 
@@ -11,7 +15,7 @@ Bienvenue dans la documentation d'OpenMandriva !
   <div class="home-card">
     <h3>
       {% if card.base_url %}
-      <a href="/fr{{ card.base_url }}/index.fr.html">{{ card.title }}</a>
+      <a href="{{ card.base_url }}/">{{ card.title }}</a>
       {% else %}
       {{ card.title }}
       {% endif %}
@@ -22,7 +26,7 @@ Bienvenue dans la documentation d'OpenMandriva !
       {% if link.url %}
         <li><a href="{{ link.url }}">{{ link.name }}</a></li>
       {% elsif link.base_url %}
-        <li><a href="/fr{{ link.base_url }}.fr.html">{{ link.name }}</a></li>
+        <li><a href="{{ link.base_url }}/">{{ link.name }}</a></li>
       {% endif %}
       {% endfor %}
     </ul>

@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - master
+      - ripetitor/develop
+  pull_request:
+    branches:
+      - master
+      - ripetitor/develop
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Run JavaScript unit tests
+        run: node test/theme-toggle.test.js
+
+      - name: Run Ruby metadata validator unit tests
+        run: ruby test/test_metadata_validator.rb
+
+      - name: Validate source document metadata
+        run: ruby test/validate_metadata.rb --check-migration
+
+      - name: Run Python validator unit tests
+        run: python3 -m unittest discover -s test -p "test_*.py"
+
+      - name: Build site with Jekyll (production)
+        run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+
+      - name: Verify generated site routes and metadata
+        run: python3 test/verify_generated_site.py --site-dir _site
+
+      - name: Validate generated site links and assets
+        run: python3 test/check_links.py --site-dir _site

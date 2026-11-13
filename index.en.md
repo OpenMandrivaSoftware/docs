@@ -1,9 +1,14 @@
 ---
-title: Home
 layout: home
-card_columns: 2
+title: Home
 nav_order: 1
+page_id: home
 lang: en
+source_lang: en
+permalink: /
+redirect_from:
+- /index.en.html
+card_columns: 2
 ---
 Welcome to the OpenMandriva documentation!
 
@@ -12,7 +17,7 @@ Welcome to the OpenMandriva documentation!
   <div class="home-card">
     <h3>
       {% if card.base_url %}
-      <a href="{{ card.base_url }}/index.en.html">{{ card.title }}</a>
+      <a href="{{ card.base_url }}/">{{ card.title }}</a>
       {% else %}
       {{ card.title }}
       {% endif %}
@@ -23,7 +28,7 @@ Welcome to the OpenMandriva documentation!
       {% if link.url %}
         <li><a href="{{ link.url }}">{{ link.name }}</a></li>
       {% elsif link.base_url %}
-        <li><a href="{{ link.base_url }}.en.html">{{ link.name }}</a></li>
+        <li><a href="{{ link.base_url }}/">{{ link.name }}</a></li>
       {% endif %}
       {% endfor %}
     </ul>

@@ -14,11 +14,11 @@
   base_url: "/user-guide"
   links:
     - name: "Desktop Environments"
-      base_url: "/user-guide/desktop"
+      base_url: "/user-guide/desktop-environments"
     - name: "Software Management"
       base_url: "/user-guide/managing-software"
     - name: "Network Configuration"
-      base_url: "/user-guide/network"
+      base_url: "/user-guide/network-configuration"
 
 - title: "Developer Docs"
   description: "Information for those contributing to OpenMandriva."
@@ -40,6 +40,6 @@
     - name: "Forums"
       url: "https://forums.openmandriva.org"
     - name: "IRC/Matrix"
-      base_url: "/community/chat"
+      base_url: "/community/chat-with-openmandriva"
     - name: "Links"
       base_url: "/community/links"

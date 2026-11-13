@@ -1,0 +1,199 @@
+---
+layout: default
+title: Network Configuration
+nav_order: 50
+parent: User Guide
+page_id: user-guide.network-configuration
+parent_id: user-guide
+lang: en
+source_lang: en
+permalink: /user-guide/network-configuration/
+redirect_from:
+- /user-guide/network-configuration.en.html
+has_toc: true
+---
+# Network Configuration
+
+You can configure and manage network connections on OpenMandriva Lx using graphical and command-line methods.
+
+## Graphical Network Configuration
+
+Set up and manage network connections through a graphical interface.
+
+### NetworkManager
+
+You manage network connections using *NetworkManager*. Click the network icon in the system tray to open network settings.
+
+1. Click the network icon in the system tray.
+1. Click the Gear icon, labeled *Configure Network Connections...*.
+1. Choose the connection to configure, or click *+* to create a new one.
+1. Configure settings in the various tabs: General, Wi-Fi, IPv4, IPv6, and DNS.
+1. Click *Apply* when finished.
+
+### Plasma Network Management
+
+In KDE Plasma, you can access additional network settings:
+
+- *System Settings* → *Network* → *Connections*
+- Or run `kcmshell6 kcm_networkmanager` from the terminal.
+
+## Command-Line Network Configuration
+
+Manage connections from the terminal using these tools.
+
+### Using `nmcli`
+
+Use `nmcli` (NetworkManager command-line interface) to manage connections from the terminal.
+
+```bash
+# List available connections
+nmcli connection show
+
+# List active connections
+nmcli device status
+
+# Create a new connection
+nmcli connection add type ethernet ifname eth0
+
+# Modify a connection
+nmcli connection modify "[Connection Name]" ipv4.addresses "192.168.1.100/24"
+
+# Activate a connection
+nmcli connection up "[Connection Name]"
+
+# Deactivate a connection
+nmcli connection down "[Connection Name]"
+```
+
+### Using `nmtui`
+
+`nmtui` (NetworkManager Text User Interface) is a text-based interface for managing network connections.
+
+```bash
+nmtui
+```
+
+When you run `nmtui`, an interactive menu opens where you can configure
+
+- Editing connections
+- Activating and deactivating connections
+- Setting up bonding, VLANs, and tunnels
+
+### Using the `ip` Command
+
+For basic network configuration, use the `ip` command from the terminal:
+
+```bash
+# Show network interfaces
+ip addr show
+
+# Bring up an interface
+ip link set dev eth0 up
+
+# Assign an IP address
+ip addr add 192.168.1.100/24 dev eth0
+
+# Set default gateway
+ip route add default via 192.168.1.1
+```
+
+## Wi-Fi Configuration
+
+Configure wireless connections using these methods.
+
+### Graphical Method
+
+1. Click the network icon in the system tray.
+1. Select a Wi-Fi network from the list.
+1. Enter the password when prompted.
+1. Check *Remember this network* if desired.
+
+### Command-Line Method
+
+```bash
+# List available Wi-Fi networks
+nmcli device wifi list
+
+# Connect to a Wi-Fi network
+nmcli device wifi connect "[SSID]" password "[password]"
+
+# Scan for networks
+nmcli device wifi rescan
+```
+
+## Troubleshooting
+
+Resolve common network issues with these diagnostic steps.
+
+### Check Network Status
+
+Run these commands to diagnose network problems:
+
+```bash
+# Check if network interface is up
+ip link show
+
+# Check IP addresses assigned
+ip addr show
+
+# Check routing table
+ip route show
+
+# Check DNS configuration
+cat /etc/resolv.conf
+```
+
+### Common Issues
+
+**No network connection after boot**
+- Check if the network interface is enabled: `nmcli device status`
+- Restart NetworkManager: `systemctl restart NetworkManager`
+
+**Can't resolve domain names**
+- Check DNS settings in `/etc/resolv.conf`
+- Use `dnssec-trigger` if DNS issues persist
+
+**Wi-Fi not showing available networks**
+- Bring up the interface: `ip link set wlan0 up`
+- Check if the wireless adapter is recognized: `lspci | grep -i wireless`
+
+## Advanced Configuration
+
+Configure complex networking setups with these tools.
+
+### Bonding (Link Aggregation)
+
+Bonding aggregates multiple network interfaces into a single logical connection for increased throughput and redundancy:
+
+```bash
+nmcli connection add type bond ifname bond0 mode active-backup
+nmcli connection add type ethernetSlave ifname eth0 MASTER bond0
+nmcli connection add type ethernetSlave ifname eth1 MASTER bond0
+nmcli connection up bond0
+```
+
+### VLAN Configuration
+
+VLAN tagging segments network traffic on specific tags:
+
+```bash
+nmcli connection add type vlan con-name vlan10 dev eth0 id 10
+nmcli connection modify vlan10 ipv4.addresses "192.168.10.1/24"
+nmcli connection up vlan10
+```
+
+### Bridge Configuration
+
+A bridge connects multiple network interface segments, useful for virtualization and container networking:
+
+```bash
+nmcli connection add type bridge ifname br0
+nmcli connection add type bridge-slave ifname eth0 master br0
+nmcli connection modify br0 ipv4.addresses "192.168.1.1/24"
+nmcli connection up br0
+```
+
+## Related Topics
+
+- [User Guide](/user-guide/)
+- [Managing Software](/user-guide/managing-software/)

@@ -89,11 +89,11 @@
 
 .section-card {
   border: 1px solid $border-color;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 24px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  background: $body-background-color;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  background: $table-background-color;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -101,8 +101,8 @@
 }
 
 .section-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   border-color: $link-color;
 }
 
@@ -122,18 +122,18 @@
 
 .home-card {
   border: 1px solid $border-color;
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 24px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  background: $body-background-color;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  background: $table-background-color;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
 }
 
 .home-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   border-color: $link-color;
 }
 
@@ -224,15 +224,15 @@
     color: #fff;
     text-decoration: none;
     padding: 0.4rem 0.75rem;
-    border: 1px solid var(--link-color, #007bff);
+    border: 1px solid var(--btn-primary-color, #2080BB);
     border-radius: 6px;
-    background: var(--link-color, #007bff);
+    background: var(--btn-primary-color, #2080BB);
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   }
 
   .edit-on-github:hover {
     background: var(--body-background-color, #ffffff);
-    color: var(--link-color, #007bff);
+    color: var(--link-color, #2080BB);
     border-color: var(--border-color, #dfe2e5);
   }
 
@@ -251,6 +251,11 @@ footer {
   color: $body-text-color;
   font-size: 0.875rem;
   text-align: center;
+}
+
+/* OpenMandriva logo switching for dark theme */
+html[data-theme='dark'] .site-logo {
+  background-image: url('/assets/images/logo/openmandriva-wh.svg') !important;
 }
 
 /* ============================ Theme toggle ============================ */
@@ -286,6 +291,82 @@ footer {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* Language switcher */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+
+  .dropdown {
+    position: relative;
+    z-index: 1000;
+  }
+
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.375rem;
+    height: 36px;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: $body-text-color;
+    background: transparent;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    cursor: pointer;
+    min-width: 72px;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      border-color: $link-color;
+    }
+  }
+
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    min-width: 120px;
+    background: $sidebar-color;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    overflow: hidden;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  .dropdown-item {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: $body-text-color;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-bottom: 1px solid $border-color;
+    transition: background-color 0.15s ease;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:hover {
+      background-color: rgba($grey-lt-300, 0.08);
+      color: $link-color;
+    }
+
+    &.active {
+      font-weight: 600;
+      color: $link-color;
+    }
+  }
 }
 
 /* Color-scheme toggle button — rendered to the left of the language switcher. */
