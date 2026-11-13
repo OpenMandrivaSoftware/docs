@@ -8,8 +8,6 @@ parent_id: dev
 lang: en
 source_lang: en
 permalink: /dev/maintaining-packages/
-redirect_from:
-- /dev/maintaining-packages.en.html
 has_toc: true
 ---
 # Maintaining Packages

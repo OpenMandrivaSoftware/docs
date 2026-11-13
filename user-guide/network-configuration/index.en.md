@@ -8,8 +8,6 @@ parent_id: user-guide
 lang: en
 source_lang: en
 permalink: /user-guide/network-configuration/
-redirect_from:
-- /user-guide/network-configuration.en.html
 has_toc: true
 ---
 # Network Configuration

@@ -8,8 +8,6 @@ parent_id: dev
 lang: en
 source_lang: en
 permalink: /dev/contributing-to-openmandriva/
-redirect_from:
-- /dev/contributing-to-openmandriva.en.html
 has_toc: true
 ---
 # Contributing to OpenMandriva

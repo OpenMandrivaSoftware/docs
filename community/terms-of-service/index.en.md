@@ -8,8 +8,6 @@ parent_id: community
 lang: en
 source_lang: en
 permalink: /community/terms-of-service/
-redirect_from:
-- /community/terms-of-service.en.html
 has_toc: true
 ---
 # Terms of Service

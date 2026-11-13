@@ -8,8 +8,6 @@ parent_id: dev
 lang: en
 source_lang: en
 permalink: /dev/preparing-your-system/
-redirect_from:
-- /dev/preparing-your-system.en.html
 has_toc: true
 ---
 # Preparing Your System

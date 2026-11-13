@@ -8,8 +8,6 @@ parent_id: getting-started
 lang: en
 source_lang: en
 permalink: /getting-started/copying-openmandriva-to-a-usb-stick/
-redirect_from:
-- /getting-started/copying-openmandriva-to-a-usb-stick.en.html
 has_toc: true
 ---
 # Copying OpenMandriva to a USB Stick

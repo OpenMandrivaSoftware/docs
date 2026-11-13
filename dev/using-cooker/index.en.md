@@ -8,8 +8,6 @@ parent_id: dev
 lang: en
 source_lang: en
 permalink: /dev/using-cooker/
-redirect_from:
-- /dev/using-cooker.en.html
 has_toc: true
 ---
 # Using Cooker

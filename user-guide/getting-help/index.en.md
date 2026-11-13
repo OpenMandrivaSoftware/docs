@@ -8,8 +8,6 @@ parent_id: user-guide
 lang: en
 source_lang: en
 permalink: /user-guide/getting-help/
-redirect_from:
-- /user-guide/getting-help.en.html
 has_toc: true
 card_columns: 2
 cards:

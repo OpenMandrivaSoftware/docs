@@ -8,8 +8,6 @@ parent_id: community
 lang: en
 source_lang: en
 permalink: /community/setting-up-a-mirror/
-redirect_from:
-- /community/setting-up-a-mirror.en.html
 has_toc: true
 ---
 # Mirroring

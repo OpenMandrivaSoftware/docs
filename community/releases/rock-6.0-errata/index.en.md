@@ -8,8 +8,6 @@ parent_id: community.releases
 lang: en
 source_lang: en
 permalink: /community/releases/rock-6.0-errata/
-redirect_from:
-- /community/releases/rock-6.0-errata.en.html
 has_toc: true
 ---
 # OpenMandriva Lx 6.0 Errata — Known Issues

@@ -8,8 +8,6 @@ parent_id: community
 lang: en
 source_lang: en
 permalink: /community/chat-with-openmandriva/
-redirect_from:
-- /community/chat-with-openmandriva.en.html
 has_toc: true
 ---
 # Chat with OpenMandriva

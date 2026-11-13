@@ -6,8 +6,6 @@ page_id: user-guide
 lang: en
 source_lang: en
 permalink: /user-guide/
-redirect_from:
-- /user-guide/index.en.html
 has_toc: true
 card_columns: 3
 cards:

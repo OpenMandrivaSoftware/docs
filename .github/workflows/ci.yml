@@ -39,11 +39,13 @@ jobs:
       - name: Run JavaScript unit tests
         run: node test/theme-toggle.test.js
 
-      - name: Run Ruby metadata validator unit tests
-        run: ruby test/test_metadata_validator.rb
+      - name: Run Ruby unit tests
+        run: |
+          ruby test/test_metadata_validator.rb
+          ruby test/test_redirect_generator.rb
 
       - name: Validate source document metadata
-        run: ruby test/validate_metadata.rb --check-migration
+        run: ruby test/validate_metadata.rb --check-migration --dump-manifest .agents/i18n-architecture/build_manifest.json
 
       - name: Run Python validator unit tests
         run: python3 -m unittest discover -s test -p "test_*.py"

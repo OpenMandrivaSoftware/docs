@@ -8,8 +8,6 @@ parent_id: user-guide.managing-software.tips-and-tricks
 lang: en
 source_lang: en
 permalink: /user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list/
-redirect_from:
-- /user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list.en.html
 has_toc: true
 ---
 # Create an Install Command from a Package List

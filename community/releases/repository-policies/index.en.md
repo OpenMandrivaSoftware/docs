@@ -8,8 +8,6 @@ parent_id: community.releases
 lang: en
 source_lang: en
 permalink: /community/releases/repository-policies/
-redirect_from:
-- /community/releases/repository-policies.en.html
 has_toc: true
 ---
 # Repository Policies

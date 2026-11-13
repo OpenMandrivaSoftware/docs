@@ -8,8 +8,6 @@ parent_id: user-guide.managing-software.tips-and-tricks
 lang: en
 source_lang: en
 permalink: /user-guide/managing-software/tips-and-tricks/listing-installed-packages/
-redirect_from:
-- /user-guide/managing-software/tips-and-tricks/listing-installed-packages.en.html
 has_toc: true
 ---
 # Listing Installed Packages

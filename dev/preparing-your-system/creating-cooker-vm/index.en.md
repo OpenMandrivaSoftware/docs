@@ -8,8 +8,6 @@ parent_id: dev.preparing-your-system
 lang: en
 source_lang: en
 permalink: /dev/preparing-your-system/creating-cooker-vm/
-redirect_from:
-- /dev/preparing-your-system/creating-cooker-vm.en.html
 has_toc: true
 ---
 # Creating a Cooker VM

@@ -8,8 +8,6 @@ parent_id: community.releases
 lang: en
 source_lang: en
 permalink: /community/releases/release-life-cycle/
-redirect_from:
-- /community/releases/release-life-cycle.en.html
 has_toc: true
 ---
 # Release Life Cycle

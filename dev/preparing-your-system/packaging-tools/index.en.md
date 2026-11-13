@@ -8,8 +8,6 @@ parent_id: dev.preparing-your-system
 lang: en
 source_lang: en
 permalink: /dev/preparing-your-system/packaging-tools/
-redirect_from:
-- /dev/preparing-your-system/packaging-tools.en.html
 has_toc: true
 ---
 # Installing Packaging Tools

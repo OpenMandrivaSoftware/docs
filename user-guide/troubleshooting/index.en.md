@@ -8,8 +8,6 @@ parent_id: user-guide
 lang: en
 source_lang: en
 permalink: /user-guide/troubleshooting/
-redirect_from:
-- /user-guide/troubleshooting.en.html
 has_toc: true
 card_columns: 3
 cards:

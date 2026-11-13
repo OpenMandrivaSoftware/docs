@@ -15,7 +15,7 @@ Bienvenue dans la documentation d'OpenMandriva !
   <div class="home-card">
     <h3>
       {% if card.base_url %}
-      <a href="{{ card.base_url }}/">{{ card.title }}</a>
+      <a href="{{ card.base_url | append: '/' | relative_url }}">{{ card.title }}</a>
       {% else %}
       {{ card.title }}
       {% endif %}
@@ -24,9 +24,9 @@ Bienvenue dans la documentation d'OpenMandriva !
     <ul>
       {% for link in card.links %}
       {% if link.url %}
-        <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+        <li><a href="{{ link.url | relative_url }}">{{ link.name }}</a></li>
       {% elsif link.base_url %}
-        <li><a href="{{ link.base_url }}/">{{ link.name }}</a></li>
+        <li><a href="{{ link.base_url | append: '/' | relative_url }}">{{ link.name }}</a></li>
       {% endif %}
       {% endfor %}
     </ul>

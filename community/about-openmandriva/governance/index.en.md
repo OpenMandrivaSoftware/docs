@@ -8,8 +8,6 @@ parent_id: community.about-openmandriva
 lang: en
 source_lang: en
 permalink: /community/about-openmandriva/governance/
-redirect_from:
-- /community/about-openmandriva/governance.en.html
 has_toc: true
 ---
 # Governance

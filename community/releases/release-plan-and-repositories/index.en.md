@@ -8,8 +8,6 @@ parent_id: community.releases
 lang: en
 source_lang: en
 permalink: /community/releases/release-plan-and-repositories/
-redirect_from:
-- /community/releases/release-plan-and-repositories.en.html
 has_toc: true
 ---
 # Release Plan and Repositories

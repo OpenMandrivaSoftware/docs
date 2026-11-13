@@ -8,8 +8,6 @@ parent_id: user-guide.managing-software
 lang: en
 source_lang: en
 permalink: /user-guide/managing-software/software-repository-selector/
-redirect_from:
-- /user-guide/managing-software/software-repository-selector.en.html
 has_toc: true
 ---
 # Software Repository Selector

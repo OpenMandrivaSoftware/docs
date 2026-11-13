@@ -8,8 +8,6 @@ parent_id: user-guide.maintaining-your-system
 lang: en
 source_lang: en
 permalink: /user-guide/maintaining-your-system/compile-custom-software/
-redirect_from:
-- /user-guide/maintaining-your-system/compile-custom-software.en.html
 has_toc: true
 ---
 # Compile Custom Software

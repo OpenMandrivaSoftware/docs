@@ -10,6 +10,9 @@ import shutil
 import subprocess
 import tempfile
 import unittest
+import json
+
+from verify_generated_site import SiteVerifier
 
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 FIXTURE_DIR = os.path.join(REPO_ROOT, "test", "fixtures", "i18n_architecture")
@@ -239,6 +242,205 @@ class TestI18nArchitecture(unittest.TestCase):
         finally:
             shutil.rmtree(temp_src, ignore_errors=True)
             shutil.rmtree(temp_dest, ignore_errors=True)
+
+    def test_translation_lifecycle_and_historical_redirect_stability(self):
+        """
+        Scenario 8: Decisive regression fixture for multilingual routing lifecycle.
+        A. Build English-only article with historical French fallback URL.
+        B. Add a genuine French translation without redirect metadata.
+        C. Rebuild.
+        D. Confirm:
+           - Historical French URL still exists;
+           - Resolves to the same logical document;
+           - Canonical French article now contains French;
+           - SiteVerifier accepts the improved translation;
+           - 3rd (de) and 4th (ru) locales remain stable fallbacks.
+        """
+        temp_src = tempfile.mkdtemp(prefix="om_lifecycle_src_")
+        temp_dest = tempfile.mkdtemp(prefix="om_lifecycle_dest_")
+        try:
+            # Copy base fixture
+            for item in os.listdir(FIXTURE_DIR):
+                s = os.path.join(FIXTURE_DIR, item)
+                d = os.path.join(temp_src, item)
+                if os.path.isdir(s):
+                    shutil.copytree(s, d)
+                else:
+                    shutil.copy2(s, d)
+
+            # Ensure articles/kernel only has English original
+            kernel_dir = os.path.join(temp_src, "articles", "kernel")
+            for f in os.listdir(kernel_dir):
+                if f != "index.en.md":
+                    os.remove(os.path.join(kernel_dir, f))
+
+            routes_manifest = os.path.join(temp_src, ".agents", "i18n-architecture", "legacy_routes.json")
+            os.makedirs(os.path.dirname(routes_manifest), exist_ok=True)
+            with open(routes_manifest, "w", encoding="utf-8") as f:
+                json.dump({
+                    "total_generated_routes": 2,
+                    "routes": [
+                        {
+                            "public_url": "/articles/kernel.en.html",
+                            "file_in_site": "articles/kernel.en.html",
+                            "requested_locale": "en",
+                            "actual_content_lang": "en",
+                            "page_id": "articles.kernel",
+                            "canonical_destination": "/articles/kernel/"
+                        },
+                        {
+                            "public_url": "/fr/articles/kernel.en.html",
+                            "file_in_site": "fr/articles/kernel.en.html",
+                            "requested_locale": "fr",
+                            "actual_content_lang": "en",
+                            "page_id": "articles.kernel",
+                            "canonical_destination": "/fr/articles/kernel/"
+                        }
+                    ]
+                }, f)
+
+            # Initial build manifest (English only)
+            build_manifest_path = os.path.join(temp_src, ".agents", "i18n-architecture", "build_manifest.json")
+            with open(build_manifest_path, "w", encoding="utf-8") as f:
+                json.dump({
+                    "languages": ["en", "fr", "de", "ru"],
+                    "default_lang": "en",
+                    "documents": {
+                        "articles.kernel": {
+                            "page_id": "articles.kernel",
+                            "permalink": "/articles/kernel/",
+                            "source_lang": "en",
+                            "available_languages": ["en"]
+                        }
+                    }
+                }, f)
+
+            env = os.environ.copy()
+            env["BUNDLE_GEMFILE"] = os.path.join(REPO_ROOT, "Gemfile")
+            cmd = ["bundle", "exec", "jekyll", "build", "--source", temp_src, "--destination", temp_dest]
+
+            # Step A: Build English-only article
+            res_a = subprocess.run(cmd, cwd=REPO_ROOT, capture_output=True, text=True, env=env)
+            self.assertEqual(res_a.returncode, 0, f"Jekyll build failed:\n{res_a.stderr}")
+
+            # Verify historical French fallback URL exists and redirects to canonical French article
+            fr_hist_url = os.path.join(temp_dest, "fr", "articles", "kernel.en.html")
+            self.assertTrue(os.path.isfile(fr_hist_url))
+            with open(fr_hist_url, "r", encoding="utf-8") as f:
+                hist_html = f.read()
+            self.assertIn('url=/fr/articles/kernel/', hist_html)
+            self.assertIn('<meta name="robots" content="noindex">', hist_html)
+
+            # Verify French article currently renders English fallback
+            fr_canon_file = os.path.join(temp_dest, "fr", "articles", "kernel", "index.html")
+            self.assertTrue(os.path.isfile(fr_canon_file))
+            with open(fr_canon_file, "r", encoding="utf-8") as f:
+                canon_html_en = f.read()
+            self.assertIn("Kernel Tuning EN", canon_html_en)
+
+            # Verify with SiteVerifier: accepts English fallback
+            verifier_a = SiteVerifier(
+                site_dir=temp_dest,
+                routes_path=routes_manifest,
+                manifest_path=build_manifest_path
+            )
+            self.assertTrue(verifier_a.verify(), f"Verifier failed at Step A: {verifier_a.errors}")
+
+            # Step B: Add genuine French translation (WITHOUT redirect metadata)
+            fr_source_file = os.path.join(kernel_dir, "index.fr.md")
+            with open(fr_source_file, "w", encoding="utf-8") as f:
+                f.write(
+                    "---\n"
+                    "layout: default\n"
+                    "page_id: articles.kernel\n"
+                    "lang: fr\n"
+                    "source_lang: en\n"
+                    "permalink: /articles/kernel/\n"
+                    "title: Optimisation du Noyau FR\n"
+                    "---\n"
+                    "Paramètres avancés d'optimisation du noyau Linux.\n"
+                )
+
+            # Update build manifest to reflect newly available French translation
+            with open(build_manifest_path, "w", encoding="utf-8") as f:
+                json.dump({
+                    "languages": ["en", "fr", "de", "ru"],
+                    "default_lang": "en",
+                    "documents": {
+                        "articles.kernel": {
+                            "page_id": "articles.kernel",
+                            "permalink": "/articles/kernel/",
+                            "source_lang": "en",
+                            "available_languages": ["en", "fr"]
+                        }
+                    }
+                }, f)
+
+            # Step C: Rebuild
+            shutil.rmtree(temp_dest)
+            os.makedirs(temp_dest, exist_ok=True)
+            res_c = subprocess.run(cmd, cwd=REPO_ROOT, capture_output=True, text=True, env=env)
+            self.assertEqual(res_c.returncode, 0, f"Jekyll rebuild failed:\n{res_c.stderr}")
+
+            # Step D: Confirm
+            # 1. Historical French URL STILL exists and redirects to canonical French permalink
+            self.assertTrue(os.path.isfile(fr_hist_url))
+            with open(fr_hist_url, "r", encoding="utf-8") as f:
+                hist_html2 = f.read()
+            self.assertIn('url=/fr/articles/kernel/', hist_html2)
+
+            # 2. Canonical French article now contains genuine French
+            with open(fr_canon_file, "r", encoding="utf-8") as f:
+                canon_html_fr = f.read()
+            self.assertIn("Optimisation du Noyau FR", canon_html_fr)
+            self.assertIn('<meta name="rendered_lang" content="fr">', canon_html_fr)
+
+            # 3. Verifier accepts the improved translation without extra redirect metadata
+            verifier_c = SiteVerifier(
+                site_dir=temp_dest,
+                routes_path=routes_manifest,
+                manifest_path=build_manifest_path
+            )
+            self.assertTrue(verifier_c.verify(), f"Verifier failed at Step D: {verifier_c.errors}")
+
+            # 4. Confirm 3rd (de) and 4th (ru) locales remain clean fallbacks without routing errors
+            de_file = os.path.join(temp_dest, "de", "articles", "kernel", "index.html")
+            ru_file = os.path.join(temp_dest, "ru", "articles", "kernel", "index.html")
+            self.assertTrue(os.path.isfile(de_file))
+            self.assertTrue(os.path.isfile(ru_file))
+            with open(de_file, "r", encoding="utf-8") as f:
+                self.assertIn("Kernel Tuning EN", f.read())
+            with open(ru_file, "r", encoding="utf-8") as f:
+                self.assertIn("Kernel Tuning EN", f.read())
+
+        finally:
+            shutil.rmtree(temp_src, ignore_errors=True)
+            shutil.rmtree(temp_dest, ignore_errors=True)
+
+    def test_absence_of_redirects_in_production_navigation_and_search(self):
+        """Verifies that redirect entries are absent from Just the Docs navigation and search output."""
+        site_dir = os.path.join(REPO_ROOT, "_site")
+        if not os.path.isdir(site_dir):
+            self.skipTest("_site directory not built yet")
+
+        # 1. Search index check
+        search_file = os.path.join(site_dir, "assets", "js", "search-data.json")
+        if os.path.isfile(search_file):
+            with open(search_file, "r", encoding="utf-8") as f:
+                search_data = json.load(f)
+            entries = search_data.values() if isinstance(search_data, dict) else search_data
+            for entry in entries:
+                title = entry.get("title", "")
+                self.assertNotEqual(title, "Redirecting...", "Redirect leaked into search index")
+                self.assertNotIn("Redirecting", title, "Redirect title leaked into search index")
+
+        # 2. Navigation sidebar check across representative pages
+        for page_rel in ["index.html", "community/index.html", "fr/index.html"]:
+            p = os.path.join(site_dir, page_rel)
+            if os.path.isfile(p):
+                with open(p, "r", encoding="utf-8") as f:
+                    html = f.read()
+                self.assertNotIn('class="nav-list-link">Redirecting...<', html, f"Redirect link leaked in {page_rel}")
 
 
 if __name__ == "__main__":

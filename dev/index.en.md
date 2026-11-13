@@ -6,8 +6,6 @@ page_id: dev
 lang: en
 source_lang: en
 permalink: /dev/
-redirect_from:
-- /dev/index.en.html
 has_toc: true
 card_columns: 3
 cards:

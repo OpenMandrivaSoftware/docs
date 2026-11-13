@@ -373,18 +373,73 @@ class MetadataValidator
 
     @errors.empty?
   end
+
+  # Export build manifest summarizing all logical documents, permalinks, and translation variants.
+  def export_build_manifest(output_path = nil, paths = nil)
+    doc_paths = paths ? paths.map { |p| Pathname.new(p) } : discover_documents
+    docs = load_documents(doc_paths)
+
+    grouped = {}
+    docs.each do |d|
+      pid = d[:page_id]
+      next unless pid
+
+      grouped[pid] ||= {
+        'page_id' => pid,
+        'parent_id' => d[:parent_id],
+        'permalink' => d[:permalink],
+        'nav_order' => d[:nav_order],
+        'source_lang' => d[:source_lang],
+        'available_languages' => [],
+        'variants' => {}
+      }
+
+      grouped[pid]['available_languages'] << d[:lang]
+      grouped[pid]['variants'][d[:lang]] = {
+        'rel_path' => d[:rel_path],
+        'title' => d[:title],
+        'source_lang' => d[:source_lang]
+      }
+    end
+
+    grouped.each_value do |entry|
+      entry['available_languages'].sort!
+    end
+
+    manifest = {
+      'languages' => @languages,
+      'default_lang' => @default_lang,
+      'total_documents' => grouped.size,
+      'documents' => grouped
+    }
+
+    if output_path
+      out_p = Pathname.new(output_path)
+      out_p = @repo_root.join(out_p) unless out_p.is_a?(Pathname) && out_p.absolute?
+      out_p.parent.mkpath
+      File.write(out_p, JSON.pretty_generate(manifest) + "\n", encoding: 'UTF-8')
+    end
+
+    manifest
+  end
 end
 
 # CLI executable entry point
 if __FILE__ == $PROGRAM_NAME
   check_migration = false
   manifest_path = nil
+  dump_manifest = false
+  manifest_dump_path = nil
 
   OptionParser.new do |opts|
     opts.banner = 'Usage: ruby test/validate_metadata.rb [options]'
     opts.on('--check-migration [MANIFEST]', 'Verify that all baseline migration documents remain present') do |m|
       check_migration = true
       manifest_path = m if m
+    end
+    opts.on('--dump-manifest [PATH]', 'Export build manifest JSON of all documents and languages') do |p|
+      dump_manifest = true
+      manifest_dump_path = p || '.agents/i18n-architecture/build_manifest.json'
     end
     opts.on('-h', '--help', 'Show help') do
       puts opts
@@ -400,6 +455,11 @@ if __FILE__ == $PROGRAM_NAME
   if check_migration
     puts 'Checking migration baseline retention...'
     migration_valid = validator.validate_migration_baseline(manifest_path)
+  end
+
+  if dump_manifest && schema_valid
+    puts "Exporting build manifest to #{manifest_dump_path}..."
+    validator.export_build_manifest(manifest_dump_path)
   end
 
   if schema_valid && migration_valid

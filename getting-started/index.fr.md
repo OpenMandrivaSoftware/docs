@@ -6,8 +6,6 @@ page_id: getting-started
 lang: fr
 source_lang: en
 permalink: /getting-started/
-redirect_from:
-- /getting-started/index.fr.html
 has_toc: true
 ---
 # Premiers pas

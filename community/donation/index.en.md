@@ -8,8 +8,6 @@ parent_id: community
 lang: en
 source_lang: en
 permalink: /community/donation/
-redirect_from:
-- /community/donation.en.html
 has_toc: true
 ---
 # Donation

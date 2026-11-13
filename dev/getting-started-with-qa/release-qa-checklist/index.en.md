@@ -8,8 +8,6 @@ parent_id: dev.getting-started-with-qa
 lang: en
 source_lang: en
 permalink: /dev/getting-started-with-qa/release-qa-checklist/
-redirect_from:
-- /dev/getting-started-with-qa/release-qa-checklist.en.html
 has_toc: true
 ---
 # Release QA Checklist

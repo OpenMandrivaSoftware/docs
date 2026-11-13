@@ -8,8 +8,6 @@ parent_id: dev.getting-started-with-qa
 lang: en
 source_lang: en
 permalink: /dev/getting-started-with-qa/bug-report-tool/
-redirect_from:
-- /dev/getting-started-with-qa/bug-report-tool.en.html
 has_toc: true
 ---
 # Bug Report Tool

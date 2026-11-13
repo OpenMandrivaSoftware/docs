@@ -8,8 +8,6 @@ parent_id: community
 lang: en
 source_lang: en
 permalink: /community/releases/
-redirect_from:
-- /community/releases.en.html
 has_toc: true
 card_columns: 3
 cards:

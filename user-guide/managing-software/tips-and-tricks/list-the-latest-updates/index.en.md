@@ -8,8 +8,6 @@ parent_id: user-guide.managing-software.tips-and-tricks
 lang: en
 source_lang: en
 permalink: /user-guide/managing-software/tips-and-tricks/list-the-latest-updates/
-redirect_from:
-- /user-guide/managing-software/tips-and-tricks/list-the-latest-updates.en.html
 has_toc: true
 ---
 # List the Latest Updates

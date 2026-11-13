@@ -8,8 +8,6 @@ parent_id: getting-started.installing-openmandriva
 lang: en
 source_lang: en
 permalink: /getting-started/installing-openmandriva/encryption/
-redirect_from:
-- /getting-started/installing-openmandriva/encryption.en.html
 has_toc: true
 ---
 # Disk Encryption

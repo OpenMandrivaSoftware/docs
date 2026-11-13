@@ -8,8 +8,6 @@ parent_id: dev.preparing-your-system
 lang: en
 source_lang: en
 permalink: /dev/preparing-your-system/installing-and-using-virt-manager/
-redirect_from:
-- /dev/preparing-your-system/installing-and-using-virt-manager.en.html
 has_toc: true
 ---
 # Installing and Using Virt Manager

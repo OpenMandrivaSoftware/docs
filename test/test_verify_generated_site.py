@@ -294,6 +294,178 @@ class TestSiteVerifier(unittest.TestCase):
             self.assertTrue(success, f"Expected success but got errors: {verifier.errors}")
             self.assertEqual(verifier.verified_count, 4)
 
+    def test_translation_replacing_fallback_accepted_by_verifier(self):
+        """Verifies that adding a genuine French translation updates expected language dynamically."""
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            site_dir = tmp_path / "_site"
+            site_dir.mkdir()
+
+            # Create destination French article
+            fr_dir = site_dir / "fr" / "user-guide" / "first-steps"
+            fr_dir.mkdir(parents=True)
+            (fr_dir / "index.html").write_text(
+                '<!DOCTYPE html><html><head>'
+                '<meta name="doc-page-id" content="user-guide.first-steps">'
+                '<meta name="doc-content-lang" content="fr">'
+                '</head><body>Contenu français authentique dépassant cinquante octets</body></html>',
+                encoding="utf-8"
+            )
+
+            # Historical French URL redirects to canonical French article
+            hist_dir = site_dir / "fr" / "user-guide"
+            (hist_dir / "first-steps.en.html").write_text(
+                '<!DOCTYPE html><html><head>'
+                '<meta name="robots" content="noindex">'
+                '<meta http-equiv="refresh" content="0; url=/fr/user-guide/first-steps/">'
+                '</head><body>Redirection vers /fr/user-guide/first-steps/...</body></html>',
+                encoding="utf-8"
+            )
+
+            # Historical routes manifest (records historical audit language as 'en')
+            routes_file = tmp_path / "routes.json"
+            routes_file.write_text(json.dumps({
+                "routes": [
+                    {
+                        "file_in_site": "fr/user-guide/first-steps.en.html",
+                        "public_url": "/fr/user-guide/first-steps.en.html",
+                        "page_id": "user-guide.first-steps",
+                        "actual_content_lang": "en",  # historical audit data
+                        "requested_locale": "fr"
+                    }
+                ]
+            }), encoding="utf-8")
+
+            # Dynamic build manifest showing 'fr' is now an available translation
+            manifest_file = tmp_path / "manifest.json"
+            manifest_file.write_text(json.dumps({
+                "languages": ["fr"],
+                "default_lang": "en",
+                "documents": {
+                    "user-guide.first-steps": {
+                        "page_id": "user-guide.first-steps",
+                        "permalink": "/user-guide/first-steps/",
+                        "source_lang": "en",
+                        "available_languages": ["en", "fr"]
+                    }
+                }
+            }), encoding="utf-8")
+
+            verifier = SiteVerifier(
+                site_dir=site_dir,
+                routes_path=routes_file,
+                manifest_path=manifest_file
+            )
+            success = verifier.verify()
+            self.assertTrue(success, f"Expected success but got errors: {verifier.errors}")
+            self.assertEqual(verifier.verified_routes_count, 1)
+            self.assertEqual(verifier.verified_canonical_count, 1)
+
+    def test_search_index_leakage_detected(self):
+        """Verifies that redirect entries leaked into search-data.json are detected."""
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            site_dir = tmp_path / "_site"
+            site_dir.mkdir()
+
+            js_dir = site_dir / "assets" / "js"
+            js_dir.mkdir(parents=True)
+            (js_dir / "search-data.json").write_text(json.dumps({
+                "0": {
+                    "title": "Redirecting...",
+                    "url": "/community/about-openmandriva.en.html"
+                }
+            }), encoding="utf-8")
+
+            (site_dir / "doc.html").write_text(
+                '<!DOCTYPE html><html><head>'
+                '<meta name="doc-page-id" content="sample.doc">'
+                '<meta name="doc-content-lang" content="en">'
+                '</head><body>Valid document body exceeding fifty bytes length requirement</body></html>',
+                encoding="utf-8"
+            )
+
+            routes_file = tmp_path / "routes.json"
+            routes_file.write_text(json.dumps({
+                "routes": [
+                    {
+                        "file_in_site": "doc.html",
+                        "public_url": "/doc.html",
+                        "page_id": "sample.doc",
+                        "actual_content_lang": "en",
+                        "requested_locale": "en"
+                    }
+                ]
+            }), encoding="utf-8")
+
+            verifier = SiteVerifier(site_dir=site_dir, routes_path=routes_file)
+            # Should fail due to search index leakage
+            success = verifier.verify()
+            self.assertFalse(success)
+            self.assertTrue(any("search index" in e for e in verifier.errors))
+
+    def test_origin_escape_detected(self):
+        """Verifies that redirects pointing to external origins are rejected."""
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            site_dir = tmp_path / "_site"
+            site_dir.mkdir()
+
+            (site_dir / "escape.html").write_text(
+                '<!DOCTYPE html><html><head>'
+                '<meta http-equiv="refresh" content="0; url=https://malicious-site.com/steal">'
+                '</head><body>External redirect body exceeding fifty bytes length</body></html>',
+                encoding="utf-8"
+            )
+
+            routes_file = tmp_path / "routes.json"
+            routes_file.write_text(json.dumps({
+                "routes": [
+                    {
+                        "file_in_site": "escape.html",
+                        "public_url": "/escape.html",
+                        "page_id": "test.escape",
+                        "requested_locale": "en"
+                    }
+                ]
+            }), encoding="utf-8")
+
+            verifier = SiteVerifier(site_dir=site_dir, routes_path=routes_file)
+            success = verifier.verify()
+            self.assertFalse(success)
+            self.assertTrue(any("external origin" in e for e in verifier.errors))
+
+    def test_baseurl_boundary_enforcement(self):
+        """Verifies that redirects outside configured baseurl are rejected."""
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            site_dir = tmp_path / "_site"
+            site_dir.mkdir()
+
+            (site_dir / "bad-base.html").write_text(
+                '<!DOCTYPE html><html><head>'
+                '<meta http-equiv="refresh" content="0; url=/wrong-scope/page/">'
+                '</head><body>Wrong scope redirect body exceeding fifty bytes length</body></html>',
+                encoding="utf-8"
+            )
+
+            routes_file = tmp_path / "routes.json"
+            routes_file.write_text(json.dumps({
+                "routes": [
+                    {
+                        "file_in_site": "bad-base.html",
+                        "public_url": "/bad-base.html",
+                        "page_id": "test.baseurl",
+                        "requested_locale": "en"
+                    }
+                ]
+            }), encoding="utf-8")
+
+            verifier = SiteVerifier(site_dir=site_dir, routes_path=routes_file, baseurl="/docs")
+            success = verifier.verify()
+            self.assertFalse(success)
+            self.assertTrue(any("outside baseurl scope" in e for e in verifier.errors))
+
 
 if __name__ == "__main__":
     unittest.main()

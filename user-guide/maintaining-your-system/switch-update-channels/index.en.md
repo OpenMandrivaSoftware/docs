@@ -8,8 +8,6 @@ parent_id: user-guide.maintaining-your-system
 lang: en
 source_lang: en
 permalink: /user-guide/maintaining-your-system/switch-update-channels/
-redirect_from:
-- /user-guide/maintaining-your-system/switch-update-channels.en.html
 has_toc: true
 ---
 # Switch Update Channels

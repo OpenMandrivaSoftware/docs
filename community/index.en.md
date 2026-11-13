@@ -6,8 +6,6 @@ page_id: community
 lang: en
 source_lang: en
 permalink: /community/
-redirect_from:
-- /community/index.en.html
 has_toc: true
 card_columns: 3
 cards:
@@ -28,23 +26,20 @@ cards:
   description: Support the project with a donation or by contributing your skills.
   url: /community/donation/
 - title: Links
-  description: A directory of useful links
----
-forums, repositories, social media, and
-    more.
-  url: /community/links.en.html
+  description: "A directory of useful links—forums, repositories, social media, and more."
+  url: /community/links/
 - title: Releases
   description: How packages flow from Cooker through Rolling to stable releases.
-  url: /community/releases.en.html
+  url: /community/releases/
 - title: Official Naming Policy
   description: How to refer to the Association and its products.
-  url: /community/official-naming-policy.en.html
+  url: /community/official-naming-policy/
 - title: Trademark License
   description: Guidelines for using OpenMandriva trademarks.
-  url: /community/oma-tm-licence.en.html
+  url: /community/oma-tm-licence/
 - title: Terms of Service
   description: Rules for using OpenMandriva project services.
-  url: /community/terms-of-service.en.html
+  url: /community/terms-of-service/
 ---
 # OpenMandriva Community
 

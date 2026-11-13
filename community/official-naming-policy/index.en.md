@@ -8,8 +8,6 @@ parent_id: community
 lang: en
 source_lang: en
 permalink: /community/official-naming-policy/
-redirect_from:
-- /community/official-naming-policy.en.html
 has_toc: true
 ---
 # Official Naming Policy

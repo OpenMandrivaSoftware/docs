@@ -8,8 +8,6 @@ parent_id: dev.getting-started-with-qa
 lang: en
 source_lang: en
 permalink: /dev/getting-started-with-qa/report-bugs-effectively/
-redirect_from:
-- /dev/getting-started-with-qa/report-bugs-effectively.en.html
 has_toc: true
 ---
 # Report Bugs Effectively

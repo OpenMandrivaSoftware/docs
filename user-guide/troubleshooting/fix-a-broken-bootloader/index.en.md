@@ -8,8 +8,6 @@ parent_id: user-guide.troubleshooting
 lang: en
 source_lang: en
 permalink: /user-guide/troubleshooting/fix-a-broken-bootloader/
-redirect_from:
-- /user-guide/troubleshooting/fix-a-broken-bootloader.en.html
 has_toc: true
 ---
 # Fix a Broken Bootloader

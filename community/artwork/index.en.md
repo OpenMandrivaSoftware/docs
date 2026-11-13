@@ -8,8 +8,6 @@ parent_id: community
 lang: en
 source_lang: en
 permalink: /community/artwork/
-redirect_from:
-- /community/artwork.en.html
 has_toc: true
 ---
 # Artwork

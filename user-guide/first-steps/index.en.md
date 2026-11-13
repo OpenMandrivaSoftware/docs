@@ -8,8 +8,6 @@ parent_id: user-guide
 lang: en
 source_lang: en
 permalink: /user-guide/first-steps/
-redirect_from:
-- /user-guide/first-steps.en.html
 has_toc: true
 ---
 # First Ten Tasks After Installation

@@ -8,8 +8,6 @@ parent_id: community.releases
 lang: en
 source_lang: en
 permalink: /community/releases/rome-errata/
-redirect_from:
-- /community/releases/rome-errata.en.html
 has_toc: true
 ---
 # ROME Errata — Known Issues

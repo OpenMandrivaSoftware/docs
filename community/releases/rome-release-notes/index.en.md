@@ -8,8 +8,6 @@ parent_id: community.releases
 lang: en
 source_lang: en
 permalink: /community/releases/rome-release-notes/
-redirect_from:
-- /community/releases/rome-release-notes.en.html
 has_toc: true
 ---
 # ROME Release Notes

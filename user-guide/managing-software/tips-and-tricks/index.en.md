@@ -8,8 +8,6 @@ parent_id: user-guide.managing-software
 lang: en
 source_lang: en
 permalink: /user-guide/managing-software/tips-and-tricks/
-redirect_from:
-- /user-guide/managing-software/tips-and-tricks.en.html
 has_toc: true
 card_columns: 2
 cards:

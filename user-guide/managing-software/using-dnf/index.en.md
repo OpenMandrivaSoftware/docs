@@ -8,8 +8,6 @@ parent_id: user-guide.managing-software
 lang: en
 source_lang: en
 permalink: /user-guide/managing-software/using-dnf/
-redirect_from:
-- /user-guide/managing-software/using-dnf.en.html
 has_toc: true
 ---
 # Using DNF

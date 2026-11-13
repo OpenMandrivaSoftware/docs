@@ -11,7 +11,7 @@
     <div class="dropdown-menu">
       {%- for l in site.languages -%}
         {%- if l == site.active_lang -%}
-          <a href="{{ page.url }}" class="dropdown-item active" data-lang="{{ l }}" aria-current="true">{{ l | upcase }}</a>
+          <a href="{{ page.url | relative_url }}" class="dropdown-item active" data-lang="{{ l }}" aria-current="true">{{ l | upcase }}</a>
         {%- else -%}
           {%- if l == site.default_lang -%}
             {%- assign target_href = page.permalink | default: '/' -%}
@@ -23,7 +23,7 @@
               {%- assign target_href = '/' | append: l | append: p_url -%}
             {%- endif -%}
           {%- endif -%}
-          <a {% static_href %}href="{{ target_href }}"{% endstatic_href %} class="dropdown-item" data-lang="{{ l }}">{{ l | upcase }}</a>
+          <a {% static_href %}href="{{ target_href | relative_url }}"{% endstatic_href %} class="dropdown-item" data-lang="{{ l }}">{{ l | upcase }}</a>
         {%- endif -%}
       {%- endfor -%}
     </div>

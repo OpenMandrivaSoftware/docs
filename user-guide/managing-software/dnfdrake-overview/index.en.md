@@ -8,8 +8,6 @@ parent_id: user-guide.managing-software
 lang: en
 source_lang: en
 permalink: /user-guide/managing-software/dnfdrake-overview/
-redirect_from:
-- /user-guide/managing-software/dnfdrake-overview.en.html
 has_toc: true
 ---
 # DnfDrake Overview

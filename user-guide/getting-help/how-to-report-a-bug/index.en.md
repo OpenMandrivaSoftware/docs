@@ -8,8 +8,6 @@ parent_id: user-guide.getting-help
 lang: en
 source_lang: en
 permalink: /user-guide/getting-help/how-to-report-a-bug/
-redirect_from:
-- /user-guide/getting-help/how-to-report-a-bug.en.html
 has_toc: true
 ---
 # How to Report a Bug

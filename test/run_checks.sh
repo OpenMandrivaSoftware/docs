@@ -11,7 +11,7 @@ ruby test/test_redirect_generator.rb
 
 echo ""
 echo "=== 2/6: Validating source document metadata and migration retention ==="
-ruby test/validate_metadata.rb --check-migration
+ruby test/validate_metadata.rb --check-migration --dump-manifest .agents/i18n-architecture/build_manifest.json
 
 echo ""
 echo "=== 3/6: Running Python validator unit tests ==="

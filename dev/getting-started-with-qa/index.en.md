@@ -8,8 +8,6 @@ parent_id: dev
 lang: en
 source_lang: en
 permalink: /dev/getting-started-with-qa/
-redirect_from:
-- /dev/getting-started-with-qa.en.html
 has_toc: true
 ---
 # Getting Started with QA

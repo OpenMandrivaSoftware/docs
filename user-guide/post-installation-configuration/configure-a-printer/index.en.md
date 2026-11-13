@@ -8,8 +8,6 @@ parent_id: user-guide.post-installation-configuration
 lang: en
 source_lang: en
 permalink: /user-guide/post-installation-configuration/configure-a-printer/
-redirect_from:
-- /user-guide/post-installation-configuration/configure-a-printer.en.html
 has_toc: true
 ---
 # Configure a Printer

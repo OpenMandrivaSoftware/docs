@@ -8,8 +8,6 @@ parent_id: dev.building-and-submitting-packages
 lang: en
 source_lang: en
 permalink: /dev/building-and-submitting-packages/building-a-python-package/
-redirect_from:
-- /dev/building-and-submitting-packages/building-a-python-package.en.html
 has_toc: true
 ---
 # Building a Python Package

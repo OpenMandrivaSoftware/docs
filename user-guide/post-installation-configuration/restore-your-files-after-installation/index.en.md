@@ -8,8 +8,6 @@ parent_id: user-guide.post-installation-configuration
 lang: en
 source_lang: en
 permalink: /user-guide/post-installation-configuration/restore-your-files-after-installation/
-redirect_from:
-- /user-guide/post-installation-configuration/restore-your-files-after-installation.en.html
 has_toc: true
 ---
 # Restore Your Files After Installation

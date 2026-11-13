@@ -8,8 +8,6 @@ parent_id: user-guide
 lang: en
 source_lang: en
 permalink: /user-guide/managing-software/
-redirect_from:
-- /user-guide/managing-software.en.html
 has_toc: true
 ---
 # Managing Software

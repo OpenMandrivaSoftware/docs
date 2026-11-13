@@ -8,8 +8,6 @@ parent_id: getting-started.installing-openmandriva
 lang: en
 source_lang: en
 permalink: /getting-started/installing-openmandriva/linux-partitions/
-redirect_from:
-- /getting-started/installing-openmandriva/linux-partitions.en.html
 has_toc: true
 ---
 # Partitioning Schemas

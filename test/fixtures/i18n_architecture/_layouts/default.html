@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
   <meta name="page_id" content="{{ page.page_id }}">
+  <meta name="doc-page-id" content="{{ page.page_id }}">
   <meta name="active_lang" content="{{ site.active_lang }}">
   <meta name="page_lang" content="{{ page.lang }}">
   <meta name="source_lang" content="{{ page.source_lang }}">
   <meta name="rendered_lang" content="{{ page.rendered_lang }}">
+  <meta name="doc-content-lang" content="{{ page.rendered_lang | default: page.lang | default: site.active_lang }}">
   <meta name="parent_id" content="{{ page.parent_id }}">
   <meta name="resolved_parent" content="{{ page.parent }}">
 </head>

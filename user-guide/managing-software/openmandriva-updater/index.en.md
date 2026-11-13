@@ -8,8 +8,6 @@ parent_id: user-guide.managing-software
 lang: en
 source_lang: en
 permalink: /user-guide/managing-software/openmandriva-updater/
-redirect_from:
-- /user-guide/managing-software/openmandriva-updater.en.html
 has_toc: true
 ---
 # OpenMandriva Updater

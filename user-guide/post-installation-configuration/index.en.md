@@ -8,8 +8,6 @@ parent_id: user-guide
 lang: en
 source_lang: en
 permalink: /user-guide/post-installation-configuration/
-redirect_from:
-- /user-guide/post-installation-configuration.en.html
 has_toc: true
 card_columns: 3
 cards:

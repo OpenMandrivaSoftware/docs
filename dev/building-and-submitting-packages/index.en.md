@@ -8,8 +8,6 @@ parent_id: dev
 lang: en
 source_lang: en
 permalink: /dev/building-and-submitting-packages/
-redirect_from:
-- /dev/building-and-submitting-packages.en.html
 has_toc: true
 ---
 # Building and Submitting Packages

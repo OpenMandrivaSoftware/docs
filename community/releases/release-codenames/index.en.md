@@ -8,8 +8,6 @@ parent_id: community.releases
 lang: en
 source_lang: en
 permalink: /community/releases/release-codenames/
-redirect_from:
-- /community/releases/release-codenames.en.html
 has_toc: true
 ---
 # Release Codenames

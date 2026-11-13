@@ -8,8 +8,6 @@ parent_id: user-guide.desktop-environments
 lang: en
 source_lang: en
 permalink: /user-guide/desktop-environments/installing-hyprland/
-redirect_from:
-- /user-guide/desktop-environments/installing-hyprland.en.html
 has_toc: true
 ---
 # Installing Hyprland

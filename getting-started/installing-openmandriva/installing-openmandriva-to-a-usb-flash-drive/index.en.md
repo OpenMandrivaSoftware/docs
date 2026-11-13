@@ -8,8 +8,6 @@ parent_id: getting-started.installing-openmandriva
 lang: en
 source_lang: en
 permalink: /getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive/
-redirect_from:
-- /getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive.en.html
 has_toc: true
 ---
 # Installing OpenMandriva to a USB Flash Drive

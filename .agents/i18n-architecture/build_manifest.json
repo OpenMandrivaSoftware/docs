@@ -1,0 +1,1513 @@
+{
+  "languages": [
+    "en",
+    "fr"
+  ],
+  "default_lang": "en",
+  "total_documents": 87,
+  "documents": {
+    "community.about-openmandriva.bylaws": {
+      "page_id": "community.about-openmandriva.bylaws",
+      "parent_id": "community.about-openmandriva",
+      "permalink": "/community/about-openmandriva/bylaws/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/about-openmandriva/bylaws/index.en.md",
+          "title": "Bylaws",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.about-openmandriva.governance": {
+      "page_id": "community.about-openmandriva.governance",
+      "parent_id": "community.about-openmandriva",
+      "permalink": "/community/about-openmandriva/governance/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/about-openmandriva/governance/index.en.md",
+          "title": "Governance",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.about-openmandriva": {
+      "page_id": "community.about-openmandriva",
+      "parent_id": "community",
+      "permalink": "/community/about-openmandriva/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/about-openmandriva/index.en.md",
+          "title": "About OpenMandriva",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.about-openmandriva.statutes": {
+      "page_id": "community.about-openmandriva.statutes",
+      "parent_id": "community.about-openmandriva",
+      "permalink": "/community/about-openmandriva/statutes/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/about-openmandriva/statutes/index.en.md",
+          "title": "Statutes",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.artwork": {
+      "page_id": "community.artwork",
+      "parent_id": "community",
+      "permalink": "/community/artwork/",
+      "nav_order": 40,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/artwork/index.en.md",
+          "title": "Artwork",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.chat-with-openmandriva": {
+      "page_id": "community.chat-with-openmandriva",
+      "parent_id": "community",
+      "permalink": "/community/chat-with-openmandriva/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/chat-with-openmandriva/index.en.md",
+          "title": "Chat with OpenMandriva",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.donation": {
+      "page_id": "community.donation",
+      "parent_id": "community",
+      "permalink": "/community/donation/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/donation/index.en.md",
+          "title": "Donation",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community": {
+      "page_id": "community",
+      "parent_id": null,
+      "permalink": "/community/",
+      "nav_order": 40,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/index.en.md",
+          "title": "OpenMandriva Community",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.links": {
+      "page_id": "community.links",
+      "parent_id": "community",
+      "permalink": "/community/links/",
+      "nav_order": 50,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/links/index.en.md",
+          "title": "Links",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.official-naming-policy": {
+      "page_id": "community.official-naming-policy",
+      "parent_id": "community",
+      "permalink": "/community/official-naming-policy/",
+      "nav_order": 110,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/official-naming-policy/index.en.md",
+          "title": "Official Naming Policy",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.oma-tm-licence": {
+      "page_id": "community.oma-tm-licence",
+      "parent_id": "community",
+      "permalink": "/community/oma-tm-licence/",
+      "nav_order": 120,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/oma-tm-licence/index.en.md",
+          "title": "OpenMandriva Trademark License",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.current-releases": {
+      "page_id": "community.releases.current-releases",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/current-releases/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/current-releases/index.en.md",
+          "title": "Current Releases",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases": {
+      "page_id": "community.releases",
+      "parent_id": "community",
+      "permalink": "/community/releases/",
+      "nav_order": 55,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/index.en.md",
+          "title": "Releases",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.release-codenames": {
+      "page_id": "community.releases.release-codenames",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/release-codenames/",
+      "nav_order": 120,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/release-codenames/index.en.md",
+          "title": "Release Codenames",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.release-life-cycle": {
+      "page_id": "community.releases.release-life-cycle",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/release-life-cycle/",
+      "nav_order": 100,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/release-life-cycle/index.en.md",
+          "title": "Release Life Cycle",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.release-plan-and-repositories": {
+      "page_id": "community.releases.release-plan-and-repositories",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/release-plan-and-repositories/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/release-plan-and-repositories/index.en.md",
+          "title": "Release Plan and Repositories",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.repository-policies": {
+      "page_id": "community.releases.repository-policies",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/repository-policies/",
+      "nav_order": 90,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/repository-policies/index.en.md",
+          "title": "Repository Policies",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.rock-6.0-changelog": {
+      "page_id": "community.releases.rock-6.0-changelog",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/rock-6.0-changelog/",
+      "nav_order": 80,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/rock-6.0-changelog/index.en.md",
+          "title": "OpenMandriva Lx 6.0 Changelog",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.rock-6.0-errata": {
+      "page_id": "community.releases.rock-6.0-errata",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/rock-6.0-errata/",
+      "nav_order": 70,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/rock-6.0-errata/index.en.md",
+          "title": "OpenMandriva Lx 6.0 Errata",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.rock-6.0-release-notes": {
+      "page_id": "community.releases.rock-6.0-release-notes",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/rock-6.0-release-notes/",
+      "nav_order": 60,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/rock-6.0-release-notes/index.en.md",
+          "title": "OpenMandriva Lx 6.0 Release Notes",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.rome-changelog": {
+      "page_id": "community.releases.rome-changelog",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/rome-changelog/",
+      "nav_order": 50,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/rome-changelog/index.en.md",
+          "title": "ROME Changelog",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.rome-errata": {
+      "page_id": "community.releases.rome-errata",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/rome-errata/",
+      "nav_order": 40,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/rome-errata/index.en.md",
+          "title": "ROME Errata",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.releases.rome-release-notes": {
+      "page_id": "community.releases.rome-release-notes",
+      "parent_id": "community.releases",
+      "permalink": "/community/releases/rome-release-notes/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/releases/rome-release-notes/index.en.md",
+          "title": "ROME Release Notes",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.setting-up-a-mirror": {
+      "page_id": "community.setting-up-a-mirror",
+      "parent_id": "community",
+      "permalink": "/community/setting-up-a-mirror/",
+      "nav_order": 25,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/setting-up-a-mirror/index.en.md",
+          "title": "Setting Up a Mirror",
+          "source_lang": "en"
+        }
+      }
+    },
+    "community.terms-of-service": {
+      "page_id": "community.terms-of-service",
+      "parent_id": "community",
+      "permalink": "/community/terms-of-service/",
+      "nav_order": 130,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "community/terms-of-service/index.en.md",
+          "title": "Terms of Service",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.building-and-submitting-packages.building-a-go-package": {
+      "page_id": "dev.building-and-submitting-packages.building-a-go-package",
+      "parent_id": "dev.building-and-submitting-packages",
+      "permalink": "/dev/building-and-submitting-packages/building-a-go-package/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/building-and-submitting-packages/building-a-go-package/index.en.md",
+          "title": "Building a Go Package",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.building-and-submitting-packages.building-a-python-package": {
+      "page_id": "dev.building-and-submitting-packages.building-a-python-package",
+      "parent_id": "dev.building-and-submitting-packages",
+      "permalink": "/dev/building-and-submitting-packages/building-a-python-package/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/building-and-submitting-packages/building-a-python-package/index.en.md",
+          "title": "Building a Python Package",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.building-and-submitting-packages.building-a-rust-package": {
+      "page_id": "dev.building-and-submitting-packages.building-a-rust-package",
+      "parent_id": "dev.building-and-submitting-packages",
+      "permalink": "/dev/building-and-submitting-packages/building-a-rust-package/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/building-and-submitting-packages/building-a-rust-package/index.en.md",
+          "title": "Building a Rust Package",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.building-and-submitting-packages": {
+      "page_id": "dev.building-and-submitting-packages",
+      "parent_id": "dev",
+      "permalink": "/dev/building-and-submitting-packages/",
+      "nav_order": 40,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/building-and-submitting-packages/index.en.md",
+          "title": "Building and Submitting Packages",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.contributing-to-openmandriva": {
+      "page_id": "dev.contributing-to-openmandriva",
+      "parent_id": "dev",
+      "permalink": "/dev/contributing-to-openmandriva/",
+      "nav_order": 60,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/contributing-to-openmandriva/index.en.md",
+          "title": "Contributing to OpenMandriva",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.getting-started-with-qa.bug-report-tool": {
+      "page_id": "dev.getting-started-with-qa.bug-report-tool",
+      "parent_id": "dev.getting-started-with-qa",
+      "permalink": "/dev/getting-started-with-qa/bug-report-tool/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/getting-started-with-qa/bug-report-tool/index.en.md",
+          "title": "Bug Report Tool",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.getting-started-with-qa": {
+      "page_id": "dev.getting-started-with-qa",
+      "parent_id": "dev",
+      "permalink": "/dev/getting-started-with-qa/",
+      "nav_order": 80,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/getting-started-with-qa/index.en.md",
+          "title": "Getting Started with QA",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.getting-started-with-qa.release-qa-checklist": {
+      "page_id": "dev.getting-started-with-qa.release-qa-checklist",
+      "parent_id": "dev.getting-started-with-qa",
+      "permalink": "/dev/getting-started-with-qa/release-qa-checklist/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/getting-started-with-qa/release-qa-checklist/index.en.md",
+          "title": "Release QA Checklist",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.getting-started-with-qa.report-bugs-effectively": {
+      "page_id": "dev.getting-started-with-qa.report-bugs-effectively",
+      "parent_id": "dev.getting-started-with-qa",
+      "permalink": "/dev/getting-started-with-qa/report-bugs-effectively/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/getting-started-with-qa/report-bugs-effectively/index.en.md",
+          "title": "Report Bugs Effectively",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev": {
+      "page_id": "dev",
+      "parent_id": null,
+      "permalink": "/dev/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/index.en.md",
+          "title": "Developer Docs",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.maintaining-packages": {
+      "page_id": "dev.maintaining-packages",
+      "parent_id": "dev",
+      "permalink": "/dev/maintaining-packages/",
+      "nav_order": 50,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/maintaining-packages/index.en.md",
+          "title": "Maintaining Packages",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.preparing-your-system.creating-cooker-vm": {
+      "page_id": "dev.preparing-your-system.creating-cooker-vm",
+      "parent_id": "dev.preparing-your-system",
+      "permalink": "/dev/preparing-your-system/creating-cooker-vm/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/preparing-your-system/creating-cooker-vm/index.en.md",
+          "title": "Creating a Cooker VM",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.preparing-your-system": {
+      "page_id": "dev.preparing-your-system",
+      "parent_id": "dev",
+      "permalink": "/dev/preparing-your-system/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/preparing-your-system/index.en.md",
+          "title": "Preparing Your System",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.preparing-your-system.installing-and-using-virt-manager": {
+      "page_id": "dev.preparing-your-system.installing-and-using-virt-manager",
+      "parent_id": "dev.preparing-your-system",
+      "permalink": "/dev/preparing-your-system/installing-and-using-virt-manager/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/preparing-your-system/installing-and-using-virt-manager/index.en.md",
+          "title": "Installing and Using Virt Manager",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.preparing-your-system.packaging-tools": {
+      "page_id": "dev.preparing-your-system.packaging-tools",
+      "parent_id": "dev.preparing-your-system",
+      "permalink": "/dev/preparing-your-system/packaging-tools/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/preparing-your-system/packaging-tools/index.en.md",
+          "title": "Installing Packaging Tools",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.understanding-rpm-spec-files": {
+      "page_id": "dev.understanding-rpm-spec-files",
+      "parent_id": "dev",
+      "permalink": "/dev/understanding-rpm-spec-files/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/understanding-rpm-spec-files/index.en.md",
+          "title": "Understanding RPM Spec Files",
+          "source_lang": "en"
+        }
+      }
+    },
+    "dev.using-cooker": {
+      "page_id": "dev.using-cooker",
+      "parent_id": "dev",
+      "permalink": "/dev/using-cooker/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "dev/using-cooker/index.en.md",
+          "title": "Using Cooker",
+          "source_lang": "en"
+        }
+      }
+    },
+    "getting-started.copying-openmandriva-to-a-usb-stick": {
+      "page_id": "getting-started.copying-openmandriva-to-a-usb-stick",
+      "parent_id": "getting-started",
+      "permalink": "/getting-started/copying-openmandriva-to-a-usb-stick/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en",
+        "fr"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "getting-started/copying-openmandriva-to-a-usb-stick/index.en.md",
+          "title": "Copying OpenMandriva to a USB Stick",
+          "source_lang": "en"
+        },
+        "fr": {
+          "rel_path": "getting-started/copying-openmandriva-to-a-usb-stick/index.fr.md",
+          "title": "Copier OpenMandriva sur une clé USB",
+          "source_lang": "en"
+        }
+      }
+    },
+    "getting-started.downloading-openmandriva": {
+      "page_id": "getting-started.downloading-openmandriva",
+      "parent_id": "getting-started",
+      "permalink": "/getting-started/downloading-openmandriva/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en",
+        "fr"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "getting-started/downloading-openmandriva/index.en.md",
+          "title": "Downloading OpenMandriva",
+          "source_lang": "en"
+        },
+        "fr": {
+          "rel_path": "getting-started/downloading-openmandriva/index.fr.md",
+          "title": "Télécharger OpenMandriva",
+          "source_lang": "en"
+        }
+      }
+    },
+    "getting-started": {
+      "page_id": "getting-started",
+      "parent_id": null,
+      "permalink": "/getting-started/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en",
+        "fr"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "getting-started/index.en.md",
+          "title": "Getting Started",
+          "source_lang": "en"
+        },
+        "fr": {
+          "rel_path": "getting-started/index.fr.md",
+          "title": "Premiers pas",
+          "source_lang": "en"
+        }
+      }
+    },
+    "getting-started.installing-openmandriva.encryption": {
+      "page_id": "getting-started.installing-openmandriva.encryption",
+      "parent_id": "getting-started.installing-openmandriva",
+      "permalink": "/getting-started/installing-openmandriva/encryption/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "getting-started/installing-openmandriva/encryption/index.en.md",
+          "title": "Disk Encryption",
+          "source_lang": "en"
+        }
+      }
+    },
+    "getting-started.installing-openmandriva": {
+      "page_id": "getting-started.installing-openmandriva",
+      "parent_id": "getting-started",
+      "permalink": "/getting-started/installing-openmandriva/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "getting-started/installing-openmandriva/index.en.md",
+          "title": "Installing OpenMandriva",
+          "source_lang": "en"
+        }
+      }
+    },
+    "getting-started.installing-openmandriva.installing-openmandriva-to-a-usb-flash-drive": {
+      "page_id": "getting-started.installing-openmandriva.installing-openmandriva-to-a-usb-flash-drive",
+      "parent_id": "getting-started.installing-openmandriva",
+      "permalink": "/getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "getting-started/installing-openmandriva/installing-openmandriva-to-a-usb-flash-drive/index.en.md",
+          "title": "Installing OpenMandriva to a USB Flash Drive",
+          "source_lang": "en"
+        }
+      }
+    },
+    "getting-started.installing-openmandriva.linux-partitions": {
+      "page_id": "getting-started.installing-openmandriva.linux-partitions",
+      "parent_id": "getting-started.installing-openmandriva",
+      "permalink": "/getting-started/installing-openmandriva/linux-partitions/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "getting-started/installing-openmandriva/linux-partitions/index.en.md",
+          "title": "Partitioning Schemas",
+          "source_lang": "en"
+        }
+      }
+    },
+    "getting-started.installing-openmandriva.partitioning": {
+      "page_id": "getting-started.installing-openmandriva.partitioning",
+      "parent_id": "getting-started.installing-openmandriva",
+      "permalink": "/getting-started/installing-openmandriva/partitioning/",
+      "nav_order": 50,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "getting-started/installing-openmandriva/partitioning/index.en.md",
+          "title": "Partitioning",
+          "source_lang": "en"
+        }
+      }
+    },
+    "getting-started.requirements": {
+      "page_id": "getting-started.requirements",
+      "parent_id": "getting-started",
+      "permalink": "/getting-started/requirements/",
+      "nav_order": 5,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "getting-started/requirements/index.en.md",
+          "title": "System Requirements",
+          "source_lang": "en"
+        }
+      }
+    },
+    "home": {
+      "page_id": "home",
+      "parent_id": null,
+      "permalink": "/",
+      "nav_order": 1,
+      "source_lang": "en",
+      "available_languages": [
+        "en",
+        "fr"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "index.en.md",
+          "title": "Home",
+          "source_lang": "en"
+        },
+        "fr": {
+          "rel_path": "index.fr.md",
+          "title": "Documentation OpenMandriva",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.desktop-environments": {
+      "page_id": "user-guide.desktop-environments",
+      "parent_id": "user-guide",
+      "permalink": "/user-guide/desktop-environments/",
+      "nav_order": 40,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/desktop-environments/index.en.md",
+          "title": "Desktop Environments",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.desktop-environments.installing-hyprland": {
+      "page_id": "user-guide.desktop-environments.installing-hyprland",
+      "parent_id": "user-guide.desktop-environments",
+      "permalink": "/user-guide/desktop-environments/installing-hyprland/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/desktop-environments/installing-hyprland/index.en.md",
+          "title": "Installing Hyprland",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.desktop-environments.installing-i3": {
+      "page_id": "user-guide.desktop-environments.installing-i3",
+      "parent_id": "user-guide.desktop-environments",
+      "permalink": "/user-guide/desktop-environments/installing-i3/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/desktop-environments/installing-i3/index.en.md",
+          "title": "Installing i3",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.first-steps": {
+      "page_id": "user-guide.first-steps",
+      "parent_id": "user-guide",
+      "permalink": "/user-guide/first-steps/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/first-steps/index.en.md",
+          "title": "First Ten Tasks After Installation",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.getting-help.get-logs-and-hardware-info-for-issue-reports": {
+      "page_id": "user-guide.getting-help.get-logs-and-hardware-info-for-issue-reports",
+      "parent_id": "user-guide.getting-help",
+      "permalink": "/user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/index.en.md",
+          "title": "Get Logs and Hardware Info for Issue Reports",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.getting-help.getting-support-on-the-forum": {
+      "page_id": "user-guide.getting-help.getting-support-on-the-forum",
+      "parent_id": "user-guide.getting-help",
+      "permalink": "/user-guide/getting-help/getting-support-on-the-forum/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/getting-help/getting-support-on-the-forum/index.en.md",
+          "title": "Getting Support on the Forum",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.getting-help.how-to-report-a-bug": {
+      "page_id": "user-guide.getting-help.how-to-report-a-bug",
+      "parent_id": "user-guide.getting-help",
+      "permalink": "/user-guide/getting-help/how-to-report-a-bug/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/getting-help/how-to-report-a-bug/index.en.md",
+          "title": "How to Report a Bug",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.getting-help": {
+      "page_id": "user-guide.getting-help",
+      "parent_id": "user-guide",
+      "permalink": "/user-guide/getting-help/",
+      "nav_order": 80,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/getting-help/index.en.md",
+          "title": "Getting Help",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide": {
+      "page_id": "user-guide",
+      "parent_id": null,
+      "permalink": "/user-guide/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/index.en.md",
+          "title": "User Guide",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.maintaining-your-system.compile-custom-software": {
+      "page_id": "user-guide.maintaining-your-system.compile-custom-software",
+      "parent_id": "user-guide.maintaining-your-system",
+      "permalink": "/user-guide/maintaining-your-system/compile-custom-software/",
+      "nav_order": 40,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/maintaining-your-system/compile-custom-software/index.en.md",
+          "title": "Compile Custom Software",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.maintaining-your-system": {
+      "page_id": "user-guide.maintaining-your-system",
+      "parent_id": "user-guide",
+      "permalink": "/user-guide/maintaining-your-system/",
+      "nav_order": 60,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/maintaining-your-system/index.en.md",
+          "title": "Maintaining Your System",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.maintaining-your-system.list-recent-updates": {
+      "page_id": "user-guide.maintaining-your-system.list-recent-updates",
+      "parent_id": "user-guide.maintaining-your-system",
+      "permalink": "/user-guide/maintaining-your-system/list-recent-updates/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/maintaining-your-system/list-recent-updates/index.en.md",
+          "title": "List Recent Updates",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.maintaining-your-system.switch-update-channels": {
+      "page_id": "user-guide.maintaining-your-system.switch-update-channels",
+      "parent_id": "user-guide.maintaining-your-system",
+      "permalink": "/user-guide/maintaining-your-system/switch-update-channels/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/maintaining-your-system/switch-update-channels/index.en.md",
+          "title": "Switch Update Channels",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.maintaining-your-system.update-your-system": {
+      "page_id": "user-guide.maintaining-your-system.update-your-system",
+      "parent_id": "user-guide.maintaining-your-system",
+      "permalink": "/user-guide/maintaining-your-system/update-your-system/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/maintaining-your-system/update-your-system/index.en.md",
+          "title": "Update Your System",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.dnfdrake-overview": {
+      "page_id": "user-guide.managing-software.dnfdrake-overview",
+      "parent_id": "user-guide.managing-software",
+      "permalink": "/user-guide/managing-software/dnfdrake-overview/",
+      "nav_order": 40,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/dnfdrake-overview/index.en.md",
+          "title": "DnfDrake Overview",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software": {
+      "page_id": "user-guide.managing-software",
+      "parent_id": "user-guide",
+      "permalink": "/user-guide/managing-software/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/index.en.md",
+          "title": "Managing Software",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.installing-steam": {
+      "page_id": "user-guide.managing-software.installing-steam",
+      "parent_id": "user-guide.managing-software",
+      "permalink": "/user-guide/managing-software/installing-steam/",
+      "nav_order": 60,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/installing-steam/index.en.md",
+          "title": "Installing Steam",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.openmandriva-updater": {
+      "page_id": "user-guide.managing-software.openmandriva-updater",
+      "parent_id": "user-guide.managing-software",
+      "permalink": "/user-guide/managing-software/openmandriva-updater/",
+      "nav_order": 50,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/openmandriva-updater/index.en.md",
+          "title": "OpenMandriva Updater",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.openmandriva-welcome": {
+      "page_id": "user-guide.managing-software.openmandriva-welcome",
+      "parent_id": "user-guide.managing-software",
+      "permalink": "/user-guide/managing-software/openmandriva-welcome/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/openmandriva-welcome/index.en.md",
+          "title": "OM Welcome",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.software-repository-selector": {
+      "page_id": "user-guide.managing-software.software-repository-selector",
+      "parent_id": "user-guide.managing-software",
+      "permalink": "/user-guide/managing-software/software-repository-selector/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/software-repository-selector/index.en.md",
+          "title": "Software Repository Selector",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.tips-and-tricks.create-an-install-command-from-a-package-list": {
+      "page_id": "user-guide.managing-software.tips-and-tricks.create-an-install-command-from-a-package-list",
+      "parent_id": "user-guide.managing-software.tips-and-tricks",
+      "permalink": "/user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/tips-and-tricks/create-an-install-command-from-a-package-list/index.en.md",
+          "title": "Create an Install Command from a Package List",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.tips-and-tricks": {
+      "page_id": "user-guide.managing-software.tips-and-tricks",
+      "parent_id": "user-guide.managing-software",
+      "permalink": "/user-guide/managing-software/tips-and-tricks/",
+      "nav_order": 80,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/tips-and-tricks/index.en.md",
+          "title": "Tips and Tricks",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.tips-and-tricks.list-all-packages-in-the-iso": {
+      "page_id": "user-guide.managing-software.tips-and-tricks.list-all-packages-in-the-iso",
+      "parent_id": "user-guide.managing-software.tips-and-tricks",
+      "permalink": "/user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso/",
+      "nav_order": 40,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/tips-and-tricks/list-all-packages-in-the-iso/index.en.md",
+          "title": "List All Packages in the ISO",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.tips-and-tricks.list-the-latest-updates": {
+      "page_id": "user-guide.managing-software.tips-and-tricks.list-the-latest-updates",
+      "parent_id": "user-guide.managing-software.tips-and-tricks",
+      "permalink": "/user-guide/managing-software/tips-and-tricks/list-the-latest-updates/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/tips-and-tricks/list-the-latest-updates/index.en.md",
+          "title": "List the Latest Updates",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.tips-and-tricks.listing-installed-packages": {
+      "page_id": "user-guide.managing-software.tips-and-tricks.listing-installed-packages",
+      "parent_id": "user-guide.managing-software.tips-and-tricks",
+      "permalink": "/user-guide/managing-software/tips-and-tricks/listing-installed-packages/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/tips-and-tricks/listing-installed-packages/index.en.md",
+          "title": "Listing Installed Packages",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.managing-software.using-dnf": {
+      "page_id": "user-guide.managing-software.using-dnf",
+      "parent_id": "user-guide.managing-software",
+      "permalink": "/user-guide/managing-software/using-dnf/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/managing-software/using-dnf/index.en.md",
+          "title": "Using DNF",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.network-configuration": {
+      "page_id": "user-guide.network-configuration",
+      "parent_id": "user-guide",
+      "permalink": "/user-guide/network-configuration/",
+      "nav_order": 50,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/network-configuration/index.en.md",
+          "title": "Network Configuration",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.post-installation-configuration.configure-a-printer": {
+      "page_id": "user-guide.post-installation-configuration.configure-a-printer",
+      "parent_id": "user-guide.post-installation-configuration",
+      "permalink": "/user-guide/post-installation-configuration/configure-a-printer/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/post-installation-configuration/configure-a-printer/index.en.md",
+          "title": "Configure a Printer",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.post-installation-configuration": {
+      "page_id": "user-guide.post-installation-configuration",
+      "parent_id": "user-guide",
+      "permalink": "/user-guide/post-installation-configuration/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/post-installation-configuration/index.en.md",
+          "title": "Post Installation Configuration",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.post-installation-configuration.restore-your-files-after-installation": {
+      "page_id": "user-guide.post-installation-configuration.restore-your-files-after-installation",
+      "parent_id": "user-guide.post-installation-configuration",
+      "permalink": "/user-guide/post-installation-configuration/restore-your-files-after-installation/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/post-installation-configuration/restore-your-files-after-installation/index.en.md",
+          "title": "Restore Your Files After Installation",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.post-installation-configuration.set-your-user-avatar": {
+      "page_id": "user-guide.post-installation-configuration.set-your-user-avatar",
+      "parent_id": "user-guide.post-installation-configuration",
+      "permalink": "/user-guide/post-installation-configuration/set-your-user-avatar/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/post-installation-configuration/set-your-user-avatar/index.en.md",
+          "title": "Set Your User Avatar",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.troubleshooting.connect-to-the-internet-in-recovery-mode": {
+      "page_id": "user-guide.troubleshooting.connect-to-the-internet-in-recovery-mode",
+      "parent_id": "user-guide.troubleshooting",
+      "permalink": "/user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode/",
+      "nav_order": 20,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode/index.en.md",
+          "title": "Connect to the Internet in Recovery Mode",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.troubleshooting.fix-a-broken-bootloader": {
+      "page_id": "user-guide.troubleshooting.fix-a-broken-bootloader",
+      "parent_id": "user-guide.troubleshooting",
+      "permalink": "/user-guide/troubleshooting/fix-a-broken-bootloader/",
+      "nav_order": 10,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/troubleshooting/fix-a-broken-bootloader/index.en.md",
+          "title": "Fix a Broken Bootloader",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.troubleshooting.fix-incorrect-time-in-dual-boot": {
+      "page_id": "user-guide.troubleshooting.fix-incorrect-time-in-dual-boot",
+      "parent_id": "user-guide.troubleshooting",
+      "permalink": "/user-guide/troubleshooting/fix-incorrect-time-in-dual-boot/",
+      "nav_order": 30,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/troubleshooting/fix-incorrect-time-in-dual-boot/index.en.md",
+          "title": "Fix Incorrect Time in Dual Boot",
+          "source_lang": "en"
+        }
+      }
+    },
+    "user-guide.troubleshooting": {
+      "page_id": "user-guide.troubleshooting",
+      "parent_id": "user-guide",
+      "permalink": "/user-guide/troubleshooting/",
+      "nav_order": 70,
+      "source_lang": "en",
+      "available_languages": [
+        "en"
+      ],
+      "variants": {
+        "en": {
+          "rel_path": "user-guide/troubleshooting/index.en.md",
+          "title": "Troubleshooting",
+          "source_lang": "en"
+        }
+      }
+    }
+  }
+}

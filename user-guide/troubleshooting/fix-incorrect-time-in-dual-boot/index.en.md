@@ -8,8 +8,6 @@ parent_id: user-guide.troubleshooting
 lang: en
 source_lang: en
 permalink: /user-guide/troubleshooting/fix-incorrect-time-in-dual-boot/
-redirect_from:
-- /user-guide/troubleshooting/fix-incorrect-time-in-dual-boot.en.html
 has_toc: true
 ---
 # Fix Incorrect Time in Dual Boot

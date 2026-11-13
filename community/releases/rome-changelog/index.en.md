@@ -8,8 +8,6 @@ parent_id: community.releases
 lang: en
 source_lang: en
 permalink: /community/releases/rome-changelog/
-redirect_from:
-- /community/releases/rome-changelog.en.html
 has_toc: true
 ---
 # ROME Changelog

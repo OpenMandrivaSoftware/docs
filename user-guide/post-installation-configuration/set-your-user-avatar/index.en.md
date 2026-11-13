@@ -8,8 +8,6 @@ parent_id: user-guide.post-installation-configuration
 lang: en
 source_lang: en
 permalink: /user-guide/post-installation-configuration/set-your-user-avatar/
-redirect_from:
-- /user-guide/post-installation-configuration/set-your-user-avatar.en.html
 has_toc: true
 ---
 # Set Your User Avatar

@@ -8,8 +8,6 @@ parent_id: dev
 lang: en
 source_lang: en
 permalink: /dev/understanding-rpm-spec-files/
-redirect_from:
-- /dev/understanding-rpm-spec-files.en.html
 has_toc: true
 ---
 # Understanding RPM Spec Files

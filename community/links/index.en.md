@@ -8,8 +8,6 @@ parent_id: community
 lang: en
 source_lang: en
 permalink: /community/links/
-redirect_from:
-- /community/links.en.html
 has_toc: true
 ---
 # Useful Links

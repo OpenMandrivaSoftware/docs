@@ -8,8 +8,6 @@ parent_id: getting-started
 lang: en
 source_lang: en
 permalink: /getting-started/downloading-openmandriva/
-redirect_from:
-- /getting-started/downloading-openmandriva.en.html
 has_toc: true
 ---
 # Downloading OpenMandriva 

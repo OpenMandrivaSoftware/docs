@@ -8,8 +8,6 @@ parent_id: getting-started
 lang: en
 source_lang: en
 permalink: /getting-started/requirements/
-redirect_from:
-- /getting-started/requirements.en.html
 has_toc: true
 ---
 # System Requirements

@@ -8,8 +8,6 @@ parent_id: user-guide.desktop-environments
 lang: en
 source_lang: en
 permalink: /user-guide/desktop-environments/installing-i3/
-redirect_from:
-- /user-guide/desktop-environments/installing-i3.en.html
 has_toc: true
 ---
 # Installing i3

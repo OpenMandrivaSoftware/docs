@@ -421,4 +421,34 @@ class TestMetadataValidator < Minitest::Test
       assert validator.errors.any? { |e| e.include?("Public route conflict: Both 'article2/index.en.md' and 'article1/index.en.md' output to '/topic/index.html'") }
     end
   end
+
+  def test_export_build_manifest
+    Dir.mktmpdir do |tmp|
+      tmp_path = Pathname.new(tmp)
+      validator = MetadataValidator.new(repo_root: tmp_path, config: { 'languages' => %w[en fr], 'default_lang' => 'en' })
+
+      create_fixture_doc(tmp, 'article/index.en.md', {
+        'page_id' => 'article.manifest', 'lang' => 'en', 'source_lang' => 'en',
+        'title' => 'Article EN', 'permalink' => '/article/', 'nav_order' => 10
+      })
+      create_fixture_doc(tmp, 'article/index.fr.md', {
+        'page_id' => 'article.manifest', 'lang' => 'fr', 'source_lang' => 'en',
+        'title' => 'Article FR', 'permalink' => '/article/', 'nav_order' => 10
+      })
+
+      manifest_file = tmp_path.join('manifest.json')
+      manifest = validator.export_build_manifest(manifest_file)
+
+      assert_equal %w[en fr], manifest['languages']
+      assert_equal 'en', manifest['default_lang']
+      assert_equal 1, manifest['total_documents']
+      assert manifest['documents'].key?('article.manifest')
+
+      doc = manifest['documents']['article.manifest']
+      assert_equal '/article/', doc['permalink']
+      assert_equal %w[en fr], doc['available_languages']
+      assert_equal 'en', doc['source_lang']
+      assert File.file?(manifest_file)
+    end
+  end
 end

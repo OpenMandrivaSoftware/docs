@@ -8,8 +8,6 @@ parent_id: community
 lang: en
 source_lang: en
 permalink: /community/about-openmandriva/
-redirect_from:
-- /community/about-openmandriva.en.html
 has_toc: true
 ---
 # About OpenMandriva

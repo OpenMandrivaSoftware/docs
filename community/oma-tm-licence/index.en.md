@@ -8,8 +8,6 @@ parent_id: community
 lang: en
 source_lang: en
 permalink: /community/oma-tm-licence/
-redirect_from:
-- /community/oma-tm-licence.en.html
 has_toc: true
 ---
 # License Agreement

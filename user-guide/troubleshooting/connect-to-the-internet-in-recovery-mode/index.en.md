@@ -8,8 +8,6 @@ parent_id: user-guide.troubleshooting
 lang: en
 source_lang: en
 permalink: /user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode/
-redirect_from:
-- /user-guide/troubleshooting/connect-to-the-internet-in-recovery-mode.en.html
 has_toc: true
 ---
 # Connect to the Internet in Recovery Mode

@@ -6,8 +6,6 @@ page_id: getting-started
 lang: en
 source_lang: en
 permalink: /getting-started/
-redirect_from:
-- /getting-started/index.en.html
 has_toc: true
 card_columns: 3
 cards:

@@ -8,8 +8,6 @@ parent_id: user-guide.getting-help
 lang: en
 source_lang: en
 permalink: /user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports/
-redirect_from:
-- /user-guide/getting-help/get-logs-and-hardware-info-for-issue-reports.en.html
 has_toc: true
 ---
 # Get Logs and Hardware Info for Issue Reports

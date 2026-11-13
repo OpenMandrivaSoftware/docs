@@ -8,8 +8,6 @@ parent_id: community.releases
 lang: en
 source_lang: en
 permalink: /community/releases/current-releases/
-redirect_from:
-- /community/releases/current-releases.en.html
 has_toc: true
 ---
 # Current Releases

@@ -8,8 +8,6 @@ parent_id: user-guide.getting-help
 lang: en
 source_lang: en
 permalink: /user-guide/getting-help/getting-support-on-the-forum/
-redirect_from:
-- /user-guide/getting-help/getting-support-on-the-forum.en.html
 has_toc: true
 ---
 # Getting Support on the Forum

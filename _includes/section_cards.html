@@ -1,7 +1,7 @@
 {% if page.cards %}
 <div class="section-cards cols-{{ page.card_columns | default: '3' }}">
   {% for card in page.cards %}
-  <a href="{{ card.url }}" class="section-card">
+  <a href="{{ card.url | relative_url }}" class="section-card">
     <div class="card-title">{{ card.title }}</div>
     <p class="description">{{ card.description }}</p>
   </a>

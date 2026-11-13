@@ -8,8 +8,6 @@ parent_id: community.releases
 lang: en
 source_lang: en
 permalink: /community/releases/rock-6.0-release-notes/
-redirect_from:
-- /community/releases/rock-6.0-release-notes.en.html
 has_toc: true
 ---
 # OpenMandriva Lx 6.0 Release Notes

@@ -8,8 +8,6 @@ parent_id: user-guide
 lang: en
 source_lang: en
 permalink: /user-guide/desktop-environments/
-redirect_from:
-- /user-guide/desktop-environments.en.html
 has_toc: true
 ---
 # Desktop Environments
