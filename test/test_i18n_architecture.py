@@ -434,13 +434,22 @@ class TestI18nArchitecture(unittest.TestCase):
                 self.assertNotEqual(title, "Redirecting...", "Redirect leaked into search index")
                 self.assertNotIn("Redirecting", title, "Redirect title leaked into search index")
 
-        # 2. Navigation sidebar check across representative pages
-        for page_rel in ["index.html", "community/index.html", "fr/index.html"]:
-            p = os.path.join(site_dir, page_rel)
-            if os.path.isfile(p):
-                with open(p, "r", encoding="utf-8") as f:
+        # 2. Navigation sidebar and children check across ALL content pages
+        checked_pages = 0
+        for root, dirs, files in os.walk(site_dir):
+            for file in files:
+                if not file.endswith(".html"):
+                    continue
+                full_path = os.path.join(root, file)
+                with open(full_path, "r", encoding="utf-8") as f:
                     html = f.read()
-                self.assertNotIn('class="nav-list-link">Redirecting...<', html, f"Redirect link leaked in {page_rel}")
+                # Skip technical redirect pages
+                if '<meta http-equiv="refresh"' in html:
+                    continue
+                rel_p = os.path.relpath(full_path, site_dir)
+                self.assertNotIn('Redirecting...', html, f"Redirect link or title leaked into content page {rel_p}")
+                checked_pages += 1
+        self.assertGreater(checked_pages, 80, "Expected at least 80 content pages checked for navigation purity")
 
 
 if __name__ == "__main__":

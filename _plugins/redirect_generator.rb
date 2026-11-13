@@ -19,7 +19,7 @@ module OpenMandrivaDocs
         'layout' => nil,
         'sitemap' => false,
         'robots' => 'noindex',
-        'title' => 'Redirecting...',
+        'title' => nil,
         'nav_exclude' => true,
         'search_exclude' => true,
         'redirect' => {

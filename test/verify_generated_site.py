@@ -342,12 +342,15 @@ class SiteVerifier:
             except Exception as e:
                 self.errors.append(f"Failed to inspect search index '{search_file}': {e}")
 
-        # Sample check navigation links in root and section pages
-        for sample_path in [self.site_dir / "index.html", self.site_dir / "fr" / "index.html", self.site_dir / "community" / "index.html"]:
-            if sample_path.is_file():
-                html = sample_path.read_text(encoding="utf-8")
-                if NAV_REDIRECT_RE.search(html):
-                    self.errors.append(f"Redirect link text leaked into site navigation in '{sample_path.name}'")
+        # Check navigation and children links across all generated content pages
+        for page_file in self.site_dir.rglob("*.html"):
+            content = page_file.read_text(encoding="utf-8")
+            # Skip technical redirect files themselves
+            if HTTP_REFRESH_RE.search(content):
+                continue
+            if NAV_REDIRECT_RE.search(content) or "Redirecting..." in content:
+                rel_path = page_file.relative_to(self.site_dir)
+                self.errors.append(f"Redirect link or title leaked into content page '{rel_path}'")
 
         return len(self.errors) == 0
 
