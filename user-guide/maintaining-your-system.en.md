@@ -19,6 +19,9 @@ cards:
   - title: "Compile Custom Software"
     description: "Build your own software from source using clang."
     url: "/user-guide/maintaining-your-system/compile-custom-software.en.html"
+  - title: "Using Timeshift for System Snapshots"
+    description: "Create system snapshots and roll back after failed updates with Timeshift."
+    url: "/user-guide/maintaining-your-system/using-timeshift-for-system-snapshots.en.html"
 ---
 
 # Maintaining Your System
