@@ -1,0 +1,23 @@
+{
+  "total_generated_routes": 2,
+  "routes": [
+    {
+      "public_url": "/articles/kernel.en.html",
+      "file_in_site": "articles/kernel.en.html",
+      "requested_locale": "en",
+      "actual_content_lang": "en",
+      "page_id": "articles.kernel",
+      "canonical_destination": "/articles/kernel/",
+      "redirect_requirement": "Legacy EN route -> redirect to /articles/kernel/"
+    },
+    {
+      "public_url": "/fr/articles/kernel.en.html",
+      "file_in_site": "fr/articles/kernel.en.html",
+      "requested_locale": "fr",
+      "actual_content_lang": "en",
+      "page_id": "articles.kernel",
+      "canonical_destination": "/fr/articles/kernel/",
+      "redirect_requirement": "Legacy FR fallback route -> redirect to /fr/articles/kernel/"
+    }
+  ]
+}

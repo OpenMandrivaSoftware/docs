@@ -1,258 +1,167 @@
-# OpenMandriva Documentation — Content Creator Guide
+# OpenMandriva Documentation
 
-This guide explains how to author and manage content for the OpenMandriva documentation site.
+This repository builds the OpenMandriva documentation site with Jekyll, the Just the Docs theme, and the Jekyll Polyglot plugin.
 
----
+## Prerequisites
 
-## 1. Navigation (the `parent` directive)
+To build and run the documentation site locally, you need:
+- **Ruby:** 3.2 to 4.0 (`Gemfile` specifies `>= 3.2.0, < 4.1.0`; verified on Ruby 3.3 in CI and Ruby 4.0.9 on OpenMandriva Lx 26.09 ROME)
+- **RubyGems:** 3.4.1+ (RubyGems 4.0.24 is included with Ruby on OpenMandriva Lx)
+- **Bundler:** 4.0.24 (locked in `Gemfile.lock`)
+- **Ruby development headers:** `ruby-devel` / `ruby-full` (for native gem compilation, including `sass-embedded`)
+- **Build tools:** `gcc`, `g++`, `make`, `git`
 
-The sidebar navigation is built automatically from your Markdown files. To nest a page under a parent, use the `parent` directive in the YAML headers:
+For running the complete automated verification suite (`./test/run_checks.sh`):
+- **Python:** 3.10+ (for `test/check_links.py` and unit tests, standard library only)
+- **Node.js:** 18+ (for `test/theme-toggle.test.js`)
+
+### OpenMandriva Lx
+```sh
+sudo dnf --refresh install ruby ruby-devel gcc gcc-c++ make git nodejs python3
+```
+
+### Fedora / RHEL
+```sh
+sudo dnf install ruby ruby-devel rubygem-bundler gcc gcc-c++ make git nodejs python3
+```
+
+### Debian / Ubuntu
+```sh
+sudo apt-get update && sudo apt-get install ruby-full build-essential zlib1g-dev git nodejs python3
+gem install bundler -v 4.0.24
+```
+
+## Run the site locally
+
+From the repository root, install the dependencies and start Jekyll:
+
+```sh
+bundle install
+bundle exec jekyll serve
+```
+
+Open the [English home page](http://localhost:4000/) or the [French home page](http://localhost:4000/fr/). The site root serves the English home page directly.
+
+## Testing and Verification
+
+To run all automated checks locally (Ruby metadata tests, Python unit tests, JavaScript theme toggle tests, production build, generated site verification, and link/asset validation):
+
+```sh
+./test/run_checks.sh
+```
+
+Individual checks can also be executed separately:
+
+- **Source metadata validation and unit tests (Ruby):**
+  ```sh
+  ruby test/test_metadata_validator.rb
+  ruby test/validate_metadata.rb --check-migration
+  ```
+- **Python validator unit tests:**
+  ```sh
+  python3 -m unittest discover -s test -p "test_*.py"
+  ```
+- **JavaScript theme toggle tests:**
+  ```sh
+  node test/theme-toggle.test.js
+  ```
+- **Generated site route verification:**
+  ```sh
+  python3 test/verify_generated_site.py --site-dir _site
+  ```
+- **Internal link and asset validation:**
+  ```sh
+  bundle exec jekyll build
+  python3 test/check_links.py --site-dir _site
+  ```
+
+## Build and publish
+
+```sh
+JEKYLL_ENV=production bundle exec jekyll build
+```
+
+Jekyll writes the static site to `_site/`. Publish its contents with the directory structure intact. The current configuration assumes the site is served at the domain root. The home page redirect and several internal links use paths from that root. [`index.html`](index.html)
+
+For GitHub Pages, run the Jekyll build separately and publish the generated files. The built-in Pages Jekyll build does not support Polyglot. [GitHub Pages documentation](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll)
+
+## Edit a page
+
+Keep translations next to their source with the same filename stem, such as `getting-started/downloading-openmandriva.en.md` and `getting-started/downloading-openmandriva.fr.md`. Set `lang` in the YAML front matter. Use the exact `title` of the parent in the same language for `parent`. Omit `parent` on top-level pages.
 
 ```yaml
 ---
+layout: default
+title: Downloading OpenMandriva
 parent: Getting Started
----
-```
-
-- The value must match the **title** of the parent page exactly (not the filename).
-- Top-level pages omit `parent` entirely.
-- The nav is generated per-language (see `_includes/components/nav/pages.html`). A page only appears in the nav for the language declared in its `lang` field.
-
----
-
-## 2. Ordering pages (the `nav_order` directive)
-
-Control the order of sibling pages with `nav_order`:
-
-```yaml
----
 nav_order: 10
+lang: en
 ---
 ```
 
-- Lower numbers appear first.
-- Use increments of 10 (10, 20, 30…) so you can insert pages later without renumbering everything.
-- Applies within each parent group.
+Lower `nav_order` values appear first among siblings. Leave gaps of 10 between values to make room for new pages. The right-hand table of contents appears when the page has level-two to level-four headings with anchors. Setting `has_toc: false` hides it and the generated list of child pages.
 
----
+## Edit landing page cards
 
-## 3. Cards on landing pages
+### Home pages
 
-The home page and all section landing pages (Getting Started, User Guide, Developer Docs, Community) use card-based navigation for visual previews of documentation sections.
-
-### Home page cards
-
-The home page (`index.en.md`) uses `layout: home` with card data stored in `_data/home_cards.yml`. Each card can contain a title, description, and a list of links.
-
-**To add or modify a home page card:**
-
-1. Edit `_data/home_cards.yml`.
-2. Add or modify an entry:
+Both home pages read card titles, descriptions, and link labels from [`_data/home_cards.yml`](_data/home_cards.yml). A card's `base_url` points to a section with a language-specific index page. Each item in `links` takes a `name` and either a `base_url` for a local page or a `url` for an external link.
 
 ```yaml
-- title: "Getting Started"
-  description: "New to OpenMandriva? Start here to get up and running quickly."
-  base_url: "/getting-started"
+- title: Getting Started
+  description: New to OpenMandriva? Start here to get up and running quickly.
+  base_url: /getting-started
   links:
-    - name: "Downloading OpenMandriva"
-      base_url: "/getting-started/downloading-openmandriva"
-    - name: "Copying to a USB"
-      base_url: "/getting-started/copying-to-usb"
-    - name: "Installing OpenMandriva"
-      base_url: "/getting-started/installing-openmandriva"
+    - name: Copying to a USB Stick
+      base_url: /getting-started/copying-openmandriva-to-a-usb-stick
 ```
 
-| Field | Required | Description |
-|---|---|---|
-| `title` | Yes | Card heading |
-| `description` | Yes | Short summary below the title |
-| `base_url` | Yes* | Internal link prefix (appends `/index.en.html` for the card title, or `.en.html` for links) |
-| `url` | Yes* | External URL (use instead of `base_url` for links leaving the site) |
-| `links` | No | Array of sub-links rendered as a list inside the card |
+On the English home page, this card links to `/getting-started/` and its list item links to `/getting-started/copying-openmandriva-to-a-usb-stick/`. The French home page uses the same labels and generates French paths (`/fr/...`), even for destinations without a translation. Check both home pages when changing the shared data.
 
-*Use `base_url` for internal pages or `url` for external links.
+### Section pages
 
-### Section landing page cards
-
-Section index pages (e.g., `getting-started/index.en.md`, `user-guide/index.en.md`, `dev/index.en.md`, `community/index.en.md`) embed card data directly in the page's YAML frontmatter rather than in a shared data file. This keeps each language file self-contained.
-
-**To add cards to a section landing page:**
-
-1. Add `card_columns: 3` to the page's frontmatter (or `2` for two columns).
-2. Add a `cards` array with `title`, `description`, and `url` for each card.
-3. Place `{% include section_cards.html %}` in the page body where the cards should appear.
+Section landing pages keep their cards in front matter. Each card has a `title`, `description`, and `url`. Set `card_columns` to `2` or `3` and place `{% include section_cards.html %}` where the cards should appear in the page body.
 
 ```yaml
 ---
 layout: default
 title: User Guide
 nav_order: 20
-card_columns: 3
+page_id: user-guide
 lang: en
+source_lang: en
+permalink: /user-guide/
+card_columns: 3
 cards:
-  - title: "Managing Software"
-    description: "Install, remove, and update software using DNF, DnfDrake, and Steam."
-    url: "/user-guide/software.en.html"
-  - title: "Troubleshooting"
-    description: "Fix broken bootloaders, connect in recovery mode, and resolve time issues."
-    url: "/user-guide/troubleshooting/index.en.html"
+  - title: Managing Software
+    description: Install, remove, and update software.
+    url: /user-guide/managing-software/
+  - title: Troubleshooting
+    description: Fix common system problems.
+    url: /user-guide/troubleshooting/
 ---
-
-# User Guide
-
-Explore the sections below for detailed instructions.
-
-{% include section_cards.html %}
 ```
 
-| Card field | Required | Description |
-|---|---|---|
-| `title` | Yes | Card heading (renders as a styled `<div>`) |
-| `description` | Yes | Short summary below the title |
-| `url` | Yes | Full path to the destination page (e.g., `/path/page.en.html`) |
+Keep the section card title as a `div` when editing the include. Just the Docs adds anchor links to headings, and the card itself is already a link. [Card template](_includes/section_cards.html) · [Card styles](_sass/custom/custom.scss) · [User Guide example](user-guide/index.en.md)
 
-> **Important:** Card titles use `<div class="card-title">` in the include template, not `<h3>`. Just the Docs automatically appends anchor links to headings; nesting an `<h3>` inside the card's `<a>` wrapper would create invalid nested anchors and break the layout.
+## Add or update a translation
 
-### Styling
+English is the default language and builds at the site root. French builds under `/fr/` and currently covers the home page and part of Getting Started. All language variants share language-neutral permalinks, and English fallback pages build cleanly under `/fr/` without file extension hacks. [Language configuration](_config.yml)
 
-Card styles live in `_sass/custom/custom.scss`:
+1. Add or edit the localized Markdown file next to the English page. Match the language suffix and `lang` value.
+2. Translate the title and set `parent` to the localized parent's title when the page has a parent. Update links and image descriptions. Link to an existing destination when a related page has yet to be translated.
+3. Preview the page in Jekyll. Check its sidebar, links, images, and language switcher.
 
-- `.home-cards` / `.home-card` — home page grid and individual cards
-- `.section-cards` / `.section-card` — section page grid and individual cards
-- `.cols-2` / `.cols-3` — column count classes
-- Mobile breakpoint at 66.5rem: all cards collapse to a single column
+The language menu reads its list from `_config.yml`. Its JavaScript supports English and French and constructs destination URLs without checking whether the translation exists. To add another language, update `languages` in the configuration, add its Markdown pages and home page, and update the switcher and home page links. [`lang-switcher.js`](assets/js/lang-switcher.js)
 
-Section cards share the same border, padding, shadow, and hover-lift effect as home cards for visual consistency.
+## Add images and other assets
 
----
+Keep article-specific screenshots in an `images/` directory next to the Markdown file. Use the article's filename stem and number the screenshots in the order they appear. The [installation guide](getting-started/installing-openmandriva.en.md) uses `../images/installing-openmandriva-01.png`.
 
-## 4. Adding a new language
-
-1. **Edit `_config.yml`**  
-   Add the language code to the `languages` array:
-   ```yaml
-   languages: ['en', 'fr', 'de']
-   ```
-
-2. **Create language-specific Markdown files**  
-   For every page, add a `.xx.md` file alongside the English version:
-   ```
-   getting-started/index.en.md
-   getting-started/index.fr.md
-   getting-started/index.de.md   # new
-   ```
-
-3. **Add `lang` to front matter**  
-   Each file must declare its language:
-   ```yaml
-   ---
-   lang: de
-   ---
-   ```
-
-4. **Create a localized home page**  
-   Add `index.de.md` at the site root with the same structure as `index.en.md` / `index.fr.md`.
-
-5. **Build and test**
-   ```bash
-   bundle exec jekyll build
-   bundle exec jekyll serve
-   # Visit http://localhost:4000/de/
-   ```
-
-No data-file changes are needed — templates construct URLs from `base_url` automatically.
-
----
-
-## 5. Linking to images and downloadable assets
-
-Place images that go with a specific piece of documentation in an `./images` folder next to that documentation: 
-
-```
-installing-openmandriva.en.md 
-├── images/
-│   └── installing-openmandriva-01.png
-│   └── installing-openmandriva-02.png
-```
-
-Place global, reusable assets in the `assets/` directory:
-
-```
-assets/
-├── images/
-│   └── om-logo.png
-└── files/
-    └── openmandriva-install-guide.pdf
-```
-
-Reference them in Markdown using **site-root-relative paths**:
+Keep reusable images in `assets/images/`. Polyglot shares the `assets/` directory across languages. For shared assets, use Jekyll's `relative_url` filter to include the site's base path.
 
 ```markdown
-![Alt text](/assets/images/screenshot.png)
-
-[Download the guide](/assets/files/openmandriva-install-guide.pdf)
+![OpenMandriva icon]({{ '/assets/images/favicon.png' | relative_url }})
 ```
 
-- `assets/` is listed in `exclude_from_localization` in `_config.yml`, so the same files serve all languages.
-- Do **not** use `../` or absolute URLs — they break when the site is built into language subdirectories (e.g., `/fr/`).
-
----
-
-## 6. Building and deploying
-
-### Prerequisites
-- Ruby ≥ 3.0
-- Bundler (`gem install bundler`)
-
-### Local development
-```bash
-bundle install
-bundle exec jekyll serve
-# Site runs at http://localhost:4000
-```
-
-### Production build
-```bash
-bundle exec jekyll build
-```
-
-Output is written to `_site/`:
-```
-_site/
-├── index.en.html          # English home page
-├── getting-started/
-│   └── index.en.html
-├── fr/
-│   ├── index.fr.html      # French home page
-│   └── getting-started/
-│       └── index.fr.html
-├── assets/                # Copied as-is (images, CSS, JS, PDFs)
-└── ...
-```
-
-### Deploy
-Upload the **entire `_site/` directory** to your web server or static hosting (Netlify, GitHub Pages, Cloudflare Pages, etc.). Configure the host to serve `index.html` for directory requests.
-
-> **Note:** The site uses `jekyll-polyglot`. Source files for languages (Markdown) are next to the default (en) files for easy maintenance. When deployed, English (default language) stays at the root; other languages live under `/fr/`, `/de/`, etc. Ensure your host preserves this structure.
-
----
-
-## 7. Quick reference: Required front matter
-
-```yaml
----
-layout: default
-title: Page Title
-nav_order: 10
-parent: Parent Page Title   # omit for top-level
-card_columns: 3             # optional: only for section landing pages
-cards:                      # optional: only for section landing pages
-  - title: "Card Title"
-    description: "Card summary."
-    url: "/path/to/page.en.html"
-has_toc: true               # optional, enables right-sidebar TOC
-lang: en                    # REQUIRED: en, fr, de, etc.
----
-```
-
-All content files live in the repo root or in subdirectories (e.g., `getting-started/`). Side-by-side language files (`.en.md`, `.fr.md`) go in the same folder.
+Check image URLs in each language preview when adding screenshots to a translated page. See [AGENTS.md](AGENTS.md) for the project's image, naming, and writing conventions.
